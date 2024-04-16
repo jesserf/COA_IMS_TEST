@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COA_IMS", "COA_IMS\COA_IMS.csproj", "{178C71EC-441D-4839-A72F-7F95DAEE7490}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B6104B1-E10C-41E1-BFC7-6D8F46FEB56E}"
+	ProjectSection(SolutionItems) = preProject
+		homeboard.txt = homeboard.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{178C71EC-441D-4839-A72F-7F95DAEE7490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178C71EC-441D-4839-A72F-7F95DAEE7490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178C71EC-441D-4839-A72F-7F95DAEE7490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178C71EC-441D-4839-A72F-7F95DAEE7490}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A03D57E-1C71-4324-865D-CB647F5A6FA4}
+	EndGlobalSection
+EndGlobal
