@@ -40,14 +40,15 @@
             this.Main_panel.Size = new System.Drawing.Size(1619, 965);
             this.Main_panel.TabIndex = 0;
             // 
-            // Home
+            // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1619, 965);
             this.Controls.Add(this.Main_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home";
+            this.Name = "Homepage";
             this.Text = "Home";
             this.ResumeLayout(false);
 

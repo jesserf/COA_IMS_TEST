@@ -1,6 +1,6 @@
-﻿namespace COA_IMS.Screens.Subscreens.ActivityLogs
+﻿namespace COA_IMS.Screens.Subscrn
 {
-    partial class AccountLogging
+    partial class InventoryTable
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountLogging));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryTable));
+            this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.reports_Button = new Guna.UI.WinForms.GunaButton();
@@ -39,24 +40,89 @@
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.dateFilter1 = new COA_IMS.UserControlUtil.DateFilter();
+            this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
-            this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.main_Panel = new System.Windows.Forms.Panel();
             this.content_Panel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).BeginInit();
             this.main_Panel.SuspendLayout();
             this.content_Panel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // LogsTable
+            // 
+            this.LogsTable.AllowUserToAddRows = false;
+            this.LogsTable.AllowUserToDeleteRows = false;
+            this.LogsTable.AllowUserToResizeColumns = false;
+            this.LogsTable.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.LogsTable.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LogsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.LogsTable.ColumnHeadersHeight = 20;
+            this.LogsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LogsTable.DefaultCellStyle = dataGridViewCellStyle9;
+            this.LogsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogsTable.EnableHeadersVisualStyles = false;
+            this.LogsTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.LogsTable.Location = new System.Drawing.Point(0, 0);
+            this.LogsTable.Margin = new System.Windows.Forms.Padding(15);
+            this.LogsTable.Name = "LogsTable";
+            this.LogsTable.ReadOnly = true;
+            this.LogsTable.RowHeadersVisible = false;
+            this.LogsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LogsTable.Size = new System.Drawing.Size(1567, 666);
+            this.LogsTable.TabIndex = 7;
+            this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.LogsTable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.LogsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.LogsTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.LogsTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.LogsTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.LogsTable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.LogsTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.LogsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.LogsTable.ThemeStyle.HeaderStyle.Height = 20;
+            this.LogsTable.ThemeStyle.ReadOnly = true;
+            this.LogsTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.LogsTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.LogsTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.LogsTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.LogsTable.ThemeStyle.RowsStyle.Height = 22;
+            this.LogsTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.LogsTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // tableLayoutPanel1
             // 
@@ -93,7 +159,7 @@
             this.reports_Button.AnimationHoverSpeed = 0.07F;
             this.reports_Button.AnimationSpeed = 0.03F;
             this.reports_Button.BackColor = System.Drawing.Color.Transparent;
-            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
+            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.reports_Button.BorderColor = System.Drawing.Color.Black;
             this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -105,7 +171,7 @@
             this.reports_Button.Location = new System.Drawing.Point(3, 3);
             this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.reports_Button.Name = "reports_Button";
-            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
             this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
             this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
             this.reports_Button.OnHoverImage = null;
@@ -113,7 +179,6 @@
             this.reports_Button.Radius = 12;
             this.reports_Button.Size = new System.Drawing.Size(42, 35);
             this.reports_Button.TabIndex = 4;
-            this.reports_Button.Click += new System.EventHandler(this.reportsButton_Click);
             // 
             // refresh_Button
             // 
@@ -121,7 +186,7 @@
             this.refresh_Button.AnimationHoverSpeed = 0.07F;
             this.refresh_Button.AnimationSpeed = 0.03F;
             this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
-            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
+            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.refresh_Button.BorderColor = System.Drawing.Color.Black;
             this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -133,7 +198,7 @@
             this.refresh_Button.Location = new System.Drawing.Point(51, 3);
             this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.refresh_Button.Name = "refresh_Button";
-            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
             this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
             this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
             this.refresh_Button.OnHoverImage = null;
@@ -141,13 +206,12 @@
             this.refresh_Button.Radius = 12;
             this.refresh_Button.Size = new System.Drawing.Size(42, 35);
             this.refresh_Button.TabIndex = 5;
-            this.refresh_Button.Click += new System.EventHandler(this.refresh_Button_Click);
             // 
             // sortComboBox
             // 
             this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sortComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.sortComboBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
+            this.sortComboBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.sortComboBox.BorderColor = System.Drawing.Color.Transparent;
             this.sortComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sortComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -162,12 +226,11 @@
             this.sortComboBox.Location = new System.Drawing.Point(1212, 30);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
+            this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
             this.sortComboBox.OnHoverItemForeColor = System.Drawing.Color.White;
             this.sortComboBox.Radius = 12;
             this.sortComboBox.Size = new System.Drawing.Size(191, 35);
             this.sortComboBox.TabIndex = 2;
-            this.sortComboBox.SelectedValueChanged += new System.EventHandler(this.sortComboBox_SelectedValueChanged);
             // 
             // searchBar1
             // 
@@ -188,6 +251,32 @@
             this.dateFilter1.Size = new System.Drawing.Size(640, 43);
             this.dateFilter1.TabIndex = 5;
             this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
+            // 
+            // previous_Button
+            // 
+            this.previous_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.previous_Button.AnimationHoverSpeed = 0.07F;
+            this.previous_Button.AnimationSpeed = 0.03F;
+            this.previous_Button.BackColor = System.Drawing.Color.White;
+            this.previous_Button.BaseColor = System.Drawing.Color.White;
+            this.previous_Button.BorderColor = System.Drawing.Color.White;
+            this.previous_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previous_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.previous_Button.FocusedColor = System.Drawing.Color.White;
+            this.previous_Button.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.previous_Button.ForeColor = System.Drawing.Color.White;
+            this.previous_Button.Image = ((System.Drawing.Image)(resources.GetObject("previous_Button.Image")));
+            this.previous_Button.ImageSize = new System.Drawing.Size(30, 30);
+            this.previous_Button.Location = new System.Drawing.Point(3, 3);
+            this.previous_Button.Name = "previous_Button";
+            this.previous_Button.OnHoverBaseColor = System.Drawing.Color.White;
+            this.previous_Button.OnHoverBorderColor = System.Drawing.Color.White;
+            this.previous_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.previous_Button.OnHoverImage = null;
+            this.previous_Button.OnPressedColor = System.Drawing.Color.White;
+            this.previous_Button.Size = new System.Drawing.Size(46, 42);
+            this.previous_Button.TabIndex = 0;
+            this.previous_Button.Text = "<";
             // 
             // pageCountTextbox
             // 
@@ -236,34 +325,6 @@
             this.next_Button.Size = new System.Drawing.Size(46, 42);
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
-            this.next_Button.Click += new System.EventHandler(this.next_Button_Click);
-            // 
-            // previous_Button
-            // 
-            this.previous_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.previous_Button.AnimationHoverSpeed = 0.07F;
-            this.previous_Button.AnimationSpeed = 0.03F;
-            this.previous_Button.BackColor = System.Drawing.Color.White;
-            this.previous_Button.BaseColor = System.Drawing.Color.White;
-            this.previous_Button.BorderColor = System.Drawing.Color.White;
-            this.previous_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.previous_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.previous_Button.FocusedColor = System.Drawing.Color.White;
-            this.previous_Button.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.previous_Button.ForeColor = System.Drawing.Color.White;
-            this.previous_Button.Image = ((System.Drawing.Image)(resources.GetObject("previous_Button.Image")));
-            this.previous_Button.ImageSize = new System.Drawing.Size(30, 30);
-            this.previous_Button.Location = new System.Drawing.Point(3, 3);
-            this.previous_Button.Name = "previous_Button";
-            this.previous_Button.OnHoverBaseColor = System.Drawing.Color.White;
-            this.previous_Button.OnHoverBorderColor = System.Drawing.Color.White;
-            this.previous_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.previous_Button.OnHoverImage = null;
-            this.previous_Button.OnPressedColor = System.Drawing.Color.White;
-            this.previous_Button.Size = new System.Drawing.Size(46, 42);
-            this.previous_Button.TabIndex = 0;
-            this.previous_Button.Text = "<";
-            this.previous_Button.Click += new System.EventHandler(this.previous_Button_Click);
             // 
             // gunaPanel1
             // 
@@ -275,72 +336,6 @@
             this.gunaPanel1.Size = new System.Drawing.Size(1567, 75);
             this.gunaPanel1.TabIndex = 8;
             // 
-            // LogsTable
-            // 
-            this.LogsTable.AllowUserToAddRows = false;
-            this.LogsTable.AllowUserToDeleteRows = false;
-            this.LogsTable.AllowUserToResizeColumns = false;
-            this.LogsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.LogsTable.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LogsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.LogsTable.ColumnHeadersHeight = 20;
-            this.LogsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LogsTable.DefaultCellStyle = dataGridViewCellStyle6;
-            this.LogsTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogsTable.EnableHeadersVisualStyles = false;
-            this.LogsTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.LogsTable.Location = new System.Drawing.Point(0, 0);
-            this.LogsTable.Margin = new System.Windows.Forms.Padding(15);
-            this.LogsTable.Name = "LogsTable";
-            this.LogsTable.ReadOnly = true;
-            this.LogsTable.RowHeadersVisible = false;
-            this.LogsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LogsTable.Size = new System.Drawing.Size(1567, 666);
-            this.LogsTable.TabIndex = 7;
-            this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.LogsTable.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.LogsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
-            this.LogsTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.LogsTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.LogsTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.LogsTable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.LogsTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.LogsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.LogsTable.ThemeStyle.HeaderStyle.Height = 20;
-            this.LogsTable.ThemeStyle.ReadOnly = true;
-            this.LogsTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.LogsTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.LogsTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.LogsTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.LogsTable.ThemeStyle.RowsStyle.Height = 22;
-            this.LogsTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.LogsTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // main_Panel
             // 
             this.main_Panel.Controls.Add(this.content_Panel);
@@ -350,7 +345,7 @@
             this.main_Panel.Location = new System.Drawing.Point(0, 0);
             this.main_Panel.Name = "main_Panel";
             this.main_Panel.Size = new System.Drawing.Size(1567, 817);
-            this.main_Panel.TabIndex = 10;
+            this.main_Panel.TabIndex = 11;
             // 
             // content_Panel
             // 
@@ -385,7 +380,7 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 64);
             this.flowLayoutPanel2.TabIndex = 12;
             // 
-            // AccountLogging
+            // InventoryTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -393,13 +388,12 @@
             this.ClientSize = new System.Drawing.Size(1567, 817);
             this.Controls.Add(this.main_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AccountLogging";
-            this.Text = "AccountLogging";
-            this.VisibleChanged += new System.EventHandler(this.AccountLogging_VisibleChanged);
+            this.Name = "InventoryTable";
+            this.Text = "InventoryTable";
+            ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).EndInit();
             this.main_Panel.ResumeLayout(false);
             this.content_Panel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -410,6 +404,7 @@
 
         #endregion
 
+        private Guna.UI.WinForms.GunaDataGridView LogsTable;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI.WinForms.GunaButton reports_Button;
@@ -417,14 +412,13 @@
         private Guna.UI.WinForms.GunaComboBox sortComboBox;
         private UserControlUtil.SearchBar searchBar1;
         private UserControlUtil.DateFilter dateFilter1;
+        private Guna.UI.WinForms.GunaButton previous_Button;
         private Guna.UI.WinForms.GunaTextBox pageCountTextbox;
         private Guna.UI.WinForms.GunaButton next_Button;
-        private Guna.UI.WinForms.GunaButton previous_Button;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaDataGridView LogsTable;
         private System.Windows.Forms.Panel main_Panel;
+        private System.Windows.Forms.Panel content_Panel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel content_Panel;
     }
 }

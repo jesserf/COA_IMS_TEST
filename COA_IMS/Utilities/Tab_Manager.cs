@@ -19,12 +19,26 @@ namespace COA_IMS.Utilities
         
         private string selected_color { get; set; }
         private string unselected_color { get; set; }
+        public string select_hover_color { get; set; }
 
-
+        #region Orange Colors
+        /*
+         * #c68621
+         * #db9526
+         * #de9f3c
+         * #e2aa52
+         * #e6b568
+         * #e9bf7e
+         * #edca94
+         * 
+         * #e2528a - pink
+*/
+        #endregion
         public Tab_Manager() 
         {
-            this.selected_color = (!string.IsNullOrEmpty(selected_color)) ? selected_color : "#365486";
-            this.unselected_color = (!string.IsNullOrEmpty(unselected_color)) ? unselected_color : "#1B303B";
+            this.selected_color = (!string.IsNullOrEmpty(selected_color)) ? selected_color : "#c68621";
+            this.select_hover_color = (!string.IsNullOrEmpty(select_hover_color)) ? select_hover_color : "#e9bf7e";
+            this.unselected_color = (!string.IsNullOrEmpty(unselected_color)) ? unselected_color : "#db9526";
         }
 
         public List<object> Sub_frames 
@@ -38,6 +52,23 @@ namespace COA_IMS.Utilities
             set { Navigation_Buttons = value; }
         }
         public void active_Button(GunaButton button, bool has_Title = false)
+        {
+            foreach (var buttons in Navigation_Buttons)
+            {
+                if (buttons.Name.Equals(button.Name))
+                {
+                    button.BackColor = Theme.Hex_To_RGB(selected_color);
+                    if (has_Title)
+                        change_Title(button.Tag.ToString().ToUpper());
+                }
+                else
+                {
+                    buttons.BackColor = Theme.Hex_To_RGB(unselected_color);
+                }
+            }
+        }
+
+        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false)
         {
             foreach (var buttons in Navigation_Buttons)
             {
