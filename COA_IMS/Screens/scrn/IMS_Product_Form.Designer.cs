@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
+            this.closebtn = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
@@ -44,10 +48,6 @@
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.closebtn = new Guna.UI.WinForms.GunaButton();
             this.gunaElipsePanel1.SuspendLayout();
             this.gunaElipsePanel2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,79 @@
             this.gunaElipsePanel1.Radius = 20;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(594, 700);
             this.gunaElipsePanel1.TabIndex = 0;
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BaseColor = System.Drawing.Color.Brown;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Image = null;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(250, 641);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Radius = 10;
+            this.gunaButton1.Size = new System.Drawing.Size(126, 34);
+            this.gunaButton1.TabIndex = 17;
+            this.gunaButton1.Text = "Save";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gunaElipsePanel2
+            // 
+            this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.gunaElipsePanel2.Controls.Add(this.gunaLabel9);
+            this.gunaElipsePanel2.Controls.Add(this.closebtn);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(-10, 25);
+            this.gunaElipsePanel2.Name = "gunaElipsePanel2";
+            this.gunaElipsePanel2.Radius = 10;
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(615, 56);
+            this.gunaElipsePanel2.TabIndex = 16;
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel9.Location = new System.Drawing.Point(258, 14);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(128, 33);
+            this.gunaLabel9.TabIndex = 0;
+            this.gunaLabel9.Text = "ADD ITEM";
+            // 
+            // closebtn
+            // 
+            this.closebtn.AnimationHoverSpeed = 0.07F;
+            this.closebtn.AnimationSpeed = 0.03F;
+            this.closebtn.BaseColor = System.Drawing.Color.Transparent;
+            this.closebtn.BorderColor = System.Drawing.Color.Black;
+            this.closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closebtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.closebtn.FocusedColor = System.Drawing.Color.Empty;
+            this.closebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.closebtn.ForeColor = System.Drawing.Color.White;
+            this.closebtn.Image = global::COA_IMS.Properties.Resources.circle_xmark__2_;
+            this.closebtn.ImageSize = new System.Drawing.Size(40, 40);
+            this.closebtn.Location = new System.Drawing.Point(538, 0);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.closebtn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.closebtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.closebtn.OnHoverImage = null;
+            this.closebtn.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.closebtn.Size = new System.Drawing.Size(62, 56);
+            this.closebtn.TabIndex = 15;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // gunaLabel8
             // 
@@ -285,78 +358,6 @@
             this.gunaTextBox1.SelectedText = "";
             this.gunaTextBox1.Size = new System.Drawing.Size(415, 178);
             this.gunaTextBox1.TabIndex = 0;
-            // 
-            // gunaElipsePanel2
-            // 
-            this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.gunaElipsePanel2.Controls.Add(this.gunaLabel9);
-            this.gunaElipsePanel2.Controls.Add(this.closebtn);
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(-10, 25);
-            this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Radius = 10;
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(615, 56);
-            this.gunaElipsePanel2.TabIndex = 16;
-            // 
-            // gunaLabel9
-            // 
-            this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel9.Location = new System.Drawing.Point(258, 14);
-            this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(128, 33);
-            this.gunaLabel9.TabIndex = 0;
-            this.gunaLabel9.Text = "ADD ITEM";
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.Brown;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(250, 641);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 10;
-            this.gunaButton1.Size = new System.Drawing.Size(126, 34);
-            this.gunaButton1.TabIndex = 17;
-            this.gunaButton1.Text = "Save";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // closebtn
-            // 
-            this.closebtn.AnimationHoverSpeed = 0.07F;
-            this.closebtn.AnimationSpeed = 0.03F;
-            this.closebtn.BaseColor = System.Drawing.Color.Transparent;
-            this.closebtn.BorderColor = System.Drawing.Color.Black;
-            this.closebtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.closebtn.FocusedColor = System.Drawing.Color.Empty;
-            this.closebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.closebtn.ForeColor = System.Drawing.Color.White;
-            this.closebtn.Image = global::COA_IMS.Properties.Resources.circle_xmark__2_;
-            this.closebtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.closebtn.Location = new System.Drawing.Point(567, -6);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.closebtn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.closebtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.closebtn.OnHoverImage = null;
-            this.closebtn.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.closebtn.Size = new System.Drawing.Size(45, 43);
-            this.closebtn.TabIndex = 15;
-            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // IMS_Product_Form
             // 

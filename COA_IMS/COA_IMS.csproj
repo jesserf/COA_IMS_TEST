@@ -320,6 +320,12 @@
     <Compile Include="Screens\Subscrn\ArchiveInventoryTable.Designer.cs">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\IMS_InventoryTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
+      <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\InventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -521,6 +527,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\ArchiveInventoryTable.resx">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
+      <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\InventoryTable.resx">
       <DependentUpon>InventoryTable.cs</DependentUpon>

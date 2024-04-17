@@ -35,7 +35,10 @@
             this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.reports_Button = new Guna.UI.WinForms.GunaButton();
+            this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
+            this.add_item = new Guna.UI.WinForms.GunaButton();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.main_Panel = new System.Windows.Forms.Panel();
@@ -44,9 +47,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
-            this.reports_Button = new Guna.UI.WinForms.GunaButton();
-            this.refresh_Button = new Guna.UI.WinForms.GunaButton();
-            this.add_item = new Guna.UI.WinForms.GunaButton();
             this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -130,7 +130,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.53465F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.46535F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
@@ -148,10 +148,64 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1430, 29);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1426, 29);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 43);
             this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // reports_Button
+            // 
+            this.reports_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.reports_Button.AnimationHoverSpeed = 0.07F;
+            this.reports_Button.AnimationSpeed = 0.03F;
+            this.reports_Button.BackColor = System.Drawing.Color.Transparent;
+            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.reports_Button.BorderColor = System.Drawing.Color.Black;
+            this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.reports_Button.FocusedColor = System.Drawing.Color.Empty;
+            this.reports_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
+            this.reports_Button.ForeColor = System.Drawing.Color.White;
+            this.reports_Button.Image = global::COA_IMS.Properties.Resources.business_report__1_;
+            this.reports_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.reports_Button.Location = new System.Drawing.Point(3, 3);
+            this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.reports_Button.Name = "reports_Button";
+            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
+            this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.reports_Button.OnHoverImage = null;
+            this.reports_Button.OnPressedColor = System.Drawing.Color.Black;
+            this.reports_Button.Radius = 12;
+            this.reports_Button.Size = new System.Drawing.Size(42, 35);
+            this.reports_Button.TabIndex = 4;
+            // 
+            // refresh_Button
+            // 
+            this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.refresh_Button.AnimationHoverSpeed = 0.07F;
+            this.refresh_Button.AnimationSpeed = 0.03F;
+            this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
+            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.refresh_Button.BorderColor = System.Drawing.Color.Black;
+            this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.refresh_Button.FocusedColor = System.Drawing.Color.Empty;
+            this.refresh_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
+            this.refresh_Button.ForeColor = System.Drawing.Color.White;
+            this.refresh_Button.Image = global::COA_IMS.Properties.Resources.refresh__1_;
+            this.refresh_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.refresh_Button.Location = new System.Drawing.Point(51, 3);
+            this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.refresh_Button.Name = "refresh_Button";
+            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
+            this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.refresh_Button.OnHoverImage = null;
+            this.refresh_Button.OnPressedColor = System.Drawing.Color.Black;
+            this.refresh_Button.Radius = 12;
+            this.refresh_Button.Size = new System.Drawing.Size(42, 35);
+            this.refresh_Button.TabIndex = 5;
             // 
             // sortComboBox
             // 
@@ -169,7 +223,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1200, 30);
+            this.sortComboBox.Location = new System.Drawing.Point(1196, 30);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
@@ -177,6 +231,34 @@
             this.sortComboBox.Radius = 12;
             this.sortComboBox.Size = new System.Drawing.Size(191, 35);
             this.sortComboBox.TabIndex = 2;
+            // 
+            // add_item
+            // 
+            this.add_item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.add_item.AnimationHoverSpeed = 0.07F;
+            this.add_item.AnimationSpeed = 0.03F;
+            this.add_item.BackColor = System.Drawing.Color.Transparent;
+            this.add_item.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.add_item.BorderColor = System.Drawing.Color.Black;
+            this.add_item.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.add_item.FocusedColor = System.Drawing.Color.Empty;
+            this.add_item.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_item.ForeColor = System.Drawing.Color.White;
+            this.add_item.Image = ((System.Drawing.Image)(resources.GetObject("add_item.Image")));
+            this.add_item.ImageSize = new System.Drawing.Size(20, 20);
+            this.add_item.Location = new System.Drawing.Point(558, 25);
+            this.add_item.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.add_item.Name = "add_item";
+            this.add_item.OnHoverBaseColor = System.Drawing.Color.White;
+            this.add_item.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.add_item.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.add_item.OnHoverImage = null;
+            this.add_item.OnPressedColor = System.Drawing.Color.Black;
+            this.add_item.Radius = 12;
+            this.add_item.Size = new System.Drawing.Size(191, 40);
+            this.add_item.TabIndex = 0;
+            this.add_item.Text = "Add Item";
+            this.add_item.Click += new System.EventHandler(this.add_item_Click);
             // 
             // pageCountTextbox
             // 
@@ -305,88 +387,6 @@
             this.next_Button.Size = new System.Drawing.Size(46, 42);
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
-            // 
-            // reports_Button
-            // 
-            this.reports_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.reports_Button.AnimationHoverSpeed = 0.07F;
-            this.reports_Button.AnimationSpeed = 0.03F;
-            this.reports_Button.BackColor = System.Drawing.Color.Transparent;
-            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.reports_Button.BorderColor = System.Drawing.Color.Black;
-            this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.reports_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.reports_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.reports_Button.ForeColor = System.Drawing.Color.White;
-            this.reports_Button.Image = global::COA_IMS.Properties.Resources.business_report__1_;
-            this.reports_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.reports_Button.Location = new System.Drawing.Point(3, 3);
-            this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.reports_Button.Name = "reports_Button";
-            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
-            this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.reports_Button.OnHoverImage = null;
-            this.reports_Button.OnPressedColor = System.Drawing.Color.Black;
-            this.reports_Button.Radius = 12;
-            this.reports_Button.Size = new System.Drawing.Size(42, 35);
-            this.reports_Button.TabIndex = 4;
-            // 
-            // refresh_Button
-            // 
-            this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.refresh_Button.AnimationHoverSpeed = 0.07F;
-            this.refresh_Button.AnimationSpeed = 0.03F;
-            this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
-            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.refresh_Button.BorderColor = System.Drawing.Color.Black;
-            this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.refresh_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.refresh_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.refresh_Button.ForeColor = System.Drawing.Color.White;
-            this.refresh_Button.Image = global::COA_IMS.Properties.Resources.refresh__1_;
-            this.refresh_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.refresh_Button.Location = new System.Drawing.Point(51, 3);
-            this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.refresh_Button.Name = "refresh_Button";
-            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
-            this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.refresh_Button.OnHoverImage = null;
-            this.refresh_Button.OnPressedColor = System.Drawing.Color.Black;
-            this.refresh_Button.Radius = 12;
-            this.refresh_Button.Size = new System.Drawing.Size(42, 35);
-            this.refresh_Button.TabIndex = 5;
-            // 
-            // add_item
-            // 
-            this.add_item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.add_item.AnimationHoverSpeed = 0.07F;
-            this.add_item.AnimationSpeed = 0.03F;
-            this.add_item.BackColor = System.Drawing.Color.Transparent;
-            this.add_item.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.add_item.BorderColor = System.Drawing.Color.Black;
-            this.add_item.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.add_item.FocusedColor = System.Drawing.Color.Empty;
-            this.add_item.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_item.ForeColor = System.Drawing.Color.White;
-            this.add_item.Image = ((System.Drawing.Image)(resources.GetObject("add_item.Image")));
-            this.add_item.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_item.Location = new System.Drawing.Point(560, 25);
-            this.add_item.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.add_item.Name = "add_item";
-            this.add_item.OnHoverBaseColor = System.Drawing.Color.White;
-            this.add_item.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.add_item.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.add_item.OnHoverImage = null;
-            this.add_item.OnPressedColor = System.Drawing.Color.Black;
-            this.add_item.Radius = 12;
-            this.add_item.Size = new System.Drawing.Size(191, 40);
-            this.add_item.TabIndex = 0;
-            this.add_item.Text = "Add Item";
-            this.add_item.Click += new System.EventHandler(this.add_item_Click);
             // 
             // searchBar1
             // 
