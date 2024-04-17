@@ -32,9 +32,9 @@
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.archived_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
             this.SuspendLayout();
@@ -75,20 +75,13 @@
             // 
             this.nav_panel.BackColor = System.Drawing.Color.White;
             this.nav_panel.Controls.Add(this.inventory_Table_Btn);
-            this.nav_panel.Controls.Add(this.gunaAdvenceButton1);
+            this.nav_panel.Controls.Add(this.archived_Table_Btn);
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
             this.nav_panel.Name = "nav_panel";
             this.nav_panel.Size = new System.Drawing.Size(1603, 55);
             this.nav_panel.TabIndex = 0;
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
             // 
             // inventory_Table_Btn
             // 
@@ -126,41 +119,48 @@
             this.inventory_Table_Btn.TextOffsetX = 5;
             this.inventory_Table_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            // gunaAdvenceButton1
+            // archived_Table_Btn
             // 
-            this.gunaAdvenceButton1.Animated = true;
-            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.CheckedImage = null;
-            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Bahnschrift", 14F);
-            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(223, 0);
-            this.gunaAdvenceButton1.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.OnHoverImage = null;
-            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(222, 55);
-            this.gunaAdvenceButton1.TabIndex = 5;
-            this.gunaAdvenceButton1.Text = "ARCHIVED TABLE";
-            this.gunaAdvenceButton1.TextOffsetX = 5;
-            this.gunaAdvenceButton1.Click += new System.EventHandler(this.button_Click);
+            this.archived_Table_Btn.Animated = true;
+            this.archived_Table_Btn.AnimationHoverSpeed = 0.07F;
+            this.archived_Table_Btn.AnimationSpeed = 0.03F;
+            this.archived_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.archived_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.archived_Table_Btn.BorderColor = System.Drawing.Color.Black;
+            this.archived_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.archived_Table_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.archived_Table_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.archived_Table_Btn.CheckedImage = null;
+            this.archived_Table_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.archived_Table_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.archived_Table_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.archived_Table_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.archived_Table_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.archived_Table_Btn.ForeColor = System.Drawing.Color.White;
+            this.archived_Table_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.archived_Table_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.archived_Table_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.archived_Table_Btn.Location = new System.Drawing.Point(223, 0);
+            this.archived_Table_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.archived_Table_Btn.Name = "archived_Table_Btn";
+            this.archived_Table_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.archived_Table_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.archived_Table_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.archived_Table_Btn.OnHoverImage = null;
+            this.archived_Table_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.archived_Table_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.archived_Table_Btn.Size = new System.Drawing.Size(222, 55);
+            this.archived_Table_Btn.TabIndex = 5;
+            this.archived_Table_Btn.Text = "ARCHIVED TABLE";
+            this.archived_Table_Btn.TextOffsetX = 5;
+            this.archived_Table_Btn.Click += new System.EventHandler(this.button_Click);
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // InventoryMain
             // 
@@ -186,6 +186,6 @@
         private System.Windows.Forms.FlowLayoutPanel nav_panel;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Guna.UI.WinForms.GunaAdvenceButton inventory_Table_Btn;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaAdvenceButton archived_Table_Btn;
     }
 }

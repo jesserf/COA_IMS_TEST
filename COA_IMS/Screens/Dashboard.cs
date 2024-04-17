@@ -40,7 +40,7 @@ namespace COA_IMS.Screens
             foreach (Control control in tab_panel.Controls)
                 tab_Manager.Nav_buttons.Add(control.Controls[0]);
 
-            login_manager.active_Account = "admin";
+            Login_Manager.active_Account = "admin";
             activity_manager.Log_Activity("admin", "Logged In");
 
             tab_Manager.Header_Title = headerTitle;

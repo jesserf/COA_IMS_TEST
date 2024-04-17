@@ -26,5 +26,15 @@ namespace COA_IMS.Screens.scrn
         {
 
         }
+
+        private void gunaLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

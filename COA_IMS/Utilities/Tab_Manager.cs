@@ -51,13 +51,14 @@ namespace COA_IMS.Utilities
             get { return Navigation_Buttons; }
             set { Navigation_Buttons = value; }
         }
-        public void active_Button(GunaButton button, bool has_Title = false)
+        public void active_Button(GunaButton button, bool has_Title = false, bool enable = true)
         {
             foreach (var buttons in Navigation_Buttons)
             {
                 if (buttons.Name.Equals(button.Name))
                 {
                     button.BackColor = Theme.Hex_To_RGB(selected_color);
+                    if(!enable) button.Enabled = false;
                     if (has_Title)
                         change_Title(button.Tag.ToString().ToUpper());
                 }
@@ -68,13 +69,14 @@ namespace COA_IMS.Utilities
             }
         }
 
-        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false)
+        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false, bool enable = true)
         {
             foreach (var buttons in Navigation_Buttons)
             {
                 if (buttons.Name.Equals(button.Name))
                 {
                     button.BackColor = Theme.Hex_To_RGB(selected_color);
+                    if (!enable) button.Enabled = false;
                     if (has_Title)
                         change_Title(button.Tag.ToString().ToUpper());
                 }

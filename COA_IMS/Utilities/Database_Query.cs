@@ -220,9 +220,13 @@ namespace COA_IMS
                                                                 "agency_table.cluster_code = '{2}', agency_table.updated_by = '{3}',\r" +
                                                                 "agency_table.updated_date = CURRENT_TIMESTAMP()\r" +
                                                                 "WHERE agency_table.code = '{4}' and agency_table.status = 1";
-        
-        
-        
+
+
+
+        #endregion
+
+        #region Insert Item to Table
+        public static readonly string insert_item_info = "INSE emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
         #endregion
     }
 }
