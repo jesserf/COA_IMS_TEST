@@ -29,27 +29,32 @@
         private void InitializeComponent()
         {
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Homebtn = new Guna.UI.WinForms.GunaButton();
-            this.Dashboard2btn = new Guna.UI.WinForms.GunaButton();
+            this.Inventorybtn = new Guna.UI.WinForms.GunaButton();
             this.Reportsbtn = new Guna.UI.WinForms.GunaButton();
             this.Settingsbtn = new Guna.UI.WinForms.GunaButton();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.title_Label = new Guna.UI.WinForms.GunaLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.user_Name = new Guna.UI.WinForms.GunaLabel();
             this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
-            this.Main = new Guna.UI.WinForms.GunaElipsePanel();
+            this.main_Panel = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.tabPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.gunaElipsePanel2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipsePanel1
             // 
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel1.Controls.Add(this.flowLayoutPanel1);
+            this.gunaElipsePanel1.Controls.Add(this.tabPanel);
             this.gunaElipsePanel1.Controls.Add(this.gunaCirclePictureBox1);
             this.gunaElipsePanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 0);
@@ -57,23 +62,25 @@
             this.gunaElipsePanel1.Size = new System.Drawing.Size(285, 1041);
             this.gunaElipsePanel1.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // tabPanel
             // 
-            this.flowLayoutPanel1.Controls.Add(this.Homebtn);
-            this.flowLayoutPanel1.Controls.Add(this.Dashboard2btn);
-            this.flowLayoutPanel1.Controls.Add(this.Reportsbtn);
-            this.flowLayoutPanel1.Controls.Add(this.Settingsbtn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 231);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(285, 198);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.tabPanel.Controls.Add(this.Homebtn);
+            this.tabPanel.Controls.Add(this.Inventorybtn);
+            this.tabPanel.Controls.Add(this.Reportsbtn);
+            this.tabPanel.Controls.Add(this.Settingsbtn);
+            this.tabPanel.Location = new System.Drawing.Point(0, 231);
+            this.tabPanel.Name = "tabPanel";
+            this.tabPanel.Size = new System.Drawing.Size(285, 198);
+            this.tabPanel.TabIndex = 5;
             // 
             // Homebtn
             // 
             this.Homebtn.AnimationHoverSpeed = 0.07F;
             this.Homebtn.AnimationSpeed = 0.03F;
-            this.Homebtn.BaseColor = System.Drawing.Color.White;
+            this.Homebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Homebtn.BaseColor = System.Drawing.Color.Transparent;
             this.Homebtn.BorderColor = System.Drawing.Color.Black;
+            this.Homebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Homebtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Homebtn.FocusedColor = System.Drawing.Color.Empty;
             this.Homebtn.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,42 +97,44 @@
             this.Homebtn.OnPressedColor = System.Drawing.Color.Black;
             this.Homebtn.Size = new System.Drawing.Size(285, 42);
             this.Homebtn.TabIndex = 0;
+            this.Homebtn.Tag = "Home";
             this.Homebtn.Text = "Home";
-            this.Homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Homebtn.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
+            this.Homebtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
-            // Dashboard2btn
+            // Inventorybtn
             // 
-            this.Dashboard2btn.AnimationHoverSpeed = 0.07F;
-            this.Dashboard2btn.AnimationSpeed = 0.03F;
-            this.Dashboard2btn.BaseColor = System.Drawing.Color.White;
-            this.Dashboard2btn.BorderColor = System.Drawing.Color.Black;
-            this.Dashboard2btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Dashboard2btn.FocusedColor = System.Drawing.Color.Empty;
-            this.Dashboard2btn.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard2btn.ForeColor = System.Drawing.Color.Black;
-            this.Dashboard2btn.Image = global::COA_IMS.Properties.Resources.shipping__1_;
-            this.Dashboard2btn.ImageOffsetX = 50;
-            this.Dashboard2btn.ImageSize = new System.Drawing.Size(25, 25);
-            this.Dashboard2btn.Location = new System.Drawing.Point(3, 51);
-            this.Dashboard2btn.Name = "Dashboard2btn";
-            this.Dashboard2btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.Dashboard2btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.Dashboard2btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.Dashboard2btn.OnHoverImage = null;
-            this.Dashboard2btn.OnPressedColor = System.Drawing.Color.Black;
-            this.Dashboard2btn.Size = new System.Drawing.Size(282, 42);
-            this.Dashboard2btn.TabIndex = 6;
-            this.Dashboard2btn.Text = "       Inventory";
-            this.Dashboard2btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Dashboard2btn.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
+            this.Inventorybtn.AnimationHoverSpeed = 0.07F;
+            this.Inventorybtn.AnimationSpeed = 0.03F;
+            this.Inventorybtn.BaseColor = System.Drawing.Color.Transparent;
+            this.Inventorybtn.BorderColor = System.Drawing.Color.Black;
+            this.Inventorybtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Inventorybtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Inventorybtn.FocusedColor = System.Drawing.Color.Empty;
+            this.Inventorybtn.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventorybtn.ForeColor = System.Drawing.Color.Black;
+            this.Inventorybtn.Image = global::COA_IMS.Properties.Resources.shipping__1_;
+            this.Inventorybtn.ImageOffsetX = 50;
+            this.Inventorybtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Inventorybtn.Location = new System.Drawing.Point(3, 51);
+            this.Inventorybtn.Name = "Inventorybtn";
+            this.Inventorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.Inventorybtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.Inventorybtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.Inventorybtn.OnHoverImage = null;
+            this.Inventorybtn.OnPressedColor = System.Drawing.Color.Black;
+            this.Inventorybtn.Size = new System.Drawing.Size(282, 42);
+            this.Inventorybtn.TabIndex = 6;
+            this.Inventorybtn.Tag = "Inventory";
+            this.Inventorybtn.Text = "Inventory";
+            this.Inventorybtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // Reportsbtn
             // 
             this.Reportsbtn.AnimationHoverSpeed = 0.07F;
             this.Reportsbtn.AnimationSpeed = 0.03F;
-            this.Reportsbtn.BaseColor = System.Drawing.Color.White;
+            this.Reportsbtn.BaseColor = System.Drawing.Color.Transparent;
             this.Reportsbtn.BorderColor = System.Drawing.Color.Black;
+            this.Reportsbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reportsbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Reportsbtn.FocusedColor = System.Drawing.Color.Empty;
             this.Reportsbtn.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,15 +151,17 @@
             this.Reportsbtn.OnPressedColor = System.Drawing.Color.Black;
             this.Reportsbtn.Size = new System.Drawing.Size(282, 42);
             this.Reportsbtn.TabIndex = 6;
-            this.Reportsbtn.Text = "    Reports";
-            this.Reportsbtn.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
+            this.Reportsbtn.Tag = "Reports";
+            this.Reportsbtn.Text = "Reports";
+            this.Reportsbtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // Settingsbtn
             // 
             this.Settingsbtn.AnimationHoverSpeed = 0.07F;
             this.Settingsbtn.AnimationSpeed = 0.03F;
-            this.Settingsbtn.BaseColor = System.Drawing.Color.White;
+            this.Settingsbtn.BaseColor = System.Drawing.Color.Transparent;
             this.Settingsbtn.BorderColor = System.Drawing.Color.Black;
+            this.Settingsbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settingsbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Settingsbtn.FocusedColor = System.Drawing.Color.Empty;
             this.Settingsbtn.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,9 +178,9 @@
             this.Settingsbtn.OnPressedColor = System.Drawing.Color.Black;
             this.Settingsbtn.Size = new System.Drawing.Size(282, 42);
             this.Settingsbtn.TabIndex = 7;
-            this.Settingsbtn.Text = "    Settings";
-            this.Settingsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Settingsbtn.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
+            this.Settingsbtn.Tag = "Settings";
+            this.Settingsbtn.Text = "Settings";
+            this.Settingsbtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // gunaCirclePictureBox1
             // 
@@ -187,65 +198,116 @@
             // 
             this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel2.Controls.Add(this.gunaLabel1);
-            this.gunaElipsePanel2.Controls.Add(this.gunaImageButton1);
+            this.gunaElipsePanel2.Controls.Add(this.tableLayoutPanel2);
             this.gunaElipsePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaElipsePanel2.Location = new System.Drawing.Point(285, 0);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
             this.gunaElipsePanel2.Size = new System.Drawing.Size(1619, 76);
             this.gunaElipsePanel2.TabIndex = 1;
             // 
-            // gunaLabel1
+            // tableLayoutPanel2
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(1390, 28);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(176, 25);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Cherie Urie Rejoy";
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.title_Label, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1619, 76);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // title_Label
+            // 
+            this.title_Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.title_Label.AutoSize = true;
+            this.title_Label.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.title_Label.Location = new System.Drawing.Point(3, 33);
+            this.title_Label.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.title_Label.Name = "title_Label";
+            this.title_Label.Size = new System.Drawing.Size(479, 33);
+            this.title_Label.TabIndex = 3;
+            this.title_Label.Text = "Cherie Urie Rejoy";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.75F));
+            this.tableLayoutPanel1.Controls.Add(this.user_Name, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gunaImageButton1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1216, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 70);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // user_Name
+            // 
+            this.user_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.user_Name.AutoSize = true;
+            this.user_Name.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.user_Name.Location = new System.Drawing.Point(158, 35);
+            this.user_Name.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.user_Name.Name = "user_Name";
+            this.user_Name.Size = new System.Drawing.Size(176, 25);
+            this.user_Name.TabIndex = 0;
+            this.user_Name.Text = "Cherie Urie Rejoy";
             // 
             // gunaImageButton1
             // 
+            this.gunaImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.arrow_down_sign_to_navigate;
             this.gunaImageButton1.ImageSize = new System.Drawing.Size(15, 15);
-            this.gunaImageButton1.Location = new System.Drawing.Point(1561, 14);
+            this.gunaImageButton1.Location = new System.Drawing.Point(342, 16);
             this.gunaImageButton1.Name = "gunaImageButton1";
             this.gunaImageButton1.OnHoverImage = null;
             this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(55, 58);
+            this.gunaImageButton1.Size = new System.Drawing.Size(55, 51);
             this.gunaImageButton1.TabIndex = 0;
             // 
-            // Main
+            // main_Panel
             // 
-            this.Main.BackColor = System.Drawing.Color.Transparent;
-            this.Main.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main.Location = new System.Drawing.Point(285, 76);
-            this.Main.Name = "Main";
-            this.Main.Radius = 5;
-            this.Main.Size = new System.Drawing.Size(1619, 965);
-            this.Main.TabIndex = 2;
-            this.Main.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Paint);
+            this.main_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.main_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.main_Panel.Location = new System.Drawing.Point(285, 76);
+            this.main_Panel.Name = "main_Panel";
+            this.main_Panel.Radius = 5;
+            this.main_Panel.Size = new System.Drawing.Size(1619, 965);
+            this.main_Panel.TabIndex = 2;
             // 
             // Dashboard2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.Main);
+            this.Controls.Add(this.main_Panel);
             this.Controls.Add(this.gunaElipsePanel2);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Name = "Dashboard2";
             this.Text = "Dasboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Dashboard2_Load);
             this.gunaElipsePanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.tabPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.gunaElipsePanel2.ResumeLayout(false);
-            this.gunaElipsePanel2.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,14 +316,17 @@
 
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel2;
-        private Guna.UI.WinForms.GunaElipsePanel Main;
+        private Guna.UI.WinForms.GunaElipsePanel main_Panel;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel user_Name;
         private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
         private Guna.UI.WinForms.GunaButton Homebtn;
-        private Guna.UI.WinForms.GunaButton Dashboard2btn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI.WinForms.GunaButton Inventorybtn;
+        private System.Windows.Forms.FlowLayoutPanel tabPanel;
         private Guna.UI.WinForms.GunaButton Settingsbtn;
         private Guna.UI.WinForms.GunaButton Reportsbtn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Guna.UI.WinForms.GunaLabel title_Label;
     }
 }
