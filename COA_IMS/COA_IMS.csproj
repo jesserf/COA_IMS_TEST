@@ -656,6 +656,9 @@
     <None Include="Resources\error.png" />
     <None Include="Resources\error1.png" />
     <None Include="Resources\Dashboard %282%29.png" />
+    <None Include="Resources\circle-xmark %281%29.png" />
+    <None Include="Resources\circle-xmark %281%291.png" />
+    <None Include="Resources\circle-xmark %282%29.png" />
     <Content Include="Resources\dsahboard_img.png" />
     <Content Include="Resources\expand - Copy.png" />
     <Content Include="Resources\expand.png" />

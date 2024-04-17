@@ -255,7 +255,7 @@
             this.user_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.user_Name.AutoSize = true;
             this.user_Name.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.user_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.user_Name.Location = new System.Drawing.Point(158, 35);
             this.user_Name.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.user_Name.Name = "user_Name";
@@ -280,7 +280,7 @@
             // main_Panel
             // 
             this.main_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.main_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.main_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_Panel.Location = new System.Drawing.Point(285, 76);
             this.main_Panel.Name = "main_Panel";

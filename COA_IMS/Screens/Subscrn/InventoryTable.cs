@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COA_IMS.Screens.scrn;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace COA_IMS.Screens.Subscrn
         public InventoryTable()
         {
             InitializeComponent();
+        }
+        private void add_item_Click(object sender, EventArgs e)
+        {
+            IMS_Product_Form prodform = new IMS_Product_Form();
+            prodform.ShowDialog();
         }
     }
 }

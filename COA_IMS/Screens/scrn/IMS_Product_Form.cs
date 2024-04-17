@@ -16,5 +16,15 @@ namespace COA_IMS.Screens.scrn
         {
             InitializeComponent();
         }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void gunaTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

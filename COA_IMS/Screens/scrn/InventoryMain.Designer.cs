@@ -32,9 +32,9 @@
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // line_Panel
             // 
-            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
+            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.line_Panel.Location = new System.Drawing.Point(0, 55);
             this.line_Panel.Name = "line_Panel";
@@ -73,7 +73,7 @@
             // 
             // nav_panel
             // 
-            this.nav_panel.BackColor = System.Drawing.Color.Transparent;
+            this.nav_panel.BackColor = System.Drawing.Color.White;
             this.nav_panel.Controls.Add(this.inventory_Table_Btn);
             this.nav_panel.Controls.Add(this.gunaAdvenceButton1);
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -83,12 +83,19 @@
             this.nav_panel.Size = new System.Drawing.Size(1603, 55);
             this.nav_panel.TabIndex = 0;
             // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
             // inventory_Table_Btn
             // 
             this.inventory_Table_Btn.Animated = true;
             this.inventory_Table_Btn.AnimationHoverSpeed = 0.07F;
             this.inventory_Table_Btn.AnimationSpeed = 0.03F;
-            this.inventory_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(200)))), ((int)(((byte)(204)))));
+            this.inventory_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.inventory_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
             this.inventory_Table_Btn.BorderColor = System.Drawing.Color.Black;
             this.inventory_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -124,7 +131,7 @@
             this.gunaAdvenceButton1.Animated = true;
             this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
             this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(200)))), ((int)(((byte)(204)))));
+            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -154,13 +161,6 @@
             this.gunaAdvenceButton1.Text = "ARCHIVED TABLE";
             this.gunaAdvenceButton1.TextOffsetX = 5;
             this.gunaAdvenceButton1.Click += new System.EventHandler(this.button_Click);
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
             // 
             // InventoryMain
             // 
