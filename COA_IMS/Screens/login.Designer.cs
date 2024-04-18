@@ -144,6 +144,8 @@
             // 
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.Image = global::COA_IMS.Properties.Resources.user;
+            this.gunaPictureBox1.InitialImage = null;
             this.gunaPictureBox1.Location = new System.Drawing.Point(11, 8);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -208,6 +210,7 @@
             // gunaPictureBox2
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = global::COA_IMS.Properties.Resources.password_lock;
             this.gunaPictureBox2.Location = new System.Drawing.Point(12, 8);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(40, 40);

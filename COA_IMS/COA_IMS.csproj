@@ -388,6 +388,8 @@
       <DependentUpon>Selector.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Activity_Manager.cs" />
+    <Compile Include="Utilities\Inventory_Manager.cs" />
+    <Compile Include="Utilities\RandomAlphanumericString.cs" />
     <Compile Include="Utilities\Tab_Manager.cs" />
     <Compile Include="Utilities\Theme.cs" />
     <Compile Include="Utilities\Database_Manager.cs" />
@@ -677,6 +679,7 @@
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
     <Content Include="Resources\Menu Bar Icon1.png" />
     <None Include="Resources\newspaper %281%29.png" />
+    <Content Include="Resources\password_lock.png" />
     <Content Include="Resources\refresh %281%29 - Copy.png" />
     <Content Include="Resources\refresh %281%29.png" />
     <None Include="Resources\route.png" />
@@ -695,6 +698,7 @@
     <Content Include="Resources\trash-bin.png" />
     <Content Include="Resources\trash-bin1.png" />
     <None Include="Resources\user-helmet-safety.png" />
+    <Content Include="Resources\user.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />

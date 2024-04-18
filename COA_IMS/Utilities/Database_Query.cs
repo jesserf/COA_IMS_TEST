@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace COA_IMS
 {
@@ -226,7 +227,41 @@ namespace COA_IMS
         #endregion
 
         #region Insert Item to Table
-        public static readonly string insert_item_info = "INSE emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
+        public static readonly string check_existing_item_desc_id = "SELECT COUNT(*) FROM item_desc_table WHERE item_desc_id = \'{0}\';";
+
+        #region Item Brands
+        public static readonly string insert_item_brand = "INSERT INTO item_brand_table (item_brand)\r" +
+                                                            "\nSELECT * FROM (SELECT '{0}' AS item_brand) AS tmp\r" +
+                                                            "\nWHERE NOT EXISTS (\r" +
+                                                            "\n    SELECT item_brand FROM item_brand_table WHERE item_brand = '{0}'\r" +
+                                                            "\n) LIMIT 1;";
+
+        public static readonly string select_item_brands = "SELECT item_brand FROM item_brand_table;";
+        public static readonly string specific_select_item_brands_id = "SELECT item_brand_id FROM item_brand_table WHERE item_brand = '{0}';";
+        #endregion
+        #region Item Types
+        public static readonly string insert_item_type = "INSERT INTO item_type_table (item_type)\r" +
+                                                            "\nSELECT * FROM (SELECT '{0}' AS item_type) AS tmp\r" +
+                                                            "\nWHERE NOT EXISTS (\r" +
+                                                            "\n    SELECT item_type FROM item_type_table WHERE item_type = '{0}'\r" +
+                                                            "\n) LIMIT 1;";
+
+        public static readonly string select_item_types = "SELECT item_type FROM item_type_table;";
+        public static readonly string specific_select_item_types_id = "SELECT item_type_id FROM item_type_table WHERE item_type = '{0}';";
+        #endregion
+        #region Item Units
+        public static readonly string insert_item_units = "INSERT INTO item_unit_table (unit)\r" +
+                                                            "\nSELECT * FROM (SELECT '{0}' AS unit) AS tmp\r" +
+                                                            "\nWHERE NOT EXISTS (\r" +
+                                                            "\n    SELECT unit FROM item_unit_table WHERE unit = '{0}';\r" +
+                                                            "\n) LIMIT 1;";
+        public static readonly string select_item_units = "SELECT unit FROM item_unit_table;";
+        public static readonly string specific_select_item_units_id = "SELECT unit_id FROM item_unit_table WHERE unit = '{0}';";
+        #endregion
+
+
+
+        public static readonly string insert_new_item = "INSE emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
         #endregion
     }
 }

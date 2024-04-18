@@ -49,6 +49,31 @@ namespace COA_IMS.Utilities
 
             return dataTable;
         }
+        #region IMS ExecuteQuery
+        public List<string> ExecuteQueryToList(string query)
+        {
+            var dbCon = DBConnection.Instance();
+            List<string> list_of_items = new List<string>();
+
+            using (MySqlCommand command = new MySqlCommand(query, dbCon.Connection))
+            {
+                try
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                            list_of_items.Add(Convert.ToString(reader["item_brand"]));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error executing query: {query}\n{ex.Message}");
+                }
+            }
+            return list_of_items;
+        }
+        #endregion
+
 
         public void ExecuteQueryReportViewerDataSource(string query, ReportViewer reportViewer = null)
         {

@@ -27,6 +27,7 @@ namespace COA_IMS
             login_manager = new Login_Manager();
             activity_manager = new Activity_Manager();
             database_manager = new Database_Manager();
+            ActiveControl = username_entry;
         }
 
         private void login_Load(object sender, EventArgs e)

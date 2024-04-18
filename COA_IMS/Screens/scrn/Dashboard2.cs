@@ -51,7 +51,7 @@ namespace COA_IMS.Screens.scrn
 
             tab_Manager.Header_Title = title_Label;
             tab_Manager.active_Button(Homebtn, true);
-            Homebtn.PerformClick();
+            Inventorybtn.PerformClick();
         }
         private void tab_Button_Click(object sender, EventArgs e)
         {
