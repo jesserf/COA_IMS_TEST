@@ -22,6 +22,8 @@ namespace COA_IMS.Screens.scrn
 
         private readonly InventoryTable inventory_Table = new InventoryTable();
         private readonly ArchiveInventoryTable archive_Table = new ArchiveInventoryTable();
+        private readonly CategoryTab category_tab = new CategoryTab();
+        private readonly IMS_SuplierTable ims_supliertable = new IMS_SuplierTable();
         public InventoryMain()
         {
             InitializeComponent();
@@ -40,6 +42,13 @@ namespace COA_IMS.Screens.scrn
                     current_Form = tab_Manager.switch_Form(archive_Table, current_Form, container_Panel);
                     break;
 
+                case "categorybtn":
+                    current_Form = tab_Manager.switch_Form(category_tab, current_Form, container_Panel);
+                    break;
+
+                case "Supplierbtn":
+                    current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, container_Panel);
+                    break;
             }
             tab_Manager.active_AdvButton(button, false);
         }
@@ -56,6 +65,11 @@ namespace COA_IMS.Screens.scrn
             tab_Manager.active_AdvButton(inventory_Table_Btn, false);
 
             inventory_Table_Btn.PerformClick();
+        }
+
+        private void container_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -67,7 +67,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.LogsTable.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.LogsTable.BackgroundColor = System.Drawing.Color.Yellow;
             this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -107,7 +107,7 @@
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.Yellow;
             this.LogsTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.LogsTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.LogsTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -130,7 +130,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.53465F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.46535F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
@@ -148,7 +148,7 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1426, 29);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1416, 29);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 43);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -223,7 +223,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1196, 30);
+            this.sortComboBox.Location = new System.Drawing.Point(1186, 30);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
@@ -246,7 +246,7 @@
             this.add_item.ForeColor = System.Drawing.Color.White;
             this.add_item.Image = ((System.Drawing.Image)(resources.GetObject("add_item.Image")));
             this.add_item.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_item.Location = new System.Drawing.Point(558, 25);
+            this.add_item.Location = new System.Drawing.Point(553, 25);
             this.add_item.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.add_item.Name = "add_item";
             this.add_item.OnHoverBaseColor = System.Drawing.Color.White;
@@ -393,7 +393,7 @@
             this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.searchBar1.Location = new System.Drawing.Point(3, 29);
             this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(549, 43);
+            this.searchBar1.Size = new System.Drawing.Size(544, 43);
             this.searchBar1.TabIndex = 3;
             // 
             // InventoryTable

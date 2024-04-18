@@ -1,6 +1,6 @@
-﻿namespace COA_IMS.Screens.scrn
+﻿namespace COA_IMS.Screens.Subscrn
 {
-    partial class Homepage
+    partial class IMS_SuplierTable
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Main_panel = new Guna.UI.WinForms.GunaElipsePanel();
             this.SuspendLayout();
             // 
-            // Main_panel
-            // 
-            this.Main_panel.BackColor = System.Drawing.Color.Transparent;
-            this.Main_panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
-            this.Main_panel.Location = new System.Drawing.Point(0, 1);
-            this.Main_panel.Name = "Main_panel";
-            this.Main_panel.Radius = 1;
-            this.Main_panel.Size = new System.Drawing.Size(1619, 965);
-            this.Main_panel.TabIndex = 0;
-            // 
-            // Homepage
+            // IMS_SuplierTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1619, 965);
-            this.Controls.Add(this.Main_panel);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1487, 926);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Homepage";
-            this.Text = "Home";
+            this.Name = "IMS_SuplierTable";
+            this.Text = "IMS_SuplierTable";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaElipsePanel Main_panel;
     }
 }

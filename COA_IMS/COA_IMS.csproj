@@ -320,17 +320,41 @@
     <Compile Include="Screens\Subscrn\ArchiveInventoryTable.Designer.cs">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\CategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\CategoryTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
+      <DependentUpon>CategoryTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\IMS_SuplierTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\IMS_SuplierTable.Designer.cs">
+      <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\InventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Subscrn\InventoryTable.Designer.cs">
       <DependentUpon>InventoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserMaintenancetab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserMaintenancetab.Designer.cs">
+      <DependentUpon>UserMaintenancetab.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserControlUtil\Cherie UI\Datagrid.cs">
@@ -528,11 +552,23 @@
     <EmbeddedResource Include="Screens\Subscrn\ArchiveInventoryTable.resx">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
+      <DependentUpon>CategoryTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\IMS_SuplierTable.resx">
+      <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\InventoryTable.resx">
       <DependentUpon>InventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserMaintenancetab.resx">
+      <DependentUpon>UserMaintenancetab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StatReportUserControl.resx">
       <DependentUpon>StatReportUserControl.cs</DependentUpon>
@@ -686,6 +722,7 @@
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
     <Content Include="Resources\Menu Bar Icon1.png" />
     <None Include="Resources\newspaper %281%29.png" />
+    <None Include="Resources\multiple1.png" />
     <Content Include="Resources\refresh %281%29 - Copy.png" />
     <Content Include="Resources\refresh %281%29.png" />
     <None Include="Resources\route.png" />
@@ -704,6 +741,7 @@
     <Content Include="Resources\trash-bin.png" />
     <Content Include="Resources\trash-bin1.png" />
     <None Include="Resources\user-helmet-safety.png" />
+    <None Include="Resources\users %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />

@@ -33,6 +33,7 @@
             this.Homebtn = new Guna.UI.WinForms.GunaButton();
             this.Inventorybtn = new Guna.UI.WinForms.GunaButton();
             this.Reportsbtn = new Guna.UI.WinForms.GunaButton();
+            this.UserMaintenance = new Guna.UI.WinForms.GunaButton();
             this.Settingsbtn = new Guna.UI.WinForms.GunaButton();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
@@ -64,13 +65,15 @@
             // 
             // tabPanel
             // 
+            this.tabPanel.BackColor = System.Drawing.Color.White;
             this.tabPanel.Controls.Add(this.Homebtn);
             this.tabPanel.Controls.Add(this.Inventorybtn);
             this.tabPanel.Controls.Add(this.Reportsbtn);
+            this.tabPanel.Controls.Add(this.UserMaintenance);
             this.tabPanel.Controls.Add(this.Settingsbtn);
             this.tabPanel.Location = new System.Drawing.Point(0, 231);
             this.tabPanel.Name = "tabPanel";
-            this.tabPanel.Size = new System.Drawing.Size(285, 198);
+            this.tabPanel.Size = new System.Drawing.Size(285, 254);
             this.tabPanel.TabIndex = 5;
             // 
             // Homebtn
@@ -78,7 +81,7 @@
             this.Homebtn.AnimationHoverSpeed = 0.07F;
             this.Homebtn.AnimationSpeed = 0.03F;
             this.Homebtn.BackColor = System.Drawing.Color.Transparent;
-            this.Homebtn.BaseColor = System.Drawing.Color.Transparent;
+            this.Homebtn.BaseColor = System.Drawing.Color.White;
             this.Homebtn.BorderColor = System.Drawing.Color.Black;
             this.Homebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Homebtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -87,7 +90,7 @@
             this.Homebtn.ForeColor = System.Drawing.Color.Black;
             this.Homebtn.Image = global::COA_IMS.Properties.Resources.home__8_;
             this.Homebtn.ImageOffsetX = 50;
-            this.Homebtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Homebtn.ImageSize = new System.Drawing.Size(20, 20);
             this.Homebtn.Location = new System.Drawing.Point(3, 3);
             this.Homebtn.Name = "Homebtn";
             this.Homebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -98,14 +101,14 @@
             this.Homebtn.Size = new System.Drawing.Size(285, 42);
             this.Homebtn.TabIndex = 0;
             this.Homebtn.Tag = "Home";
-            this.Homebtn.Text = "Home";
+            this.Homebtn.Text = "  Home";
             this.Homebtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // Inventorybtn
             // 
             this.Inventorybtn.AnimationHoverSpeed = 0.07F;
             this.Inventorybtn.AnimationSpeed = 0.03F;
-            this.Inventorybtn.BaseColor = System.Drawing.Color.Transparent;
+            this.Inventorybtn.BaseColor = System.Drawing.Color.White;
             this.Inventorybtn.BorderColor = System.Drawing.Color.Black;
             this.Inventorybtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Inventorybtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -114,7 +117,7 @@
             this.Inventorybtn.ForeColor = System.Drawing.Color.Black;
             this.Inventorybtn.Image = global::COA_IMS.Properties.Resources.shipping__1_;
             this.Inventorybtn.ImageOffsetX = 50;
-            this.Inventorybtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Inventorybtn.ImageSize = new System.Drawing.Size(20, 20);
             this.Inventorybtn.Location = new System.Drawing.Point(3, 51);
             this.Inventorybtn.Name = "Inventorybtn";
             this.Inventorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -125,14 +128,14 @@
             this.Inventorybtn.Size = new System.Drawing.Size(282, 42);
             this.Inventorybtn.TabIndex = 6;
             this.Inventorybtn.Tag = "Inventory";
-            this.Inventorybtn.Text = "Inventory";
+            this.Inventorybtn.Text = "  Inventory";
             this.Inventorybtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // Reportsbtn
             // 
             this.Reportsbtn.AnimationHoverSpeed = 0.07F;
             this.Reportsbtn.AnimationSpeed = 0.03F;
-            this.Reportsbtn.BaseColor = System.Drawing.Color.Transparent;
+            this.Reportsbtn.BaseColor = System.Drawing.Color.White;
             this.Reportsbtn.BorderColor = System.Drawing.Color.Black;
             this.Reportsbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reportsbtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -141,7 +144,7 @@
             this.Reportsbtn.ForeColor = System.Drawing.Color.Black;
             this.Reportsbtn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
             this.Reportsbtn.ImageOffsetX = 50;
-            this.Reportsbtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Reportsbtn.ImageSize = new System.Drawing.Size(20, 20);
             this.Reportsbtn.Location = new System.Drawing.Point(3, 99);
             this.Reportsbtn.Name = "Reportsbtn";
             this.Reportsbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -152,14 +155,41 @@
             this.Reportsbtn.Size = new System.Drawing.Size(282, 42);
             this.Reportsbtn.TabIndex = 6;
             this.Reportsbtn.Tag = "Reports";
-            this.Reportsbtn.Text = "Reports";
+            this.Reportsbtn.Text = "  Reports";
             this.Reportsbtn.Click += new System.EventHandler(this.tab_Button_Click);
+            // 
+            // UserMaintenance
+            // 
+            this.UserMaintenance.AnimationHoverSpeed = 0.07F;
+            this.UserMaintenance.AnimationSpeed = 0.03F;
+            this.UserMaintenance.BaseColor = System.Drawing.Color.White;
+            this.UserMaintenance.BorderColor = System.Drawing.Color.Black;
+            this.UserMaintenance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserMaintenance.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.UserMaintenance.FocusedColor = System.Drawing.Color.Empty;
+            this.UserMaintenance.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserMaintenance.ForeColor = System.Drawing.Color.Black;
+            this.UserMaintenance.Image = global::COA_IMS.Properties.Resources.users__1_;
+            this.UserMaintenance.ImageOffsetX = 45;
+            this.UserMaintenance.ImageSize = new System.Drawing.Size(20, 20);
+            this.UserMaintenance.Location = new System.Drawing.Point(3, 147);
+            this.UserMaintenance.Name = "UserMaintenance";
+            this.UserMaintenance.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.UserMaintenance.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.UserMaintenance.OnHoverForeColor = System.Drawing.Color.White;
+            this.UserMaintenance.OnHoverImage = null;
+            this.UserMaintenance.OnPressedColor = System.Drawing.Color.Black;
+            this.UserMaintenance.Size = new System.Drawing.Size(282, 42);
+            this.UserMaintenance.TabIndex = 8;
+            this.UserMaintenance.Tag = "Settings";
+            this.UserMaintenance.Text = "   User Maintenance";
+            this.UserMaintenance.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // Settingsbtn
             // 
             this.Settingsbtn.AnimationHoverSpeed = 0.07F;
             this.Settingsbtn.AnimationSpeed = 0.03F;
-            this.Settingsbtn.BaseColor = System.Drawing.Color.Transparent;
+            this.Settingsbtn.BaseColor = System.Drawing.Color.White;
             this.Settingsbtn.BorderColor = System.Drawing.Color.Black;
             this.Settingsbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settingsbtn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -168,8 +198,8 @@
             this.Settingsbtn.ForeColor = System.Drawing.Color.Black;
             this.Settingsbtn.Image = global::COA_IMS.Properties.Resources.settings__2_;
             this.Settingsbtn.ImageOffsetX = 45;
-            this.Settingsbtn.ImageSize = new System.Drawing.Size(35, 35);
-            this.Settingsbtn.Location = new System.Drawing.Point(3, 147);
+            this.Settingsbtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.Settingsbtn.Location = new System.Drawing.Point(3, 195);
             this.Settingsbtn.Name = "Settingsbtn";
             this.Settingsbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Settingsbtn.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -179,7 +209,7 @@
             this.Settingsbtn.Size = new System.Drawing.Size(282, 42);
             this.Settingsbtn.TabIndex = 7;
             this.Settingsbtn.Tag = "Settings";
-            this.Settingsbtn.Text = "Settings";
+            this.Settingsbtn.Text = "   Settings";
             this.Settingsbtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
             // gunaCirclePictureBox1
@@ -279,7 +309,7 @@
             // 
             // main_Panel
             // 
-            this.main_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.main_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_Panel.Location = new System.Drawing.Point(285, 76);
@@ -287,11 +317,13 @@
             this.main_Panel.Radius = 5;
             this.main_Panel.Size = new System.Drawing.Size(1619, 965);
             this.main_Panel.TabIndex = 2;
+            this.main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.main_Panel_Paint);
             // 
             // Dashboard2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.main_Panel);
             this.Controls.Add(this.gunaElipsePanel2);
@@ -328,5 +360,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI.WinForms.GunaLabel title_Label;
+        private Guna.UI.WinForms.GunaButton UserMaintenance;
     }
 }

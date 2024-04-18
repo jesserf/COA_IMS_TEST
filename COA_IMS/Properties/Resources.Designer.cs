@@ -433,6 +433,26 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiple {
+            get {
+                object obj = ResourceManager.GetObject("multiple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap multiple1 {
+            get {
+                object obj = ResourceManager.GetObject("multiple1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap networking {
             get {
                 object obj = ResourceManager.GetObject("networking", resourceCulture);
@@ -706,6 +726,16 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap UserIcon_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("UserIcon-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users__1_ {
+            get {
+                object obj = ResourceManager.GetObject("users (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
