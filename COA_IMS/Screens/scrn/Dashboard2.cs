@@ -29,7 +29,11 @@ namespace COA_IMS.Screens.scrn
         private readonly IMS_Reports report_Tab = new IMS_Reports();
         /*private readonly ActivityLogs log_Tab = new ActivityLogs();*/
         private readonly IMS_Maintenance maintenance_Tab = new IMS_Maintenance();
+
         private bool dontRunClosingEventHandler = false;
+
+        private readonly UserMaintenancetab usermaintenance_tab = new UserMaintenancetab();
+
         public Dashboard2()
         {
             InitializeComponent();
@@ -75,6 +79,9 @@ namespace COA_IMS.Screens.scrn
                 case "Settingsbtn":
                     form = maintenance_Tab;
                     break;
+                case "UserMaintenance":
+                    form = usermaintenance_tab;
+                    break;
             }
             if (form != null)
                 current_Form = tab_Manager.switch_Form(form, current_Form, main_Panel);
@@ -117,6 +124,15 @@ namespace COA_IMS.Screens.scrn
                 login_.ShowDialog();
                 this.Close();
             }
+
+        private void main_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UserMaintenance_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

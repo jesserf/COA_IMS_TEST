@@ -33,7 +33,13 @@
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+
             this.archived_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+
+            this.categorybtn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.Supplierbtn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
+
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
@@ -42,45 +48,53 @@
             // container_Panel
             // 
             this.container_Panel.BackColor = System.Drawing.Color.White;
-            this.container_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container_Panel.Location = new System.Drawing.Point(0, 60);
+            this.container_Panel.Location = new System.Drawing.Point(3, 60);
             this.container_Panel.Name = "container_Panel";
             this.container_Panel.Padding = new System.Windows.Forms.Padding(8);
-            this.container_Panel.Size = new System.Drawing.Size(1603, 866);
+            this.container_Panel.Size = new System.Drawing.Size(1602, 871);
             this.container_Panel.TabIndex = 3;
+            this.container_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.container_Panel_Paint);
             // 
             // parent_panel
             // 
+            this.parent_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.parent_panel.BackColor = System.Drawing.Color.Transparent;
             this.parent_panel.Controls.Add(this.container_Panel);
             this.parent_panel.Controls.Add(this.line_Panel);
             this.parent_panel.Controls.Add(this.nav_panel);
-            this.parent_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parent_panel.Location = new System.Drawing.Point(0, 0);
             this.parent_panel.Margin = new System.Windows.Forms.Padding(2);
             this.parent_panel.Name = "parent_panel";
-            this.parent_panel.Size = new System.Drawing.Size(1603, 926);
+            this.parent_panel.Size = new System.Drawing.Size(1620, 926);
             this.parent_panel.TabIndex = 3;
             // 
             // line_Panel
             // 
             this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.line_Panel.Location = new System.Drawing.Point(0, 55);
+            this.line_Panel.Location = new System.Drawing.Point(0, 54);
             this.line_Panel.Name = "line_Panel";
-            this.line_Panel.Size = new System.Drawing.Size(1603, 5);
+            this.line_Panel.Size = new System.Drawing.Size(1620, 5);
             this.line_Panel.TabIndex = 1;
             // 
             // nav_panel
             // 
             this.nav_panel.BackColor = System.Drawing.Color.White;
             this.nav_panel.Controls.Add(this.inventory_Table_Btn);
+
             this.nav_panel.Controls.Add(this.archived_Table_Btn);
+
+            this.nav_panel.Controls.Add(this.categorybtn);
+            this.nav_panel.Controls.Add(this.Supplierbtn);
+            this.nav_panel.Controls.Add(this.gunaAdvenceButton2);
+
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
             this.nav_panel.Name = "nav_panel";
-            this.nav_panel.Size = new System.Drawing.Size(1603, 55);
+            this.nav_panel.Size = new System.Drawing.Size(1620, 54);
             this.nav_panel.TabIndex = 0;
             // 
             // inventory_Table_Btn
@@ -119,6 +133,7 @@
             this.inventory_Table_Btn.TextOffsetX = 5;
             this.inventory_Table_Btn.Click += new System.EventHandler(this.button_Click);
             // 
+
             // archived_Table_Btn
             // 
             this.archived_Table_Btn.Animated = true;
@@ -154,6 +169,114 @@
             this.archived_Table_Btn.Text = "ARCHIVED TABLE";
             this.archived_Table_Btn.TextOffsetX = 5;
             this.archived_Table_Btn.Click += new System.EventHandler(this.button_Click);
+
+            // categorybtn
+            // 
+            this.categorybtn.Animated = true;
+            this.categorybtn.AnimationHoverSpeed = 0.07F;
+            this.categorybtn.AnimationSpeed = 0.03F;
+            this.categorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.categorybtn.BaseColor = System.Drawing.Color.Transparent;
+            this.categorybtn.BorderColor = System.Drawing.Color.Black;
+            this.categorybtn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.categorybtn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.categorybtn.CheckedForeColor = System.Drawing.Color.White;
+            this.categorybtn.CheckedImage = null;
+            this.categorybtn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.categorybtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categorybtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.categorybtn.FocusedColor = System.Drawing.Color.Empty;
+            this.categorybtn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.categorybtn.ForeColor = System.Drawing.Color.White;
+            this.categorybtn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.categorybtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.categorybtn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.categorybtn.Location = new System.Drawing.Point(223, 0);
+            this.categorybtn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.categorybtn.Name = "categorybtn";
+            this.categorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.categorybtn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.categorybtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.categorybtn.OnHoverImage = null;
+            this.categorybtn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.categorybtn.OnPressedColor = System.Drawing.Color.Black;
+            this.categorybtn.Size = new System.Drawing.Size(222, 55);
+            this.categorybtn.TabIndex = 6;
+            this.categorybtn.Text = "CATEGORY";
+            this.categorybtn.TextOffsetX = 5;
+            this.categorybtn.Click += new System.EventHandler(this.button_Click);
+            // 
+            // Supplierbtn
+            // 
+            this.Supplierbtn.Animated = true;
+            this.Supplierbtn.AnimationHoverSpeed = 0.07F;
+            this.Supplierbtn.AnimationSpeed = 0.03F;
+            this.Supplierbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.Supplierbtn.BaseColor = System.Drawing.Color.Transparent;
+            this.Supplierbtn.BorderColor = System.Drawing.Color.Black;
+            this.Supplierbtn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.Supplierbtn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.Supplierbtn.CheckedForeColor = System.Drawing.Color.White;
+            this.Supplierbtn.CheckedImage = null;
+            this.Supplierbtn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.Supplierbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Supplierbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Supplierbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.Supplierbtn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.Supplierbtn.ForeColor = System.Drawing.Color.White;
+            this.Supplierbtn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.Supplierbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.Supplierbtn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.Supplierbtn.Location = new System.Drawing.Point(446, 0);
+            this.Supplierbtn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.Supplierbtn.Name = "Supplierbtn";
+            this.Supplierbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.Supplierbtn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.Supplierbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.Supplierbtn.OnHoverImage = null;
+            this.Supplierbtn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.Supplierbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.Supplierbtn.Size = new System.Drawing.Size(222, 55);
+            this.Supplierbtn.TabIndex = 5;
+            this.Supplierbtn.Text = "SUPPLIER";
+            this.Supplierbtn.TextOffsetX = 5;
+            this.Supplierbtn.Click += new System.EventHandler(this.button_Click);
+            // 
+            // gunaAdvenceButton2
+            // 
+            this.gunaAdvenceButton2.Animated = true;
+            this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton2.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaAdvenceButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.gunaAdvenceButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton2.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.CheckedImage = null;
+            this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaAdvenceButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaAdvenceButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton2.Location = new System.Drawing.Point(669, 0);
+            this.gunaAdvenceButton2.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
+            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.OnHoverImage = null;
+            this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.Size = new System.Drawing.Size(222, 55);
+            this.gunaAdvenceButton2.TabIndex = 7;
+            this.gunaAdvenceButton2.Text = "DISPOSAL";
+            this.gunaAdvenceButton2.TextOffsetX = 5;
+
             // 
             // mySqlCommand1
             // 
@@ -186,6 +309,12 @@
         private System.Windows.Forms.FlowLayoutPanel nav_panel;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Guna.UI.WinForms.GunaAdvenceButton inventory_Table_Btn;
+
         private Guna.UI.WinForms.GunaAdvenceButton archived_Table_Btn;
+
+        private Guna.UI.WinForms.GunaAdvenceButton Supplierbtn;
+        private Guna.UI.WinForms.GunaAdvenceButton categorybtn;
+        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
+
     }
 }
