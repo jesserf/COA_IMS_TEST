@@ -31,14 +31,17 @@ namespace COA_IMS.Screens.scrn
         private void button_Click(object sender, EventArgs e)
         {
             var button = (GunaAdvenceButton)sender;
-            Console.WriteLine(button.Name);
             switch (button.Name)
             {
                 case "inventory_Table_Btn":
+                    inventory_Table_Btn.Enabled = false;
+                    archived_Table_Btn.Enabled = true;
                     current_Form = tab_Manager.switch_Form(inventory_Table, current_Form, container_Panel);
                     break;
 
-                case "inactive_Btn":
+                case "archived_Table_Btn":
+                    archived_Table_Btn.Enabled = false;
+                    inventory_Table_Btn.Enabled = true;
                     current_Form = tab_Manager.switch_Form(archive_Table, current_Form, container_Panel);
                     break;
 
@@ -50,7 +53,7 @@ namespace COA_IMS.Screens.scrn
                     current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, container_Panel);
                     break;
             }
-            tab_Manager.active_AdvButton(button, false);
+            tab_Manager.active_AdvButton(button, false, false);
         }
 
         private void InventoryMain_Load(object sender, EventArgs e)
@@ -62,7 +65,7 @@ namespace COA_IMS.Screens.scrn
                     tab_Manager.Nav_buttons.Add(control);
 
             tab_Manager.set_Colors("#1B303B", "#C7C8CC");
-            tab_Manager.active_AdvButton(inventory_Table_Btn, false);
+            tab_Manager.active_AdvButton(inventory_Table_Btn, false, false);
 
             inventory_Table_Btn.PerformClick();
         }

@@ -1,7 +1,9 @@
 ﻿using COA_IMS.Screens;
+using COA_IMS.Screens.scrn;
 using COA_IMS.Utilities;
 using Guna.UI.WinForms;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace COA_IMS
@@ -16,6 +18,7 @@ namespace COA_IMS
         private Login_Manager login_manager;
         private Activity_Manager activity_manager;
         private Database_Manager database_manager;
+        private bool dontRunClosingEventHandler = false;
 
         public login()
         {
@@ -24,11 +27,19 @@ namespace COA_IMS
             login_manager = new Login_Manager();
             activity_manager = new Activity_Manager();
             database_manager = new Database_Manager();
+            ActiveControl = username_entry;
         }
 
         private void login_Load(object sender, EventArgs e)
         {
             this.AcceptButton = Login_btn;
+            username_entry.ForeColor = Color.LightGray;
+            password_entry.ForeColor = Color.LightGray;
+            if (Login_Manager.active_Account != null)
+            {
+                username_entry.ForeColor = Color.Black;
+                username_entry.Text = Login_Manager.active_Account;
+            }
         }
 
         private void Loginbtn_Click(object sender, EventArgs e)
@@ -59,11 +70,13 @@ namespace COA_IMS
 
             if (login_Result && account_Status == 1)
             {
+                dontRunClosingEventHandler = true;
                 activity_manager.Log_Activity(username, Log_Message.login_message);
                 this.Hide();
-                Dashboard dashboard = new Dashboard();
+                Dashboard2 dashboard = new Dashboard2();
                 dashboard.ShowDialog();
-                login_manager.active_Account = username;
+                Login_Manager.active_Account = username;
+                this.Close();
             }
             else
             {
@@ -125,21 +138,42 @@ namespace COA_IMS
         private void login_entry_Enter(object sender, EventArgs e)
         {
             if (string.Equals(username_entry.Text.ToString(), "Username"))
+            {
+                username_entry.ForeColor = Color.Black;
                 username_entry.Text = "";
+            }
         }
 
         private void password_entry_Enter(object sender, EventArgs e)
         {
             if (string.Equals(password_entry.Text.ToString(), "Password"))
             {
+                password_entry.ForeColor = Color.Black;
                 password_entry.Text = "";
                 password_entry.PasswordChar = '*';
             }
         }
 
+        private void textbox_Leave(object sender, EventArgs e)
+        {
+            if (string.Equals(username_entry.Text.ToString().Trim(), ""))
+            {
+                username_entry.ForeColor = Color.LightGray;
+                username_entry.Text = "Username";
+            }
+            if (string.Equals(password_entry.Text.ToString().Trim(), ""))
+            {
+                password_entry.ForeColor = Color.LightGray;
+                password_entry.PasswordChar = '\0';
+                password_entry.Text = "Password";
+            }
+
+        }
+
         private void login_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
+                if (dontRunClosingEventHandler) return;
                 if (MessageBox.Show("Are you sure you want to close the application?", "Close Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.No)
                      e.Cancel = true;
                 

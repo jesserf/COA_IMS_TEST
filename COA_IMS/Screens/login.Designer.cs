@@ -134,15 +134,18 @@
             this.username_entry.Radius = 5;
             this.username_entry.SelectedText = "";
             this.username_entry.Size = new System.Drawing.Size(321, 45);
-            this.username_entry.TabIndex = 2;
+            this.username_entry.TabIndex = 0;
             this.username_entry.Tag = "Username";
             this.username_entry.Text = "Username";
             this.username_entry.Enter += new System.EventHandler(this.login_entry_Enter);
+            this.username_entry.Leave += new System.EventHandler(this.textbox_Leave);
             // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.Image = global::COA_IMS.Properties.Resources.user;
+            this.gunaPictureBox1.InitialImage = null;
             this.gunaPictureBox1.Location = new System.Drawing.Point(11, 8);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -207,6 +210,7 @@
             // gunaPictureBox2
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = global::COA_IMS.Properties.Resources.password_lock;
             this.gunaPictureBox2.Location = new System.Drawing.Point(12, 8);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(40, 40);
@@ -232,10 +236,11 @@
             this.password_entry.Radius = 5;
             this.password_entry.SelectedText = "";
             this.password_entry.Size = new System.Drawing.Size(321, 45);
-            this.password_entry.TabIndex = 3;
+            this.password_entry.TabIndex = 1;
             this.password_entry.Tag = "Password";
             this.password_entry.Text = "Password";
             this.password_entry.Enter += new System.EventHandler(this.password_entry_Enter);
+            this.password_entry.Leave += new System.EventHandler(this.textbox_Leave);
             // 
             // gunaLabel2
             // 
@@ -313,8 +318,8 @@
             this.parent_Panel.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.parent_Panel.Controls.Add(this.gunaCirclePictureBox1, 0, 0);
             this.parent_Panel.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.parent_Panel.Location = new System.Drawing.Point(1205, 164);
-            this.parent_Panel.Margin = new System.Windows.Forms.Padding(20);
+            this.parent_Panel.Location = new System.Drawing.Point(1125, 164);
+            this.parent_Panel.Margin = new System.Windows.Forms.Padding(20, 20, 100, 20);
             this.parent_Panel.Name = "parent_Panel";
             this.parent_Panel.RowCount = 5;
             this.parent_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.20387F));

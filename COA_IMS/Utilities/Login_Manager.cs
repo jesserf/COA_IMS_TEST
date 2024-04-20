@@ -11,7 +11,7 @@ namespace COA_IMS.Utilities
     {
         private Database_Manager db_Manager;
         private Encryption_Manger encryption_Manger;
-        public string active_Account { get; set; }
+        public static string active_Account { get; set; }
         public bool authenticate(string username, string password)
         {
             encryption_Manger = new Encryption_Manger();

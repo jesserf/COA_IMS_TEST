@@ -39,16 +39,16 @@
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.title_Label = new Guna.UI.WinForms.GunaLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.profilePanel = new System.Windows.Forms.TableLayoutPanel();
             this.user_Name = new Guna.UI.WinForms.GunaLabel();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
+            this.profileOptionsButton = new Guna.UI.WinForms.GunaImageButton();
             this.main_Panel = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel1.SuspendLayout();
             this.tabPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.gunaElipsePanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.profilePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipsePanel1
@@ -242,7 +242,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.title_Label, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.profilePanel, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -265,47 +265,49 @@
             this.title_Label.TabIndex = 3;
             this.title_Label.Text = "Cherie Urie Rejoy";
             // 
-            // tableLayoutPanel1
+            // profilePanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.75F));
-            this.tableLayoutPanel1.Controls.Add(this.user_Name, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gunaImageButton1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1216, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 70);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.profilePanel.ColumnCount = 2;
+            this.profilePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.25F));
+            this.profilePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.75F));
+            this.profilePanel.Controls.Add(this.user_Name, 0, 0);
+            this.profilePanel.Controls.Add(this.profileOptionsButton, 1, 0);
+            this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePanel.Location = new System.Drawing.Point(1216, 3);
+            this.profilePanel.Name = "profilePanel";
+            this.profilePanel.RowCount = 1;
+            this.profilePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.profilePanel.Size = new System.Drawing.Size(400, 70);
+            this.profilePanel.TabIndex = 2;
             // 
             // user_Name
             // 
-            this.user_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.user_Name.AutoSize = true;
+            this.user_Name.Dock = System.Windows.Forms.DockStyle.Fill;
             this.user_Name.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.user_Name.Location = new System.Drawing.Point(158, 35);
+            this.user_Name.Location = new System.Drawing.Point(3, 0);
             this.user_Name.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.user_Name.Name = "user_Name";
-            this.user_Name.Size = new System.Drawing.Size(176, 25);
+            this.user_Name.Size = new System.Drawing.Size(331, 60);
             this.user_Name.TabIndex = 0;
             this.user_Name.Text = "Cherie Urie Rejoy";
+            this.user_Name.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // gunaImageButton1
+            // profileOptionsButton
             // 
-            this.gunaImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.arrow_down_sign_to_navigate;
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(15, 15);
-            this.gunaImageButton1.Location = new System.Drawing.Point(342, 16);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(55, 51);
-            this.gunaImageButton1.TabIndex = 0;
+            this.profileOptionsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.profileOptionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profileOptionsButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.profileOptionsButton.Image = global::COA_IMS.Properties.Resources.arrow_down_sign_to_navigate;
+            this.profileOptionsButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.profileOptionsButton.Location = new System.Drawing.Point(342, 16);
+            this.profileOptionsButton.Name = "profileOptionsButton";
+            this.profileOptionsButton.OnHoverImage = null;
+            this.profileOptionsButton.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.profileOptionsButton.Size = new System.Drawing.Size(55, 51);
+            this.profileOptionsButton.TabIndex = 0;
+            this.profileOptionsButton.Click += new System.EventHandler(this.profileButton_Click);
             // 
             // main_Panel
             // 
@@ -331,6 +333,7 @@
             this.Name = "Dashboard2";
             this.Text = "Dasboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard2_Load);
             this.gunaElipsePanel1.ResumeLayout(false);
             this.tabPanel.ResumeLayout(false);
@@ -338,8 +341,8 @@
             this.gunaElipsePanel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.profilePanel.ResumeLayout(false);
+            this.profilePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -351,13 +354,13 @@
         private Guna.UI.WinForms.GunaElipsePanel main_Panel;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaLabel user_Name;
-        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
+        private Guna.UI.WinForms.GunaImageButton profileOptionsButton;
         private Guna.UI.WinForms.GunaButton Homebtn;
         private Guna.UI.WinForms.GunaButton Inventorybtn;
         private System.Windows.Forms.FlowLayoutPanel tabPanel;
         private Guna.UI.WinForms.GunaButton Settingsbtn;
         private Guna.UI.WinForms.GunaButton Reportsbtn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel profilePanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI.WinForms.GunaLabel title_Label;
         private Guna.UI.WinForms.GunaButton UserMaintenance;
