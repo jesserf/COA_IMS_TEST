@@ -108,7 +108,7 @@ namespace COA_IMS.Screens.Subscreens.ActivityLogs
             Populate_Table(3);
             pageCountTextbox.Text = page_cnt.ToString();
 
-            if ((min_lim + 15) >= activity_manager.Count_Logs()) next_Button.Enabled = false;
+            //if ((min_lim + 15) >= activity_manager.Count_Logs()) next_Button.Enabled = false;
         }
 
         private void pageCountTextbox_KeyDown(object sender, KeyEventArgs e)

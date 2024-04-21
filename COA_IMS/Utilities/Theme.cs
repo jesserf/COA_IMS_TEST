@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,6 +76,19 @@ namespace COA_IMS.Utilities
                 }
             }
 
+
+            // Apply alternating row colors
+            for (int i = 0; i < guna_Table.Rows.Count; i++)
+            {
+                if (i % 2 == 0)
+                    rowStyle.BackColor = Hex_To_RGB("#F0F0F0");
+
+            }
+        }
+        private void AlternateTableRows(GunaDataGridView guna_Table)
+        {
+            // Create row style
+            GunaDataGridViewRowsStyle rowStyle = new GunaDataGridViewRowsStyle(guna_Table.DefaultCellStyle, guna_Table);
 
             // Apply alternating row colors
             for (int i = 0; i < guna_Table.Rows.Count; i++)

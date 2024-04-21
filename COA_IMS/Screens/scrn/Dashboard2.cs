@@ -124,6 +124,7 @@ namespace COA_IMS.Screens.scrn
                 login_.ShowDialog();
                 this.Close();
             }
+        }
 
         private void main_Panel_Paint(object sender, PaintEventArgs e)
         {

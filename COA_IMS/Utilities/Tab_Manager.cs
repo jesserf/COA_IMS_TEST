@@ -69,20 +69,21 @@ namespace COA_IMS.Utilities
             }
         }
 
-        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false, bool enable = true)
+        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false, bool enable = true, List<Control> advBtns = null)
         {
-            foreach (var buttons in Navigation_Buttons)
+            foreach (GunaAdvenceButton buttons in advBtns)
             {
                 if (buttons.Name.Equals(button.Name))
                 {
-                    button.BackColor = Theme.Hex_To_RGB(selected_color);
+                    //button.BackColor = Theme.Hex_To_RGB(selected_color);
                     if (!enable) button.Enabled = false;
                     if (has_Title)
                         change_Title(button.Tag.ToString().ToUpper());
                 }
                 else
                 {
-                    buttons.BackColor = Theme.Hex_To_RGB(unselected_color);
+                    //buttons.BackColor = Theme.Hex_To_RGB(unselected_color);
+                    buttons.Enabled = true;
                 }
             }
         }

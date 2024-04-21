@@ -478,6 +478,7 @@
         private Guna.UI.WinForms.GunaButton reports_Button;
         private Guna.UI.WinForms.GunaButton refresh_Button;
         private Guna.UI.WinForms.GunaComboBox sortComboBox;
+        private Guna.UI.WinForms.GunaButton add_item;
         private UserControlUtil.SearchBar searchBar1;
         private Guna.UI.WinForms.GunaButton previous_Button;
         private Guna.UI.WinForms.GunaTextBox pageCountTextbox;
