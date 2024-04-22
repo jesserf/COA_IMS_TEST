@@ -76,7 +76,7 @@ namespace COA_IMS.Screens.Subscreens.Maintenance
                 Console.WriteLine(string.Format(Database_Query.return_module_name, Table));
                 string code_type = database_Manager.ExecuteScalar(string.Format(Database_Query.return_module_name, Table)).ToString();
                 //make activity log
-                database_Manager.ExecuteQuery(string.Format(Database_Query.log_maintenance_activity, active_account, code_type, code_Title.Text));
+                //database_Manager.ExecuteQuery(string.Format(Database_Query.log_maintenance_activity, active_account, code_type, code_Title.Text));
                 if (MessageBox.Show($"{code_Title.Text} is successfully added.", "New Record Added", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     is_ClosingProgrammatically = true; 

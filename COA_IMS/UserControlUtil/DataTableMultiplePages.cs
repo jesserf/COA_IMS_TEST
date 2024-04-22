@@ -49,7 +49,7 @@ namespace COA_IMS.UserControlUtil
             changeGunaTableStyle(data_table);
             //adds items to table
             activity_manager = new Activity_Manager();
-            data_table.DataSource = activity_manager.Display_Three_Logs_Table(min_lim);
+            /*data_table.DataSource = activity_manager.Display_Three_Logs_Table(min_lim);*/
         }
 
         private void previous_button_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace COA_IMS.UserControlUtil
         {
             if (searchBox.Text.ToString() == "") DisplayLogsTable();
             activity_manager = new Activity_Manager();
-            sourceTable.DataSource = activity_manager.Display_Specific_Logs_Table(searchBox.Text.ToString(), log_table_names[filterComboBox.SelectedIndex]);
+            //sourceTable.DataSource = activity_manager.Display_Specific_Logs_Table(searchBox.Text.ToString(), log_table_names[filterComboBox.SelectedIndex]);
 
         }
 

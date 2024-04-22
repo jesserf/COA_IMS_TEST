@@ -16,7 +16,7 @@ namespace COA_IMS.Screens.scrn
 {
     public partial class InventoryMain : Form
     {
-        private Tab_Manager tab_Manager;
+        private Tab_Manager tab_Manager = new Tab_Manager();
 
         private Form current_Form = null;
 
@@ -24,9 +24,13 @@ namespace COA_IMS.Screens.scrn
         private readonly ArchiveInventoryTable archive_Table = new ArchiveInventoryTable();
         private readonly CategoryTab category_tab = new CategoryTab();
         private readonly IMS_SuplierTable ims_supliertable = new IMS_SuplierTable();
+
+        private List<Control> navButtons = new List<Control>();
         public InventoryMain()
         {
             InitializeComponent();
+            foreach (GunaAdvenceButton buttoan in nav_panel.Controls)
+                navButtons.Add(buttoan);
         }
         private void button_Click(object sender, EventArgs e)
         {
@@ -34,14 +38,10 @@ namespace COA_IMS.Screens.scrn
             switch (button.Name)
             {
                 case "inventory_Table_Btn":
-                    inventory_Table_Btn.Enabled = false;
-                    archived_Table_Btn.Enabled = true;
                     current_Form = tab_Manager.switch_Form(inventory_Table, current_Form, container_Panel);
                     break;
 
                 case "archived_Table_Btn":
-                    archived_Table_Btn.Enabled = false;
-                    inventory_Table_Btn.Enabled = true;
                     current_Form = tab_Manager.switch_Form(archive_Table, current_Form, container_Panel);
                     break;
 
@@ -52,8 +52,10 @@ namespace COA_IMS.Screens.scrn
                 case "Supplierbtn":
                     current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, container_Panel);
                     break;
+                case "disposalBtn":
+                    break;
             }
-            tab_Manager.active_AdvButton(button, false, false);
+            tab_Manager.active_AdvButton(button, false, false, navButtons);
         }
 
         private void InventoryMain_Load(object sender, EventArgs e)
@@ -65,7 +67,7 @@ namespace COA_IMS.Screens.scrn
                     tab_Manager.Nav_buttons.Add(control);
 
             tab_Manager.set_Colors("#1B303B", "#C7C8CC");
-            tab_Manager.active_AdvButton(inventory_Table_Btn, false, false);
+            tab_Manager.active_AdvButton(inventory_Table_Btn, false, false, navButtons);
 
             inventory_Table_Btn.PerformClick();
         }

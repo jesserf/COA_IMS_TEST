@@ -109,7 +109,7 @@ namespace COA_IMS.Screens.Subscreens.ActivityLogs
             Populate_Table(3);
             pageCountTextbox.Text = page_cnt.ToString();
 
-            if ((min_lim + 15) >= activity_manager.Count_Logs()) next_Button.Enabled = false;
+            //if ((min_lim + 15) >= activity_manager.Count_Logs()) next_Button.Enabled = false;
         }
 
         private void pageCountTextbox_KeyDown(object sender, KeyEventArgs e)
@@ -166,7 +166,7 @@ namespace COA_IMS.Screens.Subscreens.ActivityLogs
         {
             Console.WriteLine("heere");
             Console.WriteLine(database_Manager.ExecuteScalar(string.Format(Database_Query.return_module_name, "agency_table")).ToString());
-            Console.WriteLine(string.Format(Database_Query.log_maintenance_activity, "admin", "AGENCY", "ACK34747"));
+            //Console.WriteLine(string.Format(Database_Query.log_maintenance_activity, "admin", "AGENCY", "ACK34747"));
             Populate_Table(3);
         }
 
