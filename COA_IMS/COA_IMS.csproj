@@ -56,7 +56,7 @@
       <HintPath>..\packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>C:\Users\COA\source\repos\COA_IMS_TEST\Guna.UI.dll</HintPath>
+      <HintPath>C:\Users\Cherie Mae Rejoy\Downloads\IMS_TEST-master\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -520,6 +520,9 @@
     <EmbeddedResource Include="Screens\scrn\Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrn\IMS_Login.resx">
+      <DependentUpon>IMS_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Product_Form.resx">
       <DependentUpon>IMS_Product_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -736,6 +739,8 @@
     <None Include="Resources\logout %282%29.png" />
     <None Include="Resources\logout %283%29.png" />
     <None Include="Resources\info.png" />
+    <None Include="Resources\loginBG.png" />
+    <None Include="Resources\loginBG1.png" />
     <Content Include="Resources\Menu Bar Icon - Copy.png" />
     <Content Include="Resources\Menu Bar Icon.png" />
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
@@ -746,6 +751,7 @@
     <Content Include="Resources\refresh %281%29 - Copy.png" />
     <Content Include="Resources\refresh %281%29.png" />
     <None Include="Resources\route.png" />
+    <None Include="Resources\search %281%29.png" />
     <Content Include="Resources\search - Copy.png" />
     <Content Include="Resources\search.png" />
     <Content Include="Resources\search1.png" />
@@ -756,6 +762,7 @@
     <None Include="Resources\settings %282%29.png" />
     <Content Include="Resources\Splash screen.png" />
     <None Include="Resources\square-divide.png" />
+    <None Include="Resources\supplier bg.png" />
     <Content Include="Resources\to-do %281%29.png" />
     <Content Include="Resources\to-do %282%29.png" />
     <Content Include="Resources\trash-bin.png" />
@@ -786,7 +793,7 @@
     <None Include="Resources\swipe-left1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\COA\source\repos\COA_IMS_TEST\Guna.UI.dll" />
+    <Analyzer Include="C:\Users\Cherie Mae Rejoy\Downloads\IMS_TEST-master\Guna.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

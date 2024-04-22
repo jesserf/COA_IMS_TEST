@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IMS_Login));
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(1904, 1041);
-            this.gunaPictureBox1.TabIndex = 0;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // gunaLabel1
             // 
@@ -128,7 +116,7 @@
             this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
             this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton1.CheckedImage")));
+            this.gunaAdvenceButton1.CheckedImage = null;
             this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
             this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
@@ -151,7 +139,19 @@
             this.gunaAdvenceButton1.Text = "Login";
             this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackgroundImage = global::COA_IMS.Properties.Resources.loginBG1;
+            this.gunaPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(1904, 1041);
+            this.gunaPictureBox1.TabIndex = 0;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // IMS_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,7 @@
             this.Controls.Add(this.gunaTextBox1);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaPictureBox1);
-            this.Name = "Form1";
+            this.Name = "IMS_Login";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();

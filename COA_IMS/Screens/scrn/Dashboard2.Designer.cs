@@ -53,7 +53,7 @@
             // 
             // gunaElipsePanel1
             // 
-            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel1.BackColor = System.Drawing.Color.White;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
             this.gunaElipsePanel1.Controls.Add(this.tabPanel);
             this.gunaElipsePanel1.Controls.Add(this.gunaCirclePictureBox1);
@@ -237,6 +237,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
@@ -311,7 +312,7 @@
             // 
             // main_Panel
             // 
-            this.main_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.main_Panel.BackColor = System.Drawing.Color.Transparent;
             this.main_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
             this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_Panel.Location = new System.Drawing.Point(285, 76);

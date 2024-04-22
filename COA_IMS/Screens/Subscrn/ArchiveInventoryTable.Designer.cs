@@ -35,10 +35,10 @@
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.reports_Button = new Guna.UI.WinForms.GunaButton();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.dateFilter1 = new COA_IMS.UserControlUtil.DateFilter();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
@@ -62,7 +62,7 @@
             // 
             this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sortComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.sortComboBox.BaseColor = System.Drawing.Color.Gray;
+            this.sortComboBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.sortComboBox.BorderColor = System.Drawing.Color.Transparent;
             this.sortComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sortComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -74,7 +74,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1245, 30);
+            this.sortComboBox.Location = new System.Drawing.Point(1284, 89);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.Silver;
@@ -92,7 +92,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.LogsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.LogsTable.BackgroundColor = System.Drawing.Color.White;
             this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -124,7 +124,7 @@
             this.LogsTable.RowHeadersVisible = false;
             this.LogsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.LogsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LogsTable.Size = new System.Drawing.Size(1603, 775);
+            this.LogsTable.Size = new System.Drawing.Size(1613, 718);
             this.LogsTable.TabIndex = 7;
             this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -132,7 +132,7 @@
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.LogsTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.LogsTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.LogsTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -152,30 +152,38 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.53465F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.46535F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.73886F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.26114F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateFilter1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1603, 75);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1603, 134);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.Location = new System.Drawing.Point(3, 88);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(549, 43);
+            this.searchBar1.TabIndex = 3;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1475, 29);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1497, 88);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 43);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(103, 43);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // reports_Button
@@ -184,7 +192,7 @@
             this.reports_Button.AnimationHoverSpeed = 0.07F;
             this.reports_Button.AnimationSpeed = 0.03F;
             this.reports_Button.BackColor = System.Drawing.Color.Transparent;
-            this.reports_Button.BaseColor = System.Drawing.Color.Gray;
+            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.reports_Button.BorderColor = System.Drawing.Color.Black;
             this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -211,7 +219,7 @@
             this.refresh_Button.AnimationHoverSpeed = 0.07F;
             this.refresh_Button.AnimationSpeed = 0.03F;
             this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
-            this.refresh_Button.BaseColor = System.Drawing.Color.Gray;
+            this.refresh_Button.BaseColor = System.Drawing.Color.DodgerBlue;
             this.refresh_Button.BorderColor = System.Drawing.Color.Black;
             this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -232,23 +240,15 @@
             this.refresh_Button.Size = new System.Drawing.Size(42, 35);
             this.refresh_Button.TabIndex = 5;
             // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.Location = new System.Drawing.Point(3, 29);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(549, 43);
-            this.searchBar1.TabIndex = 3;
-            // 
             // dateFilter1
             // 
             this.dateFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
             this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            this.dateFilter1.Location = new System.Drawing.Point(581, 29);
+            this.dateFilter1.Location = new System.Drawing.Point(589, 88);
             this.dateFilter1.Name = "dateFilter1";
-            this.dateFilter1.Size = new System.Drawing.Size(640, 43);
+            this.dateFilter1.Size = new System.Drawing.Size(688, 43);
             this.dateFilter1.TabIndex = 5;
             this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
             // 
@@ -278,10 +278,9 @@
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPanel1.Controls.Add(this.tableLayoutPanel1);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1603, 75);
+            this.gunaPanel1.Size = new System.Drawing.Size(1603, 134);
             this.gunaPanel1.TabIndex = 8;
             // 
             // main_Panel
@@ -289,7 +288,7 @@
             this.main_Panel.Controls.Add(this.content_Panel);
             this.main_Panel.Controls.Add(this.tableLayoutPanel2);
             this.main_Panel.Controls.Add(this.gunaPanel1);
-            this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.main_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.main_Panel.Location = new System.Drawing.Point(0, 0);
             this.main_Panel.Name = "main_Panel";
             this.main_Panel.Size = new System.Drawing.Size(1603, 926);
@@ -298,10 +297,9 @@
             // content_Panel
             // 
             this.content_Panel.Controls.Add(this.LogsTable);
-            this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content_Panel.Location = new System.Drawing.Point(0, 75);
+            this.content_Panel.Location = new System.Drawing.Point(0, 132);
             this.content_Panel.Name = "content_Panel";
-            this.content_Panel.Size = new System.Drawing.Size(1603, 775);
+            this.content_Panel.Size = new System.Drawing.Size(1613, 718);
             this.content_Panel.TabIndex = 12;
             // 
             // tableLayoutPanel2

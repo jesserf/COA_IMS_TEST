@@ -30,7 +30,6 @@
         {
             this.container_Panel = new Guna.UI.WinForms.GunaPanel();
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
-            this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.archived_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -38,43 +37,38 @@
             this.Supplierbtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.disposal_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.content_Panel = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
+            this.container_Panel.SuspendLayout();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
+            this.gunaPanel1.SuspendLayout();
+            this.content_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // container_Panel
             // 
             this.container_Panel.BackColor = System.Drawing.Color.White;
-            this.container_Panel.Location = new System.Drawing.Point(3, 60);
+            this.container_Panel.Controls.Add(this.content_Panel);
+            this.container_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container_Panel.Location = new System.Drawing.Point(0, 0);
             this.container_Panel.Name = "container_Panel";
-            this.container_Panel.Padding = new System.Windows.Forms.Padding(8);
-            this.container_Panel.Size = new System.Drawing.Size(1602, 871);
+            this.container_Panel.Size = new System.Drawing.Size(1603, 926);
             this.container_Panel.TabIndex = 3;
             this.container_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.container_Panel_Paint);
             // 
             // parent_panel
             // 
-            this.parent_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.parent_panel.BackColor = System.Drawing.Color.Transparent;
+            this.parent_panel.Controls.Add(this.gunaPanel1);
             this.parent_panel.Controls.Add(this.container_Panel);
-            this.parent_panel.Controls.Add(this.line_Panel);
-            this.parent_panel.Controls.Add(this.nav_panel);
+            this.parent_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parent_panel.Location = new System.Drawing.Point(0, 0);
             this.parent_panel.Margin = new System.Windows.Forms.Padding(2);
             this.parent_panel.Name = "parent_panel";
-            this.parent_panel.Size = new System.Drawing.Size(1620, 926);
+            this.parent_panel.Size = new System.Drawing.Size(1603, 926);
             this.parent_panel.TabIndex = 3;
-            // 
-            // line_Panel
-            // 
-            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.line_Panel.Location = new System.Drawing.Point(0, 54);
-            this.line_Panel.Name = "line_Panel";
-            this.line_Panel.Size = new System.Drawing.Size(1620, 5);
-            this.line_Panel.TabIndex = 1;
             // 
             // nav_panel
             // 
@@ -87,8 +81,9 @@
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
+            this.nav_panel.Margin = new System.Windows.Forms.Padding(0);
             this.nav_panel.Name = "nav_panel";
-            this.nav_panel.Size = new System.Drawing.Size(1620, 54);
+            this.nav_panel.Size = new System.Drawing.Size(1603, 55);
             this.nav_panel.TabIndex = 0;
             // 
             // inventory_Table_Btn
@@ -277,6 +272,36 @@
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
+            // gunaPanel1
+            // 
+            this.gunaPanel1.AutoSize = true;
+            this.gunaPanel1.Controls.Add(this.nav_panel);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gunaPanel1.Size = new System.Drawing.Size(1603, 55);
+            this.gunaPanel1.TabIndex = 0;
+            // 
+            // content_Panel
+            // 
+            this.content_Panel.Controls.Add(this.gunaLinePanel1);
+            this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content_Panel.Location = new System.Drawing.Point(0, 0);
+            this.content_Panel.Name = "content_Panel";
+            this.content_Panel.Size = new System.Drawing.Size(1603, 926);
+            this.content_Panel.TabIndex = 0;
+            // 
+            // gunaLinePanel1
+            // 
+            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
+            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 53);
+            this.gunaLinePanel1.Name = "gunaLinePanel1";
+            this.gunaLinePanel1.Size = new System.Drawing.Size(1602, 10);
+            this.gunaLinePanel1.TabIndex = 0;
+            // 
             // InventoryMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,9 +311,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InventoryMain";
             this.Text = "InventoryMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InventoryMain_Load);
+            this.container_Panel.ResumeLayout(false);
             this.parent_panel.ResumeLayout(false);
+            this.parent_panel.PerformLayout();
             this.nav_panel.ResumeLayout(false);
+            this.gunaPanel1.ResumeLayout(false);
+            this.content_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -297,7 +327,6 @@
 
         private Guna.UI.WinForms.GunaPanel container_Panel;
         private Guna.UI.WinForms.GunaPanel parent_panel;
-        private Guna.UI.WinForms.GunaPanel line_Panel;
         private System.Windows.Forms.FlowLayoutPanel nav_panel;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Guna.UI.WinForms.GunaAdvenceButton inventory_Table_Btn;
@@ -307,6 +336,8 @@
         private Guna.UI.WinForms.GunaAdvenceButton Supplierbtn;
         private Guna.UI.WinForms.GunaAdvenceButton categorybtn;
         private Guna.UI.WinForms.GunaAdvenceButton disposal_Btn;
-
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
+        private Guna.UI.WinForms.GunaPanel content_Panel;
+        private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
     }
 }
