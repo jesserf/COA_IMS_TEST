@@ -52,6 +52,8 @@ namespace COA_IMS.Screens.scrn
                 case "Supplierbtn":
                     current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, container_Panel);
                     break;
+                case "disposalBtn":
+                    break;
             }
             tab_Manager.active_AdvButton(button, false, false, navButtons);
         }

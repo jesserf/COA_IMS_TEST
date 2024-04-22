@@ -33,13 +33,10 @@
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-
             this.archived_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-
             this.categorybtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.Supplierbtn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
-
+            this.disposal_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
@@ -83,13 +80,10 @@
             // 
             this.nav_panel.BackColor = System.Drawing.Color.White;
             this.nav_panel.Controls.Add(this.inventory_Table_Btn);
-
             this.nav_panel.Controls.Add(this.archived_Table_Btn);
-
             this.nav_panel.Controls.Add(this.categorybtn);
             this.nav_panel.Controls.Add(this.Supplierbtn);
-            this.nav_panel.Controls.Add(this.gunaAdvenceButton2);
-
+            this.nav_panel.Controls.Add(this.disposal_Btn);
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
@@ -133,7 +127,6 @@
             this.inventory_Table_Btn.TextOffsetX = 5;
             this.inventory_Table_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-
             // archived_Table_Btn
             // 
             this.archived_Table_Btn.Animated = true;
@@ -169,7 +162,7 @@
             this.archived_Table_Btn.Text = "ARCHIVED TABLE";
             this.archived_Table_Btn.TextOffsetX = 5;
             this.archived_Table_Btn.Click += new System.EventHandler(this.button_Click);
-
+            // 
             // categorybtn
             // 
             this.categorybtn.Animated = true;
@@ -191,7 +184,7 @@
             this.categorybtn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
             this.categorybtn.ImageSize = new System.Drawing.Size(20, 20);
             this.categorybtn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.categorybtn.Location = new System.Drawing.Point(223, 0);
+            this.categorybtn.Location = new System.Drawing.Point(446, 0);
             this.categorybtn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.categorybtn.Name = "categorybtn";
             this.categorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
@@ -227,7 +220,7 @@
             this.Supplierbtn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
             this.Supplierbtn.ImageSize = new System.Drawing.Size(20, 20);
             this.Supplierbtn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.Supplierbtn.Location = new System.Drawing.Point(446, 0);
+            this.Supplierbtn.Location = new System.Drawing.Point(669, 0);
             this.Supplierbtn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.Supplierbtn.Name = "Supplierbtn";
             this.Supplierbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
@@ -242,41 +235,40 @@
             this.Supplierbtn.TextOffsetX = 5;
             this.Supplierbtn.Click += new System.EventHandler(this.button_Click);
             // 
-            // gunaAdvenceButton2
+            // disposal_Btn
             // 
-            this.gunaAdvenceButton2.Animated = true;
-            this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton2.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.gunaAdvenceButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton2.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.CheckedImage = null;
-            this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaAdvenceButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Bahnschrift", 14F);
-            this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.Location = new System.Drawing.Point(669, 0);
-            this.gunaAdvenceButton2.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
-            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton2.OnHoverImage = null;
-            this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton2.Size = new System.Drawing.Size(222, 55);
-            this.gunaAdvenceButton2.TabIndex = 7;
-            this.gunaAdvenceButton2.Text = "DISPOSAL";
-            this.gunaAdvenceButton2.TextOffsetX = 5;
-
+            this.disposal_Btn.Animated = true;
+            this.disposal_Btn.AnimationHoverSpeed = 0.07F;
+            this.disposal_Btn.AnimationSpeed = 0.03F;
+            this.disposal_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.disposal_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.disposal_Btn.BorderColor = System.Drawing.Color.Black;
+            this.disposal_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.disposal_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.disposal_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.disposal_Btn.CheckedImage = null;
+            this.disposal_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.disposal_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.disposal_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.disposal_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.disposal_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.disposal_Btn.ForeColor = System.Drawing.Color.White;
+            this.disposal_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.disposal_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.disposal_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.disposal_Btn.Location = new System.Drawing.Point(892, 0);
+            this.disposal_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.disposal_Btn.Name = "disposal_Btn";
+            this.disposal_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.disposal_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.disposal_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.disposal_Btn.OnHoverImage = null;
+            this.disposal_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.disposal_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.disposal_Btn.Size = new System.Drawing.Size(222, 55);
+            this.disposal_Btn.TabIndex = 7;
+            this.disposal_Btn.Text = "DISPOSAL";
+            this.disposal_Btn.TextOffsetX = 5;
             // 
             // mySqlCommand1
             // 
@@ -314,7 +306,7 @@
 
         private Guna.UI.WinForms.GunaAdvenceButton Supplierbtn;
         private Guna.UI.WinForms.GunaAdvenceButton categorybtn;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
+        private Guna.UI.WinForms.GunaAdvenceButton disposal_Btn;
 
     }
 }
