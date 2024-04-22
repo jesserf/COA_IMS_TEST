@@ -19,7 +19,7 @@ namespace COA_IMS.Utilities
             int ret = 0;
             using (db_Manager)
             {
-                ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.logged_in, username, message)));
+                ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.logged_in, CurrentUser.user_name, message)));
             }
 
         }
@@ -30,7 +30,7 @@ namespace COA_IMS.Utilities
             int ret = 0;
             using (db_Manager)
             {
-                ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.logged_in, username, message)));
+                ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.logged_in, CurrentUser.user_name, message)));
             }
 
         }
@@ -51,7 +51,6 @@ namespace COA_IMS.Utilities
                 int indexOfSteam = Database_Query.last_query.IndexOf("LIMIT");
                 if (indexOfSteam >= 0)
                     Database_Query.last_query = Database_Query.last_query.Remove(indexOfSteam);
-                Console.WriteLine(Database_Query.last_query);
             }
             return dt;
         }
@@ -67,7 +66,6 @@ namespace COA_IMS.Utilities
                 int indexOfSteam = Database_Query.last_query.IndexOf("LIMIT");
                 if (indexOfSteam >= 0)
                     Database_Query.last_query = Database_Query.last_query.Remove(indexOfSteam);
-                Console.WriteLine(Database_Query.last_query);
             }
             return dt;
         }
@@ -84,7 +82,6 @@ namespace COA_IMS.Utilities
                 int indexOfSteam = Database_Query.last_query.IndexOf("LIMIT");
                 if (indexOfSteam >= 0)
                     Database_Query.last_query = Database_Query.last_query.Remove(indexOfSteam);
-                Console.WriteLine(Database_Query.last_query);
             }
             return dt;
         }
@@ -104,6 +101,15 @@ namespace COA_IMS.Utilities
                 //Console.WriteLine(Database_Query.last_query);
             }
             return dt;
+        }
+
+        public void Add_New_Item_Record()
+        {
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+            {
+
+            }
         }
         #endregion
         //count number of account logging activities

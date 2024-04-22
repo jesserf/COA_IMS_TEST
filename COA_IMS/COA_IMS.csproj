@@ -251,6 +251,12 @@
     <Compile Include="Screens\scrn\InventoryScreen.Designer.cs">
       <DependentUpon>InventoryScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\scrn\LogsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrn\LogsForm.Designer.cs">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Splash Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,24 @@
     <Compile Include="Screens\Subscrn\InventoryTable.Designer.cs">
       <DependentUpon>InventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.Designer.cs">
+      <DependentUpon>AccountLogsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\ActivityLogsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\ActivityLogsSubForm.Designer.cs">
+      <DependentUpon>ActivityLogsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.Designer.cs">
+      <DependentUpon>ReportLogsSubForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\UserMaintenancetab.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -435,6 +459,7 @@
     <Compile Include="UserControlUtil\TableUtil\GenericTable.cs" />
     <Compile Include="UserControlUtil\TableUtil\IGenericTableVariables.cs" />
     <Compile Include="Utilities\Activity_Manager.cs" />
+    <Compile Include="Utilities\CurrentUser.cs" />
     <Compile Include="Utilities\Inventory_Manager.cs" />
     <Compile Include="Utilities\RandomAlphanumericString.cs" />
     <Compile Include="Utilities\Tab_Manager.cs" />
@@ -529,6 +554,9 @@
     <EmbeddedResource Include="Screens\scrn\InventoryScreen.resx">
       <DependentUpon>InventoryScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrn\LogsForm.resx">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Splash Screen.resx">
       <DependentUpon>Splash Screen.cs</DependentUpon>
     </EmbeddedResource>
@@ -585,6 +613,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\InventoryTable.resx">
       <DependentUpon>InventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.resx">
+      <DependentUpon>AccountLogsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\ActivityLogsSubForm.resx">
+      <DependentUpon>ActivityLogsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.resx">
+      <DependentUpon>ReportLogsSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UserMaintenancetab.resx">
       <DependentUpon>UserMaintenancetab.cs</DependentUpon>
@@ -736,6 +773,7 @@
     <None Include="Resources\logout %282%29.png" />
     <None Include="Resources\logout %283%29.png" />
     <None Include="Resources\info.png" />
+    <None Include="Resources\logs.png" />
     <Content Include="Resources\Menu Bar Icon - Copy.png" />
     <Content Include="Resources\Menu Bar Icon.png" />
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
@@ -800,5 +838,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

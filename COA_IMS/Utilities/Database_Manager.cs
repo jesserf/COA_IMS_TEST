@@ -50,7 +50,7 @@ namespace COA_IMS.Utilities
             return dataTable;
         }
         #region IMS ExecuteQuery
-        public List<string> ExecuteQueryToList(string query)
+        public List<string> ExecuteQueryToList(string query, string item_column)
         {
             var dbCon = DBConnection.Instance();
             List<string> list_of_items = new List<string>();
@@ -62,7 +62,7 @@ namespace COA_IMS.Utilities
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
-                            list_of_items.Add(Convert.ToString(reader["item_brand"]));
+                            list_of_items.Add(Convert.ToString(reader[item_column]));
                     }
                 }
                 catch (Exception ex)

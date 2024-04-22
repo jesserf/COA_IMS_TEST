@@ -55,26 +55,23 @@ namespace COA_IMS.Screens.scrn
                 case "disposalBtn":
                     break;
             }
-            tab_Manager.active_AdvButton(button, false, false, navButtons);
+            tab_Manager.active_AdvButton(button, false, false);
         }
 
         private void InventoryMain_Load(object sender, EventArgs e)
         {
             tab_Manager = new Tab_Manager();
 
-            foreach (Control control in nav_panel.Controls)
-                if (control is GunaButton)
-                    tab_Manager.Nav_buttons.Add(control);
+            //foreach (Control control in nav_panel.Controls)
+            //    if (control is GunaAdvenceButton)
+            //        tab_Manager.Nav_buttons.Add(control);
+            tab_Manager.TakeAllAdvButtonsFromFlowLay(nav_panel);
 
             tab_Manager.set_Colors("#1B303B", "#C7C8CC");
-            tab_Manager.active_AdvButton(inventory_Table_Btn, false, false, navButtons);
+            tab_Manager.active_AdvButton(inventory_Table_Btn, false, false);
 
             inventory_Table_Btn.PerformClick();
         }
 
-        private void container_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

@@ -29,6 +29,7 @@ namespace COA_IMS.Screens.scrn
         private readonly IMS_Reports report_Tab = new IMS_Reports();
         /*private readonly ActivityLogs log_Tab = new ActivityLogs();*/
         private readonly IMS_Maintenance maintenance_Tab = new IMS_Maintenance();
+        private readonly LogsForm logs_Tab = new LogsForm();
 
         private bool dontRunClosingEventHandler = false;
 
@@ -41,17 +42,20 @@ namespace COA_IMS.Screens.scrn
 
         private void Dashboard2_Load(object sender, EventArgs e)
         {
+            CurrentUser.user_name = "admin";
             tab_Manager = new Tab_Manager();
             login_manager = new Login_Manager();
             activity_manager = new Activity_Manager();
-            foreach (GunaButton btn in tabPanel.Controls)
-            {
-                tab_Manager.Nav_buttons.Add(btn);
-                btn.OnHoverBaseColor = Theme.Hex_To_RGB(tab_Manager.select_hover_color);
-            }
+            //foreach (GunaButton btn in tabPanel.Controls)
+            //{
+            //    tab_Manager.Nav_buttons.Add(btn);
+            //    btn.OnHoverBaseColor = Theme.Hex_To_RGB(tab_Manager.select_hover_color);
+            //}
 
-            Login_Manager.active_Account = "admin";
-            activity_manager.Log_Activity("admin", "Logged In");
+            tab_Manager.TakeAllButtonsFromFlowLay(tabPanel);
+
+            Login_Manager.active_Account = CurrentUser.user_name;
+            activity_manager.Log_Activity(CurrentUser.user_name, "Logged In");
 
             tab_Manager.Header_Title = title_Label;
             tab_Manager.active_Button(Homebtn, true);
@@ -79,9 +83,13 @@ namespace COA_IMS.Screens.scrn
                 case "Settingsbtn":
                     form = maintenance_Tab;
                     break;
-                case "UserMaintenance":
+                case "UserMaintenancebtn":
                     form = usermaintenance_tab;
                     break;
+                case "Logsbtn":
+                    form = logs_Tab;
+                    break;
+                default: break;
             }
             if (form != null)
                 current_Form = tab_Manager.switch_Form(form, current_Form, main_Panel);
@@ -124,16 +132,6 @@ namespace COA_IMS.Screens.scrn
                 login_.ShowDialog();
                 this.Close();
             }
-        }
-
-        private void main_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void UserMaintenance_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
