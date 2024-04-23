@@ -38,19 +38,19 @@ namespace COA_IMS.Screens.scrn
             switch (button.Name)
             {
                 case "inventory_Table_Btn":
-                    current_Form = tab_Manager.switch_Form(inventory_Table, current_Form, container_Panel);
+                    current_Form = tab_Manager.switch_Form(inventory_Table, current_Form, content_Panel);
                     break;
 
                 case "archived_Table_Btn":
-                    current_Form = tab_Manager.switch_Form(archive_Table, current_Form, container_Panel);
+                    current_Form = tab_Manager.switch_Form(archive_Table, current_Form, content_Panel);
                     break;
 
                 case "categorybtn":
-                    current_Form = tab_Manager.switch_Form(category_tab, current_Form, container_Panel);
+                    current_Form = tab_Manager.switch_Form(category_tab, current_Form, content_Panel);
                     break;
 
                 case "Supplierbtn":
-                    current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, container_Panel);
+                    current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, content_Panel);
                     break;
                 case "disposalBtn":
                     break;

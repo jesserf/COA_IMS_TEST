@@ -54,7 +54,7 @@
             // 
             // gunaElipsePanel1
             // 
-            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel1.BackColor = System.Drawing.Color.White;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
             this.gunaElipsePanel1.Controls.Add(this.tabPanel);
             this.gunaElipsePanel1.Controls.Add(this.gunaCirclePictureBox1);
@@ -354,6 +354,104 @@
             this.gunaCirclePictureBox1.TabIndex = 0;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
+            // gunaElipsePanel2
+            // 
+            this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel2.Controls.Add(this.tableLayoutPanel2);
+            this.gunaElipsePanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(285, 0);
+            this.gunaElipsePanel2.Name = "gunaElipsePanel2";
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(1619, 76);
+            this.gunaElipsePanel2.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.title_Label, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.profilePanel, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1619, 76);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // title_Label
+            // 
+            this.title_Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.title_Label.AutoSize = true;
+            this.title_Label.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.title_Label.Location = new System.Drawing.Point(3, 33);
+            this.title_Label.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.title_Label.Name = "title_Label";
+            this.title_Label.Size = new System.Drawing.Size(479, 33);
+            this.title_Label.TabIndex = 3;
+            this.title_Label.Text = "Cherie Urie Rejoy";
+            // 
+            // profilePanel
+            // 
+            this.profilePanel.ColumnCount = 2;
+            this.profilePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.25F));
+            this.profilePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.75F));
+            this.profilePanel.Controls.Add(this.user_Name, 0, 0);
+            this.profilePanel.Controls.Add(this.profileOptionsButton, 1, 0);
+            this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePanel.Location = new System.Drawing.Point(1216, 3);
+            this.profilePanel.Name = "profilePanel";
+            this.profilePanel.RowCount = 1;
+            this.profilePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.profilePanel.Size = new System.Drawing.Size(400, 70);
+            this.profilePanel.TabIndex = 2;
+            // 
+            // user_Name
+            // 
+            this.user_Name.AutoSize = true;
+            this.user_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.user_Name.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.user_Name.Location = new System.Drawing.Point(3, 0);
+            this.user_Name.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.user_Name.Name = "user_Name";
+            this.user_Name.Size = new System.Drawing.Size(331, 60);
+            this.user_Name.TabIndex = 0;
+            this.user_Name.Text = "Cherie Urie Rejoy";
+            this.user_Name.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // profileOptionsButton
+            // 
+            this.profileOptionsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.profileOptionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profileOptionsButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.profileOptionsButton.Image = global::COA_IMS.Properties.Resources.arrow_down_sign_to_navigate;
+            this.profileOptionsButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.profileOptionsButton.Location = new System.Drawing.Point(342, 16);
+            this.profileOptionsButton.Name = "profileOptionsButton";
+            this.profileOptionsButton.OnHoverImage = null;
+            this.profileOptionsButton.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.profileOptionsButton.Size = new System.Drawing.Size(55, 51);
+            this.profileOptionsButton.TabIndex = 0;
+            this.profileOptionsButton.Click += new System.EventHandler(this.profileButton_Click);
+            // 
+            // main_Panel
+            // 
+            this.main_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.main_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.main_Panel.Location = new System.Drawing.Point(285, 76);
+            this.main_Panel.Name = "main_Panel";
+            this.main_Panel.Radius = 5;
+            this.main_Panel.Size = new System.Drawing.Size(1619, 965);
+            this.main_Panel.TabIndex = 2;
+            this.main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.main_Panel_Paint);
             // 
             // Dashboard2
             // 

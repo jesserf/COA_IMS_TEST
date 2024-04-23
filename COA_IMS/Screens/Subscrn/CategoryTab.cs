@@ -23,5 +23,10 @@ namespace COA_IMS.Screens.Subscrn
            CategoryForm catform = new CategoryForm();
             catform.ShowDialog();
         }
+
+        private void CategoryTab_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
