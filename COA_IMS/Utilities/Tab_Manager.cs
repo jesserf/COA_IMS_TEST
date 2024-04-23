@@ -13,6 +13,8 @@ namespace COA_IMS.Utilities
     {
 
         private List<Control> Navigation_Buttons = new List<Control>();
+        private List<GunaButton> nav_GunaButtons = new List<GunaButton>();
+        private List<GunaAdvenceButton> nav_GunaAdvenceButton = new List<GunaAdvenceButton>();
 
         private List<object> Sub_Frames = new List<object>();
         public Control Header_Title { get; set; }
@@ -38,7 +40,7 @@ namespace COA_IMS.Utilities
         {
             this.selected_color = (!string.IsNullOrEmpty(selected_color)) ? selected_color : "#c68621";
             this.select_hover_color = (!string.IsNullOrEmpty(select_hover_color)) ? select_hover_color : "#e9bf7e";
-            this.unselected_color = (!string.IsNullOrEmpty(unselected_color)) ? unselected_color : "#db9526";
+            this.unselected_color = (!string.IsNullOrEmpty(unselected_color)) ? unselected_color : "#ffffff";
         }
 
         public List<object> Sub_frames 
@@ -51,13 +53,24 @@ namespace COA_IMS.Utilities
             get { return Navigation_Buttons; }
             set { Navigation_Buttons = value; }
         }
+        public List<GunaAdvenceButton> Nav_AdvBtns
+        {
+            get { return nav_GunaAdvenceButton; }
+            set { nav_GunaAdvenceButton = value; }
+        }
+        public List<GunaButton> Nav_Btns
+        {
+            get { return nav_GunaButtons; }
+            set { nav_GunaButtons = value; }
+        }
         public void active_Button(GunaButton button, bool has_Title = false, bool enable = true)
         {
-            foreach (var buttons in Navigation_Buttons)
+            foreach (var buttons in nav_GunaButtons)
             {
                 if (buttons.Name.Equals(button.Name))
                 {
-                    button.BackColor = Theme.Hex_To_RGB(selected_color);
+                    buttons.BackColor = Theme.Hex_To_RGB(selected_color);
+                    buttons.ForeColor = Theme.Hex_To_RGB(unselected_color);
                     if(!enable) button.Enabled = false;
                     if (has_Title)
                         change_Title(button.Tag.ToString().ToUpper());
@@ -65,27 +78,38 @@ namespace COA_IMS.Utilities
                 else
                 {
                     buttons.BackColor = Theme.Hex_To_RGB(unselected_color);
+                    buttons.ForeColor = Color.Black;
                 }
             }
         }
 
-        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false, bool enable = true, List<Control> advBtns = null)
+        public void active_AdvButton(GunaAdvenceButton button, bool has_Title = false, bool enable = true)
         {
-            foreach (GunaAdvenceButton buttons in advBtns)
+            foreach (var buttons in nav_GunaAdvenceButton)
             {
                 if (buttons.Name.Equals(button.Name))
                 {
-                    //button.BackColor = Theme.Hex_To_RGB(selected_color);
                     if (!enable) button.Enabled = false;
                     if (has_Title)
                         change_Title(button.Tag.ToString().ToUpper());
                 }
-                else
-                {
-                    //buttons.BackColor = Theme.Hex_To_RGB(unselected_color);
-                    buttons.Enabled = true;
-                }
+                else buttons.Enabled = true;
             }
+        }
+
+        public void TakeAllButtonsFromFlowLay (FlowLayoutPanel panel)
+        {
+            foreach (GunaButton control in panel.Controls)
+            {
+                control.OnHoverBaseColor = Theme.Hex_To_RGB(select_hover_color);
+                Nav_Btns.Add(control);
+            }
+        }
+
+        public void TakeAllAdvButtonsFromFlowLay(FlowLayoutPanel panel)
+        {
+            foreach (GunaAdvenceButton control in panel.Controls)
+                Nav_AdvBtns.Add(control);
         }
 
 

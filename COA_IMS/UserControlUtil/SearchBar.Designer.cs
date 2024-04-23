@@ -41,6 +41,7 @@
             this.flowLayoutPanel1.Controls.Add(this.search_box);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+
             this.flowLayoutPanel1.Size = new System.Drawing.Size(547, 56);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
@@ -81,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "SearchBar";
             this.Size = new System.Drawing.Size(547, 54);

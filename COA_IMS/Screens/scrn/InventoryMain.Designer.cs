@@ -56,7 +56,6 @@
             this.container_Panel.Name = "container_Panel";
             this.container_Panel.Size = new System.Drawing.Size(1603, 926);
             this.container_Panel.TabIndex = 3;
-            this.container_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.container_Panel_Paint);
             // 
             // parent_panel
             // 
@@ -69,6 +68,15 @@
             this.parent_panel.Name = "parent_panel";
             this.parent_panel.Size = new System.Drawing.Size(1603, 926);
             this.parent_panel.TabIndex = 3;
+            // 
+            // line_Panel
+            // 
+            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(124)))), ((int)(((byte)(58)))));
+            this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.line_Panel.Location = new System.Drawing.Point(0, 54);
+            this.line_Panel.Name = "line_Panel";
+            this.line_Panel.Size = new System.Drawing.Size(1620, 5);
+            this.line_Panel.TabIndex = 1;
             // 
             // nav_panel
             // 
@@ -264,6 +272,7 @@
             this.disposal_Btn.TabIndex = 7;
             this.disposal_Btn.Text = "DISPOSAL";
             this.disposal_Btn.TextOffsetX = 5;
+            this.disposal_Btn.Click += new System.EventHandler(this.button_Click);
             // 
             // mySqlCommand1
             // 

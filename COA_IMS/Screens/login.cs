@@ -167,7 +167,6 @@ namespace COA_IMS
                 password_entry.PasswordChar = '\0';
                 password_entry.Text = "Password";
             }
-
         }
 
         private void login_FormClosing(object sender, FormClosingEventArgs e)
