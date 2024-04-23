@@ -1,6 +1,6 @@
-﻿namespace COA_IMS.Screens.Subscrn
+﻿namespace COA_IMS.Screens.Subscrn.LogsSubscreens
 {
-    partial class CategoryForm
+    partial class UnitForm
     {
         /// <summary>
         /// Required designer variable.
@@ -49,11 +49,11 @@
             this.categorypopup.Controls.Add(this.save_Button);
             this.categorypopup.Controls.Add(this.gunaLabel1);
             this.categorypopup.Controls.Add(this.add_Category_TextBox);
-            this.categorypopup.Location = new System.Drawing.Point(-2, -1);
+            this.categorypopup.Location = new System.Drawing.Point(0, 1);
             this.categorypopup.Name = "categorypopup";
             this.categorypopup.Radius = 10;
             this.categorypopup.Size = new System.Drawing.Size(635, 155);
-            this.categorypopup.TabIndex = 0;
+            this.categorypopup.TabIndex = 1;
             // 
             // gunaImageButton1
             // 
@@ -129,9 +129,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(16, 14);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(163, 23);
+            this.gunaLabel1.Size = new System.Drawing.Size(122, 23);
             this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Add new Category";
+            this.gunaLabel1.Text = "Add new Unit";
             // 
             // add_Category_TextBox
             // 
@@ -151,20 +151,20 @@
             this.add_Category_TextBox.SelectedText = "";
             this.add_Category_TextBox.Size = new System.Drawing.Size(576, 37);
             this.add_Category_TextBox.TabIndex = 0;
-            this.add_Category_TextBox.Text = "Category Name";
+            this.add_Category_TextBox.Text = "Unit Name";
             this.add_Category_TextBox.Enter += new System.EventHandler(this.textbox_Enter);
             this.add_Category_TextBox.Leave += new System.EventHandler(this.textbox_Leave);
             // 
-            // CategoryForm
+            // UnitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 156);
             this.Controls.Add(this.categorypopup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CategoryForm";
+            this.Name = "UnitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CategoryForm";
+            this.Text = "UnitForm";
             this.categorypopup.ResumeLayout(false);
             this.categorypopup.PerformLayout();
             this.ResumeLayout(false);
@@ -174,10 +174,10 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipsePanel categorypopup;
+        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
+        private Guna.UI.WinForms.GunaButton clear_Button;
         private Guna.UI.WinForms.GunaButton save_Button;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaTextBox add_Category_TextBox;
-        private Guna.UI.WinForms.GunaButton clear_Button;
-        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
     }
 }

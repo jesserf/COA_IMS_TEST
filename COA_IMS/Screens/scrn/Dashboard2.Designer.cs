@@ -451,7 +451,6 @@
             this.main_Panel.Radius = 5;
             this.main_Panel.Size = new System.Drawing.Size(1619, 965);
             this.main_Panel.TabIndex = 2;
-            this.main_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.main_Panel_Paint);
             // 
             // Dashboard2
             // 

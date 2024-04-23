@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace COA_IMS.Utilities
@@ -97,18 +98,21 @@ namespace COA_IMS.Utilities
                 int indexOfSteam = Database_Query.last_query.IndexOf("LIMIT");
                 if (indexOfSteam >= 0)
                     Database_Query.last_query = Database_Query.last_query.Remove(indexOfSteam);
-                Console.WriteLine(Database_Query.last_query);
-                //Console.WriteLine(Database_Query.last_query);
             }
             return dt;
         }
 
-        public void Add_New_Item_Record()
+        public void Add_New_Item_Record(string type, string record_name)
         {
             db_Manager = new Database_Manager();
             using (db_Manager)
             {
-
+                db_Manager = new Database_Manager();
+                int ret = 0;
+                using (db_Manager)
+                {
+                    ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.log_maintenance_activity_add, CurrentUser.user_name, type, record_name)));
+                }
             }
         }
         #endregion

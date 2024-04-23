@@ -1,6 +1,6 @@
 ﻿namespace COA_IMS.Screens.Subscrn
 {
-    partial class CategoryForm
+    partial class BrandForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.categorypopup = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.clear_Button = new Guna.UI.WinForms.GunaButton();
             this.save_Button = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.add_Category_TextBox = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.categorypopup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,24 +49,11 @@
             this.categorypopup.Controls.Add(this.save_Button);
             this.categorypopup.Controls.Add(this.gunaLabel1);
             this.categorypopup.Controls.Add(this.add_Category_TextBox);
-            this.categorypopup.Location = new System.Drawing.Point(-2, -1);
+            this.categorypopup.Location = new System.Drawing.Point(0, 1);
             this.categorypopup.Name = "categorypopup";
             this.categorypopup.Radius = 10;
             this.categorypopup.Size = new System.Drawing.Size(635, 155);
-            this.categorypopup.TabIndex = 0;
-            // 
-            // gunaImageButton1
-            // 
-            this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.circle_xmark__1_;
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaImageButton1.Location = new System.Drawing.Point(608, 3);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(28, 33);
-            this.gunaImageButton1.TabIndex = 4;
-            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
+            this.categorypopup.TabIndex = 1;
             // 
             // clear_Button
             // 
@@ -129,9 +116,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(16, 14);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(163, 23);
+            this.gunaLabel1.Size = new System.Drawing.Size(139, 23);
             this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Add new Category";
+            this.gunaLabel1.Text = "Add new Brand";
             // 
             // add_Category_TextBox
             // 
@@ -151,20 +138,33 @@
             this.add_Category_TextBox.SelectedText = "";
             this.add_Category_TextBox.Size = new System.Drawing.Size(576, 37);
             this.add_Category_TextBox.TabIndex = 0;
-            this.add_Category_TextBox.Text = "Category Name";
+            this.add_Category_TextBox.Text = "Brand Name";
             this.add_Category_TextBox.Enter += new System.EventHandler(this.textbox_Enter);
             this.add_Category_TextBox.Leave += new System.EventHandler(this.textbox_Leave);
             // 
-            // CategoryForm
+            // gunaImageButton1
+            // 
+            this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.circle_xmark__1_;
+            this.gunaImageButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaImageButton1.Location = new System.Drawing.Point(608, 3);
+            this.gunaImageButton1.Name = "gunaImageButton1";
+            this.gunaImageButton1.OnHoverImage = null;
+            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.gunaImageButton1.Size = new System.Drawing.Size(28, 33);
+            this.gunaImageButton1.TabIndex = 4;
+            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click);
+            // 
+            // BrandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 156);
             this.Controls.Add(this.categorypopup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CategoryForm";
+            this.Name = "BrandForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CategoryForm";
+            this.Text = "BrandForm";
             this.categorypopup.ResumeLayout(false);
             this.categorypopup.PerformLayout();
             this.ResumeLayout(false);
@@ -174,10 +174,10 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipsePanel categorypopup;
+        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
+        private Guna.UI.WinForms.GunaButton clear_Button;
         private Guna.UI.WinForms.GunaButton save_Button;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaTextBox add_Category_TextBox;
-        private Guna.UI.WinForms.GunaButton clear_Button;
-        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
     }
 }
