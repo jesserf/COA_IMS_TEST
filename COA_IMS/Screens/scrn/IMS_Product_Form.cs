@@ -66,7 +66,7 @@ namespace COA_IMS.Screens.scrn
                 item_Brand_CBox.Items.Add(items);
             foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_list, "item_type"))
                 item_Type_CBox.Items.Add(items);
-            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_list, "unit_type"))
+            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_units, "unit"))
                 unit_Type_CBox.Items.Add(items);
         }
         private void clear_Textboxes()

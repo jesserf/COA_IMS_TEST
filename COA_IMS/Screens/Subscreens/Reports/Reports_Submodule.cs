@@ -40,7 +40,7 @@ namespace COA_IMS.Screens.Subscreens.Reports
             string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
             string current_time = DateTime.Now.ToString("HH':'mm':'ss");
             string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd " + current_time);
-            switch (4)
+            switch (i)
             {
                 case 1:
                     Query = string.Format(Database_Query.get_general_project_records_by_date, sort_by, from_Date, to_Date);

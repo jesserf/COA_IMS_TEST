@@ -64,7 +64,7 @@
             // gunaImageButton1
             // 
             this.gunaImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaImageButton1.BackgroundImage = global::COA_IMS.Properties.Resources.info;
+            this.gunaImageButton1.BackgroundImage = global::COA_IMS.Properties.Resources.InformationLOgo_removebg_preview;
             this.gunaImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gunaImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
