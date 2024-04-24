@@ -335,6 +335,12 @@
     <Compile Include="Screens\Subscreens\Reports\Reports_Submodule.Designer.cs">
       <DependentUpon>Reports_Submodule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\Add SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Add SupplierForm.Designer.cs">
+      <DependentUpon>Add SupplierForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\ArchiveInventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -599,6 +605,9 @@
     <EmbeddedResource Include="Screens\Subscreens\Reports\Reports_Submodule.resx">
       <DependentUpon>Reports_Submodule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Add SupplierForm.resx">
+      <DependentUpon>Add SupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\ArchiveInventoryTable.resx">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -736,6 +745,7 @@
     <None Include="Resources\swipe-right.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
     <Content Include="Resources\add-product.png" />
     <Content Include="Resources\add-product1.png" />
     <Content Include="Resources\apps-sort - Copy.png" />

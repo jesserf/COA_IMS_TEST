@@ -40,5 +40,16 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"Category Name: {item} is not added.", "Category Name Not Added");
 
         }
+        public void Insert_Item_Supplier_Info(string sn, string address, string cn, string cp, string item)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(string.Format(Database_Query.set_new_supplier, sn, address, cn, cp));
+            /*if(ret == 1)
+            MessageBox.Show($"Category Name: {item} is successfully added.", "Category Name Added");
+            else if (ret == 0)
+                MessageBox.Show($"Category Name: {item} is not added.", "Category Name Not Added");*/
+        }
     }
 }

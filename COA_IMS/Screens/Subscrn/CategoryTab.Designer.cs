@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryTab));
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -38,17 +38,16 @@
             this.reports_Button = new Guna.UI.WinForms.GunaButton();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
+            this.dateFilter1 = new COA_IMS.UserControlUtil.DateFilter();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.addcategorybtn = new Guna.UI.WinForms.GunaButton();
             this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
-            this.addcategorybtn = new Guna.UI.WinForms.GunaButton();
-            this.dateFilter1 = new COA_IMS.UserControlUtil.DateFilter();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
-            this.gunaElipsePanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.gunaElipsePanel2.SuspendLayout();
@@ -61,10 +60,9 @@
             // 
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel1.Controls.Add(this.tableLayoutPanel1);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 109);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 92);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(1626, 68);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(1626, 49);
             this.gunaElipsePanel1.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -73,17 +71,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.78075F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.21925F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateFilter1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 92);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1626, 68);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1626, 49);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // flowLayoutPanel1
@@ -91,7 +88,7 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1506, 22);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1503, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(117, 43);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -166,7 +163,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1306, 23);
+            this.sortComboBox.Location = new System.Drawing.Point(1303, 4);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.Silver;
@@ -175,15 +172,64 @@
             this.sortComboBox.Size = new System.Drawing.Size(185, 35);
             this.sortComboBox.TabIndex = 2;
             // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(3, 3);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(548, 43);
+            this.searchBar1.TabIndex = 3;
+            // 
+            // dateFilter1
+            // 
+            this.dateFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
+            this.dateFilter1.Location = new System.Drawing.Point(559, 3);
+            this.dateFilter1.Name = "dateFilter1";
+            this.dateFilter1.Size = new System.Drawing.Size(640, 43);
+            this.dateFilter1.TabIndex = 5;
+            this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
+            // 
             // gunaElipsePanel2
             // 
             this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel2.Controls.Add(this.addcategorybtn);
             this.gunaElipsePanel2.Controls.Add(this.LogsTable);
             this.gunaElipsePanel2.Location = new System.Drawing.Point(0, 177);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
             this.gunaElipsePanel2.Size = new System.Drawing.Size(1625, 632);
             this.gunaElipsePanel2.TabIndex = 4;
+            // 
+            // addcategorybtn
+            // 
+            this.addcategorybtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addcategorybtn.AnimationHoverSpeed = 0.07F;
+            this.addcategorybtn.AnimationSpeed = 0.03F;
+            this.addcategorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.addcategorybtn.BaseColor = System.Drawing.Color.White;
+            this.addcategorybtn.BorderColor = System.Drawing.Color.Black;
+            this.addcategorybtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.addcategorybtn.FocusedColor = System.Drawing.Color.Empty;
+            this.addcategorybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addcategorybtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.addcategorybtn.Image = global::COA_IMS.Properties.Resources.add__1_;
+            this.addcategorybtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.addcategorybtn.Location = new System.Drawing.Point(1445, 5);
+            this.addcategorybtn.Name = "addcategorybtn";
+            this.addcategorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.addcategorybtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.addcategorybtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.addcategorybtn.OnHoverImage = null;
+            this.addcategorybtn.OnPressedColor = System.Drawing.Color.Black;
+            this.addcategorybtn.Radius = 10;
+            this.addcategorybtn.Size = new System.Drawing.Size(154, 42);
+            this.addcategorybtn.TabIndex = 2;
+            this.addcategorybtn.Text = "Add new Category";
+            this.addcategorybtn.Click += new System.EventHandler(this.addcategorybtn_Click);
             // 
             // LogsTable
             // 
@@ -191,42 +237,41 @@
             this.LogsTable.AllowUserToDeleteRows = false;
             this.LogsTable.AllowUserToResizeColumns = false;
             this.LogsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.LogsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LogsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LogsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.LogsTable.ColumnHeadersHeight = 20;
             this.LogsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LogsTable.DefaultCellStyle = dataGridViewCellStyle12;
-            this.LogsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LogsTable.DefaultCellStyle = dataGridViewCellStyle6;
             this.LogsTable.EnableHeadersVisualStyles = false;
             this.LogsTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
-            this.LogsTable.Location = new System.Drawing.Point(0, 0);
+            this.LogsTable.Location = new System.Drawing.Point(0, -39);
             this.LogsTable.Margin = new System.Windows.Forms.Padding(15);
             this.LogsTable.Name = "LogsTable";
             this.LogsTable.ReadOnly = true;
             this.LogsTable.RowHeadersVisible = false;
             this.LogsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.LogsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LogsTable.Size = new System.Drawing.Size(1625, 632);
+            this.LogsTable.Size = new System.Drawing.Size(1625, 671);
             this.LogsTable.TabIndex = 8;
             this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -349,70 +394,22 @@
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
             // 
-            // addcategorybtn
-            // 
-            this.addcategorybtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addcategorybtn.AnimationHoverSpeed = 0.07F;
-            this.addcategorybtn.AnimationSpeed = 0.03F;
-            this.addcategorybtn.BackColor = System.Drawing.Color.Transparent;
-            this.addcategorybtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
-            this.addcategorybtn.BorderColor = System.Drawing.Color.Black;
-            this.addcategorybtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.addcategorybtn.FocusedColor = System.Drawing.Color.Empty;
-            this.addcategorybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addcategorybtn.ForeColor = System.Drawing.Color.White;
-            this.addcategorybtn.Image = global::COA_IMS.Properties.Resources.multiple1;
-            this.addcategorybtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.addcategorybtn.Location = new System.Drawing.Point(1439, 61);
-            this.addcategorybtn.Name = "addcategorybtn";
-            this.addcategorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.addcategorybtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.addcategorybtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.addcategorybtn.OnHoverImage = null;
-            this.addcategorybtn.OnPressedColor = System.Drawing.Color.Black;
-            this.addcategorybtn.Radius = 10;
-            this.addcategorybtn.Size = new System.Drawing.Size(160, 42);
-            this.addcategorybtn.TabIndex = 2;
-            this.addcategorybtn.Text = "Add new Category";
-            this.addcategorybtn.Click += new System.EventHandler(this.addcategorybtn_Click);
-            // 
-            // dateFilter1
-            // 
-            this.dateFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
-            this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            this.dateFilter1.Location = new System.Drawing.Point(560, 22);
-            this.dateFilter1.Name = "dateFilter1";
-            this.dateFilter1.Size = new System.Drawing.Size(640, 43);
-            this.dateFilter1.TabIndex = 5;
-            this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.Location = new System.Drawing.Point(3, 22);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(548, 43);
-            this.searchBar1.TabIndex = 3;
-            // 
             // CategoryTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1603, 866);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.gunaElipsePanel2);
             this.Controls.Add(this.gunaElipsePanel1);
-            this.Controls.Add(this.addcategorybtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoryTab";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryTab";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CategoryTab_Load);
-            this.gunaElipsePanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gunaElipsePanel2.ResumeLayout(false);

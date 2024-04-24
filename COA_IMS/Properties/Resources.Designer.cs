@@ -73,6 +73,16 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add__1_ {
+            get {
+                object obj = ResourceManager.GetObject("add (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_file {
             get {
                 object obj = ResourceManager.GetObject("add_file", resourceCulture);
@@ -686,16 +696,6 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap square_divide {
             get {
                 object obj = ResourceManager.GetObject("square-divide", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap supplier_bg {
-            get {
-                object obj = ResourceManager.GetObject("supplier bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

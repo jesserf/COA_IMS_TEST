@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.container_Panel = new Guna.UI.WinForms.GunaPanel();
+            this.content_Panel = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.archived_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -37,25 +40,42 @@
             this.Supplierbtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.disposal_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.content_Panel = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
+            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.container_Panel.SuspendLayout();
             this.parent_panel.SuspendLayout();
-            this.nav_panel.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
-            this.content_Panel.SuspendLayout();
+            this.nav_panel.SuspendLayout();
+            this.gunaElipsePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // container_Panel
             // 
             this.container_Panel.BackColor = System.Drawing.Color.White;
             this.container_Panel.Controls.Add(this.content_Panel);
+            this.container_Panel.Controls.Add(this.gunaElipsePanel1);
             this.container_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container_Panel.Location = new System.Drawing.Point(0, 0);
             this.container_Panel.Name = "container_Panel";
             this.container_Panel.Size = new System.Drawing.Size(1603, 926);
             this.container_Panel.TabIndex = 3;
+            // 
+            // content_Panel
+            // 
+            this.content_Panel.Location = new System.Drawing.Point(0, 63);
+            this.content_Panel.Name = "content_Panel";
+            this.content_Panel.Size = new System.Drawing.Size(1603, 858);
+            this.content_Panel.TabIndex = 0;
+            // 
+            // gunaLinePanel1
+            // 
+            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
+            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaLinePanel1.Name = "gunaLinePanel1";
+            this.gunaLinePanel1.Size = new System.Drawing.Size(1604, 12);
+            this.gunaLinePanel1.TabIndex = 0;
             // 
             // parent_panel
             // 
@@ -69,14 +89,16 @@
             this.parent_panel.Size = new System.Drawing.Size(1603, 926);
             this.parent_panel.TabIndex = 3;
             // 
-            // line_Panel
+            // gunaPanel1
             // 
-            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(124)))), ((int)(((byte)(58)))));
-            this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.line_Panel.Location = new System.Drawing.Point(0, 54);
-            this.line_Panel.Name = "line_Panel";
-            this.line_Panel.Size = new System.Drawing.Size(1620, 5);
-            this.line_Panel.TabIndex = 1;
+            this.gunaPanel1.AutoSize = true;
+            this.gunaPanel1.Controls.Add(this.nav_panel);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gunaPanel1.Size = new System.Drawing.Size(1603, 54);
+            this.gunaPanel1.TabIndex = 0;
             // 
             // nav_panel
             // 
@@ -91,7 +113,7 @@
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
             this.nav_panel.Margin = new System.Windows.Forms.Padding(0);
             this.nav_panel.Name = "nav_panel";
-            this.nav_panel.Size = new System.Drawing.Size(1603, 55);
+            this.nav_panel.Size = new System.Drawing.Size(1603, 54);
             this.nav_panel.TabIndex = 0;
             // 
             // inventory_Table_Btn
@@ -99,7 +121,7 @@
             this.inventory_Table_Btn.Animated = true;
             this.inventory_Table_Btn.AnimationHoverSpeed = 0.07F;
             this.inventory_Table_Btn.AnimationSpeed = 0.03F;
-            this.inventory_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.inventory_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.inventory_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
             this.inventory_Table_Btn.BorderColor = System.Drawing.Color.Black;
             this.inventory_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -135,7 +157,7 @@
             this.archived_Table_Btn.Animated = true;
             this.archived_Table_Btn.AnimationHoverSpeed = 0.07F;
             this.archived_Table_Btn.AnimationSpeed = 0.03F;
-            this.archived_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.archived_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.archived_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
             this.archived_Table_Btn.BorderColor = System.Drawing.Color.Black;
             this.archived_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -171,7 +193,7 @@
             this.categorybtn.Animated = true;
             this.categorybtn.AnimationHoverSpeed = 0.07F;
             this.categorybtn.AnimationSpeed = 0.03F;
-            this.categorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.categorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.categorybtn.BaseColor = System.Drawing.Color.Transparent;
             this.categorybtn.BorderColor = System.Drawing.Color.Black;
             this.categorybtn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -207,7 +229,7 @@
             this.Supplierbtn.Animated = true;
             this.Supplierbtn.AnimationHoverSpeed = 0.07F;
             this.Supplierbtn.AnimationSpeed = 0.03F;
-            this.Supplierbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.Supplierbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.Supplierbtn.BaseColor = System.Drawing.Color.Transparent;
             this.Supplierbtn.BorderColor = System.Drawing.Color.Black;
             this.Supplierbtn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -244,7 +266,7 @@
             this.disposal_Btn.AnimationHoverSpeed = 0.07F;
             this.disposal_Btn.AnimationSpeed = 0.03F;
             this.disposal_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.disposal_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.disposal_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.disposal_Btn.BorderColor = System.Drawing.Color.Black;
             this.disposal_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
             this.disposal_Btn.CheckedBorderColor = System.Drawing.Color.Black;
@@ -281,35 +303,15 @@
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
-            // gunaPanel1
+            // gunaElipsePanel1
             // 
-            this.gunaPanel1.AutoSize = true;
-            this.gunaPanel1.Controls.Add(this.nav_panel);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gunaPanel1.Size = new System.Drawing.Size(1603, 55);
-            this.gunaPanel1.TabIndex = 0;
-            // 
-            // content_Panel
-            // 
-            this.content_Panel.Controls.Add(this.gunaLinePanel1);
-            this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content_Panel.Location = new System.Drawing.Point(0, 0);
-            this.content_Panel.Name = "content_Panel";
-            this.content_Panel.Size = new System.Drawing.Size(1603, 926);
-            this.content_Panel.TabIndex = 0;
-            // 
-            // gunaLinePanel1
-            // 
-            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 53);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(1602, 10);
-            this.gunaLinePanel1.TabIndex = 0;
+            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel1.Controls.Add(this.gunaLinePanel1);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(-1, 57);
+            this.gunaElipsePanel1.Name = "gunaElipsePanel1";
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(1604, 12);
+            this.gunaElipsePanel1.TabIndex = 1;
             // 
             // InventoryMain
             // 
@@ -325,9 +327,9 @@
             this.container_Panel.ResumeLayout(false);
             this.parent_panel.ResumeLayout(false);
             this.parent_panel.PerformLayout();
-            this.nav_panel.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
-            this.content_Panel.ResumeLayout(false);
+            this.nav_panel.ResumeLayout(false);
+            this.gunaElipsePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,5 +350,6 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaPanel content_Panel;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
+        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
     }
 }

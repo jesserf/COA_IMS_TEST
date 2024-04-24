@@ -16,5 +16,11 @@ namespace COA_IMS.Screens.Subscrn
         {
             InitializeComponent();
         }
+
+        private void AddSupplier_Click(object sender, EventArgs e)
+        {
+            Add_SupplierForm supform = new Add_SupplierForm();
+            supform.ShowDialog();
+        }
     }
 }
