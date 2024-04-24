@@ -56,7 +56,7 @@
       <HintPath>..\packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>C:\Users\Cherie Mae Rejoy\Downloads\IMS_TEST-master\Guna.UI.dll</HintPath>
+      <HintPath>C:\Users\COA\source\repos\COA_IMS_TEST\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -347,6 +347,12 @@
     <Compile Include="Screens\Subscrn\ArchiveInventoryTable.Designer.cs">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\BrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\BrandForm.Designer.cs">
+      <DependentUpon>BrandForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\CategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -394,6 +400,12 @@
     </Compile>
     <Compile Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.Designer.cs">
       <DependentUpon>ReportLogsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\UnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\UnitForm.Designer.cs">
+      <DependentUpon>UnitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UserMaintenancetab.cs">
       <SubType>Form</SubType>
@@ -611,6 +623,9 @@
     <EmbeddedResource Include="Screens\Subscrn\ArchiveInventoryTable.resx">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\BrandForm.resx">
+      <DependentUpon>BrandForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -634,6 +649,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.resx">
       <DependentUpon>ReportLogsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\UnitForm.resx">
+      <DependentUpon>UnitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UserMaintenancetab.resx">
       <DependentUpon>UserMaintenancetab.cs</DependentUpon>
@@ -841,7 +859,7 @@
     <None Include="Resources\swipe-left1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\Cherie Mae Rejoy\Downloads\IMS_TEST-master\Guna.UI.dll" />
+    <Analyzer Include="C:\Users\COA\source\repos\COA_IMS_TEST\Guna.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

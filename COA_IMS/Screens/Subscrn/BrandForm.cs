@@ -11,14 +11,13 @@ using System.Windows.Forms;
 
 namespace COA_IMS.Screens.Subscrn
 {
-    public partial class CategoryForm : Form
+    public partial class BrandForm : Form
     {
         Inventory_Manager inventory_Manager = new Inventory_Manager();
-        public CategoryForm()
+        public BrandForm()
         {
             InitializeComponent();
         }
-
         private void gunaImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -31,12 +30,12 @@ namespace COA_IMS.Screens.Subscrn
 
         private void save_Button_Click(object sender, EventArgs e)
         {
-            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, add_Category_TextBox.Text, "Type");
+            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_brands, add_Category_TextBox.Text, "Brand", CurrentUser.user_name);
         }
 
         private void textbox_Enter(object sender, EventArgs e)
         {
-            if (string.Equals(add_Category_TextBox.Text.ToString(), "Category Name"))
+            if (string.Equals(add_Category_TextBox.Text.ToString(), "Brand Name"))
             {
                 add_Category_TextBox.ForeColor = Color.Black;
                 add_Category_TextBox.Text = "";
@@ -49,7 +48,7 @@ namespace COA_IMS.Screens.Subscrn
             if (string.Equals(add_Category_TextBox.Text.ToString().Trim(), ""))
             {
                 add_Category_TextBox.ForeColor = Color.LightGray;
-                add_Category_TextBox.Text = "Category Name";
+                add_Category_TextBox.Text = "Brand Name";
             }
         }
     }
