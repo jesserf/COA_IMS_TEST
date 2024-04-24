@@ -15,6 +15,7 @@ namespace COA_IMS.Utilities
         {
             db_Manager = new Database_Manager();
             List<string> list_Of_Items = new List<string>();
+            query = string.Format(query, item_column);
             using (db_Manager)
                 list_Of_Items = db_Manager.ExecuteQueryToList(query, item_column);
             return list_Of_Items;
@@ -27,18 +28,40 @@ namespace COA_IMS.Utilities
                 code = Convert.ToInt32(db_Manager.ExecuteScalar(query));
             return code;
         }
-        public void Insert_Item_Category_Name(string query, string item)
+        public void Insert_Item_Category_Name(string query, string item, string type, string name = null)
         {
             int ret;
             db_Manager = new Database_Manager();
-            query = string.Format(query, item);
+            query = string.Format(query, item, name);
             using(db_Manager)
                 ret = db_Manager.ExecuteNonQuery(query);
             if (ret == 1)
-                MessageBox.Show($"Category Name: {item} is successfully added.", "Category Name Added");
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(type, item);
+                MessageBox.Show($"{type} Name: {item} is successfully added.", "Category Name Added");
+            }
             else if (ret == 0)
-                MessageBox.Show($"Category Name: {item} is not added.", "Category Name Not Added");
+                MessageBox.Show($"{type} Name: {item} is not added.", "Category Name Not Added");
 
+        }
+        public DataTable Get_Item_Types(int minimium, string item_spec, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.get_specific_item_record, item_spec, searchwords, minimium);
+            else query = string.Format(Database_Query.get_general_item_record, item_spec, minimium);
+            using (db_Manager)
+            {
+                dt = db_Manager.ExecuteQuery(query);
+            }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
         }
     }
 }

@@ -234,15 +234,22 @@ namespace COA_IMS
 
         #region Inventory Queries
         public static readonly string check_existing_item_desc_id = "SELECT COUNT(*) FROM item_desc_table WHERE item_desc_id = \'{0}\';";
-        public static readonly string get_general_inventory_records = 
+        public static readonly string get_general_item_records = 
             "SELECT * FROM docu_info_table WHERE {0} BETWEEN '{1}' AND '{2}'";
-        public static readonly string get_specific_inventory_records = 
+        public static readonly string get_specific_item_records = 
             "SELECT * FROM docu_info_table WHERE {0} BETWEEN '{1}' AND '{2}' AND (document_id LIKE '%{3}%' OR \r" +
                                                                                 "document_code LIKE '%{3}%' OR \r" +
                                                                                 "document_no LIKE '%{3}%' OR \r" +
                                                                                 "amount LIKE '%{3}%' OR \r" +
                                                                                 "title LIKE '%{3}%' OR \r" +
                                                                                 "subject LIKE '%{3}%')";
+        public static readonly string get_general_item_record =
+            "SELECT {0} FROM {0}_table LIMIT {1}, 15";
+        public static readonly string get_specific_item_record =
+            "SELECT {0} FROM {0}_table WHERE {0} LIKE '%{1}%' LIMIT {2}, 15";
+        #region Fill Comboboxes
+        public static readonly string select_item_list = "SELECT {0} FROM {0}_table;";
+        #endregion
 
 
         #region Item Brands
@@ -262,8 +269,23 @@ namespace COA_IMS
                                                             "\n    SELECT item_type FROM item_type_table WHERE item_type = '{0}'\r" +
                                                             "\n) LIMIT 1;";
 
-        public static readonly string select_item_types = "SELECT item_type FROM item_type_table;";
+        public static readonly string insert_item_brands = "INSERT INTO item_brand_table (item_brand, updated_by) SELECT * FROM (SELECT '{0}', '{1}') AS tmp WHERE NOT EXISTS (SELECT item_brand FROM item_brand_table WHERE item_brand = '{0}') LIMIT 1;";
+
+        public static readonly string insert_item_unit = "INSERT INTO item_unit_table (unit)\r" +
+                                                            "\nSELECT * FROM (SELECT '{0}' AS unit) AS tmp\r" +
+                                                            "\nWHERE NOT EXISTS (\r" +
+                                                            "\n    SELECT unit FROM item_unit_table WHERE unit = '{0}'\r" +
+                                                            "\n) LIMIT 1;";
+
+        public static readonly string insert_spec_type = "INSERT INTO {1}_table ({1})\r" +
+                                                            "\nSELECT * FROM (SELECT '{0}' AS {1}) AS tmp\r" +
+                                                            "\nWHERE NOT EXISTS (\r" +
+                                                            "\n    SELECT {1} FROM {1}_table WHERE {1} = '{0}'\r" +
+                                                            "\n) LIMIT 1;";
+
+        public static readonly string select_item_types = "SELECT item_type FROM item_type_table LIMIT {0}, 15";
         public static readonly string specific_select_item_types_id = "SELECT item_type_id FROM item_type_table WHERE item_type = '{0}';";
+        public static readonly string select_specific_item_types = "SELECT item_type_id, item_type FROM item_type_table FROM log_table WHERE item_type LIKE '%{0}%' LIMIT {1}, 15";
         #endregion
         #region Item Units
         public static readonly string insert_item_units = "INSERT INTO item_unit_table (unit)\r" +

@@ -43,7 +43,7 @@ namespace COA_IMS.Utilities
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error executing query: {ex.Message}");
+                    Console.WriteLine($"Error executing query: {query}\n {ex.Message}");
                 }
             }
 

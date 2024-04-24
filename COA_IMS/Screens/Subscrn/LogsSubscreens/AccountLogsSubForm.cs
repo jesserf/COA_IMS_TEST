@@ -16,8 +16,6 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
     {
         GenericTable generic_Table;
         readonly string[] log_table_names = { "user_name", "activity" };
-        private int min_lim = 0;
-        private int page_cnt = 1;
         public AccountLogsSubForm()
         {
             InitializeComponent();
@@ -26,7 +24,7 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
             previous_Button.Enabled = false;
             sortComboBox.SelectedText = "user_name";
             sortComboBox.SelectedIndex = 0;
-            generic_Table.Populate_Table(1, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, min_lim, "acclog");
+            generic_Table.Populate_Table(1, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
             //setup user controls
             searchBar1.Ambatu(logsSearchBox_TextChanged);
             ChangeDataDates();
@@ -34,31 +32,31 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
             dateFilter1.toValue = DateTime.Today;
             dateFilter1.fromValue = DateTime.Today;
             //disables next logs button
-            generic_Table.Check_Count(next_Button, previous_Button, dateFilter1, min_lim, page_cnt, "acclog");
+            generic_Table.Check_Count(next_Button, previous_Button, dateFilter1, "acclog");
         }
         private void logsSearchBox_TextChanged(object sender, EventArgs e)
         {
-            generic_Table.Populate_Table(2, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, min_lim, "acclog");
+            generic_Table.Populate_Table(2, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
         }
         private void sortComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, min_lim, "acclog");
+            generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
         }
 
         private void previous_Button_Click(object sender, EventArgs e)
         {
-            generic_Table.UserChangePage(pageCountTextbox, dateFilter1, searchBar1, LogsTable, sortComboBox, next_Button, previous_Button, page_cnt, min_lim, log_table_names, false, "acclog");
+            generic_Table.UserChangePage(pageCountTextbox, dateFilter1, searchBar1, LogsTable, sortComboBox, next_Button, previous_Button, log_table_names, false, "acclog");
         }
         private void next_Button_Click(object sender, EventArgs e)
         {
-            generic_Table.UserChangePage(pageCountTextbox, dateFilter1, searchBar1, LogsTable, sortComboBox, next_Button, previous_Button, page_cnt, min_lim, log_table_names, true, "acclog");
+            generic_Table.UserChangePage(pageCountTextbox, dateFilter1, searchBar1, LogsTable, sortComboBox, next_Button, previous_Button, log_table_names, true, "acclog");
         }
 
         private void pageCountTextbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
             {
-                generic_Table.UserChangePageCountInput(pageCountTextbox, dateFilter1, searchBar1, LogsTable, sortComboBox, next_Button, previous_Button, page_cnt, min_lim, log_table_names, "acclog");
+                generic_Table.UserChangePageCountInput(pageCountTextbox, dateFilter1, searchBar1, LogsTable, sortComboBox, next_Button, previous_Button, log_table_names, "acclog");
             }
         }
         private void ChangeDataDates()
@@ -70,18 +68,18 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
         {
             if (dateFilter1.toValue < dateFilter1.fromValue)
                 dateFilter1.fromValue = dateFilter1.toValue;
-            generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, min_lim, "acclog");
+            generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
+            generic_Table.Check_Count(next_Button, previous_Button, dateFilter1, "acclog");
         }
 
         private void refresh_Button_Click(object sender, EventArgs e)
         {
-            generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, min_lim, "acclog");
+            generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
         }
 
         private void AccountLogging_VisibleChanged(object sender, EventArgs e)
         {
             refresh_Button.PerformClick();
         }
-
     }
 }

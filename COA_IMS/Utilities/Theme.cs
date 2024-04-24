@@ -12,6 +12,11 @@ namespace COA_IMS.Utilities
 {
     internal class Theme
     {
+        Color old_column_color = Color.FromArgb(27, 48, 59);
+        Color old_row_color = Color.FromArgb(77, 109, 128);
+
+        Color orange_column_color = Color.FromArgb(198, 134, 33);
+        Color orange_row_color = Color.FromArgb(230, 181, 104);
         public static Color Hex_To_RGB(string hex)
         {
             // Remove '#' if present
@@ -43,11 +48,12 @@ namespace COA_IMS.Utilities
             GunaDataGridViewHeaderStyle columnHeaderStyle = new GunaDataGridViewHeaderStyle(guna_Table.ColumnHeadersDefaultCellStyle, guna_Table);
             columnHeaderStyle.Font = new Font("Bahnschrift", 14.25F);
             columnHeaderStyle.Height = col_height;
-            columnHeaderStyle.BackColor = Color.FromArgb(27, 48, 59);
+            columnHeaderStyle.BackColor = Color.FromArgb(198, 134, 33);
+
 
             // Create row style
             GunaDataGridViewRowsStyle rowStyle = new GunaDataGridViewRowsStyle(guna_Table.DefaultCellStyle, guna_Table);
-            rowStyle.SelectionBackColor = Color.FromArgb(77, 109, 128);
+            rowStyle.SelectionBackColor = Color.FromArgb(230, 181, 104);
             rowStyle.SelectionForeColor = Color.White;
             rowStyle.Font = new Font("Bahnschrift", 14.25F);
             rowStyle.Height = row_Height;

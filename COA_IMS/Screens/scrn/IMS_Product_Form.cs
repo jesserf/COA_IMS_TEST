@@ -62,11 +62,11 @@ namespace COA_IMS.Screens.scrn
         private void Populate_ComboBoxes()
         {
             //fills different values inside comboboxes
-            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_brands, "item_brand"))
+            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_list, "item_brand"))
                 item_Brand_CBox.Items.Add(items);
-            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_types, "item_type"))
+            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_list, "item_type"))
                 item_Type_CBox.Items.Add(items);
-            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_units, "unit_type"))
+            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_list, "unit_type"))
                 unit_Type_CBox.Items.Add(items);
         }
         private void clear_Textboxes()
