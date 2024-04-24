@@ -153,6 +153,7 @@
             this.add_Category_TextBox.TabIndex = 0;
             this.add_Category_TextBox.Text = "Category Name";
             this.add_Category_TextBox.Enter += new System.EventHandler(this.textbox_Enter);
+            this.add_Category_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PressEnter);
             this.add_Category_TextBox.Leave += new System.EventHandler(this.textbox_Leave);
             // 
             // CategoryForm

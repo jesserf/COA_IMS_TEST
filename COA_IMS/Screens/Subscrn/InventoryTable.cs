@@ -23,7 +23,7 @@ namespace COA_IMS.Screens.Subscrn
             InitializeComponent();
             //setup GenericTable
             generic_Table = new GenericTable();
-            generic_Table.FillVariables(log_table_names, null, null, "item_type", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
+            generic_Table.FillVariables(log_table_names, null, null, "item_type", "item_type", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
             //setup ordinary controls
             sortComboBox.SelectedText = "item_type";
             sortComboBox.SelectedIndex = 0;

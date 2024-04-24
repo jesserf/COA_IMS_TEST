@@ -383,6 +383,12 @@
     <Compile Include="Screens\Subscrn\InventoryTable.Designer.cs">
       <DependentUpon>InventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\ItemCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\ItemCategoryForm.Designer.cs">
+      <DependentUpon>ItemCategoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -640,6 +646,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\InventoryTable.resx">
       <DependentUpon>InventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\ItemCategoryForm.resx">
+      <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.resx">
       <DependentUpon>AccountLogsSubForm.cs</DependentUpon>

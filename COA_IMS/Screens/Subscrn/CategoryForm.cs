@@ -31,7 +31,7 @@ namespace COA_IMS.Screens.Subscrn
 
         private void save_Button_Click(object sender, EventArgs e)
         {
-            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, add_Category_TextBox.Text, "Type");
+            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, add_Category_TextBox.Text, "item_type", "item_type", "Item Type");
         }
 
         private void textbox_Enter(object sender, EventArgs e)
@@ -50,6 +50,14 @@ namespace COA_IMS.Screens.Subscrn
             {
                 add_Category_TextBox.ForeColor = Color.LightGray;
                 add_Category_TextBox.Text = "Category Name";
+            }
+        }
+
+        private void textBox_PressEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                save_Button.PerformClick();
             }
         }
     }

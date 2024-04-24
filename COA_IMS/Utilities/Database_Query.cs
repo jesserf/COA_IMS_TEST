@@ -242,9 +242,14 @@ namespace COA_IMS
                                                                                 "title LIKE '%{3}%' OR \r" +
                                                                                 "subject LIKE '%{3}%')";
         public static readonly string get_general_item_record =
-            "SELECT {0} FROM {0}_table LIMIT {1}, 15";
+            "SELECT {0} FROM {2}_table LIMIT {1}, 15";
         public static readonly string get_specific_item_record =
-            "SELECT {0} FROM {0}_table WHERE {0} LIKE '%{1}%' LIMIT {2}, 15";
+            "SELECT {0} FROM {3}_table WHERE {0} LIKE '%{1}%' LIMIT {2}, 15";
+        public static readonly string insert_item_record = "INSERT INTO {1}_table ({2})\r" +
+                                                            "\nSELECT * FROM (SELECT '{0}' AS {2}) AS tmp\r" +
+                                                            "\nWHERE NOT EXISTS (\r" +
+                                                            "\n    SELECT {2} FROM {1}_table WHERE {2} = '{0}'\r" +
+                                                            "\n) LIMIT 1;";
         #region Fill Comboboxes
         public static readonly string select_item_list = "SELECT {0} FROM {0}_table;";
         #endregion
