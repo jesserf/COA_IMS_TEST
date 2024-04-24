@@ -703,6 +703,16 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap supplier_bg {
+            get {
+                object obj = ResourceManager.GetObject("supplier bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap swipe_left {
             get {
                 object obj = ResourceManager.GetObject("swipe-left", resourceCulture);
