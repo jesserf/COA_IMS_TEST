@@ -300,7 +300,7 @@ namespace COA_IMS
         public static readonly string insert_new_item = "INSE emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
         #endregion
 
-        public static readonly string set_new_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, date_Added,date_modified, status)\r" +
-                                                     "VALUES ('{0}','{1}','{2}','{3}',, CURRENT_TIMESTAMP() , 1)";
+        public static readonly string set_new_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by)\r" +
+                                                     "VALUES ('{0}','{1}','{2}','{3}','{4}')";
     }
 }

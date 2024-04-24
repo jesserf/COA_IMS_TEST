@@ -373,6 +373,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "item_type":
                     dt = FillInventoryTable();
                     break;
+                case "itemsupplier":
+                    dt = FillInventoryTable();
+                    break;
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering

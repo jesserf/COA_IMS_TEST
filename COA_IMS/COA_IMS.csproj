@@ -56,7 +56,7 @@
       <HintPath>..\packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>C:\Users\COA\source\repos\COA_IMS_TEST\Guna.UI.dll</HintPath>
+      <HintPath>C:\Users\Cherie Mae Rejoy\Downloads\IMS_TEST-master\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -365,6 +365,12 @@
     <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\IMS_AccountManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\IMS_AccountManagement.Designer.cs">
+      <DependentUpon>IMS_AccountManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +638,9 @@
     <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\IMS_AccountManagement.resx">
+      <DependentUpon>IMS_AccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -812,6 +821,7 @@
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
     <Content Include="Resources\Menu Bar Icon1.png" />
     <None Include="Resources\newspaper %281%29.png" />
+    <Content Include="Resources\multiple.png" />
     <Content Include="Resources\password_lock.png" />
     <None Include="Resources\multiple1.png" />
     <Content Include="Resources\refresh %281%29 - Copy.png" />
@@ -859,7 +869,7 @@
     <None Include="Resources\swipe-left1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\COA\source\repos\COA_IMS_TEST\Guna.UI.dll" />
+    <Analyzer Include="C:\Users\Cherie Mae Rejoy\Downloads\IMS_TEST-master\Guna.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
