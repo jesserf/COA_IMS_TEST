@@ -32,10 +32,10 @@
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.account_Logs_Button = new Guna.UI.WinForms.GunaAdvenceButton();
             this.activity_Logs_Button = new Guna.UI.WinForms.GunaAdvenceButton();
             this.reports_Button = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             // line_Panel
             // 
-            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(124)))), ((int)(((byte)(58)))));
+            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.line_Panel.Location = new System.Drawing.Point(0, 54);
             this.line_Panel.Name = "line_Panel";
@@ -85,12 +85,19 @@
             this.nav_panel.Size = new System.Drawing.Size(1603, 54);
             this.nav_panel.TabIndex = 0;
             // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
             // account_Logs_Button
             // 
             this.account_Logs_Button.Animated = true;
             this.account_Logs_Button.AnimationHoverSpeed = 0.07F;
             this.account_Logs_Button.AnimationSpeed = 0.03F;
-            this.account_Logs_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.account_Logs_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.account_Logs_Button.BaseColor = System.Drawing.Color.Transparent;
             this.account_Logs_Button.BorderColor = System.Drawing.Color.Black;
             this.account_Logs_Button.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -126,7 +133,7 @@
             this.activity_Logs_Button.Animated = true;
             this.activity_Logs_Button.AnimationHoverSpeed = 0.07F;
             this.activity_Logs_Button.AnimationSpeed = 0.03F;
-            this.activity_Logs_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.activity_Logs_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.activity_Logs_Button.BaseColor = System.Drawing.Color.Transparent;
             this.activity_Logs_Button.BorderColor = System.Drawing.Color.Black;
             this.activity_Logs_Button.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -162,7 +169,7 @@
             this.reports_Button.Animated = true;
             this.reports_Button.AnimationHoverSpeed = 0.07F;
             this.reports_Button.AnimationSpeed = 0.03F;
-            this.reports_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.reports_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.reports_Button.BaseColor = System.Drawing.Color.Transparent;
             this.reports_Button.BorderColor = System.Drawing.Color.Black;
             this.reports_Button.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -192,13 +199,6 @@
             this.reports_Button.Text = "REPORTS";
             this.reports_Button.TextOffsetX = 5;
             this.reports_Button.Click += new System.EventHandler(this.button_Click);
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
             // 
             // LogsForm
             // 

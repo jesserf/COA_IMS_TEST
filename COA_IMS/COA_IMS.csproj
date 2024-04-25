@@ -245,12 +245,6 @@
     <Compile Include="Screens\scrn\InventoryMain.Designer.cs">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\InventoryScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\scrn\InventoryScreen.Designer.cs">
-      <DependentUpon>InventoryScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\scrn\LogsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -578,9 +572,6 @@
     <EmbeddedResource Include="Screens\scrn\InventoryMain.resx">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\InventoryScreen.resx">
-      <DependentUpon>InventoryScreen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\LogsForm.resx">
       <DependentUpon>LogsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -816,6 +807,8 @@
     <None Include="Resources\logs.png" />
     <None Include="Resources\loginBG.png" />
     <None Include="Resources\loginBG1.png" />
+    <None Include="Resources\menu %282%29.png" />
+    <None Include="Resources\LOG IN FINAL BG.png" />
     <Content Include="Resources\Menu Bar Icon - Copy.png" />
     <Content Include="Resources\Menu Bar Icon.png" />
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
@@ -844,6 +837,7 @@
     <Content Include="Resources\trash-bin.png" />
     <Content Include="Resources\trash-bin1.png" />
     <None Include="Resources\user-helmet-safety.png" />
+    <None Include="Resources\user %288%29.png" />
     <Content Include="Resources\user.png" />
     <None Include="Resources\users %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />

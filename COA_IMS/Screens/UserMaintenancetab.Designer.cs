@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.activebtn = new Guna.UI.WinForms.GunaButton();
+            this.deactbtn = new Guna.UI.WinForms.GunaButton();
+            this.accountbtn = new Guna.UI.WinForms.GunaButton();
             this.gunaElipsePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,86 +42,89 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel1.Controls.Add(this.gunaButton3);
-            this.gunaElipsePanel1.Controls.Add(this.gunaButton2);
-            this.gunaElipsePanel1.Controls.Add(this.gunaButton1);
+            this.gunaElipsePanel1.Controls.Add(this.activebtn);
+            this.gunaElipsePanel1.Controls.Add(this.deactbtn);
+            this.gunaElipsePanel1.Controls.Add(this.accountbtn);
             this.gunaElipsePanel1.Location = new System.Drawing.Point(13, 13);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 1;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(1594, 940);
             this.gunaElipsePanel1.TabIndex = 0;
             // 
-            // gunaButton3
+            // activebtn
             // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = null;
-            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(502, -1);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Size = new System.Drawing.Size(250, 55);
-            this.gunaButton3.TabIndex = 2;
-            this.gunaButton3.Text = "Active Accounts";
-            this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.activebtn.AnimationHoverSpeed = 0.07F;
+            this.activebtn.AnimationSpeed = 0.03F;
+            this.activebtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.activebtn.BorderColor = System.Drawing.Color.Black;
+            this.activebtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.activebtn.FocusedColor = System.Drawing.Color.Empty;
+            this.activebtn.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activebtn.ForeColor = System.Drawing.Color.White;
+            this.activebtn.Image = null;
+            this.activebtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.activebtn.Location = new System.Drawing.Point(502, -1);
+            this.activebtn.Name = "activebtn";
+            this.activebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.activebtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.activebtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.activebtn.OnHoverImage = null;
+            this.activebtn.OnPressedColor = System.Drawing.Color.Black;
+            this.activebtn.Size = new System.Drawing.Size(250, 55);
+            this.activebtn.TabIndex = 2;
+            this.activebtn.Text = "Active Accounts";
+            this.activebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.activebtn.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // gunaButton2
+            // deactbtn
             // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = null;
-            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(251, -1);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(250, 55);
-            this.gunaButton2.TabIndex = 1;
-            this.gunaButton2.Text = "Deactivated Accounts";
-            this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.deactbtn.AnimationHoverSpeed = 0.07F;
+            this.deactbtn.AnimationSpeed = 0.03F;
+            this.deactbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.deactbtn.BorderColor = System.Drawing.Color.Black;
+            this.deactbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.deactbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.deactbtn.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deactbtn.ForeColor = System.Drawing.Color.White;
+            this.deactbtn.Image = null;
+            this.deactbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.deactbtn.Location = new System.Drawing.Point(251, -1);
+            this.deactbtn.Name = "deactbtn";
+            this.deactbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.deactbtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.deactbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.deactbtn.OnHoverImage = null;
+            this.deactbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.deactbtn.Size = new System.Drawing.Size(250, 55);
+            this.deactbtn.TabIndex = 1;
+            this.deactbtn.Text = "Deactivated Accounts";
+            this.deactbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.deactbtn.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // gunaButton1
+            // accountbtn
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(0, -1);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(250, 55);
-            this.gunaButton1.TabIndex = 0;
-            this.gunaButton1.Text = "Accounts";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.accountbtn.AnimationHoverSpeed = 0.07F;
+            this.accountbtn.AnimationSpeed = 0.03F;
+            this.accountbtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.accountbtn.BorderColor = System.Drawing.Color.Black;
+            this.accountbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.accountbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.accountbtn.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountbtn.ForeColor = System.Drawing.Color.White;
+            this.accountbtn.Image = null;
+            this.accountbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.accountbtn.Location = new System.Drawing.Point(0, -1);
+            this.accountbtn.Name = "accountbtn";
+            this.accountbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.accountbtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.accountbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.accountbtn.OnHoverImage = null;
+            this.accountbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.accountbtn.Size = new System.Drawing.Size(250, 55);
+            this.accountbtn.TabIndex = 0;
+            this.accountbtn.Text = "Accounts";
+            this.accountbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.accountbtn.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // UserMaintenancetab
             // 
@@ -141,8 +144,8 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaButton gunaButton3;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton accountbtn;
+        private Guna.UI.WinForms.GunaButton activebtn;
+        private Guna.UI.WinForms.GunaButton deactbtn;
     }
 }
