@@ -36,26 +36,32 @@ namespace COA_IMS.Screens.scrn
         private void button_Click(object sender, EventArgs e)
         {
             var button = (GunaAdvenceButton)sender;
+            Form form = null;
+
             switch (button.Name)
             {
                 case "inventory_Table_Btn":
-                    current_Form = tab_Manager.switch_Form(inventory_Table, current_Form, content_Panel);
+                    form = inventory_Table;
                     break;
 
                 case "archived_Table_Btn":
-                    current_Form = tab_Manager.switch_Form(archive_Table, current_Form, content_Panel);
+                    form = archive_Table;
                     break;
 
                 case "categorybtn":
-                    current_Form = tab_Manager.switch_Form(category_tab, current_Form, content_Panel);
+                    form = category_tab;
                     break;
 
                 case "Supplierbtn":
-                    current_Form = tab_Manager.switch_Form(ims_supliertable, current_Form, content_Panel);
+                    form = ims_supliertable;
                     break;
                 case "disposal_Btn":
                     current_Form = tab_Manager.switch_Form(itemCategoryForm, current_Form, content_Panel);
                     break;
+                }
+            if (form != null)
+            {
+                current_Form = tab_Manager.switch_Form(form, current_Form, content_Panel);
             }
             tab_Manager.active_AdvButton(button, false, false);
         }

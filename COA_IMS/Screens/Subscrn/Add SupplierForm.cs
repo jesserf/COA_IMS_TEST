@@ -32,7 +32,7 @@ namespace COA_IMS.Screens.Subscrn
 
             using (database_manager) 
             {
-                MessageBox.Show(database_manager.ExecuteNonQuery(string.Format(Database_Query.set_new_supplier, gunaTextBox1.Text, gunaTextBox2.Text, gunaTextBox3.Text, gunaTextBox4.Text)).ToString());
+                MessageBox.Show(database_manager.ExecuteNonQuery(string.Format(Database_Query.set_new_supplier, gunaTextBox1.Text, gunaTextBox2.Text, gunaTextBox3.Text, gunaTextBox4.Text, CurrentUser.user_name)).ToString());
             }
 
             //supplier_info.Insert_Item_Supplier_Info(Database_Query.insert_item_type, gunaTextBox1.Text, gunaTextBox2.Text, gunaTextBox3.Text, gunaTextBox4.Text);

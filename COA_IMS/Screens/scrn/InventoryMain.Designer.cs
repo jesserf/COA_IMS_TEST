@@ -66,7 +66,7 @@
             // 
             // line_Panel
             // 
-            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(124)))), ((int)(((byte)(58)))));
+            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.line_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.line_Panel.Location = new System.Drawing.Point(0, 55);
             this.line_Panel.Name = "line_Panel";
@@ -94,7 +94,7 @@
             this.inventory_Table_Btn.Animated = true;
             this.inventory_Table_Btn.AnimationHoverSpeed = 0.07F;
             this.inventory_Table_Btn.AnimationSpeed = 0.03F;
-            this.inventory_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.inventory_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.inventory_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
             this.inventory_Table_Btn.BorderColor = System.Drawing.Color.Black;
             this.inventory_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -130,7 +130,7 @@
             this.archived_Table_Btn.Animated = true;
             this.archived_Table_Btn.AnimationHoverSpeed = 0.07F;
             this.archived_Table_Btn.AnimationSpeed = 0.03F;
-            this.archived_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.archived_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.archived_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
             this.archived_Table_Btn.BorderColor = System.Drawing.Color.Black;
             this.archived_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -166,7 +166,7 @@
             this.categorybtn.Animated = true;
             this.categorybtn.AnimationHoverSpeed = 0.07F;
             this.categorybtn.AnimationSpeed = 0.03F;
-            this.categorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.categorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.categorybtn.BaseColor = System.Drawing.Color.Transparent;
             this.categorybtn.BorderColor = System.Drawing.Color.Black;
             this.categorybtn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -202,7 +202,7 @@
             this.Supplierbtn.Animated = true;
             this.Supplierbtn.AnimationHoverSpeed = 0.07F;
             this.Supplierbtn.AnimationSpeed = 0.03F;
-            this.Supplierbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.Supplierbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.Supplierbtn.BaseColor = System.Drawing.Color.Transparent;
             this.Supplierbtn.BorderColor = System.Drawing.Color.Black;
             this.Supplierbtn.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -239,7 +239,7 @@
             this.disposal_Btn.AnimationHoverSpeed = 0.07F;
             this.disposal_Btn.AnimationSpeed = 0.03F;
             this.disposal_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.disposal_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.disposal_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.disposal_Btn.BorderColor = System.Drawing.Color.Black;
             this.disposal_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
             this.disposal_Btn.CheckedBorderColor = System.Drawing.Color.Black;
