@@ -91,7 +91,7 @@ namespace COA_IMS.Utilities
 
             }
         }
-        private void AlternateTableRows(GunaDataGridView guna_Table)
+        public static void AlternateTableRows(GunaDataGridView guna_Table)
         {
             // Create row style
             GunaDataGridViewRowsStyle rowStyle = new GunaDataGridViewRowsStyle(guna_Table.DefaultCellStyle, guna_Table);

@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryTable));
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.add_Item_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.reports_Button = new Guna.UI.WinForms.GunaButton();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
+            this.add_Item_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.add_item = new Guna.UI.WinForms.GunaButton();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
@@ -48,7 +49,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             ((System.ComponentModel.ISupportInitialize)(this.data_View)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -65,31 +65,31 @@
             this.data_View.AllowUserToDeleteRows = false;
             this.data_View.AllowUserToResizeColumns = false;
             this.data_View.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.data_View.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.data_View.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.data_View.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_View.BackgroundColor = System.Drawing.Color.White;
             this.data_View.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data_View.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.data_View.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.data_View.ColumnHeadersHeight = 20;
             this.data_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_View.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_View.DefaultCellStyle = dataGridViewCellStyle3;
             this.data_View.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data_View.EnableHeadersVisualStyles = false;
             this.data_View.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -131,7 +131,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.13805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.86195F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
@@ -144,42 +144,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1567, 58);
             this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // add_Item_Btn
-            // 
-            this.add_Item_Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.add_Item_Btn.AnimationHoverSpeed = 0.07F;
-            this.add_Item_Btn.AnimationSpeed = 0.03F;
-            this.add_Item_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.add_Item_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(181)))), ((int)(((byte)(104)))));
-            this.add_Item_Btn.BorderColor = System.Drawing.Color.Black;
-            this.add_Item_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.add_Item_Btn.CheckedBorderColor = System.Drawing.Color.Black;
-            this.add_Item_Btn.CheckedForeColor = System.Drawing.Color.White;
-            this.add_Item_Btn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("add_Item_Btn.CheckedImage")));
-            this.add_Item_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.add_Item_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Item_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.add_Item_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.add_Item_Btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.add_Item_Btn.ForeColor = System.Drawing.Color.White;
-            this.add_Item_Btn.Image = global::COA_IMS.Properties.Resources.add_product;
-            this.add_Item_Btn.ImageSize = new System.Drawing.Size(32, 32);
-            this.add_Item_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_Item_Btn.Location = new System.Drawing.Point(555, 6);
-            this.add_Item_Btn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.add_Item_Btn.Name = "add_Item_Btn";
-            this.add_Item_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
-            this.add_Item_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
-            this.add_Item_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.add_Item_Btn.OnHoverImage = null;
-            this.add_Item_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_Item_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.add_Item_Btn.Radius = 10;
-            this.add_Item_Btn.Size = new System.Drawing.Size(180, 42);
-            this.add_Item_Btn.TabIndex = 8;
-            this.add_Item_Btn.Text = "ADD ITEM";
-            this.add_Item_Btn.Click += new System.EventHandler(this.add_item_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -247,6 +211,15 @@
             this.refresh_Button.TabIndex = 5;
             this.refresh_Button.VisibleChanged += new System.EventHandler(this.refresh_Button_Click);
             // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(3, 12);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(544, 43);
+            this.searchBar1.TabIndex = 3;
+            // 
             // sortComboBox
             // 
             this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -263,7 +236,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1175, 13);
+            this.sortComboBox.Location = new System.Drawing.Point(1174, 13);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
@@ -272,6 +245,42 @@
             this.sortComboBox.Size = new System.Drawing.Size(191, 35);
             this.sortComboBox.TabIndex = 2;
             this.sortComboBox.SelectedValueChanged += new System.EventHandler(this.sortComboBox_SelectedValueChanged);
+            // 
+            // add_Item_Btn
+            // 
+            this.add_Item_Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.add_Item_Btn.AnimationHoverSpeed = 0.07F;
+            this.add_Item_Btn.AnimationSpeed = 0.03F;
+            this.add_Item_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.add_Item_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(181)))), ((int)(((byte)(104)))));
+            this.add_Item_Btn.BorderColor = System.Drawing.Color.Black;
+            this.add_Item_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.add_Item_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.add_Item_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.add_Item_Btn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("add_Item_Btn.CheckedImage")));
+            this.add_Item_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.add_Item_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_Item_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.add_Item_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.add_Item_Btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.add_Item_Btn.ForeColor = System.Drawing.Color.White;
+            this.add_Item_Btn.Image = global::COA_IMS.Properties.Resources.add_product;
+            this.add_Item_Btn.ImageSize = new System.Drawing.Size(32, 32);
+            this.add_Item_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.add_Item_Btn.Location = new System.Drawing.Point(555, 6);
+            this.add_Item_Btn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.add_Item_Btn.Name = "add_Item_Btn";
+            this.add_Item_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.add_Item_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.add_Item_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.add_Item_Btn.OnHoverImage = null;
+            this.add_Item_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.add_Item_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.add_Item_Btn.Radius = 10;
+            this.add_Item_Btn.Size = new System.Drawing.Size(180, 42);
+            this.add_Item_Btn.TabIndex = 8;
+            this.add_Item_Btn.Text = "ADD ITEM";
+            this.add_Item_Btn.Click += new System.EventHandler(this.add_item_Click);
             // 
             // add_item
             // 
@@ -431,15 +440,6 @@
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
             this.next_Button.Click += new System.EventHandler(this.next_Button_Click);
-            // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 12);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(544, 43);
-            this.searchBar1.TabIndex = 3;
             // 
             // InventoryTable
             // 

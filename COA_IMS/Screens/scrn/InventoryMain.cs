@@ -24,6 +24,7 @@ namespace COA_IMS.Screens.scrn
         private readonly ArchiveInventoryTable archive_Table = new ArchiveInventoryTable();
         private readonly CategoryTab category_tab = new CategoryTab();
         private readonly IMS_SuplierTable ims_supliertable = new IMS_SuplierTable();
+        private readonly ItemCategoryForm itemCategoryForm = new ItemCategoryForm();
 
         private List<Control> navButtons = new List<Control>();
         public InventoryMain()
@@ -54,7 +55,8 @@ namespace COA_IMS.Screens.scrn
                 case "Supplierbtn":
                     form = ims_supliertable;
                     break;
-                case "disposalBtn":
+                case "disposal_Btn":
+                    current_Form = tab_Manager.switch_Form(itemCategoryForm, current_Form, content_Panel);
                     break;
                 }
             if (form != null)

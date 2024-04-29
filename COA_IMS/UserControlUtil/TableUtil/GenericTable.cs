@@ -5,6 +5,8 @@ using Org.BouncyCastle.Tls.Crypto;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +28,8 @@ namespace COA_IMS.UserControlUtil.TableUtil
         string[] log_table_names { get; set; }
         string from_Date { get; set; }
         string to_Date { get; set; }
-        string data_Table_Type { get; set; }
+        public string data_Table_Type { get; set; }
+        public string inventory_Table_Name { get; set; }
         //user controls
         SearchBar searchBar1 { get; set; }
         DateFilter dateFilter1 { get; set; }
@@ -38,10 +41,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
         GunaTextBox pageCountTextbox { get; set; }
         #endregion
         private readonly int max_lim = 15;
+        private Image trash = Properties.Resources.error ;
+        private int already_Designed = 0;
         private string Query { get; set; }
 
         public void FillVariables(string[] log_table_names,
-            string from_Date, string to_Date, string data_Table_Type,
+            string from_Date, string to_Date, string data_Table_Type, string inventory_Table_Name,
             SearchBar searchBar1, DateFilter dateFilter1, GunaComboBox sortComboBox,
             GunaDataGridView data_View, GunaButton next_Button,
             GunaButton previous_Button, GunaTextBox pageCountTextbox)
@@ -51,6 +56,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
             this.from_Date = from_Date;
             this.to_Date = to_Date;
             this.data_Table_Type = data_Table_Type;
+            this.inventory_Table_Name = inventory_Table_Name;
             //user controls
             this.searchBar1 = searchBar1;
             this.dateFilter1 = dateFilter1;
@@ -373,7 +379,11 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "item_type":
                     dt = FillInventoryTable();
                     break;
-                case "itemsupplier":
+                case "item_brand":
+                    goto case "item_type";
+                case "unit":
+                    goto case "item_type";
+                case "inventory":
                     dt = FillInventoryTable();
                     break;
                 default: break;
@@ -382,6 +392,14 @@ namespace COA_IMS.UserControlUtil.TableUtil
             data_View.DataSource = util.format_DataTableLimit(dt, min_lim);
             //add design to data grid view along with column names
             AddThemeToDGV();
+            //if (already_Designed == 0)
+            //    AddThemeToDGV();
+            //else AlternateTheTable();
+            //already_Designed = 1;
+            //add delete button
+            //if (data_Table_Type.Equals("item_type"))
+            //    AddDeletee();
+
         }
         #region account logs
         private DataTable FillAccLogsTable(int type_of_spec, string from_Date, string to_Date)
@@ -460,12 +478,8 @@ namespace COA_IMS.UserControlUtil.TableUtil
         #endregion
         private DataTable FillInventoryTable()
         {
-            DataTable dt = new DataTable();
-            string sort_by = log_table_names[sortComboBox.SelectedIndex];
             inventory_Manager = new Inventory_Manager();
-            dt = inventory_Manager.Get_Item_Types(min_lim, data_Table_Type, searchBar1.Text);
-
-            return dt;
+            return inventory_Manager.Get_Item_Records(min_lim, data_Table_Type, inventory_Table_Name, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -512,11 +526,62 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Item Types", DataGridViewContentAlignment.MiddleCenter),
                         };
                     break;
+                case "item_brand":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 95) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Item Brands", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
+                case "unit":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 95) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Item Units", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
                 default: break;
             }
 
             Theme.gridView_Style(data_View, column_Widths, column_Text_Align);
         }
+        private void AlternateTheTable()
+        {
+            Theme.AlternateTableRows(data_View);
+        }
+        //add button
+        //private void AddDeletee()
+        //{
+        //    DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
+        //    int columnIndex = 2;
+        //    if (data_View.Columns["uninstall_column"] == null)
+        //    {
+        //        data_View.Columns.Insert(columnIndex, uninstallButtonColumn);
+        //    }
+        //    data_View.CellPainting += grid_CellPainting;
+        //}
+
+        private void grid_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            //I supposed your button column is at index 0
+            if (e.ColumnIndex == 2)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = trash.Width;
+                var h = trash.Height;
+                var x = e.CellBounds.Right + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(trash, new Rectangle(x, y, w, h));
+            }
+        }
+
         public void Check_Count()
         {
             min_lim = max_lim * (page_cnt - 1);

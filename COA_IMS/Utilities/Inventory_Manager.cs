@@ -28,31 +28,31 @@ namespace COA_IMS.Utilities
                 code = Convert.ToInt32(db_Manager.ExecuteScalar(query));
             return code;
         }
-        public void Insert_Item_Category_Name(string query, string item, string type, string name = null)
+        public void Insert_Item_Category_Name(string query, string item, string table_name, string type, string name = null)
         {
             int ret;
             db_Manager = new Database_Manager();
-            query = string.Format(query, item, name);
+            query = string.Format(query, item, table_name, type);
             using(db_Manager)
                 ret = db_Manager.ExecuteNonQuery(query);
             if (ret == 1)
             {
                 Activity_Manager activity_Manager = new Activity_Manager();
                 activity_Manager.Add_New_Item_Record(type, item);
-                MessageBox.Show($"{type} Name: {item} is successfully added.", "Category Name Added");
+                MessageBox.Show($"{name} Name: {item} is successfully added.", "Category Name Added");
             }
             else if (ret == 0)
-                MessageBox.Show($"{type} Name: {item} is not added.", "Category Name Not Added");
+                MessageBox.Show($"{name} Name: {item} is not added.", "Category Name Not Added");
 
         }
-        public DataTable Get_Item_Types(int minimium, string item_spec, string searchwords = null)
+        public DataTable Get_Item_Records(int minimium, string item_spec, string item_table, string searchwords = null)
         {
             string query;
             db_Manager = new Database_Manager();
             DataTable dt = new DataTable();
             if (searchwords != null)
-                query = string.Format(Database_Query.get_specific_item_record, item_spec, searchwords, minimium);
-            else query = string.Format(Database_Query.get_general_item_record, item_spec, minimium);
+                query = string.Format(Database_Query.get_specific_item_record, item_spec, searchwords, minimium, item_table);
+            else query = string.Format(Database_Query.get_general_item_record, item_spec, minimium, item_table);
             using (db_Manager)
             {
                 dt = db_Manager.ExecuteQuery(query);
@@ -63,6 +63,7 @@ namespace COA_IMS.Utilities
                 Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
         }
+        
         public void Insert_Item_Supplier_Info(string sn, string address, string cn, string cp, string item)
         {
             int ret;
