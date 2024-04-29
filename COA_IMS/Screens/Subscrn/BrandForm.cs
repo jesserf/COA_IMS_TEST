@@ -30,7 +30,7 @@ namespace COA_IMS.Screens.Subscrn
 
         private void save_Button_Click(object sender, EventArgs e)
         {
-            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_brands, add_Category_TextBox.Text, "Brand", CurrentUser.user_name);
+            
         }
 
         private void textbox_Enter(object sender, EventArgs e)

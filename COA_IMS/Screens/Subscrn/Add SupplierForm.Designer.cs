@@ -31,13 +31,13 @@
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.closebtn = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
+            this.contact_Person_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
+            this.contact_Number_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
+            this.address_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.supplier_Name_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaElipsePanel1.SuspendLayout();
@@ -48,15 +48,16 @@
             this.gunaElipsePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gunaElipsePanel1.Controls.Add(this.closebtn);
             this.gunaElipsePanel1.Controls.Add(this.gunaButton1);
-            this.gunaElipsePanel1.Controls.Add(this.gunaTextBox4);
+            this.gunaElipsePanel1.Controls.Add(this.contact_Person_Textbox);
             this.gunaElipsePanel1.Controls.Add(this.label5);
-            this.gunaElipsePanel1.Controls.Add(this.gunaTextBox3);
+            this.gunaElipsePanel1.Controls.Add(this.contact_Number_Textbox);
             this.gunaElipsePanel1.Controls.Add(this.label4);
-            this.gunaElipsePanel1.Controls.Add(this.gunaTextBox2);
+            this.gunaElipsePanel1.Controls.Add(this.address_Textbox);
             this.gunaElipsePanel1.Controls.Add(this.label3);
-            this.gunaElipsePanel1.Controls.Add(this.gunaTextBox1);
+            this.gunaElipsePanel1.Controls.Add(this.supplier_Name_Textbox);
             this.gunaElipsePanel1.Controls.Add(this.label2);
             this.gunaElipsePanel1.Controls.Add(this.label1);
             this.gunaElipsePanel1.Location = new System.Drawing.Point(0, -3);
@@ -115,24 +116,24 @@
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
-            // gunaTextBox4
+            // contact_Person_Textbox
             // 
-            this.gunaTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox4.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaTextBox4.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox4.BorderSize = 0;
-            this.gunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox4.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox4.Location = new System.Drawing.Point(183, 452);
-            this.gunaTextBox4.Name = "gunaTextBox4";
-            this.gunaTextBox4.PasswordChar = '\0';
-            this.gunaTextBox4.Radius = 10;
-            this.gunaTextBox4.SelectedText = "";
-            this.gunaTextBox4.Size = new System.Drawing.Size(429, 36);
-            this.gunaTextBox4.TabIndex = 8;
+            this.contact_Person_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.contact_Person_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.contact_Person_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.contact_Person_Textbox.BorderSize = 0;
+            this.contact_Person_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.contact_Person_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.contact_Person_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.contact_Person_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.contact_Person_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contact_Person_Textbox.Location = new System.Drawing.Point(183, 452);
+            this.contact_Person_Textbox.Name = "contact_Person_Textbox";
+            this.contact_Person_Textbox.PasswordChar = '\0';
+            this.contact_Person_Textbox.Radius = 10;
+            this.contact_Person_Textbox.SelectedText = "";
+            this.contact_Person_Textbox.Size = new System.Drawing.Size(429, 36);
+            this.contact_Person_Textbox.TabIndex = 8;
             // 
             // label5
             // 
@@ -144,24 +145,24 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Contact Person";
             // 
-            // gunaTextBox3
+            // contact_Number_Textbox
             // 
-            this.gunaTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox3.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaTextBox3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaTextBox3.BorderSize = 0;
-            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox3.Location = new System.Drawing.Point(183, 393);
-            this.gunaTextBox3.Name = "gunaTextBox3";
-            this.gunaTextBox3.PasswordChar = '\0';
-            this.gunaTextBox3.Radius = 10;
-            this.gunaTextBox3.SelectedText = "";
-            this.gunaTextBox3.Size = new System.Drawing.Size(429, 36);
-            this.gunaTextBox3.TabIndex = 6;
+            this.contact_Number_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.contact_Number_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.contact_Number_Textbox.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.contact_Number_Textbox.BorderSize = 0;
+            this.contact_Number_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.contact_Number_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.contact_Number_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.contact_Number_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.contact_Number_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contact_Number_Textbox.Location = new System.Drawing.Point(183, 393);
+            this.contact_Number_Textbox.Name = "contact_Number_Textbox";
+            this.contact_Number_Textbox.PasswordChar = '\0';
+            this.contact_Number_Textbox.Radius = 10;
+            this.contact_Number_Textbox.SelectedText = "";
+            this.contact_Number_Textbox.Size = new System.Drawing.Size(429, 36);
+            this.contact_Number_Textbox.TabIndex = 6;
             // 
             // label4
             // 
@@ -173,24 +174,24 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Contact Number";
             // 
-            // gunaTextBox2
+            // address_Textbox
             // 
-            this.gunaTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox2.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaTextBox2.BorderColor = System.Drawing.Color.LightGray;
-            this.gunaTextBox2.BorderSize = 0;
-            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox2.Location = new System.Drawing.Point(183, 278);
-            this.gunaTextBox2.Name = "gunaTextBox2";
-            this.gunaTextBox2.PasswordChar = '\0';
-            this.gunaTextBox2.Radius = 10;
-            this.gunaTextBox2.SelectedText = "";
-            this.gunaTextBox2.Size = new System.Drawing.Size(429, 88);
-            this.gunaTextBox2.TabIndex = 4;
+            this.address_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.address_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.address_Textbox.BorderColor = System.Drawing.Color.LightGray;
+            this.address_Textbox.BorderSize = 0;
+            this.address_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.address_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.address_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.address_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.address_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address_Textbox.Location = new System.Drawing.Point(183, 278);
+            this.address_Textbox.Name = "address_Textbox";
+            this.address_Textbox.PasswordChar = '\0';
+            this.address_Textbox.Radius = 10;
+            this.address_Textbox.SelectedText = "";
+            this.address_Textbox.Size = new System.Drawing.Size(429, 88);
+            this.address_Textbox.TabIndex = 4;
             // 
             // label3
             // 
@@ -202,24 +203,24 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Address";
             // 
-            // gunaTextBox1
+            // supplier_Name_Textbox
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 0;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox1.Location = new System.Drawing.Point(183, 218);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(429, 36);
-            this.gunaTextBox1.TabIndex = 2;
+            this.supplier_Name_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.supplier_Name_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.supplier_Name_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.supplier_Name_Textbox.BorderSize = 0;
+            this.supplier_Name_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.supplier_Name_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.supplier_Name_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.supplier_Name_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.supplier_Name_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplier_Name_Textbox.Location = new System.Drawing.Point(183, 218);
+            this.supplier_Name_Textbox.Name = "supplier_Name_Textbox";
+            this.supplier_Name_Textbox.PasswordChar = '\0';
+            this.supplier_Name_Textbox.Radius = 10;
+            this.supplier_Name_Textbox.SelectedText = "";
+            this.supplier_Name_Textbox.Size = new System.Drawing.Size(429, 36);
+            this.supplier_Name_Textbox.TabIndex = 2;
             // 
             // label2
             // 
@@ -263,13 +264,13 @@
 
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox4;
+        private Guna.UI.WinForms.GunaTextBox contact_Person_Textbox;
         private System.Windows.Forms.Label label5;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
+        private Guna.UI.WinForms.GunaTextBox contact_Number_Textbox;
         private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
+        private Guna.UI.WinForms.GunaTextBox address_Textbox;
         private System.Windows.Forms.Label label3;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox supplier_Name_Textbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaButton closebtn;

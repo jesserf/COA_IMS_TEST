@@ -32,7 +32,7 @@ namespace COA_IMS.Utilities
         {
             int ret;
             db_Manager = new Database_Manager();
-            query = string.Format(query, item, table_name, type);
+            query = string.Format(query, item, CurrentUser.user_name, type);
             using(db_Manager)
                 ret = db_Manager.ExecuteNonQuery(query);
             if (ret == 1)
@@ -42,8 +42,43 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"{name} Name: {item} is successfully added.", "Category Name Added");
             }
             else if (ret == 0)
-                MessageBox.Show($"{name} Name: {item} is not added.", "Category Name Not Added");
+                MessageBox.Show($"{name} Name: {item} is not added.", $"Category Name Not Added\n{name} may already exist.");
 
+        }
+        public void Insert_Item_Supplier(string query, string supplier_name, string supplier_address, string supplier_contact_num, string supplier_contact_person, string name = "Item Supplier")
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            query = string.Format(query, supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, CurrentUser.user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(name, supplier_name);
+                MessageBox.Show($"{name} Name: {supplier_name} is successfully added.", "Category Name Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"{name} Name: {supplier_name} is not added.", $"Category Name Not Added\n{name} may already exist.");
+
+        }
+        public DataTable Get_Item_Supplier_Records(int minimium, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.get_specific_item_supplier_record, minimium, searchwords);
+            else query = string.Format(Database_Query.get_general_item_supplier_record, minimium);
+            using (db_Manager)
+            {
+                dt = db_Manager.ExecuteQuery(query);
+            }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
         }
         public DataTable Get_Item_Records(int minimium, string item_spec, string item_table, string searchwords = null)
         {

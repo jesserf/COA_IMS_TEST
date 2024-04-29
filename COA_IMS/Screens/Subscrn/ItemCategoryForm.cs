@@ -3,6 +3,7 @@ using COA_IMS.UserControlUtil.TableUtil;
 using COA_IMS.Utilities;
 using Guna.UI.WinForms;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,9 +78,20 @@ namespace COA_IMS.Screens.Subscrn
 
         private void add_Category_Button_Click(object sender, EventArgs e)
         {
-            string asdas = ((GunaButton)sender).Name;
-            Console.WriteLine(asdas);
-            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_record, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+            switch (combobox_name[sortComboBox.SelectedIndex])
+            {
+                case "Item Types":
+                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+                    break;
+                case "Item Brands":
+                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_brand, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+                    break;
+                case "Units":
+                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_unit, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+                    break ;
+                default: break;
+            }
+            
             category_Name_TextBox.Clear();
             refresh_Button.PerformClick();
         }
