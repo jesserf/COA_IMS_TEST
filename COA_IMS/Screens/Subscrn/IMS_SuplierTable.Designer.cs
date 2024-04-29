@@ -37,7 +37,7 @@
             this.AddSupplier.AnimationHoverSpeed = 0.07F;
             this.AddSupplier.AnimationSpeed = 0.03F;
             this.AddSupplier.BackColor = System.Drawing.Color.Transparent;
-            this.AddSupplier.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.AddSupplier.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.AddSupplier.BorderColor = System.Drawing.Color.Black;
             this.AddSupplier.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddSupplier.FocusedColor = System.Drawing.Color.Empty;

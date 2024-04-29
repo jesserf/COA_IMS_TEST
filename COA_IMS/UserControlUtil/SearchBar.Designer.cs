@@ -37,11 +37,10 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.gunaImageButton1);
             this.flowLayoutPanel1.Controls.Add(this.search_box);
+            this.flowLayoutPanel1.Controls.Add(this.gunaImageButton1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-
             this.flowLayoutPanel1.Size = new System.Drawing.Size(547, 56);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
@@ -49,7 +48,7 @@
             // 
             this.search_box.BackColor = System.Drawing.Color.Transparent;
             this.search_box.BaseColor = System.Drawing.Color.Transparent;
-            this.search_box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.search_box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.search_box.BorderSize = 1;
             this.search_box.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.search_box.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -57,7 +56,7 @@
             this.search_box.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.search_box.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.search_box.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.search_box.Location = new System.Drawing.Point(36, 0);
+            this.search_box.Location = new System.Drawing.Point(0, 0);
             this.search_box.Margin = new System.Windows.Forms.Padding(0);
             this.search_box.Name = "search_box";
             this.search_box.PasswordChar = '\0';
@@ -69,9 +68,9 @@
             // gunaImageButton1
             // 
             this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.search__1_;
+            this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.search__2_;
             this.gunaImageButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaImageButton1.Location = new System.Drawing.Point(3, 3);
+            this.gunaImageButton1.Location = new System.Drawing.Point(512, 3);
             this.gunaImageButton1.Name = "gunaImageButton1";
             this.gunaImageButton1.OnHoverImage = null;
             this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);

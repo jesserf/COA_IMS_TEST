@@ -15,6 +15,7 @@ namespace COA_IMS.Utilities
         private List<Control> Navigation_Buttons = new List<Control>();
         private List<GunaButton> nav_GunaButtons = new List<GunaButton>();
         private List<GunaAdvenceButton> nav_GunaAdvenceButton = new List<GunaAdvenceButton>();
+        
 
         private List<object> Sub_Frames = new List<object>();
         public Control Header_Title { get; set; }
@@ -22,6 +23,7 @@ namespace COA_IMS.Utilities
         private string selected_color { get; set; }
         private string unselected_color { get; set; }
         public string select_hover_color { get; set; }
+        private string button_color { get; set; }
 
         #region Orange Colors
         /*
@@ -38,9 +40,11 @@ namespace COA_IMS.Utilities
         #endregion
         public Tab_Manager() 
         {
-            this.selected_color = (!string.IsNullOrEmpty(selected_color)) ? selected_color : "#c68621";
-            this.select_hover_color = (!string.IsNullOrEmpty(select_hover_color)) ? select_hover_color : "#e9bf7e";
+            this.selected_color = (!string.IsNullOrEmpty(selected_color)) ? selected_color : "#2C2A37";
+            this.select_hover_color = (!string.IsNullOrEmpty(select_hover_color)) ? select_hover_color : "#2C2A37";
             this.unselected_color = (!string.IsNullOrEmpty(unselected_color)) ? unselected_color : "#ffffff";
+            this.button_color = (!string.IsNullOrEmpty(unselected_color)) ? unselected_color : "#2C2A37";
+            
         }
 
         public List<object> Sub_frames 
