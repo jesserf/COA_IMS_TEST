@@ -105,7 +105,7 @@
             // 
             this.user_Panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.user_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.user_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.user_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.user_Panel.Controls.Add(this.username_entry);
             this.user_Panel.Controls.Add(this.gunaPictureBox1);
             this.user_Panel.Location = new System.Drawing.Point(35, 3);
@@ -172,7 +172,7 @@
             this.Login_btn.AnimationHoverSpeed = 0.07F;
             this.Login_btn.AnimationSpeed = 0.03F;
             this.Login_btn.BackColor = System.Drawing.Color.Transparent;
-            this.Login_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.Login_btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.Login_btn.BorderColor = System.Drawing.Color.Black;
             this.Login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_btn.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -183,7 +183,7 @@
             this.Login_btn.ImageSize = new System.Drawing.Size(20, 20);
             this.Login_btn.Location = new System.Drawing.Point(166, 597);
             this.Login_btn.Name = "Login_btn";
-            this.Login_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(140)))), ((int)(((byte)(84)))));
+            this.Login_btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
             this.Login_btn.OnHoverBorderColor = System.Drawing.Color.Black;
             this.Login_btn.OnHoverForeColor = System.Drawing.Color.White;
             this.Login_btn.OnHoverImage = null;
@@ -199,7 +199,7 @@
             // 
             this.pass_Panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pass_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.pass_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.pass_Panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.pass_Panel.Controls.Add(this.gunaPictureBox2);
             this.pass_Panel.Controls.Add(this.password_entry);
             this.pass_Panel.Location = new System.Drawing.Point(35, 82);
@@ -366,7 +366,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = global::COA_IMS.Properties.Resources.Dashboard__2_;
+            this.BackgroundImage = global::COA_IMS.Properties.Resources.LOG_IN_FINAL_BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1684, 991);
             this.Controls.Add(this.tableLayoutPanel1);

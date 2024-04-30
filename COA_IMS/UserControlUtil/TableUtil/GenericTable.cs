@@ -386,6 +386,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "inventory":
                     dt = FillInventoryTable();
                     break;
+                case "item_supplier":
+                    dt = FillSupplierTable();
+                    break;
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering
@@ -481,6 +484,11 @@ namespace COA_IMS.UserControlUtil.TableUtil
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Item_Records(min_lim, data_Table_Type, inventory_Table_Name, searchBar1.Text);
         }
+        private DataTable FillSupplierTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Item_Supplier_Records(min_lim, searchBar1.Text);
+        }
         private void AddThemeToDGV()
         {
             //Add Theme.cs DataGridView Style
@@ -541,6 +549,17 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("#", DataGridViewContentAlignment.MiddleRight),
                             ("Item Units", DataGridViewContentAlignment.MiddleCenter),
                         };
+                    break;
+                case "item_supplier":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 15), (true, 30), (true, 25), (true, 25) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Supplier Name", DataGridViewContentAlignment.MiddleLeft),
+                            ("Supplier Address", DataGridViewContentAlignment.MiddleLeft),
+                            ("Contact Number", DataGridViewContentAlignment.MiddleLeft),
+                            ("Contact Person", DataGridViewContentAlignment.MiddleCenter)
+                        }; ;
                     break;
                 default: break;
             }

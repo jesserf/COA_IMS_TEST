@@ -36,7 +36,7 @@ namespace COA_IMS
         public static readonly string display_account_logs = "SELECT user_name, activity, activity_datetime FROM log_table WHERE activity_type = 1";
         #endregion
         #region Activity Logs
-        public static readonly string log_maintenance_activity_add = "INSERT INTO log_table (user_name, activity, activity_datetime, activity_type) VALUES ('{0}', 'Add Record: {1} {2}', CURRENT_TIMESTAMP, 2)";
+        public static readonly string log_maintenance_activity_add = "INSERT INTO log_table (user_name, activity, activity_datetime, activity_type) VALUES ('{0}', 'Add Record: {1}-{2}', CURRENT_TIMESTAMP, 2)";
         public static readonly string log_maintenance_activity_delete = "INSERT INTO log_table (user_name, activity, activity_datetime, activity_type) VALUES ('{0}', 'Deleted Record: {1} {2}', CURRENT_TIMESTAMP, 2)";
         public static readonly string log_maintenance_activity_edit = "INSERT INTO log_table (user_name, activity, activity_datetime, activity_type) VALUES ('{0}', 'Edited Record: {1} {2}', CURRENT_TIMESTAMP, 2)";
         public static readonly string display_activity_logs_by_date = "SELECT user_name, activity, activity_datetime FROM log_table WHERE activity_datetime BETWEEN '{0}' AND '{1}' AND activity_type = 2 LIMIT {2}, 15";
@@ -256,50 +256,45 @@ namespace COA_IMS
 
 
         #region Item Brands
-        public static readonly string insert_item_brand = "INSERT INTO item_brand_table (item_brand)\r" +
-                                                            "\nSELECT * FROM (SELECT '{0}' AS item_brand) AS tmp\r" +
-                                                            "\nWHERE NOT EXISTS (\r" +
-                                                            "\n    SELECT item_brand FROM item_brand_table WHERE item_brand = '{0}'\r" +
-                                                            "\n) LIMIT 1;";
+        public static readonly string insert_item_brand = "INSERT INTO item_brand_table (item_brand, added_by) \r" +
+            "\nSELECT * FROM (SELECT '{0}', '{1}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT item_brand FROM item_brand_table \r" +
+            "\nWHERE item_brand = '{0}') LIMIT 1;";
 
         public static readonly string select_item_brands = "SELECT item_brand FROM item_brand_table;";
         public static readonly string specific_select_item_brands_id = "SELECT item_brand_id FROM item_brand_table WHERE item_brand = '{0}';";
         #endregion
         #region Item Types
-        public static readonly string insert_item_type = "INSERT INTO item_type_table (item_type)\r" +
-                                                            "\nSELECT * FROM (SELECT '{0}' AS item_type) AS tmp\r" +
-                                                            "\nWHERE NOT EXISTS (\r" +
-                                                            "\n    SELECT item_type FROM item_type_table WHERE item_type = '{0}'\r" +
-                                                            "\n) LIMIT 1;";
-
-        public static readonly string insert_item_brands = "INSERT INTO item_brand_table (item_brand, updated_by) SELECT * FROM (SELECT '{0}', '{1}') AS tmp WHERE NOT EXISTS (SELECT item_brand FROM item_brand_table WHERE item_brand = '{0}') LIMIT 1;";
-
-        public static readonly string insert_item_unit = "INSERT INTO item_unit_table (unit)\r" +
-                                                            "\nSELECT * FROM (SELECT '{0}' AS unit) AS tmp\r" +
-                                                            "\nWHERE NOT EXISTS (\r" +
-                                                            "\n    SELECT unit FROM item_unit_table WHERE unit = '{0}'\r" +
-                                                            "\n) LIMIT 1;";
-
-        public static readonly string insert_spec_type = "INSERT INTO {1}_table ({1})\r" +
-                                                            "\nSELECT * FROM (SELECT '{0}' AS {1}) AS tmp\r" +
-                                                            "\nWHERE NOT EXISTS (\r" +
-                                                            "\n    SELECT {1} FROM {1}_table WHERE {1} = '{0}'\r" +
-                                                            "\n) LIMIT 1;";
+        public static readonly string insert_item_type = "INSERT INTO item_type_table (item_type, updated_by) \r" +
+            "\nSELECT * FROM (SELECT '{0}', '{1}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT item_type FROM item_type_table \r" +
+            "\nWHERE item_type = '{0}') LIMIT 1;";
 
         public static readonly string select_item_types = "SELECT item_type FROM item_type_table LIMIT {0}, 15";
         public static readonly string specific_select_item_types_id = "SELECT item_type_id FROM item_type_table WHERE item_type = '{0}';";
         public static readonly string select_specific_item_types = "SELECT item_type_id, item_type FROM item_type_table FROM log_table WHERE item_type LIKE '%{0}%' LIMIT {1}, 15";
         #endregion
         #region Item Units
-        public static readonly string insert_item_units = "INSERT INTO item_unit_table (unit)\r" +
-                                                            "\nSELECT * FROM (SELECT '{0}' AS unit) AS tmp\r" +
-                                                            "\nWHERE NOT EXISTS (\r" +
-                                                            "\n    SELECT unit FROM item_unit_table WHERE unit = '{0}';\r" +
-                                                            "\n) LIMIT 1;";
+        public static readonly string insert_item_unit = "INSERT INTO item_unit_table (unit) \r" +
+            "\nSELECT * FROM (SELECT '{0}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT unit FROM item_unit_table \r" +
+            "\nWHERE unit = '{0}') LIMIT 1;";
         public static readonly string select_item_units = "SELECT unit FROM item_unit_table;";
         public static readonly string specific_select_item_units_id = "SELECT unit_id FROM item_unit_table WHERE unit = '{0}';";
         #endregion
-
+        #region Item Supplier
+        public static readonly string insert_item_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by) \r" +
+            "\nSELECT * FROM (SELECT '{0}', '{1}', '{2}', '{3}', '{4}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT supplier_name FROM item_supplier_table \r" +
+            "\nWHERE supplier_name = '{0}') LIMIT 1;";
+        public static readonly string get_general_item_supplier_record =
+            "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table LIMIT {0}, 15;";
+        public static readonly string get_specific_item_supplier_record =
+            "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table WHERE  (supplier_name LIKE '%{0}%' OR \r" +
+                "supplier_address LIKE '%{0}%' OR \r" +
+                "supplier_contact_num LIKE '%{0}%' OR \r" +
+                "supplier_contact_person LIKE '%{0}%') LIMIT {0}, 15;";
+        #endregion
 
 
         public static readonly string insert_new_item = "INSE emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
