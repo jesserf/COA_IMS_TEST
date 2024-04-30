@@ -42,6 +42,7 @@ namespace COA_IMS.Screens.Subscrn
         {
             IMS_Product_Form prodform = new IMS_Product_Form();
             prodform.ShowDialog();
+            refresh_Button.PerformClick();
         }
         private void RePopulate_Table(object sender, EventArgs e)
         {
@@ -64,16 +65,6 @@ namespace COA_IMS.Screens.Subscrn
         private void next_Button_Click(object sender, EventArgs e)
         {
             generic_Table.UserChangePage(true);
-        }
-
-        private void pageCountTextbox_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void refresh_Button_Click(object sender, EventArgs e)
-        {
-            generic_Table.Populate_Table();
         }
 
         private void add_Category_Button_Click(object sender, EventArgs e)

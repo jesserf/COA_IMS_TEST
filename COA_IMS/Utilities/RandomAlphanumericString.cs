@@ -66,5 +66,14 @@ namespace COA_IMS.Utilities
             if(check == 1) randomString = Generate_RandomString();
             return randomString;
         }
+        public string Generate_RandomString(string query, int size = 2)
+        {
+            string randomString = Random_Alpha_Num(size);
+            int check = 0;
+            using (database_Manager)
+                check = Convert.ToInt32(database_Manager.ExecuteScalar(string.Format(query, randomString)));
+            if (check == 1) randomString = Generate_RandomString(query);
+            return randomString;
+        }
     }
 }

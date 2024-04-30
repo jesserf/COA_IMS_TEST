@@ -389,6 +389,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "item_supplier":
                     dt = FillSupplierTable();
                     break;
+                case "item":
+                    dt = FillItemsTable();
+                    break;
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering
@@ -489,6 +492,11 @@ namespace COA_IMS.UserControlUtil.TableUtil
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Item_Supplier_Records(min_lim, searchBar1.Text);
         }
+        private DataTable FillItemsTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Item_Records(min_lim, searchBar1.Text);
+        }
         private void AddThemeToDGV()
         {
             //Add Theme.cs DataGridView Style
@@ -561,6 +569,19 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Contact Person", DataGridViewContentAlignment.MiddleCenter)
                         }; ;
                     break;
+                case "item":
+                    column_Widths = new (bool, int)[] { (true, 3), (true, 10), (true, 47), (true, 10), (true, 10), (true, 10), (true, 10) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Item Code", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Desc", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),
+                            ("Quantity", DataGridViewContentAlignment.MiddleLeft)
+                        }; ;
+                    break;
                 default: break;
             }
 
@@ -629,6 +650,18 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     rec_count = activity_manager.Count_Account_Logs(from_Date, to_Date);
                     break;
                 case "project":
+                    break;
+                case "item_type":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_item_types, searchBar1.Text));
+                    break;
+                case "item_brand":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_item_brands, searchBar1.Text));
+                    break;
+                case "unit":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_item_units, searchBar1.Text));
+                    break;
+                case "item_supplier":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_item_suppliers, searchBar1.Text));
                     break;
                 default: break;
             }

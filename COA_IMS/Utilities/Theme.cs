@@ -17,6 +17,9 @@ namespace COA_IMS.Utilities
 
         Color orange_column_color = Color.FromArgb(198, 134, 33);
         Color orange_row_color = Color.FromArgb(230, 181, 104);
+
+        public static Color dark_pink_header = Color.FromArgb(195, 141, 140);
+        public static Color dark_pink_row = Color.FromArgb(235, 111, 108);	
         public static Color Hex_To_RGB(string hex)
         {
             // Remove '#' if present
@@ -48,12 +51,12 @@ namespace COA_IMS.Utilities
             GunaDataGridViewHeaderStyle columnHeaderStyle = new GunaDataGridViewHeaderStyle(guna_Table.ColumnHeadersDefaultCellStyle, guna_Table);
             columnHeaderStyle.Font = new Font("Bahnschrift", 14.25F);
             columnHeaderStyle.Height = col_height;
-            columnHeaderStyle.BackColor = Color.FromArgb(198, 134, 33);
+            columnHeaderStyle.BackColor = dark_pink_header;
 
 
             // Create row style
             GunaDataGridViewRowsStyle rowStyle = new GunaDataGridViewRowsStyle(guna_Table.DefaultCellStyle, guna_Table);
-            rowStyle.SelectionBackColor = Color.FromArgb(230, 181, 104);
+            rowStyle.SelectionBackColor = dark_pink_row;
             rowStyle.SelectionForeColor = Color.White;
             rowStyle.Font = new Font("Bahnschrift", 14.25F);
             rowStyle.Height = row_Height;
