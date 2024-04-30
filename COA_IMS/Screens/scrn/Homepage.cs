@@ -16,5 +16,10 @@ namespace COA_IMS.Screens.scrn
         {
             InitializeComponent();
         }
+
+        private void gunaElipsePanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

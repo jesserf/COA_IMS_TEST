@@ -82,7 +82,7 @@
             // Main_panel
             // 
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
-            this.Main_panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.Main_panel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.Main_panel.Location = new System.Drawing.Point(0, 1);
             this.Main_panel.Name = "Main_panel";
             this.Main_panel.Radius = 1;
@@ -100,6 +100,7 @@
             this.gunaElipsePanel4.Name = "gunaElipsePanel4";
             this.gunaElipsePanel4.Size = new System.Drawing.Size(352, 230);
             this.gunaElipsePanel4.TabIndex = 10;
+            this.gunaElipsePanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaElipsePanel4_Paint);
             // 
             // gunaLabel3
             // 

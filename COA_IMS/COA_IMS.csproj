@@ -800,6 +800,7 @@
     <None Include="Resources\circle-xmark %281%29.png" />
     <None Include="Resources\circle-xmark %281%291.png" />
     <None Include="Resources\circle-xmark %282%29.png" />
+    <None Include="Resources\digital-tachograph.png" />
     <Content Include="Resources\dsahboard_img.png" />
     <Content Include="Resources\expand - Copy.png" />
     <Content Include="Resources\expand.png" />
@@ -808,6 +809,7 @@
     <Content Include="Resources\folder-download - Copy.png" />
     <Content Include="Resources\folder-download.png" />
     <None Include="Resources\home %288%29.png" />
+    <None Include="Resources\home %2811%29.png" />
     <Content Include="Resources\house-solid - Copy.png" />
     <Content Include="Resources\house-solid.png" />
     <None Include="Resources\logout %282%29.png" />
@@ -824,12 +826,14 @@
     <Content Include="Resources\Menu Bar Icon1.png" />
     <None Include="Resources\newspaper %281%29.png" />
     <Content Include="Resources\multiple.png" />
+    <None Include="Resources\newspaper %282%29.png" />
     <Content Include="Resources\password_lock.png" />
     <None Include="Resources\multiple1.png" />
     <Content Include="Resources\refresh %281%29 - Copy.png" />
     <Content Include="Resources\refresh %281%29.png" />
     <None Include="Resources\route.png" />
     <None Include="Resources\search %281%29.png" />
+    <None Include="Resources\search %282%29.png" />
     <Content Include="Resources\search - Copy.png" />
     <Content Include="Resources\search.png" />
     <Content Include="Resources\search1.png" />
@@ -838,9 +842,11 @@
     <Content Include="Resources\select.png" />
     <None Include="Resources\shipping %281%29.png" />
     <None Include="Resources\settings %282%29.png" />
+    <None Include="Resources\settings %284%29.png" />
     <Content Include="Resources\Splash screen.png" />
     <None Include="Resources\square-divide.png" />
     <None Include="Resources\supplier bg.png" />
+    <None Include="Resources\supplier-alt.png" />
     <Content Include="Resources\to-do %281%29.png" />
     <Content Include="Resources\to-do %282%29.png" />
     <Content Include="Resources\trash-bin.png" />
@@ -849,6 +855,8 @@
     <None Include="Resources\user %288%29.png" />
     <Content Include="Resources\user.png" />
     <None Include="Resources\users %281%29.png" />
+    <None Include="Resources\users-alt.png" />
+    <None Include="Resources\users-alt %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />

@@ -39,5 +39,10 @@ namespace COA_IMS.Screens.Subscrn
         {
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

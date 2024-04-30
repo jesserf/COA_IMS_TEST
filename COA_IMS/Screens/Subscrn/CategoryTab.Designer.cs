@@ -48,10 +48,6 @@
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.addcategorybtn = new Guna.UI.WinForms.GunaButton();
-            this.add_New_Category_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.add_New_Brand_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.add_New_Unit_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaElipsePanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -59,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipsePanel1
@@ -67,36 +62,37 @@
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.White;
             this.gunaElipsePanel1.Controls.Add(this.tableLayoutPanel1);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 109);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(0, 84);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(1626, 68);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(1626, 56);
             this.gunaElipsePanel1.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.78075F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.21925F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.14065F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.85935F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateFilter1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1626, 68);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1626, 56);
             this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1503, 22);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1497, 10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(117, 43);
             this.flowLayoutPanel1.TabIndex = 7;
@@ -171,7 +167,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1303, 23);
+            this.sortComboBox.Location = new System.Drawing.Point(1297, 11);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.Silver;
@@ -182,11 +178,10 @@
             // 
             // searchBar1
             // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 22);
+            this.searchBar1.Location = new System.Drawing.Point(12, 10);
             this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(548, 43);
+            this.searchBar1.Size = new System.Drawing.Size(595, 46);
             this.searchBar1.TabIndex = 3;
             // 
             // dateFilter1
@@ -195,7 +190,7 @@
             this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
             this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            this.dateFilter1.Location = new System.Drawing.Point(559, 22);
+            this.dateFilter1.Location = new System.Drawing.Point(613, 10);
             this.dateFilter1.Name = "dateFilter1";
             this.dateFilter1.Size = new System.Drawing.Size(640, 43);
             this.dateFilter1.TabIndex = 5;
@@ -206,9 +201,9 @@
             this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
             this.gunaElipsePanel2.Controls.Add(this.LogsTable);
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(0, 177);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(0, 152);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(1625, 632);
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(1625, 620);
             this.gunaElipsePanel2.TabIndex = 4;
             // 
             // LogsTable
@@ -217,15 +212,15 @@
             this.LogsTable.AllowUserToDeleteRows = false;
             this.LogsTable.AllowUserToResizeColumns = false;
             this.LogsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
             this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.LogsTable.BackgroundColor = System.Drawing.Color.Gray;
+            this.LogsTable.BackgroundColor = System.Drawing.Color.White;
             this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -235,16 +230,16 @@
             this.LogsTable.ColumnHeadersHeight = 20;
             this.LogsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.LogsTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.LogsTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LogsTable.EnableHeadersVisualStyles = false;
-            this.LogsTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.LogsTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
             this.LogsTable.Location = new System.Drawing.Point(0, 0);
             this.LogsTable.Margin = new System.Windows.Forms.Padding(15);
             this.LogsTable.Name = "LogsTable";
@@ -252,30 +247,30 @@
             this.LogsTable.RowHeadersVisible = false;
             this.LogsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.LogsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LogsTable.Size = new System.Drawing.Size(1625, 632);
+            this.LogsTable.Size = new System.Drawing.Size(1625, 620);
             this.LogsTable.TabIndex = 8;
-            this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.DeepPurple;
+            this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.Gray;
-            this.LogsTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
-            this.LogsTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.LogsTable.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.LogsTable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
+            this.LogsTable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.LogsTable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.LogsTable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.LogsTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.LogsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.LogsTable.ThemeStyle.HeaderStyle.Height = 20;
             this.LogsTable.ThemeStyle.ReadOnly = true;
-            this.LogsTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.LogsTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
             this.LogsTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LogsTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.LogsTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.LogsTable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.LogsTable.ThemeStyle.RowsStyle.Height = 22;
-            this.LogsTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.LogsTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.LogsTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
+            this.LogsTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // tableLayoutPanel2
             // 
@@ -377,145 +372,11 @@
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Controls.Add(this.addcategorybtn);
-            this.flowLayoutPanel3.Controls.Add(this.add_New_Category_Btn);
-            this.flowLayoutPanel3.Controls.Add(this.add_New_Brand_Btn);
-            this.flowLayoutPanel3.Controls.Add(this.add_New_Unit_Btn);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1603, 100);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1603, 68);
             this.flowLayoutPanel3.TabIndex = 13;
-            // 
-            // addcategorybtn
-            // 
-            this.addcategorybtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addcategorybtn.AnimationHoverSpeed = 0.07F;
-            this.addcategorybtn.AnimationSpeed = 0.03F;
-            this.addcategorybtn.BackColor = System.Drawing.Color.Transparent;
-            this.addcategorybtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.addcategorybtn.BorderColor = System.Drawing.Color.Black;
-            this.addcategorybtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.addcategorybtn.FocusedColor = System.Drawing.Color.Empty;
-            this.addcategorybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addcategorybtn.ForeColor = System.Drawing.Color.White;
-            this.addcategorybtn.Image = global::COA_IMS.Properties.Resources.multiple1;
-            this.addcategorybtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.addcategorybtn.Location = new System.Drawing.Point(30, 30);
-            this.addcategorybtn.Margin = new System.Windows.Forms.Padding(30, 30, 30, 0);
-            this.addcategorybtn.Name = "addcategorybtn";
-            this.addcategorybtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.addcategorybtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.addcategorybtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.addcategorybtn.OnHoverImage = null;
-            this.addcategorybtn.OnPressedColor = System.Drawing.Color.Black;
-            this.addcategorybtn.Radius = 10;
-            this.addcategorybtn.Size = new System.Drawing.Size(160, 42);
-            this.addcategorybtn.TabIndex = 2;
-            this.addcategorybtn.Text = "Add new Category";
-            this.addcategorybtn.Click += new System.EventHandler(this.addcategorybtn_Click);
-            // 
-            // add_New_Category_Btn
-            // 
-            this.add_New_Category_Btn.AnimationHoverSpeed = 0.07F;
-            this.add_New_Category_Btn.AnimationSpeed = 0.03F;
-            this.add_New_Category_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.add_New_Category_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.add_New_Category_Btn.BorderColor = System.Drawing.Color.Black;
-            this.add_New_Category_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.add_New_Category_Btn.CheckedBorderColor = System.Drawing.Color.Black;
-            this.add_New_Category_Btn.CheckedForeColor = System.Drawing.Color.White;
-            this.add_New_Category_Btn.CheckedImage = global::COA_IMS.Properties.Resources.add_product;
-            this.add_New_Category_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.add_New_Category_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.add_New_Category_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.add_New_Category_Btn.Font = new System.Drawing.Font("Bahnschrift", 12.25F);
-            this.add_New_Category_Btn.ForeColor = System.Drawing.Color.White;
-            this.add_New_Category_Btn.Image = global::COA_IMS.Properties.Resources.multiple1;
-            this.add_New_Category_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_New_Category_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_New_Category_Btn.Location = new System.Drawing.Point(250, 30);
-            this.add_New_Category_Btn.Margin = new System.Windows.Forms.Padding(30, 30, 30, 0);
-            this.add_New_Category_Btn.Name = "add_New_Category_Btn";
-            this.add_New_Category_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
-            this.add_New_Category_Btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.add_New_Category_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.add_New_Category_Btn.OnHoverImage = null;
-            this.add_New_Category_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_New_Category_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.add_New_Category_Btn.Radius = 15;
-            this.add_New_Category_Btn.Size = new System.Drawing.Size(210, 42);
-            this.add_New_Category_Btn.TabIndex = 3;
-            this.add_New_Category_Btn.Text = "ADD NEW CATEGORY";
-            this.add_New_Category_Btn.Click += new System.EventHandler(this.addcategorybtn_Click);
-            // 
-            // add_New_Brand_Btn
-            // 
-            this.add_New_Brand_Btn.AnimationHoverSpeed = 0.07F;
-            this.add_New_Brand_Btn.AnimationSpeed = 0.03F;
-            this.add_New_Brand_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.add_New_Brand_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.add_New_Brand_Btn.BorderColor = System.Drawing.Color.Black;
-            this.add_New_Brand_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.add_New_Brand_Btn.CheckedBorderColor = System.Drawing.Color.Black;
-            this.add_New_Brand_Btn.CheckedForeColor = System.Drawing.Color.White;
-            this.add_New_Brand_Btn.CheckedImage = global::COA_IMS.Properties.Resources.add_product;
-            this.add_New_Brand_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.add_New_Brand_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.add_New_Brand_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.add_New_Brand_Btn.Font = new System.Drawing.Font("Bahnschrift", 12.25F);
-            this.add_New_Brand_Btn.ForeColor = System.Drawing.Color.White;
-            this.add_New_Brand_Btn.Image = global::COA_IMS.Properties.Resources.multiple1;
-            this.add_New_Brand_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_New_Brand_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_New_Brand_Btn.Location = new System.Drawing.Point(520, 30);
-            this.add_New_Brand_Btn.Margin = new System.Windows.Forms.Padding(30, 30, 30, 0);
-            this.add_New_Brand_Btn.Name = "add_New_Brand_Btn";
-            this.add_New_Brand_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
-            this.add_New_Brand_Btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.add_New_Brand_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.add_New_Brand_Btn.OnHoverImage = null;
-            this.add_New_Brand_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_New_Brand_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.add_New_Brand_Btn.Radius = 15;
-            this.add_New_Brand_Btn.Size = new System.Drawing.Size(210, 42);
-            this.add_New_Brand_Btn.TabIndex = 4;
-            this.add_New_Brand_Btn.Text = "ADD NEW BRAND";
-            this.add_New_Brand_Btn.Click += new System.EventHandler(this.addbrandbtn_Click);
-            // 
-            // add_New_Unit_Btn
-            // 
-            this.add_New_Unit_Btn.AnimationHoverSpeed = 0.07F;
-            this.add_New_Unit_Btn.AnimationSpeed = 0.03F;
-            this.add_New_Unit_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.add_New_Unit_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.add_New_Unit_Btn.BorderColor = System.Drawing.Color.Black;
-            this.add_New_Unit_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.add_New_Unit_Btn.CheckedBorderColor = System.Drawing.Color.Black;
-            this.add_New_Unit_Btn.CheckedForeColor = System.Drawing.Color.White;
-            this.add_New_Unit_Btn.CheckedImage = global::COA_IMS.Properties.Resources.add_product;
-            this.add_New_Unit_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.add_New_Unit_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.add_New_Unit_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.add_New_Unit_Btn.Font = new System.Drawing.Font("Bahnschrift", 12.25F);
-            this.add_New_Unit_Btn.ForeColor = System.Drawing.Color.White;
-            this.add_New_Unit_Btn.Image = global::COA_IMS.Properties.Resources.multiple1;
-            this.add_New_Unit_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_New_Unit_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_New_Unit_Btn.Location = new System.Drawing.Point(790, 30);
-            this.add_New_Unit_Btn.Margin = new System.Windows.Forms.Padding(30, 30, 30, 0);
-            this.add_New_Unit_Btn.Name = "add_New_Unit_Btn";
-            this.add_New_Unit_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(202)))), ((int)(((byte)(148)))));
-            this.add_New_Unit_Btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.add_New_Unit_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.add_New_Unit_Btn.OnHoverImage = null;
-            this.add_New_Unit_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_New_Unit_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.add_New_Unit_Btn.Radius = 15;
-            this.add_New_Unit_Btn.Size = new System.Drawing.Size(210, 42);
-            this.add_New_Unit_Btn.TabIndex = 5;
-            this.add_New_Unit_Btn.Text = "ADD NEW UNIT";
-            this.add_New_Unit_Btn.Click += new System.EventHandler(this.addunitbtn_Click);
             // 
             // CategoryTab
             // 
@@ -540,13 +401,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaButton addcategorybtn;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -563,8 +422,5 @@
         private UserControlUtil.DateFilter dateFilter1;
         private UserControlUtil.SearchBar searchBar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private Guna.UI.WinForms.GunaAdvenceButton add_New_Category_Btn;
-        private Guna.UI.WinForms.GunaAdvenceButton add_New_Brand_Btn;
-        private Guna.UI.WinForms.GunaAdvenceButton add_New_Unit_Btn;
     }
 }
