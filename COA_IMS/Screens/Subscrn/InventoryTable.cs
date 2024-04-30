@@ -17,15 +17,15 @@ namespace COA_IMS.Screens.Subscrn
     public partial class InventoryTable : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "item_type", "item_brand", "unit" };
+        readonly string[] log_table_names = { "item", "item_brand", "unit" };
         public InventoryTable()
         {
             InitializeComponent();
             //setup GenericTable
             generic_Table = new GenericTable();
-            generic_Table.FillVariables(log_table_names, null, null, "item_type", "item_type", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
+            generic_Table.FillVariables(log_table_names, null, null, "item", "item", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
             //setup ordinary controls
-            sortComboBox.SelectedText = "item_type";
+            sortComboBox.SelectedText = "item";
             sortComboBox.SelectedIndex = 0;
             generic_Table.Populate_Table(1);
             //setup user controls
@@ -37,6 +37,7 @@ namespace COA_IMS.Screens.Subscrn
         {
             IMS_Product_Form prodform = new IMS_Product_Form();
             prodform.ShowDialog();
+            generic_Table.Populate_Table();
         }
         private void RePopulate_Table(object sender, EventArgs e)
         {
@@ -64,15 +65,5 @@ namespace COA_IMS.Screens.Subscrn
             }
         }
 
-        private void refresh_Button_Click(object sender, EventArgs e)
-        {
-            string asdas = ((GunaButton)sender).Name;
-            generic_Table.Populate_Table();
-        }
-
-        private void AccountLogging_VisibleChanged(object sender, EventArgs e)
-        {
-            refresh_Button.PerformClick();
-        }
     }
 }

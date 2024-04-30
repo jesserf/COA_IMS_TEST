@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using COA_IMS.Utilities;
 using Guna.UI.WinForms;
+using MySqlX.XDevAPI.Common;
 
 namespace COA_IMS.Screens.scrn
 {
@@ -34,20 +35,49 @@ namespace COA_IMS.Screens.scrn
 
         private void save_Button_Click(object sender, EventArgs e)
         {
-            string this_ItemCode, this_ItemBrand, this_estLife, this_unitType, this_unitCost, this_Quantity, this_Supplier;
+            string this_ItemCode, this_ItemBrand, this_estLife, this_unitType, this_unitCost, this_Quantity, this_Supplier, this_Product_Name, this_ItemType;
+            int est_life = 0, quantity = 0, result_int;
+            object b;
+            float cost = 0, result_fl;
             this_ItemCode = item_Code_Textbox.Text;
-            this_ItemBrand = item_Code_Textbox.Text;
-            this_estLife = item_Code_Textbox.Text;
-            this_unitType = item_Code_Textbox.Text;
-            this_unitCost = item_Code_Textbox.Text;
-            this_Quantity = item_Code_Textbox.Text;
+            this_ItemType = item_Type_CBox.Text;
+            this_ItemBrand = item_Brand_CBox.Text;
+            this_estLife = est_Life_Textbox.Text;
+            this_unitType = unit_Type_CBox.Text;
+            this_unitCost = unit_Cost_Textbox.Text;
+            this_Quantity = quantity_Textbox.Text;
             this_Supplier = supplier_CBox.Text;
-            Console.WriteLine(item_Type_CBox.Text);
-            Console.WriteLine(item_Brand_CBox.Text);
-            Console.WriteLine(est_Life_Textbox.Text);
-            Console.WriteLine(unit_Type_CBox.Text);
-            Console.WriteLine(unit_Cost_Textbox.Text);
-            Console.WriteLine(quantity_Textbox.Text);
+            this_Product_Name = product_Name_TextBox.Text;
+
+            b = this_estLife;
+            //checks to see if user input is a number
+            if (int.TryParse(b.ToString(), out result_int))
+            {
+                est_life = result_int;
+            }
+            b = this_Quantity;
+            //checks to see if user input is a number
+            if (int.TryParse(b.ToString(), out result_int))
+            {
+                quantity = result_int;
+            }
+            b = this_unitCost;
+            //checks to see if user input is a number
+            if (float.TryParse(b.ToString(), out result_fl))
+            {
+                cost = result_fl;
+            }
+
+            Console.WriteLine(this_ItemCode);
+            Console.WriteLine(this_ItemType);
+            Console.WriteLine(this_ItemBrand);
+            Console.WriteLine(est_life);
+            Console.WriteLine(this_unitType);
+            Console.WriteLine(cost);
+            Console.WriteLine(quantity);
+            Console.WriteLine(this_Supplier);
+            Console.WriteLine(this_Product_Name);
+            inventory_Manager.Insert_Item_Description(this_Product_Name, this_ItemBrand, this_ItemType, this_Supplier, this_ItemCode, cost, est_life, quantity, this_unitType);
             clear_Textboxes();
         }
 
@@ -68,6 +98,8 @@ namespace COA_IMS.Screens.scrn
                 item_Type_CBox.Items.Add(items);
             foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_units, "unit"))
                 unit_Type_CBox.Items.Add(items);
+            foreach (var items in inventory_Manager.Display_List_To_Combobox(Database_Query.select_item_supplier_list, "supplier_name"))
+                supplier_CBox.Items.Add(items);
         }
         private void clear_Textboxes()
         {
@@ -81,5 +113,9 @@ namespace COA_IMS.Screens.scrn
             }
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

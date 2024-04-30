@@ -39,16 +39,7 @@ namespace COA_IMS.Screens.Subscrn
             supform.ShowDialog();
             refresh_Button.PerformClick();
         }
-        private void add_item_Click(object sender, EventArgs e)
-        {
-            IMS_Product_Form prodform = new IMS_Product_Form();
-            prodform.ShowDialog();
-        }
         private void RePopulate_Table(object sender, EventArgs e)
-        {
-            generic_Table.Populate_Table();
-        }
-        private void sortComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             generic_Table.Populate_Table();
         }
@@ -68,17 +59,6 @@ namespace COA_IMS.Screens.Subscrn
             {
                 generic_Table.UserChangePageCountInput();
             }
-        }
-
-        private void refresh_Button_Click(object sender, EventArgs e)
-        {
-            string asdas = ((GunaButton)sender).Name;
-            generic_Table.Populate_Table();
-        }
-
-        private void IMS_SupplierTable_VisibleChanged(object sender, EventArgs e)
-        {
-            refresh_Button.PerformClick();
         }
     }
 }

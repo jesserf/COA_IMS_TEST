@@ -263,6 +263,7 @@ namespace COA_IMS
 
         public static readonly string select_item_brands = "SELECT item_brand FROM item_brand_table;";
         public static readonly string specific_select_item_brands_id = "SELECT item_brand_id FROM item_brand_table WHERE item_brand = '{0}';";
+        public static readonly string count_item_brands = "SELECT COUNT(*) FROM item_brand_table WHERE item_brand LIKE '%{0}%';";
         #endregion
         #region Item Types
         public static readonly string insert_item_type = "INSERT INTO item_type_table (item_type, updated_by) \r" +
@@ -273,6 +274,7 @@ namespace COA_IMS
         public static readonly string select_item_types = "SELECT item_type FROM item_type_table LIMIT {0}, 15";
         public static readonly string specific_select_item_types_id = "SELECT item_type_id FROM item_type_table WHERE item_type = '{0}';";
         public static readonly string select_specific_item_types = "SELECT item_type_id, item_type FROM item_type_table FROM log_table WHERE item_type LIKE '%{0}%' LIMIT {1}, 15";
+        public static readonly string count_item_types = "SELECT COUNT(*) FROM item_type_table WHERE item_type LIKE '%{0}%';";
         #endregion
         #region Item Units
         public static readonly string insert_item_unit = "INSERT INTO item_unit_table (unit) \r" +
@@ -281,8 +283,10 @@ namespace COA_IMS
             "\nWHERE unit = '{0}') LIMIT 1;";
         public static readonly string select_item_units = "SELECT unit FROM item_unit_table;";
         public static readonly string specific_select_item_units_id = "SELECT unit_id FROM item_unit_table WHERE unit = '{0}';";
+        public static readonly string count_item_units = "SELECT COUNT(*) FROM item_unit_table WHERE unit LIKE '%{0}%';";
         #endregion
         #region Item Supplier
+        public static readonly string select_item_supplier_list = "SELECT supplier_name FROM item_supplier_table;";
         public static readonly string insert_item_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by) \r" +
             "\nSELECT * FROM (SELECT '{0}', '{1}', '{2}', '{3}', '{4}') AS tmp \r" +
             "\nWHERE NOT EXISTS (SELECT supplier_name FROM item_supplier_table \r" +
@@ -290,14 +294,49 @@ namespace COA_IMS
         public static readonly string get_general_item_supplier_record =
             "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table LIMIT {0}, 15;";
         public static readonly string get_specific_item_supplier_record =
-            "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table WHERE  (supplier_name LIKE '%{0}%' OR \r" +
+            "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table WHERE  (supplier_name LIKE '%{1}%' OR \r" +
+                "supplier_address LIKE '%{1}%' OR \r" +
+                "supplier_contact_num LIKE '%{1}%' OR \r" +
+                "supplier_contact_person LIKE '%{1}%') LIMIT {0}, 15;";
+        public static readonly string count_item_suppliers =
+            "SELECT COUNT(*) FROM item_supplier_table WHERE  (supplier_name LIKE '%{0}%' OR \r" +
                 "supplier_address LIKE '%{0}%' OR \r" +
                 "supplier_contact_num LIKE '%{0}%' OR \r" +
-                "supplier_contact_person LIKE '%{0}%') LIMIT {0}, 15;";
+                "supplier_contact_person LIKE '%{0}%');";
+        #endregion
+        #region Items
+        public static readonly string insert_new_item_desc = "INSERT INTO item_desc_table\r" +
+            "\nSELECT * FROM (\r" +
+            "\nSELECT \r" +
+            "\n'{0}', \r" +
+            "\nitem_type_id,\r" +
+            "\nitem_brand_id,\r" +
+            "\n'{1}' FROM item_type_table, item_brand_table\r" +
+            "\nWHERE item_brand = '{2}' AND item_type = '{3}'\r" +
+            "\n) AS tmp \r\nWHERE NOT EXISTS (SELECT item_desc_id FROM item_desc_table\r" +
+            "\nWHERE item_desc_id = '{0}') LIMIT 1;";
+        public static readonly string insert_new_item = "INSERT INTO items_table (item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity, added_by) \r" +
+            "SELECT * FROM ( SELECT \r" +
+            "'{1}', \r" +
+            "'{0}', \r" +
+            "unit_id, \r" +
+            "{2}, \r" +
+            "{3}, \r" +
+            "{4}, \r" +
+            "'{5}' \r" +
+            "FROM item_unit_table  WHERE unit = '{6}' \r" +
+            ")AS tmp WHERE NOT EXISTS (SELECT item_code FROM items_table\r" +
+            " WHERE item_code = '{1}') LIMIT 1;";
+        public static readonly string check_item_desc_id = "SELECT COUNT(*) FROM item_desc_table WHERE item_desc_id = '{0}';";
+        public static readonly string get_general_items_record =
+            "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT {0}, 15;";
+        public static readonly string get_specific_items_record =
+            "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table WHERE  (item_code LIKE '%{1}%' OR \r" +
+                "item_desc_id LIKE '%{1}%' OR \r" +
+                "unit_id LIKE '%{1}%') LIMIT {0}, 15;";
         #endregion
 
-
-        public static readonly string insert_new_item = "INSE emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
+        //public static readonly string insert_new_item = "INSERT emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
         #endregion
 
         public static readonly string set_new_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by)\r" +
