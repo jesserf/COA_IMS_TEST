@@ -38,7 +38,7 @@ namespace COA_IMS.Screens
             }
             if (usermanagementform != null)
             {
-                current_Form = tab_Manager.switch_Form(usermanagementform, current_Form, gunaElipsePanel1);
+                current_Form = tab_Manager.switch_Form(usermanagementform, current_Form, gunaPanel1);
             }
             tab_Manager.active_Button(btn, false, false);
         }

@@ -575,6 +575,9 @@
     <EmbeddedResource Include="Screens\scrn\IMS_Login.resx">
       <DependentUpon>IMS_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrn\IMS_Maintenance.resx">
+      <DependentUpon>IMS_Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Product_Form.resx">
       <DependentUpon>IMS_Product_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -805,6 +808,7 @@
     <None Include="Resources\circle-xmark %281%291.png" />
     <None Include="Resources\circle-xmark %282%29.png" />
     <None Include="Resources\digital-tachograph.png" />
+    <None Include="Resources\disk.png" />
     <Content Include="Resources\dsahboard_img.png" />
     <Content Include="Resources\expand - Copy.png" />
     <Content Include="Resources\expand.png" />

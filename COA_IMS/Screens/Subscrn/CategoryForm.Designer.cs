@@ -52,7 +52,7 @@
             this.categorypopup.Location = new System.Drawing.Point(-2, -1);
             this.categorypopup.Name = "categorypopup";
             this.categorypopup.Radius = 10;
-            this.categorypopup.Size = new System.Drawing.Size(635, 155);
+            this.categorypopup.Size = new System.Drawing.Size(634, 155);
             this.categorypopup.TabIndex = 0;
             // 
             // gunaImageButton1
@@ -60,7 +60,7 @@
             this.gunaImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaImageButton1.Image = global::COA_IMS.Properties.Resources.circle_xmark__1_;
             this.gunaImageButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaImageButton1.Location = new System.Drawing.Point(608, 3);
+            this.gunaImageButton1.Location = new System.Drawing.Point(603, 5);
             this.gunaImageButton1.Name = "gunaImageButton1";
             this.gunaImageButton1.OnHoverImage = null;
             this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
@@ -127,7 +127,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(16, 14);
+            this.gunaLabel1.Location = new System.Drawing.Point(16, 17);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(163, 23);
             this.gunaLabel1.TabIndex = 1;
@@ -144,7 +144,7 @@
             this.add_Category_TextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.add_Category_TextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.add_Category_TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.add_Category_TextBox.Location = new System.Drawing.Point(38, 56);
+            this.add_Category_TextBox.Location = new System.Drawing.Point(36, 56);
             this.add_Category_TextBox.Name = "add_Category_TextBox";
             this.add_Category_TextBox.PasswordChar = '\0';
             this.add_Category_TextBox.Radius = 10;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 156);
+            this.ClientSize = new System.Drawing.Size(632, 156);
             this.Controls.Add(this.categorypopup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoryForm";
