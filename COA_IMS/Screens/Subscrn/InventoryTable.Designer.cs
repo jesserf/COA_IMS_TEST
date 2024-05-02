@@ -131,7 +131,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.13805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.86195F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
@@ -227,7 +227,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1168, 13);
+            this.sortComboBox.Location = new System.Drawing.Point(1162, 13);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
@@ -258,7 +258,7 @@
             this.add_Item_Btn.Image = global::COA_IMS.Properties.Resources.add_product;
             this.add_Item_Btn.ImageSize = new System.Drawing.Size(32, 32);
             this.add_Item_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.add_Item_Btn.Location = new System.Drawing.Point(552, 6);
+            this.add_Item_Btn.Location = new System.Drawing.Point(549, 6);
             this.add_Item_Btn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.add_Item_Btn.Name = "add_Item_Btn";
             this.add_Item_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
@@ -438,7 +438,7 @@
             this.searchBar1.BackColor = System.Drawing.Color.Transparent;
             this.searchBar1.Location = new System.Drawing.Point(3, 12);
             this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(543, 43);
+            this.searchBar1.Size = new System.Drawing.Size(540, 43);
             this.searchBar1.TabIndex = 3;
             // 
             // InventoryTable
