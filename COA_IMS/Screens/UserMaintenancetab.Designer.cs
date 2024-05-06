@@ -105,7 +105,7 @@
             // 
             this.activebtn.AnimationHoverSpeed = 0.07F;
             this.activebtn.AnimationSpeed = 0.03F;
-            this.activebtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.activebtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.activebtn.BorderColor = System.Drawing.Color.Black;
             this.activebtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.activebtn.FocusedColor = System.Drawing.Color.Empty;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1619, 965);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
