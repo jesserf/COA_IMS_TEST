@@ -253,8 +253,40 @@ namespace COA_IMS
         #region Fill Comboboxes
         public static readonly string select_item_list = "SELECT {0} FROM {0}_table;";
         #endregion
-
-
+        #region Employee
+        public static readonly string insert_employee_record = "INSERT INTO employee_table (employee_name, employee_position, employee_office, added_by) \r" +
+            "\nSELECT * FROM (SELECT '{0}', '{1}', '{2}', '{3}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT employee_name FROM employee_table \r" +
+            "\nWHERE employee_name = '{0}') LIMIT 1;";
+        public static readonly string insert_employee_position = "INSERT INTO employee_position_table (employee_position) \r" +
+            "\nSELECT * FROM (SELECT '{0}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT employee_position FROM employee_position_table \r" +
+            "\nWHERE employee_position = '{0}') LIMIT 1;";
+        public static readonly string insert_employee_office = "INSERT INTO employee_office_table (employee_office) \r" +
+            "\nSELECT * FROM (SELECT '{0}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT employee_office FROM employee_office_table \r" +
+            "\nWHERE employee_office = '{0}') LIMIT 1;";
+        public static readonly string count_employee =
+            "SELECT COUNT(*) FROM employee_table WHERE  (employee_name LIKE '%{0}%' OR \r" +
+                "employee_office LIKE '%{0}%' OR \r" +
+                "employee_position LIKE '%{0}%');";
+        public static readonly string get_general_employee_record =
+            "SELECT employee_name, employee_position, employee_office FROM employee_table LIMIT {0}, 15;";
+        public static readonly string get_specific_employee_record =
+            "SELECT employee_name, employee_position, employee_office FROM employee_table WHERE (employee_name LIKE '%{1}%' OR \r" +
+                "employee_position LIKE '%{1}%' OR \r" +
+                "employee_office LIKE '%{1}%') LIMIT {0}, 15;";
+        #endregion
+        #region Fund Names
+        public static readonly string insert_fund_name = "INSERT INTO fund_table (fund_name, added_by) \r" +
+            "\nSELECT * FROM (SELECT '{0}', '{1}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT fund_name FROM fund_table \r" +
+            "\nWHERE fund_name = '{0}') LIMIT 1;";
+        public static readonly string select_fund = "SELECT fund_name FROM fund_table LIMIT {0}, 15;";
+        public static readonly string select_specific_funds = "SELECT fund_name FROM fund_table WHERE fund_name LIKE '%{0}%' LIMIT {1}, 15;";
+        public static readonly string specific_select_fund_id = "SELECT fund_id FROM fund_table WHERE fund_name = '{0}';";
+        public static readonly string count_funds = "SELECT COUNT(*) FROM fund_table WHERE fund_name LIKE '%{0}%';";
+        #endregion
         #region Item Brands
         public static readonly string insert_item_brand = "INSERT INTO item_brand_table (item_brand, added_by) \r" +
             "\nSELECT * FROM (SELECT '{0}', '{1}') AS tmp \r" +
@@ -328,12 +360,25 @@ namespace COA_IMS
             ")AS tmp WHERE NOT EXISTS (SELECT item_code FROM items_table\r" +
             " WHERE item_code = '{1}') LIMIT 1;";
         public static readonly string check_item_desc_id = "SELECT COUNT(*) FROM item_desc_table WHERE item_desc_id = '{0}';";
-        public static readonly string get_general_items_record =
-            "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT {0}, 15;";
-        public static readonly string get_specific_items_record =
-            "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table WHERE  (item_code LIKE '%{1}%' OR \r" +
-                "item_desc_id LIKE '%{1}%' OR \r" +
-                "unit_id LIKE '%{1}%') LIMIT {0}, 15;";
+        #region Get Subqueries
+        public static readonly string get_concatenated_item_desc = "(SELECT GROUP_CONCAT(\r\n(SELECT item_brand \r\nFROM item_brand_table \r\nWHERE item_brand_id = \r\n(SELECT item_brand_id FROM item_desc_table WHERE item_desc_id = \r\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))),\r\n\" - \",\r\n(SELECT item_type FROM item_type_table WHERE item_type_id = \r\n(SELECT item_type_id FROM item_desc_table WHERE item_desc_id = \r\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))),\r\n\" - \",\r\nproduct_name\r\n) AS 'item_desc_id' FROM item_desc_table WHERE item_desc_id =\r\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))";
+        public static readonly string get_unit_from_items = "(SELECT unit FROM item_unit_table WHERE unit_id = \r" +
+            "\n(SELECT unit_id FROM items_table p WHERE p.item_code = items_table.item_code))";
+        #endregion
+        
+        public static readonly string get_general_items_record = "SELECT item_code, \r\n" + Database_Query.get_concatenated_item_desc + "\r\nunit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT 0, 15;";
+        public static readonly string get_specific_items_record = "SELECT item_code, \r\n" + Database_Query.get_concatenated_item_desc + "\r," +
+            Database_Query.get_unit_from_items + "\r\n, unit_cost, est_useful_life, quantity FROM items_table WHERE  (item_code LIKE '%{1}%' OR \r" +
+            Database_Query.get_concatenated_item_desc + " LIKE '%{1}%' OR \r" +
+            Database_Query.get_unit_from_items + " LIKE '%{1}%') LIMIT 0, 15;";
+        #region deprecated
+        //public static readonly string get_general_items_records =
+        //    "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT {0}, 15;";
+        //public static readonly string get_specific_items_records =
+        //    "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table WHERE  (item_code LIKE '%{1}%' OR \r" +
+        //        "item_desc_id LIKE '%{1}%' OR \r" +
+        //        "unit_id LIKE '%{1}%') LIMIT {0}, 15;";
+        #endregion
         #endregion
 
         //public static readonly string insert_new_item = "INSERT emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";

@@ -45,9 +45,12 @@
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.item_Type_CBox = new System.Windows.Forms.ComboBox();
             this.supplier_CBox = new System.Windows.Forms.ComboBox();
+            this.product_Name_TextBox = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.save_Button = new Guna.UI.WinForms.GunaButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gunaTextBox7 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox6 = new Guna.UI.WinForms.GunaTextBox();
@@ -56,10 +59,6 @@
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.close_Button = new Guna.UI.WinForms.GunaCircleButton();
-            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
-            this.product_Name_TextBox = new Guna.UI.WinForms.GunaTextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -164,14 +163,14 @@
             this.item_Code_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.item_Code_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.item_Code_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.item_Code_Textbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.item_Code_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
             this.item_Code_Textbox.Location = new System.Drawing.Point(196, 15);
             this.item_Code_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.item_Code_Textbox.Name = "item_Code_Textbox";
             this.item_Code_Textbox.PasswordChar = '\0';
             this.item_Code_Textbox.Radius = 10;
             this.item_Code_Textbox.SelectedText = "";
-            this.item_Code_Textbox.Size = new System.Drawing.Size(371, 32);
+            this.item_Code_Textbox.Size = new System.Drawing.Size(371, 35);
             this.item_Code_Textbox.TabIndex = 0;
             // 
             // gunaLabel3
@@ -195,14 +194,14 @@
             this.est_Life_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.est_Life_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.est_Life_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.est_Life_Textbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.est_Life_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
             this.est_Life_Textbox.Location = new System.Drawing.Point(196, 201);
             this.est_Life_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.est_Life_Textbox.Name = "est_Life_Textbox";
             this.est_Life_Textbox.PasswordChar = '\0';
             this.est_Life_Textbox.Radius = 10;
             this.est_Life_Textbox.SelectedText = "";
-            this.est_Life_Textbox.Size = new System.Drawing.Size(371, 32);
+            this.est_Life_Textbox.Size = new System.Drawing.Size(371, 35);
             this.est_Life_Textbox.TabIndex = 3;
             this.est_Life_Textbox.TextChanged += new System.EventHandler(this.gunaTextBox5_TextChanged);
             // 
@@ -216,14 +215,14 @@
             this.unit_Cost_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.unit_Cost_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.unit_Cost_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.unit_Cost_Textbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.unit_Cost_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
             this.unit_Cost_Textbox.Location = new System.Drawing.Point(196, 325);
             this.unit_Cost_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.unit_Cost_Textbox.Name = "unit_Cost_Textbox";
             this.unit_Cost_Textbox.PasswordChar = '\0';
             this.unit_Cost_Textbox.Radius = 10;
             this.unit_Cost_Textbox.SelectedText = "";
-            this.unit_Cost_Textbox.Size = new System.Drawing.Size(371, 32);
+            this.unit_Cost_Textbox.Size = new System.Drawing.Size(371, 35);
             this.unit_Cost_Textbox.TabIndex = 5;
             // 
             // quantity_Textbox
@@ -236,14 +235,14 @@
             this.quantity_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.quantity_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.quantity_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.quantity_Textbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.quantity_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
             this.quantity_Textbox.Location = new System.Drawing.Point(196, 387);
             this.quantity_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.quantity_Textbox.Name = "quantity_Textbox";
             this.quantity_Textbox.PasswordChar = '\0';
             this.quantity_Textbox.Radius = 10;
             this.quantity_Textbox.SelectedText = "";
-            this.quantity_Textbox.Size = new System.Drawing.Size(371, 32);
+            this.quantity_Textbox.Size = new System.Drawing.Size(371, 35);
             this.quantity_Textbox.TabIndex = 6;
             // 
             // gunaLabel8
@@ -329,6 +328,37 @@
             this.supplier_CBox.Size = new System.Drawing.Size(371, 32);
             this.supplier_CBox.TabIndex = 7;
             // 
+            // product_Name_TextBox
+            // 
+            this.product_Name_TextBox.BackColor = System.Drawing.Color.Transparent;
+            this.product_Name_TextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.product_Name_TextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.product_Name_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.product_Name_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.product_Name_TextBox.FocusedBaseColor = System.Drawing.Color.White;
+            this.product_Name_TextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.product_Name_TextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.product_Name_TextBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.product_Name_TextBox.Location = new System.Drawing.Point(196, 511);
+            this.product_Name_TextBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
+            this.product_Name_TextBox.Name = "product_Name_TextBox";
+            this.product_Name_TextBox.PasswordChar = '\0';
+            this.product_Name_TextBox.Radius = 10;
+            this.product_Name_TextBox.SelectedText = "";
+            this.product_Name_TextBox.Size = new System.Drawing.Size(371, 35);
+            this.product_Name_TextBox.TabIndex = 22;
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.AutoSize = true;
+            this.gunaLabel10.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.Location = new System.Drawing.Point(20, 516);
+            this.gunaLabel10.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(139, 24);
+            this.gunaLabel10.TabIndex = 21;
+            this.gunaLabel10.Text = "Product  Name:";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -379,7 +409,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.02357F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.97643F));
             this.tableLayoutPanel1.Controls.Add(this.gunaLabel9, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.close_Button, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -388,6 +417,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(587, 68);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.Location = new System.Drawing.Point(10, 20);
+            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(135, 33);
+            this.gunaLabel9.TabIndex = 0;
+            this.gunaLabel9.Text = "ADD ITEM:";
             // 
             // gunaButton1
             // 
@@ -542,74 +583,6 @@
             this.gunaTextBox1.Size = new System.Drawing.Size(415, 178);
             this.gunaTextBox1.TabIndex = 0;
             // 
-            // gunaLabel9
-            // 
-            this.gunaLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.Location = new System.Drawing.Point(10, 20);
-            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
-            this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(135, 33);
-            this.gunaLabel9.TabIndex = 0;
-            this.gunaLabel9.Text = "ADD ITEM:";
-            // 
-            // close_Button
-            // 
-            this.close_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close_Button.AnimationHoverSpeed = 0.07F;
-            this.close_Button.AnimationSpeed = 0.03F;
-            this.close_Button.BackColor = System.Drawing.Color.Transparent;
-            this.close_Button.BaseColor = System.Drawing.Color.Transparent;
-            this.close_Button.BorderColor = System.Drawing.Color.Black;
-            this.close_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.close_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.close_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.close_Button.ForeColor = System.Drawing.Color.White;
-            this.close_Button.Image = global::COA_IMS.Properties.Resources.circle_xmark__2_;
-            this.close_Button.ImageSize = new System.Drawing.Size(52, 52);
-            this.close_Button.Location = new System.Drawing.Point(552, 3);
-            this.close_Button.Name = "close_Button";
-            this.close_Button.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.close_Button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.close_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.close_Button.OnHoverImage = null;
-            this.close_Button.OnPressedColor = System.Drawing.Color.Black;
-            this.close_Button.Size = new System.Drawing.Size(32, 32);
-            this.close_Button.TabIndex = 1;
-            this.close_Button.Click += new System.EventHandler(this.closebtn_Click);
-            // 
-            // gunaLabel10
-            // 
-            this.gunaLabel10.AutoSize = true;
-            this.gunaLabel10.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel10.Location = new System.Drawing.Point(20, 516);
-            this.gunaLabel10.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
-            this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(139, 24);
-            this.gunaLabel10.TabIndex = 21;
-            this.gunaLabel10.Text = "Product  Name:";
-            // 
-            // product_Name_TextBox
-            // 
-            this.product_Name_TextBox.BackColor = System.Drawing.Color.Transparent;
-            this.product_Name_TextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
-            this.product_Name_TextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
-            this.product_Name_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.product_Name_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.product_Name_TextBox.FocusedBaseColor = System.Drawing.Color.White;
-            this.product_Name_TextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.product_Name_TextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.product_Name_TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.product_Name_TextBox.Location = new System.Drawing.Point(196, 511);
-            this.product_Name_TextBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.product_Name_TextBox.Name = "product_Name_TextBox";
-            this.product_Name_TextBox.PasswordChar = '\0';
-            this.product_Name_TextBox.Radius = 10;
-            this.product_Name_TextBox.SelectedText = "";
-            this.product_Name_TextBox.Size = new System.Drawing.Size(371, 33);
-            this.product_Name_TextBox.TabIndex = 22;
-            // 
             // IMS_Product_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,7 +592,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "IMS_Product_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IMS_Product_Form";
@@ -663,7 +636,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private System.Windows.Forms.ComboBox supplier_CBox;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
-        private Guna.UI.WinForms.GunaCircleButton close_Button;
         private Guna.UI.WinForms.GunaTextBox product_Name_TextBox;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;
     }

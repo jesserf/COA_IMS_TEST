@@ -24,11 +24,6 @@ namespace COA_IMS.Screens.Subscrn
            CategoryForm catform = new CategoryForm();
             catform.ShowDialog();
         }
-        private void addbrandbtn_Click(object sender, EventArgs e)
-        {
-            BrandForm catform = new BrandForm();
-            catform.ShowDialog();
-        }
         private void addunitbtn_Click(object sender, EventArgs e)
         {
             UnitForm catform = new UnitForm();

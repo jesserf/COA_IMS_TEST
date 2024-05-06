@@ -67,6 +67,7 @@
             this.AddSupplier.BackColor = System.Drawing.Color.Transparent;
             this.AddSupplier.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
             this.AddSupplier.BorderColor = System.Drawing.Color.Black;
+            this.AddSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddSupplier.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddSupplier.FocusedColor = System.Drawing.Color.Empty;
             this.AddSupplier.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,7 +302,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.13805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.86195F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
@@ -405,7 +406,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1235, 13);
+            this.sortComboBox.Location = new System.Drawing.Point(1234, 13);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));

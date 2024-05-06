@@ -41,12 +41,12 @@ namespace COA_IMS.Utilities
 
             return lowercase ? builder.ToString().ToLower() : builder.ToString();
         }
-        private string Random_Alpha_Num(int size = 2)
+        private string Random_Alpha_Num(int size = 2, string startLetter = "I")
         {
             int one_num = 1;
             int two_num = 1;
             var builder = new StringBuilder(size);
-            builder.Append("I");
+            builder.Append(startLetter);
             for (int i = 0; i < size; i++)
             {
                 two_num += one_num;

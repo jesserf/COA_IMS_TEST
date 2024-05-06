@@ -338,17 +338,17 @@
     <Compile Include="Screens\Subscrn\Add SupplierForm.Designer.cs">
       <DependentUpon>Add SupplierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\ArchiveInventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Subscrn\ArchiveInventoryTable.Designer.cs">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\BrandForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\BrandForm.Designer.cs">
-      <DependentUpon>BrandForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\CategoryForm.cs">
       <SubType>Form</SubType>
@@ -361,6 +361,12 @@
     </Compile>
     <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
       <DependentUpon>CategoryTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeTable.Designer.cs">
+      <DependentUpon>EmployeeTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\IMS_AccountManagement.cs">
       <SubType>Form</SubType>
@@ -629,17 +635,20 @@
     <EmbeddedResource Include="Screens\Subscrn\Add SupplierForm.resx">
       <DependentUpon>Add SupplierForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\ArchiveInventoryTable.resx">
       <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\BrandForm.resx">
-      <DependentUpon>BrandForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
       <DependentUpon>CategoryTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeTable.resx">
+      <DependentUpon>EmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\IMS_AccountManagement.resx">
       <DependentUpon>IMS_AccountManagement.cs</DependentUpon>

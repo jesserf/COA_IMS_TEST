@@ -392,6 +392,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "item":
                     dt = FillItemsTable();
                     break;
+                case "fund":
+                    dt = FillFundsTable();
+                    break;
+                case "employee":
+                    dt = FillEmployeeTable();
+                    break;
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering
@@ -497,6 +503,16 @@ namespace COA_IMS.UserControlUtil.TableUtil
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Item_Records(min_lim, searchBar1.Text);
         }
+        private DataTable FillFundsTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Fund_Names(min_lim, searchBar1.Text);
+        }
+        private DataTable FillEmployeeTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Employee_Records(min_lim, searchBar1.Text);
+        }
         private void AddThemeToDGV()
         {
             //Add Theme.cs DataGridView Style
@@ -582,6 +598,24 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Quantity", DataGridViewContentAlignment.MiddleLeft)
                         }; ;
                     break;
+                case "fund":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 95) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Fund Names", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
+                case "employee":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 45), (true, 25), (true, 25) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Employee Name", DataGridViewContentAlignment.MiddleCenter),
+                            ("Employee Position", DataGridViewContentAlignment.MiddleCenter),
+                            ("Office", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
                 default: break;
             }
 
@@ -662,6 +696,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     break;
                 case "item_supplier":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_item_suppliers, searchBar1.Text));
+                    break;
+                case "fund":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_funds, searchBar1.Text));
+                    break;
+                case "employee":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text));
                     break;
                 default: break;
             }
