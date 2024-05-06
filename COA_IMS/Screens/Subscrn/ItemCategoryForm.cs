@@ -19,9 +19,9 @@ namespace COA_IMS.Screens.Subscrn
     public partial class ItemCategoryForm : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "item_type", "item_brand", "unit" };
-        readonly string[] item_table_names = { "item_type", "item_brand", "item_unit" };
-        readonly string[] combobox_name = { "Item Types", "Item Brands", "Units" };
+        readonly string[] log_table_names = { "item_type", "item_brand", "unit", "fund" };
+        readonly string[] item_table_names = { "item_type", "item_brand", "item_unit", "fund" };
+        readonly string[] combobox_name = { "Item Types", "Item Brands", "Units", "Fund Names" };
         Inventory_Manager inventory_Manager = new Inventory_Manager();
         public ItemCategoryForm()
         {
@@ -48,6 +48,7 @@ namespace COA_IMS.Screens.Subscrn
         {
             Console.WriteLine(sender.ToString());
             generic_Table.Populate_Table();
+            category_Name_TextBox.Text = $"{combobox_name[sortComboBox.SelectedIndex]} Name";
         }
         private void sortComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -55,6 +56,7 @@ namespace COA_IMS.Screens.Subscrn
             generic_Table.data_Table_Type = log_table_names[sortComboBox.SelectedIndex].ToString();
             add_New_Label.Text = $"ADD NEW {combobox_name[sortComboBox.SelectedIndex].ToUpper()}";
             category_Label.Text = combobox_name[sortComboBox.SelectedIndex].ToUpper();
+            category_Name_TextBox.Text = $"{combobox_name[sortComboBox.SelectedIndex]} Name";
             generic_Table.Populate_Table();
         }
 
@@ -72,14 +74,17 @@ namespace COA_IMS.Screens.Subscrn
             switch (combobox_name[sortComboBox.SelectedIndex])
             {
                 case "Item Types":
-                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, category_Name_TextBox.Text, item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
                     break;
                 case "Item Brands":
-                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_brand, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_brand, category_Name_TextBox.Text, item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
                     break;
                 case "Units":
-                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_unit, category_Name_TextBox.Text, log_table_names[sortComboBox.SelectedIndex], item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
+                    inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_unit, category_Name_TextBox.Text, item_table_names[sortComboBox.SelectedIndex], combobox_name[sortComboBox.SelectedIndex]);
                     break ;
+                case "Fund Names":
+                    inventory_Manager.Insert_Fund_Name(category_Name_TextBox.Text, combobox_name[sortComboBox.SelectedIndex]);
+                    break;
                 default: break;
             }
             
@@ -89,7 +94,7 @@ namespace COA_IMS.Screens.Subscrn
         #region Textbox Placeholder and Press Enter to Save
         private void textbox_Enter(object sender, EventArgs e)
         {
-            if (string.Equals(category_Name_TextBox.Text.ToString(), "Category Name"))
+            if (string.Equals(category_Name_TextBox.Text.ToString(), $"{combobox_name[sortComboBox.SelectedIndex]} Name"))
             {
                 category_Name_TextBox.ForeColor = Color.Black;
                 category_Name_TextBox.Text = "";
@@ -100,7 +105,7 @@ namespace COA_IMS.Screens.Subscrn
             if (string.Equals(category_Name_TextBox.Text.ToString(), ""))
             {
                 category_Name_TextBox.ForeColor = Color.LightGray;
-                category_Name_TextBox.Text = "Category Name";
+                category_Name_TextBox.Text = $"{combobox_name[sortComboBox.SelectedIndex]} Name";
             }
         }
         private void textBox_PressEnter(object sender, KeyEventArgs e)

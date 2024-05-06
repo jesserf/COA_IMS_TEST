@@ -29,7 +29,7 @@ namespace COA_IMS.Utilities
                 code = Convert.ToInt32(db_Manager.ExecuteScalar(query));
             return code;
         }
-        public void Insert_Item_Category_Name(string query, string item, string table_name, string type, string name = null)
+        public void Insert_Item_Category_Name(string query, string item, string type, string name = null)
         {
             int ret;
             db_Manager = new Database_Manager();
@@ -166,6 +166,77 @@ namespace COA_IMS.Utilities
             {
                 dt = db_Manager.ExecuteQuery(query);
             }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        #endregion
+        #region Funds
+        public void Insert_Fund_Name(string fund_name, string type)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = string.Format(Database_Query.insert_fund_name, fund_name, CurrentUser.user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(type, fund_name);
+                MessageBox.Show($"Fund Name: {fund_name} is successfully added.", "Fund Name Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"Fund Name: {fund_name} is not added.", $"Fund Name Not Added\n{fund_name} may already exist.");
+
+        }
+        public DataTable Get_Fund_Names(int minimium, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.select_specific_funds, searchwords, minimium);
+            else query = string.Format(Database_Query.select_fund, minimium);
+            using (db_Manager)
+            {
+                dt = db_Manager.ExecuteQuery(query);
+            }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        #endregion
+        #region Employee
+        public void Insert_Employee_Category(string query, string item, string type)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            query = string.Format(query, item);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(type, item);
+                MessageBox.Show($"{type}: {item} is successfully added.", $"{type} Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"{type}: {item} is not added.", $"{type} Not Added\n{item} may already exist.");
+        }
+        public DataTable Get_Employee_Records(int minimium, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.get_specific_employee_record, minimium, searchwords);
+            else query = string.Format(Database_Query.get_general_employee_record, minimium);
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
 
             int removeLimitIndex = query.IndexOf("LIMIT");
             if (removeLimitIndex >= 0)

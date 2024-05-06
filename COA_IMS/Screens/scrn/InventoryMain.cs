@@ -21,7 +21,7 @@ namespace COA_IMS.Screens.scrn
         private Form current_Form = null;
 
         private readonly InventoryTable inventory_Table = new InventoryTable();
-        private readonly ArchiveInventoryTable archive_Table = new ArchiveInventoryTable();
+        private readonly EmployeeTable archive_Table = new EmployeeTable();
         private readonly CategoryTab category_tab = new CategoryTab();
         private readonly IMS_SuplierTable ims_supliertable = new IMS_SuplierTable();
         private readonly ItemCategoryForm itemCategoryForm = new ItemCategoryForm();

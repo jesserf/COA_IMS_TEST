@@ -31,7 +31,7 @@ namespace COA_IMS.Screens.Subscrn
 
         private void save_Button_Click(object sender, EventArgs e)
         {
-            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, add_Category_TextBox.Text, "item_type", "item_type", "Item Type");
+            inventory_Manager.Insert_Item_Category_Name(Database_Query.insert_item_type, add_Category_TextBox.Text, "item_type", "Item Type");
         }
 
         private void textbox_Enter(object sender, EventArgs e)
