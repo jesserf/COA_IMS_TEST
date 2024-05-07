@@ -218,6 +218,12 @@
     <Compile Include="Screens\scrn\Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\scrn\IMS_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrn\IMS_Employee.Designer.cs">
+      <DependentUpon>IMS_Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\scrn\IMS_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,11 @@
     <Compile Include="Screens\scrn\IMS_Reports.Designer.cs">
       <DependentUpon>IMS_Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\scrn\IMS_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrn\IMS_Settings.Designer.cs">
+      <DependentUpon>IMS_Settings.cs</DependentUpon>
     <Compile Include="Screens\scrn\IMS_Tracking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,10 +379,16 @@
     <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeTable.cs">
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeTable.Designer.cs">
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.Designer.cs">
+      <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.Designer.cs">
       <DependentUpon>EmployeeTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\IMS_AccountManagement.cs">
@@ -386,22 +403,22 @@
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\IMS_SuplierTable.cs">
+    <Compile Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\IMS_SuplierTable.Designer.cs">
+    <Compile Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.Designer.cs">
       <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventoryTable.cs">
+    <Compile Include="Screens\Subscrn\InventorySubscreens\InventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventoryTable.Designer.cs">
+    <Compile Include="Screens\Subscrn\InventorySubscreens\InventoryTable.Designer.cs">
       <DependentUpon>InventoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\ItemCategoryForm.cs">
+    <Compile Include="Screens\Subscrn\SettingsSubscreens\ItemCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\ItemCategoryForm.Designer.cs">
+    <Compile Include="Screens\Subscrn\SettingsSubscreens\ItemCategoryForm.Designer.cs">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.cs">
@@ -578,6 +595,9 @@
     <EmbeddedResource Include="Screens\scrn\Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrn\IMS_Employee.resx">
+      <DependentUpon>IMS_Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Login.resx">
       <DependentUpon>IMS_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -587,6 +607,8 @@
     <EmbeddedResource Include="Screens\scrn\IMS_Product_Form.resx">
       <DependentUpon>IMS_Product_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrn\IMS_Settings.resx">
+      <DependentUpon>IMS_Settings.cs</DependentUpon>
     <EmbeddedResource Include="Screens\scrn\IMS_Tracking.resx">
       <DependentUpon>IMS_Tracking.cs</DependentUpon>
     </EmbeddedResource>
@@ -650,7 +672,10 @@
     <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\EmployeeTable.resx">
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.resx">
+      <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.resx">
       <DependentUpon>EmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\IMS_AccountManagement.resx">
@@ -659,13 +684,13 @@
     <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\IMS_SuplierTable.resx">
+    <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.resx">
       <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\InventoryTable.resx">
+    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\InventoryTable.resx">
       <DependentUpon>InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\ItemCategoryForm.resx">
+    <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\ItemCategoryForm.resx">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.resx">
@@ -818,8 +843,21 @@
     <None Include="Resources\circle-xmark %282%29.png" />
     <None Include="Resources\digital-tachograph.png" />
     <None Include="Resources\disk.png" />
-    <None Include="Resources\clipboard-user.png" />
+    <Content Include="Resources\darkblu\employee-darkblue-24.png" />
+    <Content Include="Resources\darkblu\employee-lightgray-24.png" />
+    <Content Include="Resources\darkblu\employee-table-darkblue-24.png" />
+    <Content Include="Resources\darkblu\employee-table-lightgray-24.png" />
+    <Content Include="Resources\darkblu\employee-table-white-24.png" />
+    <Content Include="Resources\darkblu\item-category-darkblue-24.png" />
+    <Content Include="Resources\darkblu\item-category-lightgray-24.png" />
+    <Content Include="Resources\darkblu\item-category-white-24.png" />
+    <Content Include="Resources\darkblu\item-supplier-darkblue-24.png" />
+    <Content Include="Resources\darkblu\item-supplier-lightgray-24.png" />
+    <Content Include="Resources\darkblu\item-supplier-white-24.png" />
+    <Content Include="Resources\darkblu\logout-darkblue-24.png" />
+    <Content Include="Resources\darkblu\logout-lightgray-24.png" />
     <Content Include="Resources\dsahboard_img.png" />
+    <None Include="Resources\employee-darkblue-24.png" />
     <Content Include="Resources\expand - Copy.png" />
     <Content Include="Resources\expand.png" />
     <Content Include="Resources\folder-download %281%29 - Copy.png" />

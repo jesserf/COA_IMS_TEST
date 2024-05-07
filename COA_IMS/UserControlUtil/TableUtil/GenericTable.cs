@@ -30,6 +30,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
         string to_Date { get; set; }
         public string data_Table_Type { get; set; }
         public string inventory_Table_Name { get; set; }
+        public string sort_String { get; set; }
         //user controls
         SearchBar searchBar1 { get; set; }
         DateFilter dateFilter1 { get; set; }
@@ -496,12 +497,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
         private DataTable FillSupplierTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Item_Supplier_Records(min_lim, searchBar1.Text);
+            return inventory_Manager.Get_Item_Supplier_Records(min_lim, sort_String, searchBar1.Text);
         }
         private DataTable FillItemsTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Item_Records(min_lim, searchBar1.Text);
+            return inventory_Manager.Get_Item_Records(min_lim, sort_String, searchBar1.Text);
         }
         private DataTable FillFundsTable()
         {
@@ -511,7 +512,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
         private DataTable FillEmployeeTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Employee_Records(min_lim, searchBar1.Text);
+            return inventory_Manager.Get_Employee_Records(min_lim, sort_String, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -591,7 +592,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         {
                             ("#", DataGridViewContentAlignment.MiddleRight),
                             ("Item Code", DataGridViewContentAlignment.MiddleLeft),
-                            ("Item Desc", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Description", DataGridViewContentAlignment.MiddleLeft),
                             ("Unit", DataGridViewContentAlignment.MiddleLeft),
                             ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
                             ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),

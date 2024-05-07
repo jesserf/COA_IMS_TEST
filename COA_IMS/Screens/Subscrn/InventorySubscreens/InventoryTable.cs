@@ -17,16 +17,19 @@ namespace COA_IMS.Screens.Subscrn
     public partial class InventoryTable : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "item", "item_brand", "unit" };
+        readonly string[] log_table_names = { "All", "Item Code", "Item Description", "Unit" };
         public InventoryTable()
         {
             InitializeComponent();
             //setup GenericTable
+            foreach (var name in log_table_names)
+                sortComboBox.Items.Add(name);
             generic_Table = new GenericTable();
             generic_Table.FillVariables(log_table_names, null, null, "item", "item", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
             //setup ordinary controls
-            sortComboBox.SelectedText = "item";
+            sortComboBox.SelectedText = "All";
             sortComboBox.SelectedIndex = 0;
+            generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
             generic_Table.Populate_Table(1);
             //setup user controls
             searchBar1.Ambatu(RePopulate_Table);
@@ -45,6 +48,7 @@ namespace COA_IMS.Screens.Subscrn
         }
         private void sortComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
+            generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
             generic_Table.Populate_Table();
         }
 

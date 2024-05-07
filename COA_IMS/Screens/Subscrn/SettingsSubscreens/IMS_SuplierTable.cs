@@ -1,14 +1,5 @@
-﻿using COA_IMS.Screens.scrn;
-using COA_IMS.UserControlUtil.TableUtil;
-using Guna.UI.WinForms;
+﻿using COA_IMS.UserControlUtil.TableUtil;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COA_IMS.Screens.Subscrn
@@ -16,15 +7,17 @@ namespace COA_IMS.Screens.Subscrn
     public partial class IMS_SuplierTable : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "item_supplier", "item_supplier", "item_supplier" };
+        readonly string[] log_table_names = { "All", "Supplier Name", "Address", "Contact Num", "Contact Person" };
         public IMS_SuplierTable()
         {
             InitializeComponent();
             //setup GenericTable
+            foreach (var name in log_table_names)
+                sortComboBox.Items.Add(name);
             generic_Table = new GenericTable();
             generic_Table.FillVariables(log_table_names, null, null, "item_supplier", "item_supplier", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
             //setup ordinary controls
-            sortComboBox.SelectedText = "item_supplier";
+            generic_Table.sort_String = "All";
             sortComboBox.SelectedIndex = 0;
             generic_Table.Populate_Table(1);
             //setup user controls
@@ -59,6 +52,12 @@ namespace COA_IMS.Screens.Subscrn
             {
                 generic_Table.UserChangePageCountInput();
             }
+        }
+
+        private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
+            generic_Table.Populate_Table();
         }
     }
 }

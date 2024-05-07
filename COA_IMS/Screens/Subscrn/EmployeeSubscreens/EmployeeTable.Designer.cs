@@ -36,7 +36,6 @@
             this.reports_Button = new Guna.UI.WinForms.GunaButton();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.main_Panel = new System.Windows.Forms.Panel();
             this.content_Panel = new System.Windows.Forms.Panel();
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
@@ -48,6 +47,7 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.add_Employee_Button = new Guna.UI.WinForms.GunaButton();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.main_Panel.SuspendLayout();
@@ -72,12 +72,7 @@
             this.sortComboBox.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
             this.sortComboBox.ForeColor = System.Drawing.Color.White;
             this.sortComboBox.FormattingEnabled = true;
-            this.sortComboBox.Items.AddRange(new object[] {
-            "All",
-            "Employee Name",
-            "Position",
-            "Office"});
-            this.sortComboBox.Location = new System.Drawing.Point(1233, 13);
+            this.sortComboBox.Location = new System.Drawing.Point(1225, 13);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
@@ -85,6 +80,7 @@
             this.sortComboBox.Radius = 12;
             this.sortComboBox.Size = new System.Drawing.Size(191, 35);
             this.sortComboBox.TabIndex = 2;
+            this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.sortComboBox_SelectedIndexChanged);
             this.sortComboBox.SelectedValueChanged += new System.EventHandler(this.RePopulate_Table);
             // 
             // flowLayoutPanel3
@@ -159,7 +155,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.13805F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.86195F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
@@ -171,15 +167,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1629, 58);
             this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 12);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(544, 43);
-            this.searchBar1.TabIndex = 3;
             // 
             // main_Panel
             // 
@@ -266,6 +253,7 @@
             this.data_View.ThemeStyle.RowsStyle.Height = 22;
             this.data_View.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data_View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data_View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_View_CellDoubleClick);
             // 
             // tableLayoutPanel2
             // 
@@ -417,6 +405,15 @@
             this.add_Employee_Button.Text = "ADD EMPLOYEE";
             this.add_Employee_Button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.add_Employee_Button.Click += new System.EventHandler(this.add_Employee_Button_Click);
+            // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(3, 12);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(544, 43);
+            this.searchBar1.TabIndex = 3;
             // 
             // EmployeeTable
             // 

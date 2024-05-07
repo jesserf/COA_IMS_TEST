@@ -363,6 +363,46 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employee_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("employee-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_lightgray_24 {
+            get {
+                object obj = ResourceManager.GetObject("employee-lightgray-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_table_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("employee-table-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_table_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("employee-table-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap error {
             get {
                 object obj = ResourceManager.GetObject("error", resourceCulture);
@@ -473,6 +513,39 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap item_category_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("item-category-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap item_category_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("item-category-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap item_supplier_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("item-supplier-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap item_supplier_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("item-supplier-white-24", resourceCulture);
         internal static System.Drawing.Bitmap location_alt {
             get {
                 object obj = ResourceManager.GetObject("location-alt", resourceCulture);
@@ -536,6 +609,26 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap logout__3_ {
             get {
                 object obj = ResourceManager.GetObject("logout (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("logout-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_lightgray_24 {
+            get {
+                object obj = ResourceManager.GetObject("logout-lightgray-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
