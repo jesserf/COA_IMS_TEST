@@ -94,14 +94,22 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"{name} Name: {supplier_name} is not added.", $"Category Name Not Added\n{name} may already exist.");
 
         }
-        public DataTable Get_Item_Supplier_Records(int minimium, string searchwords = null)
+        public DataTable Get_Item_Supplier_Records(int minimium, string sortString, string searchwords = null)
         {
             string query;
             db_Manager = new Database_Manager();
             DataTable dt = new DataTable();
-            if (searchwords != null)
-                query = string.Format(Database_Query.get_specific_item_supplier_record, minimium, searchwords);
-            else query = string.Format(Database_Query.get_general_item_supplier_record, minimium);
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_all_specific_item_supplier_record, minimium, searchwords);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_item_supplier_record, minimium, searchwords, sortString.Replace(" ", "_"));
+                    else query = string.Format(Database_Query.get_general_item_supplier_record, minimium);
+                    break;
+            }
             using (db_Manager)
             {
                 dt = db_Manager.ExecuteQuery(query);
@@ -154,14 +162,22 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"{name} Name: {item_code} is not added.", $"Item Not Added\n{item_code} may already exist.");
 
         }
-        public DataTable Get_Item_Records(int minimium, string searchwords = null)
+        public DataTable Get_Item_Records(int minimium, string sortString, string searchwords = null)
         {
             string query;
             db_Manager = new Database_Manager();
             DataTable dt = new DataTable();
-            if (searchwords != null)
-                query = string.Format(Database_Query.get_specific_items_record, minimium, searchwords);
-            else query = string.Format(Database_Query.get_general_items_record, minimium);
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_all_specific_items_record, minimium, searchwords);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_items_record, minimium, searchwords, sortString.Replace(" ", "_"));
+                    else query = string.Format(Database_Query.get_general_items_record, minimium);
+                    break;
+            }
             using (db_Manager)
             {
                 dt = db_Manager.ExecuteQuery(query);
@@ -227,14 +243,22 @@ namespace COA_IMS.Utilities
             else if (ret == 0)
                 MessageBox.Show($"{type}: {item} is not added.", $"{type} Not Added\n{item} may already exist.");
         }
-        public DataTable Get_Employee_Records(int minimium, string searchwords = null)
+        public DataTable Get_Employee_Records(int minimium, string sortString, string searchwords = null)
         {
             string query;
             db_Manager = new Database_Manager();
             DataTable dt = new DataTable();
-            if (searchwords != null)
-                query = string.Format(Database_Query.get_specific_employee_record, minimium, searchwords);
-            else query = string.Format(Database_Query.get_general_employee_record, minimium);
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_all_specific_employee_record, minimium, searchwords);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_employee_record, minimium, searchwords, sortString.Replace(" ", "_"));
+                    else query = string.Format(Database_Query.get_general_employee_record, minimium);
+                    break;
+            }
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);
 

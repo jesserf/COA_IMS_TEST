@@ -1,6 +1,6 @@
-﻿namespace COA_IMS.Screens.Subscrn
+﻿namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
 {
-    partial class AddEmployeeForm
+    partial class EmployeeInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.office_ComboBox = new System.Windows.Forms.ComboBox();
-            this.position_ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.save_Button = new Guna.UI.WinForms.GunaButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,8 +43,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.office_ComboBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.position_ComboBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.save_Button, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
@@ -64,35 +60,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(644, 576);
-            this.tableLayoutPanel1.TabIndex = 3;
-            // 
-            // office_ComboBox
-            // 
-            this.office_ComboBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.office_ComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.office_ComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.office_ComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.office_ComboBox.Font = new System.Drawing.Font("Calibri", 15F);
-            this.office_ComboBox.FormattingEnabled = true;
-            this.office_ComboBox.Location = new System.Drawing.Point(267, 386);
-            this.office_ComboBox.Margin = new System.Windows.Forms.Padding(10);
-            this.office_ComboBox.Name = "office_ComboBox";
-            this.office_ComboBox.Size = new System.Drawing.Size(367, 32);
-            this.office_ComboBox.TabIndex = 3;
-            // 
-            // position_ComboBox
-            // 
-            this.position_ComboBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.position_ComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.position_ComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.position_ComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.position_ComboBox.Font = new System.Drawing.Font("Calibri", 15F);
-            this.position_ComboBox.FormattingEnabled = true;
-            this.position_ComboBox.Location = new System.Drawing.Point(267, 271);
-            this.position_ComboBox.Margin = new System.Windows.Forms.Padding(10);
-            this.position_ComboBox.Name = "position_ComboBox";
-            this.position_ComboBox.Size = new System.Drawing.Size(367, 32);
-            this.position_ComboBox.TabIndex = 2;
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // label1
             // 
@@ -138,7 +106,6 @@
             this.save_Button.TabIndex = 4;
             this.save_Button.Text = "Save";
             this.save_Button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.save_Button.Click += new System.EventHandler(this.save_Button_Click);
             // 
             // label2
             // 
@@ -198,7 +165,7 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Employee Position:";
             // 
-            // AddEmployeeForm
+            // EmployeeInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,9 +173,8 @@
             this.ClientSize = new System.Drawing.Size(644, 576);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "AddEmployeeForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Employee";
+            this.Name = "EmployeeInfoForm";
+            this.Text = "Employee Information";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -224,7 +190,5 @@
         private Guna.UI.WinForms.GunaTextBox employee_Name_Textbox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox office_ComboBox;
-        private System.Windows.Forms.ComboBox position_ComboBox;
     }
 }

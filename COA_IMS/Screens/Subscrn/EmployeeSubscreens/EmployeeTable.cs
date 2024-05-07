@@ -1,12 +1,6 @@
-﻿using COA_IMS.UserControlUtil.TableUtil;
+﻿using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
+using COA_IMS.UserControlUtil.TableUtil;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COA_IMS.Screens.Subscrn
@@ -14,15 +8,18 @@ namespace COA_IMS.Screens.Subscrn
     public partial class EmployeeTable : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "employee", "employee", "employee" };
+        readonly string[] log_table_names = {"All", "Employee Name", "Employee Position", "Employee Office" };
         public EmployeeTable()
         {
             InitializeComponent();
             //setup GenericTable
+            //setup ordinary controls
+            foreach (string name in log_table_names)
+                sortComboBox.Items.Add(name);
             generic_Table = new GenericTable();
             generic_Table.FillVariables(log_table_names, null, null, "employee", "employee", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
-            //setup ordinary controls
-            sortComboBox.SelectedText = "employee";
+            generic_Table.sort_String = "All";
+            sortComboBox.SelectedText = "All";
             sortComboBox.SelectedIndex = 0;
             generic_Table.Populate_Table(1);
             //setup user controls
@@ -56,6 +53,22 @@ namespace COA_IMS.Screens.Subscrn
             {
                 generic_Table.UserChangePageCountInput();
             }
+        }
+
+        private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
+            generic_Table.Populate_Table();
+        }
+
+        private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //MessageBox.Show(arg.ToString());
+            EmployeeInfoForm form2 = new EmployeeInfoForm(arg, arg2, arg3);
+            form2.Show();
         }
     }
 }

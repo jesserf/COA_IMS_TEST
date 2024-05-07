@@ -272,10 +272,12 @@ namespace COA_IMS
                 "employee_position LIKE '%{0}%');";
         public static readonly string get_general_employee_record =
             "SELECT employee_name, employee_position, employee_office FROM employee_table LIMIT {0}, 15;";
-        public static readonly string get_specific_employee_record =
+        public static readonly string get_all_specific_employee_record =
             "SELECT employee_name, employee_position, employee_office FROM employee_table WHERE (employee_name LIKE '%{1}%' OR \r" +
                 "employee_position LIKE '%{1}%' OR \r" +
                 "employee_office LIKE '%{1}%') LIMIT {0}, 15;";
+        public static readonly string get_specific_employee_record =
+            "SELECT employee_name, employee_position, employee_office FROM employee_table WHERE {2} LIKE '%{1}%' LIMIT {0}, 15;";
         #endregion
         #region Fund Names
         public static readonly string insert_fund_name = "INSERT INTO fund_table (fund_name, added_by) \r" +
@@ -325,11 +327,13 @@ namespace COA_IMS
             "\nWHERE supplier_name = '{0}') LIMIT 1;";
         public static readonly string get_general_item_supplier_record =
             "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table LIMIT {0}, 15;";
-        public static readonly string get_specific_item_supplier_record =
+        public static readonly string get_all_specific_item_supplier_record =
             "SELECT supplier_name, supplier_address, supplier_contact_num, supplier_contact_person FROM item_supplier_table WHERE  (supplier_name LIKE '%{1}%' OR \r" +
                 "supplier_address LIKE '%{1}%' OR \r" +
                 "supplier_contact_num LIKE '%{1}%' OR \r" +
                 "supplier_contact_person LIKE '%{1}%') LIMIT {0}, 15;";
+        public static readonly string get_specific_item_supplier_record =
+            "SELECT supplier_name, supplier_address AS 'address', supplier_contact_num AS 'contact_num', supplier_contact_person AS 'contact_person' FROM item_supplier_table HAVING {2} LIKE '%{1}%' LIMIT {0}, 15;";
         public static readonly string count_item_suppliers =
             "SELECT COUNT(*) FROM item_supplier_table WHERE  (supplier_name LIKE '%{0}%' OR \r" +
                 "supplier_address LIKE '%{0}%' OR \r" +
@@ -361,16 +365,37 @@ namespace COA_IMS
             " WHERE item_code = '{1}') LIMIT 1;";
         public static readonly string check_item_desc_id = "SELECT COUNT(*) FROM item_desc_table WHERE item_desc_id = '{0}';";
         #region Get Subqueries
-        public static readonly string get_concatenated_item_desc = "(SELECT GROUP_CONCAT(\r\n(SELECT item_brand \r\nFROM item_brand_table \r\nWHERE item_brand_id = \r\n(SELECT item_brand_id FROM item_desc_table WHERE item_desc_id = \r\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))),\r\n\" - \",\r\n(SELECT item_type FROM item_type_table WHERE item_type_id = \r\n(SELECT item_type_id FROM item_desc_table WHERE item_desc_id = \r\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))),\r\n\" - \",\r\nproduct_name\r\n) AS 'item_desc_id' FROM item_desc_table WHERE item_desc_id =\r\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))";
+        public static readonly string get_concatenated_item_desc = "(SELECT GROUP_CONCAT(\r" +
+            "\n(SELECT item_brand \r" +
+            "\nFROM item_brand_table \r" +
+            "\nWHERE item_brand_id = \r" +
+            "\n(SELECT item_brand_id FROM item_desc_table WHERE item_desc_id = \r" +
+            "\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))),\r" +
+            "\n\" - \",\r" +
+            "\n(SELECT item_type FROM item_type_table WHERE item_type_id = \r" +
+            "\n(SELECT item_type_id FROM item_desc_table WHERE item_desc_id = \r" +
+            "\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code))),\r" +
+            "\n\" - \",\r" +
+            "\nproduct_name\r" +
+            "\n) AS 'item_desc_id' FROM item_desc_table WHERE item_desc_id =\r" +
+            "\n(SELECT item_desc_id FROM items_table p WHERE p.item_code = items_table.item_code)) as 'Item_Description'";
         public static readonly string get_unit_from_items = "(SELECT unit FROM item_unit_table WHERE unit_id = \r" +
-            "\n(SELECT unit_id FROM items_table p WHERE p.item_code = items_table.item_code))";
+            "\n(SELECT unit_id FROM items_table p WHERE p.item_code = items_table.item_code)) as 'unit'";
         #endregion
         
-        public static readonly string get_general_items_record = "SELECT item_code, \r\n" + Database_Query.get_concatenated_item_desc + "\r\nunit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT 0, 15;";
-        public static readonly string get_specific_items_record = "SELECT item_code, \r\n" + Database_Query.get_concatenated_item_desc + "\r," +
-            Database_Query.get_unit_from_items + "\r\n, unit_cost, est_useful_life, quantity FROM items_table WHERE  (item_code LIKE '%{1}%' OR \r" +
-            Database_Query.get_concatenated_item_desc + " LIKE '%{1}%' OR \r" +
-            Database_Query.get_unit_from_items + " LIKE '%{1}%') LIMIT 0, 15;";
+        public static readonly string get_general_items_record = "SELECT item_code, \r" +
+            "\n" + Database_Query.get_concatenated_item_desc + "\r" +
+            "\nunit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT {0}, 15;";
+        public static readonly string get_all_specific_items_record = "SELECT item_code, \r" +
+            "\n" + Database_Query.get_concatenated_item_desc + "\r," +
+            Database_Query.get_unit_from_items + "\r" +
+            "\n, unit_cost, est_useful_life, quantity FROM items_table HAVING  (item_code LIKE '%{1}%' OR \r" +
+            "Item_Description" + " LIKE '%{1}%' OR \r" +
+            "unit" + " LIKE '%{1}%') LIMIT {0}, 15;";
+        public static readonly string get_specific_items_record = "SELECT item_code, \r" +
+            "\n" + Database_Query.get_concatenated_item_desc + "\r," +
+            Database_Query.get_unit_from_items + "\r" +
+            "\n, unit_cost, est_useful_life, quantity FROM items_table HAVING {2} LIKE '%{1}%' LIMIT {0}, 15;";
         #region deprecated
         //public static readonly string get_general_items_records =
         //    "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT {0}, 15;";

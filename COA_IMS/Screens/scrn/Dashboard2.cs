@@ -29,7 +29,9 @@ namespace COA_IMS.Screens.scrn
         private readonly IMS_Reports report_Tab = new IMS_Reports();
         /*private readonly ActivityLogs log_Tab = new ActivityLogs();*/
         private readonly IMS_Maintenance maintenance_Tab = new IMS_Maintenance();
+        private readonly IMS_Employee employee_Tab = new IMS_Employee();
         private readonly LogsForm logs_Tab = new LogsForm();
+        private readonly IMS_Settings settings_Tab = new IMS_Settings();
 
         private bool dontRunClosingEventHandler = false;
 
@@ -76,12 +78,16 @@ namespace COA_IMS.Screens.scrn
                     form = inventory_tab;
                     //current_Form = tab_Manager.switch_Form2(inventory_tab, current_Form, Main);
                     break;
+                case "Employeebtn":
+                    // Handle Create button click
+                    form = employee_Tab;
+                    break;
                 case "Reportsbtn":
                     // Handle Report button click
                     form = report_Tab;
                     break;
                 case "Settingsbtn":
-                    form = maintenance_Tab;
+                    form = settings_Tab;
                     break;
                 case "UserMaintenancebtn":
                     form = usermaintenance_tab;
@@ -103,7 +109,6 @@ namespace COA_IMS.Screens.scrn
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (dontRunClosingEventHandler) return;
-                Console.WriteLine(1);
                 Activity_Manager activityManager = new Activity_Manager();
                 if (MessageBox.Show("Are you sure you want to logout", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
