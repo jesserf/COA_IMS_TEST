@@ -43,6 +43,7 @@
             this.Reportsbtn = new Guna.UI.WinForms.GunaButton();
             this.UserMaintenancebtn = new Guna.UI.WinForms.GunaButton();
             this.Settingsbtn = new Guna.UI.WinForms.GunaButton();
+            this.trackingbtn = new Guna.UI.WinForms.GunaButton();
             this.Logsbtn = new Guna.UI.WinForms.GunaButton();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaElipsePanel1.SuspendLayout();
@@ -72,8 +73,10 @@
             this.tabPanel.Controls.Add(this.Inventorybtn);
             this.tabPanel.Controls.Add(this.Employeebtn);
             this.tabPanel.Controls.Add(this.Reportsbtn);
-            this.tabPanel.Controls.Add(this.UserMaintenancebtn);
+            this.tabPanel.Controls.Add(this.Inventorybtn);
             this.tabPanel.Controls.Add(this.Settingsbtn);
+            this.tabPanel.Controls.Add(this.trackingbtn);
+            this.tabPanel.Controls.Add(this.UserMaintenancebtn);
             this.tabPanel.Controls.Add(this.Logsbtn);
             this.tabPanel.Location = new System.Drawing.Point(0, 231);
             this.tabPanel.Name = "tabPanel";
@@ -359,6 +362,34 @@
             this.Settingsbtn.TextOffsetX = 15;
             this.Settingsbtn.Click += new System.EventHandler(this.tab_Button_Click);
             // 
+            // trackingbtn
+            // 
+            this.trackingbtn.AnimationHoverSpeed = 0.07F;
+            this.trackingbtn.AnimationSpeed = 0.03F;
+            this.trackingbtn.BaseColor = System.Drawing.Color.Transparent;
+            this.trackingbtn.BorderColor = System.Drawing.Color.Black;
+            this.trackingbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackingbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.trackingbtn.FocusedColor = System.Drawing.Color.Empty;
+            this.trackingbtn.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackingbtn.ForeColor = System.Drawing.Color.Black;
+            this.trackingbtn.Image = global::COA_IMS.Properties.Resources.location_alt;
+            this.trackingbtn.ImageOffsetX = 45;
+            this.trackingbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.trackingbtn.Location = new System.Drawing.Point(3, 195);
+            this.trackingbtn.Name = "trackingbtn";
+            this.trackingbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.trackingbtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.trackingbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.trackingbtn.OnHoverImage = null;
+            this.trackingbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.trackingbtn.Size = new System.Drawing.Size(282, 42);
+            this.trackingbtn.TabIndex = 10;
+            this.trackingbtn.Tag = "Tracking";
+            this.trackingbtn.Text = "Tracking";
+            this.trackingbtn.TextOffsetX = 15;
+            this.trackingbtn.Click += new System.EventHandler(this.tab_Button_Click);
+            // 
             // Logsbtn
             // 
             this.Logsbtn.AnimationHoverSpeed = 0.07F;
@@ -445,5 +476,6 @@
         private Guna.UI.WinForms.GunaButton UserMaintenancebtn;
         private Guna.UI.WinForms.GunaButton Logsbtn;
         private Guna.UI.WinForms.GunaButton Employeebtn;
+        private Guna.UI.WinForms.GunaButton trackingbtn;
     }
 }

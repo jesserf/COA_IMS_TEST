@@ -253,6 +253,11 @@
     </Compile>
     <Compile Include="Screens\scrn\IMS_Settings.Designer.cs">
       <DependentUpon>IMS_Settings.cs</DependentUpon>
+    <Compile Include="Screens\scrn\IMS_Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrn\IMS_Tracking.Designer.cs">
+      <DependentUpon>IMS_Tracking.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\scrn\InventoryMain.cs">
       <SubType>Form</SubType>
@@ -453,12 +458,6 @@
     <Compile Include="UserControlUtil\Cherie UI\Datagrid.Designer.cs">
       <DependentUpon>Datagrid.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlUtil\DataTableMultiplePages.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlUtil\DataTableMultiplePages.Designer.cs">
-      <DependentUpon>DataTableMultiplePages.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlUtil\DateFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -610,6 +609,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Settings.resx">
       <DependentUpon>IMS_Settings.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\scrn\IMS_Tracking.resx">
+      <DependentUpon>IMS_Tracking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\InventoryMain.resx">
       <DependentUpon>InventoryMain.cs</DependentUpon>
@@ -715,9 +716,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\Cherie UI\Datagrid.resx">
       <DependentUpon>Datagrid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlUtil\DataTableMultiplePages.resx">
-      <DependentUpon>DataTableMultiplePages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\DateFilter.resx">
       <DependentUpon>DateFilter.cs</DependentUpon>
@@ -878,6 +876,7 @@
     <None Include="Resources\loginBG1.png" />
     <None Include="Resources\menu %282%29.png" />
     <None Include="Resources\LOG IN FINAL BG.png" />
+    <None Include="Resources\location-alt.png" />
     <Content Include="Resources\Menu Bar Icon - Copy.png" />
     <Content Include="Resources\Menu Bar Icon.png" />
     <Content Include="Resources\Menu Bar Icon1 - Copy.png" />
