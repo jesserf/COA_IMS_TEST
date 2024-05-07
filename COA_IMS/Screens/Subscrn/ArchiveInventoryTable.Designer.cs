@@ -35,11 +35,9 @@
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.reports_Button = new Guna.UI.WinForms.GunaButton();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
-            this.dateFilter1 = new COA_IMS.UserControlUtil.DateFilter();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.main_Panel = new System.Windows.Forms.Panel();
@@ -48,6 +46,8 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
+            this.dateFilter1 = new COA_IMS.UserControlUtil.DateFilter();
             ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1246, 13);
+            this.sortComboBox.Location = new System.Drawing.Point(1244, 13);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
@@ -155,7 +155,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.73886F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.26114F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateFilter1, 1, 0);
@@ -168,23 +168,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1567, 58);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 12);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(549, 43);
-            this.searchBar1.TabIndex = 3;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1459, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1457, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 43);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(107, 43);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // reports_Button
@@ -240,18 +231,6 @@
             this.refresh_Button.Radius = 12;
             this.refresh_Button.Size = new System.Drawing.Size(42, 35);
             this.refresh_Button.TabIndex = 5;
-            // 
-            // dateFilter1
-            // 
-            this.dateFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
-            this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            this.dateFilter1.Location = new System.Drawing.Point(571, 12);
-            this.dateFilter1.Name = "dateFilter1";
-            this.dateFilter1.Size = new System.Drawing.Size(669, 43);
-            this.dateFilter1.TabIndex = 5;
-            this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
             // 
             // pageCountTextbox
             // 
@@ -378,6 +357,27 @@
             this.next_Button.Size = new System.Drawing.Size(46, 42);
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
+            // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(3, 12);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(549, 43);
+            this.searchBar1.TabIndex = 3;
+            // 
+            // dateFilter1
+            // 
+            this.dateFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
+            this.dateFilter1.Location = new System.Drawing.Point(571, 12);
+            this.dateFilter1.Name = "dateFilter1";
+            this.dateFilter1.Size = new System.Drawing.Size(667, 43);
+            this.dateFilter1.TabIndex = 5;
+            this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
             // 
             // ArchiveInventoryTable
             // 

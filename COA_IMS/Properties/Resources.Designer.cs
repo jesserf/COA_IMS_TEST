@@ -253,6 +253,16 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clipboard_user {
+            get {
+                object obj = ResourceManager.GetObject("clipboard-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap COA_img {
             get {
                 object obj = ResourceManager.GetObject("COA img", resourceCulture);
@@ -456,6 +466,16 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap InformationLOgo_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("InformationLOgo-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap location_alt {
+            get {
+                object obj = ResourceManager.GetObject("location-alt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

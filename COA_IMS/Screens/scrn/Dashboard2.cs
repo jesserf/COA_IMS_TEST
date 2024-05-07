@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using COA_IMS.Screens.Subscrn;
 
 namespace COA_IMS.Screens.scrn
 {
@@ -30,6 +31,7 @@ namespace COA_IMS.Screens.scrn
         /*private readonly ActivityLogs log_Tab = new ActivityLogs();*/
         private readonly IMS_Maintenance maintenance_Tab = new IMS_Maintenance();
         private readonly LogsForm logs_Tab = new LogsForm();
+        private readonly IMS_Tracking owner_tracking = new IMS_Tracking();
 
         private bool dontRunClosingEventHandler = false;
 
@@ -88,6 +90,9 @@ namespace COA_IMS.Screens.scrn
                     break;
                 case "Logsbtn":
                     form = logs_Tab;
+                    break;
+                case "trackingbtn":
+                    form = owner_tracking;
                     break;
                 default: break;
             }
