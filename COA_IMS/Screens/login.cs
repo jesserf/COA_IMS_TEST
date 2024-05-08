@@ -5,6 +5,7 @@ using Guna.UI.WinForms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace COA_IMS
 {
@@ -22,12 +23,16 @@ namespace COA_IMS
 
         public login()
         {
+            this.SuspendLayout();
             InitializeComponent();
             validator = new Validator();
             login_manager = new Login_Manager();
             activity_manager = new Activity_Manager();
             database_manager = new Database_Manager();
             ActiveControl = username_entry;
+            //System.Threading.Timer timer = new System.Threading.Timer(Tick, null, 0, 3000);
+
+            this.ResumeLayout();
         }
 
         private void login_Load(object sender, EventArgs e)

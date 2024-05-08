@@ -253,6 +253,7 @@
     </Compile>
     <Compile Include="Screens\scrn\IMS_Settings.Designer.cs">
       <DependentUpon>IMS_Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\scrn\IMS_Tracking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +465,12 @@
     <Compile Include="UserControlUtil\DateFilter.Designer.cs">
       <DependentUpon>DateFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlUtil\DGVTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\DGVTable.Designer.cs">
+      <DependentUpon>DGVTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlUtil\Label_Drop.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -609,6 +616,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Settings.resx">
       <DependentUpon>IMS_Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Tracking.resx">
       <DependentUpon>IMS_Tracking.cs</DependentUpon>
     </EmbeddedResource>
@@ -719,6 +727,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\DateFilter.resx">
       <DependentUpon>DateFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\DGVTable.resx">
+      <DependentUpon>DGVTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\Label_Drop.resx">
       <DependentUpon>Label_Drop.cs</DependentUpon>
