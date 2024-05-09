@@ -72,6 +72,30 @@ namespace COA_IMS.Utilities
             }
             return list_of_items;
         }
+
+        public List<string> ExecuteQueryToList(string query, string[] item_columns)
+        {
+            var dbCon = DBConnection.Instance();
+            List<string> list_of_items = new List<string>();
+
+            using (MySqlCommand command = new MySqlCommand(query, dbCon.Connection))
+            {
+                try
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                            foreach(string item_column in item_columns)
+                                list_of_items.Add(Convert.ToString(reader[item_column]));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error executing query: {query}\n{ex.Message}");
+                }
+            }
+            return list_of_items;
+        }
         #endregion
 
 

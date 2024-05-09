@@ -38,21 +38,21 @@
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
             this.searchbar_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
-            this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
-            this.next_Button = new Guna.UI.WinForms.GunaButton();
             this.category_Label = new Guna.UI.WinForms.GunaLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.add_New_Label = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.category_Name_TextBox = new Guna.UI.WinForms.GunaLineTextBox();
-            this.add_Category_Button = new Guna.UI.WinForms.GunaButton();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.refresh_Button = new Guna.UI.WinForms.GunaButton();
+            this.previous_Button = new Guna.UI.WinForms.GunaButton();
+            this.next_Button = new Guna.UI.WinForms.GunaButton();
+            this.add_Category_Button = new Guna.UI.WinForms.GunaButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_View)).BeginInit();
@@ -108,6 +108,7 @@
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gunaPanel1.Controls.Add(this.data_View);
             this.gunaPanel1.Controls.Add(this.searchbar_Panel);
             this.gunaPanel1.Controls.Add(this.gunaLinePanel2);
@@ -162,7 +163,7 @@
             this.data_View.RowHeadersVisible = false;
             this.data_View.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.data_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_View.Size = new System.Drawing.Size(716, 547);
+            this.data_View.Size = new System.Drawing.Size(714, 545);
             this.data_View.TabIndex = 29;
             this.data_View.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.data_View.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -194,7 +195,7 @@
             this.searchbar_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchbar_Panel.Location = new System.Drawing.Point(10, 51);
             this.searchbar_Panel.Name = "searchbar_Panel";
-            this.searchbar_Panel.Size = new System.Drawing.Size(716, 65);
+            this.searchbar_Panel.Size = new System.Drawing.Size(714, 65);
             this.searchbar_Panel.TabIndex = 28;
             // 
             // searchBar1
@@ -206,34 +207,6 @@
             this.searchBar1.Size = new System.Drawing.Size(587, 45);
             this.searchBar1.TabIndex = 20;
             // 
-            // refresh_Button
-            // 
-            this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.refresh_Button.AnimationHoverSpeed = 0.07F;
-            this.refresh_Button.AnimationSpeed = 0.03F;
-            this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
-            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
-            this.refresh_Button.BorderColor = System.Drawing.Color.Black;
-            this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.refresh_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.refresh_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.refresh_Button.ForeColor = System.Drawing.Color.White;
-            this.refresh_Button.Image = global::COA_IMS.Properties.Resources.refresh__1_;
-            this.refresh_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.refresh_Button.Location = new System.Drawing.Point(596, 13);
-            this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.refresh_Button.Name = "refresh_Button";
-            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
-            this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.refresh_Button.OnHoverImage = null;
-            this.refresh_Button.OnPressedColor = System.Drawing.Color.Black;
-            this.refresh_Button.Radius = 12;
-            this.refresh_Button.Size = new System.Drawing.Size(42, 35);
-            this.refresh_Button.TabIndex = 21;
-            this.refresh_Button.Click += new System.EventHandler(this.RePopulate_Table);
-            // 
             // gunaLinePanel2
             // 
             this.gunaLinePanel2.BackColor = System.Drawing.Color.Gray;
@@ -242,7 +215,7 @@
             this.gunaLinePanel2.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel2.Location = new System.Drawing.Point(10, 49);
             this.gunaLinePanel2.Name = "gunaLinePanel2";
-            this.gunaLinePanel2.Size = new System.Drawing.Size(716, 2);
+            this.gunaLinePanel2.Size = new System.Drawing.Size(714, 2);
             this.gunaLinePanel2.TabIndex = 26;
             // 
             // tableLayoutPanel2
@@ -251,11 +224,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 663);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 661);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(716, 60);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(714, 60);
             this.tableLayoutPanel2.TabIndex = 23;
             // 
             // flowLayoutPanel2
@@ -264,37 +237,10 @@
             this.flowLayoutPanel2.Controls.Add(this.previous_Button);
             this.flowLayoutPanel2.Controls.Add(this.pageCountTextbox);
             this.flowLayoutPanel2.Controls.Add(this.next_Button);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(258, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(257, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 53);
             this.flowLayoutPanel2.TabIndex = 12;
-            // 
-            // previous_Button
-            // 
-            this.previous_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.previous_Button.AnimationHoverSpeed = 0.07F;
-            this.previous_Button.AnimationSpeed = 0.03F;
-            this.previous_Button.BackColor = System.Drawing.Color.Transparent;
-            this.previous_Button.BaseColor = System.Drawing.Color.Transparent;
-            this.previous_Button.BorderColor = System.Drawing.Color.White;
-            this.previous_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.previous_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.previous_Button.FocusedColor = System.Drawing.Color.White;
-            this.previous_Button.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.previous_Button.ForeColor = System.Drawing.Color.White;
-            this.previous_Button.Image = global::COA_IMS.Properties.Resources.caret_left;
-            this.previous_Button.ImageSize = new System.Drawing.Size(30, 30);
-            this.previous_Button.Location = new System.Drawing.Point(3, 3);
-            this.previous_Button.Name = "previous_Button";
-            this.previous_Button.OnHoverBaseColor = System.Drawing.Color.White;
-            this.previous_Button.OnHoverBorderColor = System.Drawing.Color.White;
-            this.previous_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.previous_Button.OnHoverImage = null;
-            this.previous_Button.OnPressedColor = System.Drawing.Color.White;
-            this.previous_Button.Size = new System.Drawing.Size(46, 42);
-            this.previous_Button.TabIndex = 0;
-            this.previous_Button.Text = "<";
-            this.previous_Button.Click += new System.EventHandler(this.previous_Button_Click);
             // 
             // pageCountTextbox
             // 
@@ -317,33 +263,6 @@
             this.pageCountTextbox.TabIndex = 2;
             this.pageCountTextbox.Text = "1";
             this.pageCountTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // next_Button
-            // 
-            this.next_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.next_Button.AnimationHoverSpeed = 0.07F;
-            this.next_Button.AnimationSpeed = 0.03F;
-            this.next_Button.BackColor = System.Drawing.Color.Transparent;
-            this.next_Button.BaseColor = System.Drawing.Color.Transparent;
-            this.next_Button.BorderColor = System.Drawing.Color.Black;
-            this.next_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.next_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.next_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.next_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.next_Button.ForeColor = System.Drawing.Color.White;
-            this.next_Button.Image = global::COA_IMS.Properties.Resources.caret_right;
-            this.next_Button.ImageSize = new System.Drawing.Size(30, 30);
-            this.next_Button.Location = new System.Drawing.Point(151, 3);
-            this.next_Button.Name = "next_Button";
-            this.next_Button.OnHoverBaseColor = System.Drawing.Color.White;
-            this.next_Button.OnHoverBorderColor = System.Drawing.Color.White;
-            this.next_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.next_Button.OnHoverImage = null;
-            this.next_Button.OnPressedColor = System.Drawing.Color.White;
-            this.next_Button.Size = new System.Drawing.Size(46, 42);
-            this.next_Button.TabIndex = 1;
-            this.next_Button.Text = ">";
-            this.next_Button.Click += new System.EventHandler(this.next_Button_Click);
             // 
             // category_Label
             // 
@@ -423,6 +342,93 @@
             this.category_Name_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PressEnter);
             this.category_Name_TextBox.Leave += new System.EventHandler(this.textbox_Leave);
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 12;
+            this.gunaElipse1.TargetControl = this.flowLayoutPanel3;
+            // 
+            // refresh_Button
+            // 
+            this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.refresh_Button.AnimationHoverSpeed = 0.07F;
+            this.refresh_Button.AnimationSpeed = 0.03F;
+            this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
+            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
+            this.refresh_Button.BorderColor = System.Drawing.Color.Black;
+            this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.refresh_Button.FocusedColor = System.Drawing.Color.Empty;
+            this.refresh_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
+            this.refresh_Button.ForeColor = System.Drawing.Color.White;
+            this.refresh_Button.Image = global::COA_IMS.Properties.Resources.refresh__1_;
+            this.refresh_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.refresh_Button.Location = new System.Drawing.Point(596, 13);
+            this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.refresh_Button.Name = "refresh_Button";
+            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
+            this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.refresh_Button.OnHoverImage = null;
+            this.refresh_Button.OnPressedColor = System.Drawing.Color.Black;
+            this.refresh_Button.Radius = 12;
+            this.refresh_Button.Size = new System.Drawing.Size(42, 35);
+            this.refresh_Button.TabIndex = 21;
+            this.refresh_Button.Click += new System.EventHandler(this.RePopulate_Table);
+            // 
+            // previous_Button
+            // 
+            this.previous_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.previous_Button.AnimationHoverSpeed = 0.07F;
+            this.previous_Button.AnimationSpeed = 0.03F;
+            this.previous_Button.BackColor = System.Drawing.Color.Transparent;
+            this.previous_Button.BaseColor = System.Drawing.Color.Transparent;
+            this.previous_Button.BorderColor = System.Drawing.Color.White;
+            this.previous_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previous_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.previous_Button.FocusedColor = System.Drawing.Color.White;
+            this.previous_Button.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.previous_Button.ForeColor = System.Drawing.Color.White;
+            this.previous_Button.Image = global::COA_IMS.Properties.Resources.caret_left;
+            this.previous_Button.ImageSize = new System.Drawing.Size(30, 30);
+            this.previous_Button.Location = new System.Drawing.Point(3, 3);
+            this.previous_Button.Name = "previous_Button";
+            this.previous_Button.OnHoverBaseColor = System.Drawing.Color.White;
+            this.previous_Button.OnHoverBorderColor = System.Drawing.Color.White;
+            this.previous_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.previous_Button.OnHoverImage = null;
+            this.previous_Button.OnPressedColor = System.Drawing.Color.White;
+            this.previous_Button.Size = new System.Drawing.Size(46, 42);
+            this.previous_Button.TabIndex = 0;
+            this.previous_Button.Text = "<";
+            this.previous_Button.Click += new System.EventHandler(this.previous_Button_Click);
+            // 
+            // next_Button
+            // 
+            this.next_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.next_Button.AnimationHoverSpeed = 0.07F;
+            this.next_Button.AnimationSpeed = 0.03F;
+            this.next_Button.BackColor = System.Drawing.Color.Transparent;
+            this.next_Button.BaseColor = System.Drawing.Color.Transparent;
+            this.next_Button.BorderColor = System.Drawing.Color.Black;
+            this.next_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.next_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.next_Button.FocusedColor = System.Drawing.Color.Empty;
+            this.next_Button.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.next_Button.ForeColor = System.Drawing.Color.White;
+            this.next_Button.Image = global::COA_IMS.Properties.Resources.caret_right;
+            this.next_Button.ImageSize = new System.Drawing.Size(30, 30);
+            this.next_Button.Location = new System.Drawing.Point(151, 3);
+            this.next_Button.Name = "next_Button";
+            this.next_Button.OnHoverBaseColor = System.Drawing.Color.White;
+            this.next_Button.OnHoverBorderColor = System.Drawing.Color.White;
+            this.next_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.next_Button.OnHoverImage = null;
+            this.next_Button.OnPressedColor = System.Drawing.Color.White;
+            this.next_Button.Size = new System.Drawing.Size(46, 42);
+            this.next_Button.TabIndex = 1;
+            this.next_Button.Text = ">";
+            this.next_Button.Click += new System.EventHandler(this.next_Button_Click);
+            // 
             // add_Category_Button
             // 
             this.add_Category_Button.AnimationHoverSpeed = 0.07F;
@@ -446,11 +452,6 @@
             this.add_Category_Button.TabIndex = 5;
             this.add_Category_Button.Text = "ADD";
             this.add_Category_Button.Click += new System.EventHandler(this.add_Category_Button_Click);
-            // 
-            // gunaElipse1
-            // 
-            this.gunaElipse1.Radius = 12;
-            this.gunaElipse1.TargetControl = this.flowLayoutPanel3;
             // 
             // ItemCategoryForm
             // 

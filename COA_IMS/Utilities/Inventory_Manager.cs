@@ -21,6 +21,15 @@ namespace COA_IMS.Utilities
                 list_Of_Items = db_Manager.ExecuteQueryToList(query, item_column);
             return list_Of_Items;
         }
+        public List<string> Display_List_To_Combobox(string query, string[] item_columns)
+        {
+            db_Manager = new Database_Manager();
+            List<string> list_Of_Items = new List<string>();
+            query = string.Format(query);
+            using (db_Manager)
+                list_Of_Items = db_Manager.ExecuteQueryToList(query, item_columns);
+            return list_Of_Items;
+        }
         public int Get_Code_From_table(string query)
         {
             db_Manager = new Database_Manager();
@@ -227,7 +236,7 @@ namespace COA_IMS.Utilities
         }
         #endregion
         #region Employee
-        public void Insert_Employee_Category(string query, string item, string type)
+        public void Insert_Employee_Category(string query, string item, string type, bool zero_feedback = true)
         {
             int ret;
             db_Manager = new Database_Manager();
@@ -241,7 +250,8 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"{type}: {item} is successfully added.", $"{type} Added");
             }
             else if (ret == 0)
-                MessageBox.Show($"{type}: {item} is not added.", $"{type} Not Added\n{item} may already exist.");
+                if(zero_feedback)
+                    MessageBox.Show($"{type}: {item} is not added.", $"{type} Not Added\n{item} may already exist.");
         }
         public DataTable Get_Employee_Records(int minimium, string sortString, string searchwords = null)
         {
