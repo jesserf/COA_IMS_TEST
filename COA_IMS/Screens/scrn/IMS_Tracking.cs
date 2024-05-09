@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COA_IMS.Screens.Subscrn;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace COA_IMS.Screens.scrn
 {
     public partial class IMS_Tracking : Form
     {
+        
         public IMS_Tracking()
         {
             InitializeComponent();
+        }
+
+        private void CreateOrder_Click(object sender, EventArgs e)
+        {
+           CreateOrder trackform = new CreateOrder();
+            trackform.ShowDialog();
         }
     }
 }
