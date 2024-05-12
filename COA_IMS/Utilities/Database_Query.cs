@@ -312,6 +312,26 @@ namespace COA_IMS
             "\nWHERE employee_id = {0};";
         // 0 - employee id 
         public static readonly string get_employee_remarks = "SELECT remarks FROM employee_table WHERE employee_id = {0};";
+        // 0 - minimum | 1 - status
+        public static readonly string get_general_archived_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id WHERE emp.status = {1} LIMIT {0}, 15;";
+        // 0 - minimum | 1 - searchbar.text | 2 - status 
+        public static readonly string get_all_specific_archived_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE (employee_name LIKE '%{1}%' OR employee_position LIKE '%{1}%' OR employee_office LIKE '%{1}%') AND emp.status = {2} LIMIT {0}, 15;";
+        // 0 - minimum | 1 - searchbar.text | 2 - specific table name | 3 - status
+        public static readonly string get_specific_archived_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE {2} LIKE '%{1}%' LIMIT {0}, 15; WHERE {2} LIKE '%{1}%' AND emp.status = {3} LIMIT {0}, 15;";
         #endregion
         // 0 - employee name | 1 - employee position | 2 - employee office
         public static readonly string get_employee_record =

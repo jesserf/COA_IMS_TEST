@@ -15,14 +15,19 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
     {
         private Form parentForm;
         Inventory_Manager inventory_Manager;
-        string id, name, button_text;
-        public EmployeeRemoveRemarksSubForm(string id, string name, Form parentForm, string button_text = null)
+        string id, name, button_text, remarks;
+        public EmployeeRemoveRemarksSubForm(string id, string name, Form parentForm, string button_text = null, string remarks = null)
         {
             InitializeComponent();
             this.id = id;
             this.name = name;
             this.parentForm = parentForm;
-            if (button_text != null ) remove_Btn.Text = button_text;
+            if (button_text != null)
+            {
+                remove_Btn.Text = button_text;
+                this.Text = button_text + " Employee";
+            }
+            remarks_Textbox.Text = remarks;
         }
 
         private void remove_Btn_Click(object sender, EventArgs e)

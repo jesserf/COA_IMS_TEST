@@ -21,7 +21,13 @@
 1. Created instructions before running in `readme.md` file.
 2. Able to Update Employee Information
 3. Able to Move Employee to Archive
-4. Able to get only active employee in main employee table
+4. Able to get only active employee in main employee table.
+
+
+5. Get Recent Remarks to Restore
+6. Added Remarks to Archived Employees Table
+7. Change form name to restore employee
+8. Refresh archived employees table after 
 
 ## Plans
 1. Create Dashboard or `Home` section
@@ -35,11 +41,11 @@
 * rgb(107, 105, 115) 
 
 ## Later
-* Get Recent Remarks to Restore
-* Change form name to restore employee
-* refresh archived employees table after 
 * Go tracking
 * Misc Categories
 * RDLC Reports
 * Loading Function
 * Help or Tutorial Function
+
+## Cant
+* Create subform when double clicking a logs cell that showcases logs content when content is longer.

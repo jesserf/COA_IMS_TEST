@@ -73,9 +73,11 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
             string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
             string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
             string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
+            string remarks = data_View.Rows[e.RowIndex].Cells[4].Value.ToString();
             //MessageBox.Show(arg.ToString());
-            EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3, "Restore");
+            EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3, "Restore", remarks);
             employeeInfoForm.ShowDialog();
+            generic_Table.Populate_Table();
         }
     }
 }

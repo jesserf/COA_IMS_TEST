@@ -520,7 +520,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
         private DataTable FillArchivedEmployeeTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Employee_Records(min_lim, 0, sort_String, searchBar1.Text);
+            return inventory_Manager.Get_Archived_Employee_Records(min_lim, 0, sort_String, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -626,7 +626,16 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         };
                     break;
                 case "archived_employee":
-                    goto case "employee";
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 20), (true, 25), (true, 25), (true, 25) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Employee Name", DataGridViewContentAlignment.MiddleCenter),
+                            ("Employee Position", DataGridViewContentAlignment.MiddleCenter),
+                            ("Office", DataGridViewContentAlignment.MiddleCenter),
+                            ("Remarks", DataGridViewContentAlignment.MiddleCenter)
+                        };
+                    break;
                 default: break;
             }
 

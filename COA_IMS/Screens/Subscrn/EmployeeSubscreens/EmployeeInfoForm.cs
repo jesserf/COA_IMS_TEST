@@ -16,17 +16,19 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
 {
     public partial class EmployeeInfoForm : Form
     {
-        string name, pos, off, email, number, address, id, left_button_text;
+        string name, pos, off, email, number, address, id, left_button_text, remarks;
         private Dictionary<GunaTextBox, string> initialTexts = new Dictionary<GunaTextBox, string>();
         private Dictionary<ComboBox, string> initialChoices = new Dictionary<ComboBox, string>();
         Inventory_Manager inventory_Manager = new Inventory_Manager();
-        public EmployeeInfoForm(string name, string pos, string off, string left_button_text = null)
+        public EmployeeInfoForm(string name, string pos, string off, string left_button_text = null, string remarks = null)
         {
             InitializeComponent();
             //takes information from a cell in table and puts it in variables
             this.name = name;
             this.pos = pos;
             this.off = off;
+            if(remarks != null)
+                this.remarks = remarks;
             if (left_button_text != null)
                 switch (left_button_text)
                 {
@@ -185,7 +187,7 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
         private void remove_Btn_Click(object sender, EventArgs e)
         {
             //if still has unreturned items, show yes and no messagebox showing that  they still are in possession of items, if yes, remove all items today, if no dont show form
-            EmployeeRemoveRemarksSubForm removalForm = new EmployeeRemoveRemarksSubForm(id, name, this, remove_Btn.Text);
+            EmployeeRemoveRemarksSubForm removalForm = new EmployeeRemoveRemarksSubForm(id, name, this, remove_Btn.Text, remarks);
             removalForm.ShowDialog();
         }
 

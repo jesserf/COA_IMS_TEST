@@ -277,6 +277,30 @@ namespace COA_IMS.Utilities
                 Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
         }
+        public DataTable Get_Archived_Employee_Records(int minimium, int status, string sortString, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_all_specific_archived_employee_record, minimium, searchwords, status);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_archived_employee_record, minimium, searchwords, sortString.Replace(" ", "_"), status);
+                    else query = string.Format(Database_Query.get_general_archived_employee_record, minimium, status);
+                    break;
+            }
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
         public void Update_Employee_Record(string query, string item, string type, bool zero_feedback = true, string changes = null)
         {
             int ret;
