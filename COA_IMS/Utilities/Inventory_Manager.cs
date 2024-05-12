@@ -21,6 +21,15 @@ namespace COA_IMS.Utilities
                 list_Of_Items = db_Manager.ExecuteQueryToList(query, item_column);
             return list_Of_Items;
         }
+        public List<string> Display_List_To_Combobox(string query, string[] item_columns)
+        {
+            db_Manager = new Database_Manager();
+            List<string> list_Of_Items = new List<string>();
+            query = string.Format(query);
+            using (db_Manager)
+                list_Of_Items = db_Manager.ExecuteQueryToList(query, item_columns);
+            return list_Of_Items;
+        }
         public int Get_Code_From_table(string query)
         {
             db_Manager = new Database_Manager();
@@ -227,7 +236,7 @@ namespace COA_IMS.Utilities
         }
         #endregion
         #region Employee
-        public void Insert_Employee_Category(string query, string item, string type)
+        public void Insert_Employee_Category(string query, string item, string type, bool zero_feedback = true)
         {
             int ret;
             db_Manager = new Database_Manager();
@@ -241,9 +250,10 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"{type}: {item} is successfully added.", $"{type} Added");
             }
             else if (ret == 0)
-                MessageBox.Show($"{type}: {item} is not added.", $"{type} Not Added\n{item} may already exist.");
+                if(zero_feedback)
+                    MessageBox.Show($"{type}: {item} is not added.", $"{type} Not Added\n{item} may already exist.");
         }
-        public DataTable Get_Employee_Records(int minimium, string sortString, string searchwords = null)
+        public DataTable Get_Employee_Records(int minimium, int status, string sortString, string searchwords = null)
         {
             string query;
             db_Manager = new Database_Manager();
@@ -251,12 +261,12 @@ namespace COA_IMS.Utilities
             switch (sortString)
             {
                 case "All":
-                    query = string.Format(Database_Query.get_all_specific_employee_record, minimium, searchwords);
+                    query = string.Format(Database_Query.get_all_specific_employee_record, minimium, searchwords, status);
                     break;
                 default:
                     if (searchwords != null)
-                        query = string.Format(Database_Query.get_specific_employee_record, minimium, searchwords, sortString.Replace(" ", "_"));
-                    else query = string.Format(Database_Query.get_general_employee_record, minimium);
+                        query = string.Format(Database_Query.get_specific_employee_record, minimium, searchwords, sortString.Replace(" ", "_"), status);
+                    else query = string.Format(Database_Query.get_general_employee_record, minimium, status);
                     break;
             }
             using (db_Manager)
@@ -266,6 +276,82 @@ namespace COA_IMS.Utilities
             if (removeLimitIndex >= 0)
                 Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
+        }
+        public DataTable Get_Archived_Employee_Records(int minimium, int status, string sortString, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_all_specific_archived_employee_record, minimium, searchwords, status);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_archived_employee_record, minimium, searchwords, sortString.Replace(" ", "_"), status);
+                    else query = string.Format(Database_Query.get_general_archived_employee_record, minimium, status);
+                    break;
+            }
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        public void Update_Employee_Record(string query, string item, string type, bool zero_feedback = true, string changes = null)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            query = string.Format(query, item);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Alter_Item_Record(type, item, changes);
+                MessageBox.Show($"{type}: {item} is successfully updated.", $"{type} updated");
+            }
+            else if (ret == 0)
+                if (zero_feedback)
+                    MessageBox.Show($"{type}: {item} is not updated.", $"{type} Not updated.");
+        }
+        public void Archive_Employee_Status(string query, string item, string type, bool zero_feedback = true, string remarks = null, int status = 0)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            query = string.Format(query, item);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            switch (status)
+            {
+                case 0:
+                    if (ret == 1)
+                    {
+                        Activity_Manager activity_Manager = new Activity_Manager();
+                        activity_Manager.Archive_Item_Record(type, item, remarks);
+                        MessageBox.Show($"{type}: {item} is successfully archived.", $"{type} Archived");
+                    }
+                    else if (ret == 0)
+                        if (zero_feedback)
+                            MessageBox.Show($"{type}: {item} is not archived.", $"{type} Not Archived\n{item} may already archived.");
+                    break;
+                case 1:
+                    if (ret == 1)
+                    {
+                        Activity_Manager activity_Manager = new Activity_Manager();
+                        activity_Manager.Archive_Item_Record(type, item, remarks);
+                        MessageBox.Show($"{type}: {item} is successfully restored.", $"{type} Restored");
+                    }
+                    else if (ret == 0)
+                        if (zero_feedback)
+                            MessageBox.Show($"{type}: {item} is not restored.", $"{type} Not Restored\n{item} may already restored.");
+                    break;
+                default: break;
+            }
+            
         }
         #endregion
     }

@@ -380,6 +380,12 @@
     <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.Designer.cs">
+      <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\CreateOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +397,12 @@
     </Compile>
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.Designer.cs">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.Designer.cs">
+      <DependentUpon>EmployeeRemoveRemarksSubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.cs">
       <SubType>Form</SubType>
@@ -457,6 +469,24 @@
     </Compile>
     <Compile Include="Screens\Subscrn\LogsSubscreens\UnitForm.Designer.cs">
       <DependentUpon>UnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\SettingsSubscreens\MiscCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\SettingsSubscreens\MiscCategoryForm.Designer.cs">
+      <DependentUpon>MiscCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\ButtonWithExit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\ButtonWithExit.Designer.cs">
+      <DependentUpon>ButtonWithExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\selected_Item_Info_SubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\selected_Item_Info_SubForm.Designer.cs">
+      <DependentUpon>selected_Item_Info_SubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UserMaintenancetab.cs">
       <SubType>Form</SubType>
@@ -692,11 +722,17 @@
     <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.resx">
+      <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.resx">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.resx">
+      <DependentUpon>EmployeeRemoveRemarksSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.resx">
       <DependentUpon>EmployeeTable.cs</DependentUpon>
@@ -730,6 +766,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\UnitForm.resx">
       <DependentUpon>UnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\MiscCategoryForm.resx">
+      <DependentUpon>MiscCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\ButtonWithExit.resx">
+      <DependentUpon>ButtonWithExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\selected_Item_Info_SubForm.resx">
+      <DependentUpon>selected_Item_Info_SubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UserMaintenancetab.resx">
       <DependentUpon>UserMaintenancetab.cs</DependentUpon>
@@ -872,6 +917,10 @@
     <None Include="Resources\circle-xmark %282%29.png" />
     <None Include="Resources\digital-tachograph.png" />
     <None Include="Resources\disk.png" />
+    <Content Include="Resources\darkblu\archive-black-24.png" />
+    <Content Include="Resources\darkblu\archive-darkblue-24.png" />
+    <Content Include="Resources\darkblu\archive-lightgray-24.png" />
+    <Content Include="Resources\darkblu\archive-white-24.png" />
     <Content Include="Resources\darkblu\employee-darkblue-24.png" />
     <Content Include="Resources\darkblu\employee-lightgray-24.png" />
     <Content Include="Resources\darkblu\employee-table-darkblue-24.png" />

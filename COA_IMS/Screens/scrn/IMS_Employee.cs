@@ -1,4 +1,5 @@
 ﻿using COA_IMS.Screens.Subscrn;
+using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
 using COA_IMS.Utilities;
 using Guna.UI.WinForms;
 using System;
@@ -19,11 +20,8 @@ namespace COA_IMS.Screens.scrn
 
         private Form current_Form = null;
 
-        private readonly InventoryTable inventory_Table = new InventoryTable();
         private readonly EmployeeTable employee_Table = new EmployeeTable();
-        private readonly CategoryTab category_tab = new CategoryTab();
-        private readonly IMS_SuplierTable ims_supliertable = new IMS_SuplierTable();
-        private readonly ItemCategoryForm itemCategoryForm = new ItemCategoryForm();
+        private readonly ArchivedEmployeeTable archived_Employee_Table = new ArchivedEmployeeTable();
 
         private List<Control> navButtons = new List<Control>();
         public IMS_Employee()
@@ -42,6 +40,9 @@ namespace COA_IMS.Screens.scrn
             {
                 case "employee_Table_Btn":
                     form = employee_Table;
+                    break;
+                case "archived_Employees_Btn":
+                    form = archived_Employee_Table;
                     break;
                 default: break;
             }

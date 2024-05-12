@@ -115,6 +115,32 @@ namespace COA_IMS.Utilities
                 }
             }
         }
+
+        public void Alter_Item_Record(string type, string record_name, string changes = null)
+        {
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+            {
+                db_Manager = new Database_Manager();
+                int ret = 0;
+                using (db_Manager)
+                {
+                    ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.log_maintenance_activity_edit, CurrentUser.user_name, type, record_name, changes)));
+                }
+            }
+        }
+
+        public void Archive_Item_Record(string type, string record_name, string changes = null)
+        {
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+            {
+                db_Manager = new Database_Manager();
+                int ret = 0;
+                using (db_Manager)
+                    ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.log_maintenance_activity_archive, CurrentUser.user_name, type, record_name, changes)));
+            }
+        }
         #endregion
         //count number of account logging activities
         public int Count_Account_Logs(string from, string to)
