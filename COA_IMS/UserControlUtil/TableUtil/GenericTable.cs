@@ -399,6 +399,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "employee":
                     dt = FillEmployeeTable();
                     break;
+                case "archived_employee":
+                    dt = FillArchivedEmployeeTable();
+                    break;
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering
@@ -512,7 +515,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
         private DataTable FillEmployeeTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Employee_Records(min_lim, sort_String, searchBar1.Text);
+            return inventory_Manager.Get_Employee_Records(min_lim, 1, sort_String, searchBar1.Text);
+        }
+        private DataTable FillArchivedEmployeeTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Employee_Records(min_lim, 0, sort_String, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -617,6 +625,8 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Office", DataGridViewContentAlignment.MiddleCenter),
                         };
                     break;
+                case "archived_employee":
+                    goto case "employee";
                 default: break;
             }
 
@@ -702,7 +712,10 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_funds, searchBar1.Text));
                     break;
                 case "employee":
-                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text));
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 1));
+                    break;
+                case "archived_employee":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
                     break;
                 default: break;
             }

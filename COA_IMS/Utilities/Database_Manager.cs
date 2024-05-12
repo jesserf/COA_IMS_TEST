@@ -141,7 +141,7 @@ namespace COA_IMS.Utilities
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Query: {query} \n Error executing nonquery command: {ex.Message}", "Error");
-                    Console.WriteLine();
+                    Console.WriteLine(query);
                 }
             }
 

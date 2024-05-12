@@ -380,11 +380,23 @@
     <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.Designer.cs">
+      <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.Designer.cs">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.Designer.cs">
+      <DependentUpon>EmployeeRemoveRemarksSubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.cs">
       <SubType>Form</SubType>
@@ -698,8 +710,14 @@
     <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
       <DependentUpon>CategoryTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.resx">
+      <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.resx">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.resx">
+      <DependentUpon>EmployeeRemoveRemarksSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.resx">
       <DependentUpon>EmployeeTable.cs</DependentUpon>
@@ -881,6 +899,10 @@
     <None Include="Resources\circle-xmark %282%29.png" />
     <None Include="Resources\digital-tachograph.png" />
     <None Include="Resources\disk.png" />
+    <Content Include="Resources\darkblu\archive-black-24.png" />
+    <Content Include="Resources\darkblu\archive-darkblue-24.png" />
+    <Content Include="Resources\darkblu\archive-lightgray-24.png" />
+    <Content Include="Resources\darkblu\archive-white-24.png" />
     <Content Include="Resources\darkblu\employee-darkblue-24.png" />
     <Content Include="Resources\darkblu\employee-lightgray-24.png" />
     <Content Include="Resources\darkblu\employee-table-darkblue-24.png" />

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.remove_Btn = new Guna.UI.WinForms.GunaButton();
             this.contact_Number_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.email_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.Controls.Add(this.remove_Btn, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.contact_Number_Textbox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.email_Textbox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
@@ -84,6 +86,36 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(644, 576);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // remove_Btn
+            // 
+            this.remove_Btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.remove_Btn.AnimationHoverSpeed = 0.07F;
+            this.remove_Btn.AnimationSpeed = 0.03F;
+            this.remove_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.remove_Btn.BaseColor = System.Drawing.Color.Silver;
+            this.remove_Btn.BorderColor = System.Drawing.Color.Black;
+            this.remove_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.remove_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.remove_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.remove_Btn.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_Btn.ForeColor = System.Drawing.Color.Black;
+            this.remove_Btn.Image = null;
+            this.remove_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.remove_Btn.Location = new System.Drawing.Point(58, 522);
+            this.remove_Btn.Margin = new System.Windows.Forms.Padding(10);
+            this.remove_Btn.Name = "remove_Btn";
+            this.remove_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.remove_Btn.OnHoverBorderColor = System.Drawing.Color.Firebrick;
+            this.remove_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.remove_Btn.OnHoverImage = null;
+            this.remove_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.remove_Btn.Radius = 10;
+            this.remove_Btn.Size = new System.Drawing.Size(140, 44);
+            this.remove_Btn.TabIndex = 12;
+            this.remove_Btn.Text = "Remove";
+            this.remove_Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.remove_Btn.Click += new System.EventHandler(this.remove_Btn_Click);
+            // 
             // contact_Number_Textbox
             // 
             this.contact_Number_Textbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -103,6 +135,8 @@
             this.contact_Number_Textbox.SelectedText = "";
             this.contact_Number_Textbox.Size = new System.Drawing.Size(367, 36);
             this.contact_Number_Textbox.TabIndex = 5;
+            this.contact_Number_Textbox.Tag = "Phone";
+            this.contact_Number_Textbox.TextChanged += new System.EventHandler(this.comboBox_TextUpdate);
             // 
             // email_Textbox
             // 
@@ -123,6 +157,8 @@
             this.email_Textbox.SelectedText = "";
             this.email_Textbox.Size = new System.Drawing.Size(367, 36);
             this.email_Textbox.TabIndex = 4;
+            this.email_Textbox.Tag = "Email";
+            this.email_Textbox.TextChanged += new System.EventHandler(this.comboBox_TextUpdate);
             // 
             // label8
             // 
@@ -173,6 +209,9 @@
             this.office_ComboBox.Name = "office_ComboBox";
             this.office_ComboBox.Size = new System.Drawing.Size(367, 33);
             this.office_ComboBox.TabIndex = 3;
+            this.office_ComboBox.Tag = "Employee Office";
+            this.office_ComboBox.TextUpdate += new System.EventHandler(this.comboBox_TextUpdate);
+            this.office_ComboBox.SelectedValueChanged += new System.EventHandler(this.comboBox_SelectedValueChanged);
             // 
             // position_ComboBox
             // 
@@ -187,6 +226,9 @@
             this.position_ComboBox.Name = "position_ComboBox";
             this.position_ComboBox.Size = new System.Drawing.Size(367, 33);
             this.position_ComboBox.TabIndex = 2;
+            this.position_ComboBox.Tag = "Employee Position";
+            this.position_ComboBox.TextUpdate += new System.EventHandler(this.comboBox_TextUpdate);
+            this.position_ComboBox.SelectedValueChanged += new System.EventHandler(this.comboBox_SelectedValueChanged);
             // 
             // label1
             // 
@@ -211,15 +253,15 @@
             this.save_Button.BackColor = System.Drawing.Color.Transparent;
             this.save_Button.BaseColor = System.Drawing.Color.ForestGreen;
             this.save_Button.BorderColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel1.SetColumnSpan(this.save_Button, 2);
             this.save_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.save_Button.Enabled = false;
             this.save_Button.FocusedColor = System.Drawing.Color.Empty;
             this.save_Button.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_Button.ForeColor = System.Drawing.Color.White;
             this.save_Button.Image = null;
             this.save_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.save_Button.Location = new System.Drawing.Point(231, 522);
+            this.save_Button.Location = new System.Drawing.Point(359, 522);
             this.save_Button.Margin = new System.Windows.Forms.Padding(10);
             this.save_Button.Name = "save_Button";
             this.save_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -232,6 +274,7 @@
             this.save_Button.TabIndex = 7;
             this.save_Button.Text = "Save";
             this.save_Button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.save_Button.Click += new System.EventHandler(this.save_Button_Click);
             // 
             // label2
             // 
@@ -324,9 +367,12 @@
             this.address_Textbox.SelectedText = "";
             this.address_Textbox.Size = new System.Drawing.Size(367, 36);
             this.address_Textbox.TabIndex = 6;
+            this.address_Textbox.Tag = "Address";
+            this.address_Textbox.TextChanged += new System.EventHandler(this.comboBox_TextUpdate);
             // 
             // EmployeeInfoForm
             // 
+            this.AcceptButton = this.save_Button;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -360,5 +406,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaTextBox address_Textbox;
+        private Guna.UI.WinForms.GunaButton remove_Btn;
     }
 }
