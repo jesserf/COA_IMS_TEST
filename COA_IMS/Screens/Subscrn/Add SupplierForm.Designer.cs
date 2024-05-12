@@ -225,7 +225,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.save_Button, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.contact_Person_Textbox, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.supplier_Name_Textbox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
@@ -233,6 +232,7 @@
             this.tableLayoutPanel1.Controls.Add(this.contact_Number_Textbox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.address_Textbox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";

@@ -386,6 +386,12 @@
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.Designer.cs">
       <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\CreateOrder.Designer.cs">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,6 +421,12 @@
     </Compile>
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.cs">
       <SubType>Form</SubType>
@@ -713,6 +725,9 @@
     <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.resx">
       <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\CreateOrder.resx">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.resx">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -727,6 +742,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.resx">
       <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
@@ -951,6 +969,8 @@
     <None Include="Resources\route.png" />
     <None Include="Resources\search %281%29.png" />
     <None Include="Resources\search %282%29.png" />
+    <None Include="Resources\search %283%29.png" />
+    <None Include="Resources\search %283%291.png" />
     <Content Include="Resources\search - Copy.png" />
     <Content Include="Resources\search.png" />
     <Content Include="Resources\search1.png" />
