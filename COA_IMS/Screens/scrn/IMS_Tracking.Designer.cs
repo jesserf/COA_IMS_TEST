@@ -28,135 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //old master
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
-            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
-            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.main_Panel = new Guna.UI.WinForms.GunaPanel();
-            this.flowLayoutPanel1.SuspendLayout();
-            //new master
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.CreateOrder = new Guna.UI.WinForms.GunaButton();
-            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.content_Panel = new Guna.UI.WinForms.GunaPanel();
+            this.container_Panel = new Guna.UI.WinForms.GunaPanel();
+            this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.tracking_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.add_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.returned_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.line_Panel = new Guna.UI.WinForms.GunaPanel();
+            this.parent_panel = new Guna.UI.WinForms.GunaPanel();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.gunaPanel1.SuspendLayout();
-            // master end     
-            this.gunaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            //old master
-            this.main_Panel.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.gunaLinePanel1);
-            this.flowLayoutPanel1.Controls.Add(this.searchBar1);
-            this.flowLayoutPanel1.Controls.Add(this.gunaButton1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1579, 74);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = global::COA_IMS.Properties.Resources.refresh__1_;
-            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaButton1.Location = new System.Drawing.Point(1508, 14);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 12;
-            this.gunaButton1.Size = new System.Drawing.Size(54, 54);
-            this.gunaButton1.TabIndex = 21;
-            // 
-            // searchBar1
-            // 
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 19);
-            this.searchBar1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(1499, 56);
-            this.searchBar1.TabIndex = 20;
-            // 
-            // gunaLinePanel1
-            // 
-            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(3, 3);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(1575, 3);
-            this.gunaLinePanel1.TabIndex = 1;
-            // 
-            // gunaPanel2
-            // 
-            this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.gunaPanel2.Controls.Add(this.pictureBox1);
-            this.gunaPanel2.Controls.Add(this.gunaLabel2);
-            this.gunaPanel2.Controls.Add(this.gunaDataGridView1);
-            this.gunaPanel2.Location = new System.Drawing.Point(6, 159);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1562, 740);
-            this.gunaPanel2.TabIndex = 3;
-            // 
-            // gunaDataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            //new master
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
+            this.container_Panel.SuspendLayout();
+            this.nav_panel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.parent_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
             this.gunaPanel1.Controls.Add(this.CreateOrder);
-            this.gunaPanel1.Controls.Add(this.gunaPanel2);
-            this.gunaPanel1.Controls.Add(this.flowLayoutPanel1);
             this.gunaPanel1.Location = new System.Drawing.Point(12, 12);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1579, 902);
@@ -188,303 +81,221 @@
             this.CreateOrder.Text = "CreateOrder";
             this.CreateOrder.Click += new System.EventHandler(this.CreateOrder_Click);
             // 
-            // gunaPanel2
+            // content_Panel
             // 
-            this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.gunaPanel2.Controls.Add(this.pictureBox1);
-            this.gunaPanel2.Controls.Add(this.gunaLabel2);
-            this.gunaPanel2.Controls.Add(this.gunaDataGridView1);
-            this.gunaPanel2.Location = new System.Drawing.Point(6, 159);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1562, 740);
-            this.gunaPanel2.TabIndex = 3;
+            this.content_Panel.BackColor = System.Drawing.Color.White;
+            this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content_Panel.Location = new System.Drawing.Point(0, 55);
+            this.content_Panel.Name = "content_Panel";
+            this.content_Panel.Size = new System.Drawing.Size(1583, 851);
+            this.content_Panel.TabIndex = 7;
             // 
-            // pictureBox1
+            // container_Panel
             // 
-            this.pictureBox1.Image = global::COA_IMS.Properties.Resources.clipboard_user;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.container_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.container_Panel.Controls.Add(this.content_Panel);
+            this.container_Panel.Controls.Add(this.nav_panel);
+            this.container_Panel.Controls.Add(this.flowLayoutPanel1);
+            this.container_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container_Panel.Location = new System.Drawing.Point(0, 0);
+            this.container_Panel.Name = "container_Panel";
+            this.container_Panel.Size = new System.Drawing.Size(1583, 906);
+            this.container_Panel.TabIndex = 3;
             // 
-            // gunaLabel2
+            // nav_panel
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(62, 18);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(342, 35);
-            this.gunaLabel2.TabIndex = 4;
-            this.gunaLabel2.Text = "EQUIPMENT OWNERSHIP";
+            this.nav_panel.AutoSize = true;
+            this.nav_panel.BackColor = System.Drawing.Color.White;
+            this.nav_panel.Controls.Add(this.tracking_Table_Btn);
+            this.nav_panel.Controls.Add(this.add_Btn);
+            this.nav_panel.Controls.Add(this.returned_Btn);
+            this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.nav_panel.Location = new System.Drawing.Point(0, 0);
+            this.nav_panel.Margin = new System.Windows.Forms.Padding(0);
+            this.nav_panel.Name = "nav_panel";
+            this.nav_panel.Size = new System.Drawing.Size(1583, 55);
+            this.nav_panel.TabIndex = 4;
             // 
-            // gunaDataGridView1
+            // tracking_Table_Btn
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            //master end
-            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            //old master end
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            //new master
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            //master end
-            this.gunaDataGridView1.ColumnHeadersHeight = 21;
-            this.gunaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Num,
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            //old master
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            //new master
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            //master end
-            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
-            this.gunaDataGridView1.Location = new System.Drawing.Point(25, 63);
-            this.gunaDataGridView1.Name = "gunaDataGridView1";
-            this.gunaDataGridView1.RowHeadersVisible = false;
-            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(1518, 659);
-            this.gunaDataGridView1.TabIndex = 2;
-            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.DeepPurple;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 21;
-            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tracking_Table_Btn.Animated = true;
+            this.tracking_Table_Btn.AnimationHoverSpeed = 0.07F;
+            this.tracking_Table_Btn.AnimationSpeed = 0.03F;
+            this.tracking_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.tracking_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.tracking_Table_Btn.BorderColor = System.Drawing.Color.Black;
+            this.tracking_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.tracking_Table_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.tracking_Table_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.tracking_Table_Btn.CheckedImage = null;
+            this.tracking_Table_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.tracking_Table_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tracking_Table_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.tracking_Table_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.tracking_Table_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.tracking_Table_Btn.ForeColor = System.Drawing.Color.White;
+            this.tracking_Table_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.tracking_Table_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.tracking_Table_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
+            this.tracking_Table_Btn.Location = new System.Drawing.Point(0, 0);
+            this.tracking_Table_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.tracking_Table_Btn.Name = "tracking_Table_Btn";
+            this.tracking_Table_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
+            this.tracking_Table_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            this.tracking_Table_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.tracking_Table_Btn.OnHoverImage = null;
+            this.tracking_Table_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
+            this.tracking_Table_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.tracking_Table_Btn.Size = new System.Drawing.Size(222, 55);
+            this.tracking_Table_Btn.TabIndex = 4;
+            this.tracking_Table_Btn.Text = "TRACKING TABLE";
+            this.tracking_Table_Btn.TextOffsetX = 5;
+            this.tracking_Table_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            //new master
-            // Column3
+            // add_Btn
             // 
-            this.Column3.HeaderText = "Description";
-            this.Column3.Name = "Column3";
+            this.add_Btn.Animated = true;
+            this.add_Btn.AnimationHoverSpeed = 0.07F;
+            this.add_Btn.AnimationSpeed = 0.03F;
+            this.add_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.add_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.add_Btn.BorderColor = System.Drawing.Color.Black;
+            this.add_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.add_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.add_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.add_Btn.CheckedImage = null;
+            this.add_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.add_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.add_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.add_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.add_Btn.ForeColor = System.Drawing.Color.White;
+            this.add_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.add_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.add_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
+            this.add_Btn.Location = new System.Drawing.Point(223, 0);
+            this.add_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.add_Btn.Name = "add_Btn";
+            this.add_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
+            this.add_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            this.add_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.add_Btn.OnHoverImage = null;
+            this.add_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
+            this.add_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.add_Btn.Size = new System.Drawing.Size(222, 55);
+            this.add_Btn.TabIndex = 7;
+            this.add_Btn.Text = "ADD";
+            this.add_Btn.TextOffsetX = 5;
+            this.add_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            // Column2
+            // returned_Btn
             // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            //old master
-            // Num
-            // 
-            this.Num.HeaderText = "#";
-            this.Num.Name = "Num";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Owner";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Product Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Description";
-            this.Column3.Name = "Column3";
+            this.returned_Btn.Animated = true;
+            this.returned_Btn.AnimationHoverSpeed = 0.07F;
+            this.returned_Btn.AnimationSpeed = 0.03F;
+            this.returned_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.returned_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.returned_Btn.BorderColor = System.Drawing.Color.Black;
+            this.returned_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.returned_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.returned_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.returned_Btn.CheckedImage = null;
+            this.returned_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.returned_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.returned_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.returned_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.returned_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.returned_Btn.ForeColor = System.Drawing.Color.White;
+            this.returned_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.returned_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.returned_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
+            this.returned_Btn.Location = new System.Drawing.Point(446, 0);
+            this.returned_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.returned_Btn.Name = "returned_Btn";
+            this.returned_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
+            this.returned_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            this.returned_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.returned_Btn.OnHoverImage = null;
+            this.returned_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
+            this.returned_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.returned_Btn.Size = new System.Drawing.Size(222, 55);
+            this.returned_Btn.TabIndex = 5;
+            this.returned_Btn.Text = "RETURNED";
+            this.returned_Btn.TextOffsetX = 5;
+            this.returned_Btn.Click += new System.EventHandler(this.button_Click);
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.gunaLinePanel1);
-            this.flowLayoutPanel1.Controls.Add(this.searchBar1);
-            this.flowLayoutPanel1.Controls.Add(this.gunaButton1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.flowLayoutPanel1.Controls.Add(this.line_Panel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1579, 74);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1601, 56);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // gunaLinePanel1
+            // line_Panel
             // 
-            this.gunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(3, 3);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(1575, 3);
-            this.gunaLinePanel1.TabIndex = 1;
+            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.line_Panel.Location = new System.Drawing.Point(3, 3);
+            this.line_Panel.Name = "line_Panel";
+            this.line_Panel.Size = new System.Drawing.Size(1603, 10);
+            this.line_Panel.TabIndex = 5;
             // 
-            // searchBar1
+            // parent_panel
             // 
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 19);
-            this.searchBar1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(939, 56);
-            this.searchBar1.TabIndex = 20;
-            //master end
+            this.parent_panel.BackColor = System.Drawing.Color.Transparent;
+            this.parent_panel.Controls.Add(this.container_Panel);
+            this.parent_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parent_panel.Location = new System.Drawing.Point(10, 10);
+            this.parent_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.parent_panel.Name = "parent_panel";
+            this.parent_panel.Size = new System.Drawing.Size(1583, 906);
+            this.parent_panel.TabIndex = 4;
             // 
-            // Column1
+            // mySqlCommand1
             // 
-            //old master
-            this.Column1.HeaderText = "Owner";
-            this.Column1.Name = "Column1";
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
-            // Num
-            // 
-            this.Num.HeaderText = "#";
-            this.Num.Name = "Num";
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(62, 18);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(342, 35);
-            this.gunaLabel2.TabIndex = 4;
-            this.gunaLabel2.Text = "EQUIPMENT OWNERSHIP";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::COA_IMS.Properties.Resources.clipboard_user;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // main_Panel
-            // 
-            this.main_Panel.Controls.Add(this.gunaPanel2);
-            this.main_Panel.Controls.Add(this.flowLayoutPanel1);
-            this.main_Panel.Location = new System.Drawing.Point(12, 12);
-            this.main_Panel.Name = "main_Panel";
-            this.main_Panel.Size = new System.Drawing.Size(1579, 902);
-            this.main_Panel.TabIndex = 0;
-            // 
-            //new master
-            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = global::COA_IMS.Properties.Resources.refresh__1_;
-            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaButton1.Location = new System.Drawing.Point(948, 14);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 12;
-            this.gunaButton1.Size = new System.Drawing.Size(54, 54);
-            this.gunaButton1.TabIndex = 21;
-            // 
-            //master end
             // IMS_Tracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1603, 926);
-            this.Controls.Add(this.main_Panel);
+            this.Controls.Add(this.parent_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IMS_Tracking";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "IMS_Tracking";
-            //old master
-            this.flowLayoutPanel1.ResumeLayout(false);
-            //new master
+            this.Load += new System.EventHandler(this.IMS_Tracking_Load);
             this.gunaPanel1.ResumeLayout(false);
-            //master end
-            this.gunaPanel2.ResumeLayout(false);
-            this.gunaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            //old master
-            this.main_Panel.ResumeLayout(false);
-            //new master
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
+            this.container_Panel.ResumeLayout(false);
+            this.container_Panel.PerformLayout();
+            this.nav_panel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            //master end
+            this.parent_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
-        private UserControlUtil.SearchBar searchBar1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaPanel gunaPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-            //old master
-        private Guna.UI.WinForms.GunaPanel main_Panel;
-            //new master
-        private Guna.UI.WinForms.GunaPanel gunaPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        //new master
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaButton CreateOrder;
-            //master end
+        private Guna.UI.WinForms.GunaPanel content_Panel;
+        private Guna.UI.WinForms.GunaPanel container_Panel;
+        private System.Windows.Forms.FlowLayoutPanel nav_panel;
+        private Guna.UI.WinForms.GunaAdvenceButton tracking_Table_Btn;
+        private Guna.UI.WinForms.GunaAdvenceButton add_Btn;
+        private Guna.UI.WinForms.GunaAdvenceButton returned_Btn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI.WinForms.GunaPanel line_Panel;
+        private Guna.UI.WinForms.GunaPanel parent_panel;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        //master end
     }
 }

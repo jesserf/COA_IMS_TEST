@@ -1,4 +1,8 @@
 ﻿using COA_IMS.Screens.Subscrn;
+using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
+using COA_IMS.Screens.Subscrn.Tracking;
+using COA_IMS.Utilities;
+using Guna.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +17,58 @@ namespace COA_IMS.Screens.scrn
 {
     public partial class IMS_Tracking : Form
     {
-        
+        private Tab_Manager tab_Manager = new Tab_Manager();
+
+        private Form current_Form = null;
+
+        private readonly AddTrackingInfo add_Tracking_Info = new AddTrackingInfo();
+        private readonly TrackingTable tracking_Table = new TrackingTable();
+        private readonly EmployeeHistoryTable history_Table = new EmployeeHistoryTable();
+
+        private List<Control> navButtons = new List<Control>();
+
         public IMS_Tracking()
         {
             InitializeComponent();
+            foreach (GunaAdvenceButton button in nav_panel.Controls)
+                navButtons.Add(button);
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            var button = (GunaAdvenceButton)sender;
+            Form form = null;
+
+            switch (button.Name)
+            {
+                case "add_Btn":
+                    form = add_Tracking_Info;
+                    break;
+                case "tracking_Table_Btn":
+                    form = tracking_Table;
+                    break;
+                case "returned_Btn":
+                    form = history_Table;
+                    break;
+                default: break;
+            }
+            if (form != null)
+            {
+                current_Form = tab_Manager.switch_Form(form, current_Form, content_Panel);
+            }
+            tab_Manager.active_AdvButton(button, false, false);
+        }
+
+        private void IMS_Tracking_Load(object sender, EventArgs e)
+        {
+            tab_Manager = new Tab_Manager();
+
+            tab_Manager.TakeAllAdvButtonsFromFlowLay(nav_panel);
+
+            tab_Manager.set_Colors("#1B303B", "#C7C8CC");
+            tab_Manager.active_AdvButton(add_Btn, false, false);
+
+            add_Btn.PerformClick();
         }
 
         private void CreateOrder_Click(object sender, EventArgs e)

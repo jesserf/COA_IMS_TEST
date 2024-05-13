@@ -1,0 +1,136 @@
+some stuff
+added refresh button perform click on tab switch on logs
+added activity logging for editing and deleting records in maintenance
+fixed page count textbox, next button, and prev button for logs table
+changed tab title and image from activity logs
+change "Constractor" name to "Contractor" in Maintenance class
+
+4-16-24
+added generictable class that contains functions for populating the project request report table and log table
+remove limit word for database.lastquery in activity managers
+
+inventory
+fixed preliminary dashboard and inventory
+
+4-17-24
+added page numbering to reports
+added report generation for project requests (docu_info_table)
+
+ims
+added temporary logout to login form
+added this.exit() on form hide
+added some slight changes on login textboxes
+
+issues 
+wrong spelling for receiving date in docu_info_table (reveiveing_date)
+
+ims issues
+no images for username and password in login.cs
+login form load lag
+
+4/18/2024
+added images to username and password
+fill in comboboxes for add item form
+puts active control in first textbox
+changed gunacombobox to regular combobox
+added more columns for database
+
+issues
+login form load lag
+get ico file for ims form icon
+
+4/22/2024
+added functional logs menu,
+able to add item types in category tab
+able to get value from database to combobox
+
+issues 
+login form load lag
+get ico file for ims form icon
+fix logs theme to fit IMS
+fix logs numbering
+add generate report
+
+4/23/2024
+able to add new item type and item brand
+table for item types
+
+issues
+item units not showing, replace sql command from item_unit to unit
+
+4/29/2024
+violet = #2C2A37
+
+#09090c
+#15141a
+#201f29
+#2c2a37
+#383545
+#434054
+#4f4b62
+pink = #F4B1AF
+WHITE
+
+Changes
+Changed color to violet in login.cs form
+able to add item units, item brands, and item types
+able to add item suppliers (needs cleaning)
+able to add items and item desc
+
+please concat to item desc
+
+5/2/24
+added gitignore for appsettings json file,
+change query for taking item description and unit type
+
+5/6/24
+able to add fund names
+able to add employee names, employee positions, employee offices
+
+issues
+cant sort item description column in items table
+
+todo
+add maintenance to edit items quantity, status, etc
+add status to disable items
+
+5/7/24
+changes
+added employee section in navigation bar
+separated different submodules to corresponding sections
+working sorting function for searchbar
+centered add employee form
+started function when double clicking on datagridview cell
+
+issues
+cant sort item description column in items table
+
+todo
+create ownership tracking to track which employee have certain items
+create history 
+
+Colors: https://www.color-hex.com/color/2c2a37
+
+5/8/24
+cleaned SQL Database
+
+5/9/24
+changes 
+restructured adding of employees based on new sql
+able to show employee information on double click
+
+issues
+does adding new records add the count for changing of pages
+
+todo
+make entity table in sql
+add status and remaks to employee information
+
+5/13/24
+made simple table selector form for adding info in tracking
+add simple form for tracking
+adding new sql
+
+issues
+in adding in tracking, it uses the gunatextbox and combobox once it is used the corresponding button is pressed
+addingitems form is not using main panel on trackign

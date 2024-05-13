@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `employee_office_table` (
   UNIQUE KEY `employee_office` (`employee_office`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.employee_office_table: ~2 rows (approximately)
+-- Dumping data for table db_ims.employee_office_table: ~1 rows (approximately)
 INSERT INTO `employee_office_table` (`employee_office_id`, `employee_office`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
 	(3, 'ITO', '2024-05-09 14:24:09', 'admin', NULL, '2024-05-09 14:24:09', 1);
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `employee_position_table` (
   UNIQUE KEY `employee_position` (`employee_position`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.employee_position_table: ~0 rows (approximately)
+-- Dumping data for table db_ims.employee_position_table: ~1 rows (approximately)
 INSERT INTO `employee_position_table` (`employee_position_id`, `employee_position`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
 	(2, 'OJT', '2024-05-09 14:24:11', 'admin', NULL, '2024-05-09 14:24:11', 1);
 
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `employee_table` (
   CONSTRAINT `FK_employee_table_user_info_table_2` FOREIGN KEY (`modified_by`) REFERENCES `user_info_table` (`user_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.employee_table: ~2 rows (approximately)
+-- Dumping data for table db_ims.employee_table: ~1 rows (approximately)
 INSERT INTO `employee_table` (`employee_id`, `employee_name`, `employee_position_id`, `employee_office_id`, `email`, `phone`, `address`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`, `remarks`) VALUES
 	(6, 'Carlo Almero', 2, 3, 'carloalmero@gmail.com', '0909 123 1421', 'COA', '2024-05-09 14:25:49', 'admin', NULL, NULL, 1, NULL);
 
@@ -112,13 +112,32 @@ INSERT INTO `emp_info_table` (`emp_id`, `code`, `full_name`, `email`, `contact_n
 	(3, 'EMPL00000002', 'James', 'sadas', 'sadasd', 'SXN000000003', 'POS000000001', 1, 'james', '2024-03-25 13:39:24', NULL, NULL),
 	(4, 'EMPL00000003', 'Christian James R.Vinas', 'jamesvinas09@gmail.com', '09208902063', 'SXN000000003', 'POS000000002', 1, 'james', '2024-04-06 19:39:24', NULL, NULL);
 
+-- Dumping structure for table db_ims.entity_table
+CREATE TABLE IF NOT EXISTS `entity_table` (
+  `entity_id` int NOT NULL,
+  `entity_name` varchar(100) NOT NULL DEFAULT '',
+  `date_added` datetime NOT NULL DEFAULT (now()),
+  `added_by` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT '',
+  `updated_by` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `updated_date` datetime DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+  `status` int NOT NULL DEFAULT '1',
+  PRIMARY KEY (`entity_id`),
+  UNIQUE KEY `entity_name` (`entity_name`),
+  KEY `FK_entity_table_user_info_table` (`added_by`),
+  KEY `FK_entity_table_user_info_table_2` (`updated_by`),
+  CONSTRAINT `FK_entity_table_user_info_table` FOREIGN KEY (`added_by`) REFERENCES `user_info_table` (`user_name`),
+  CONSTRAINT `FK_entity_table_user_info_table_2` FOREIGN KEY (`updated_by`) REFERENCES `user_info_table` (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_ims.entity_table: ~0 rows (approximately)
+
 -- Dumping structure for table db_ims.fund_table
 CREATE TABLE IF NOT EXISTS `fund_table` (
   `fund_id` int NOT NULL AUTO_INCREMENT,
   `fund_name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL DEFAULT (now()),
   `added_by` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT '',
-  `date_modified` datetime DEFAULT NULL,
+  `date_modified` datetime DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
   `modified_by` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   `status` tinyint NOT NULL DEFAULT '1',
   PRIMARY KEY (`fund_id`),
@@ -131,6 +150,30 @@ CREATE TABLE IF NOT EXISTS `fund_table` (
 -- Dumping data for table db_ims.fund_table: ~0 rows (approximately)
 INSERT INTO `fund_table` (`fund_id`, `fund_name`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`) VALUES
 	(1, 'Regular Agency Fund', '2024-05-06 10:46:13', 'admin', NULL, NULL, 1);
+
+-- Dumping structure for table db_ims.ics_fund_cluster_table
+CREATE TABLE IF NOT EXISTS `ics_fund_cluster_table` (
+  `ics_number` varchar(50) NOT NULL DEFAULT '',
+  `fund_id` int NOT NULL,
+  PRIMARY KEY (`ics_number`,`fund_id`),
+  KEY `fund_id` (`fund_id`),
+  CONSTRAINT `FK_ics_fund_cluster_table_fund_table` FOREIGN KEY (`fund_id`) REFERENCES `fund_table` (`fund_id`),
+  CONSTRAINT `FK_ics_fund_cluster_table_item_ics_table` FOREIGN KEY (`ics_number`) REFERENCES `item_ics_table` (`ics_number_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_ims.ics_fund_cluster_table: ~0 rows (approximately)
+
+-- Dumping structure for table db_ims.ics_transfer_af_table
+CREATE TABLE IF NOT EXISTS `ics_transfer_af_table` (
+  `ics_number_id` varchar(50) NOT NULL,
+  `transfer_id` int NOT NULL,
+  PRIMARY KEY (`ics_number_id`,`transfer_id`),
+  KEY `FK_ics_transfer_af_table_transfer_current_table` (`transfer_id`),
+  CONSTRAINT `FK_ics_transfer_af_table_item_ics_table` FOREIGN KEY (`ics_number_id`) REFERENCES `item_ics_table` (`ics_number_id`),
+  CONSTRAINT `FK_ics_transfer_af_table_transfer_current_table` FOREIGN KEY (`transfer_id`) REFERENCES `transfer_current_table` (`transfer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_ims.ics_transfer_af_table: ~0 rows (approximately)
 
 -- Dumping structure for table db_ims.items_table
 CREATE TABLE IF NOT EXISTS `items_table` (
@@ -225,8 +268,17 @@ INSERT INTO `item_desc_table` (`item_desc_id`, `item_type_id`, `item_brand_id`, 
 
 -- Dumping structure for table db_ims.item_ics_table
 CREATE TABLE IF NOT EXISTS `item_ics_table` (
-  `ics_number_id` int DEFAULT NULL,
-  `entity_id` int DEFAULT NULL
+  `ics_number_id` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `entity_id` int DEFAULT NULL,
+  `receiver` int DEFAULT NULL,
+  `giver` int DEFAULT NULL,
+  PRIMARY KEY (`ics_number_id`),
+  KEY `FK_item_ics_table_entity_table` (`entity_id`),
+  KEY `FK_item_ics_table_employee_table` (`receiver`),
+  KEY `FK_item_ics_table_employee_table_2` (`giver`),
+  CONSTRAINT `FK_item_ics_table_employee_table` FOREIGN KEY (`receiver`) REFERENCES `employee_table` (`employee_id`),
+  CONSTRAINT `FK_item_ics_table_employee_table_2` FOREIGN KEY (`giver`) REFERENCES `employee_table` (`employee_id`),
+  CONSTRAINT `FK_item_ics_table_entity_table` FOREIGN KEY (`entity_id`) REFERENCES `entity_table` (`entity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.item_ics_table: ~0 rows (approximately)
@@ -318,9 +370,9 @@ CREATE TABLE IF NOT EXISTS `log_table` (
   PRIMARY KEY (`log_id`) USING BTREE,
   KEY `user_name` (`user_name`) USING BTREE,
   CONSTRAINT `FK_log_table_user_info_table` FOREIGN KEY (`user_name`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=873 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=904 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.log_table: ~798 rows (approximately)
+-- Dumping data for table db_ims.log_table: ~830 rows (approximately)
 INSERT INTO `log_table` (`log_id`, `user_name`, `activity`, `activity_datetime`, `activity_type`) VALUES
 	(1, 'admin', 'Logged In', '2024-03-31 15:14:46', 1),
 	(12, 'admin', 'Logged Out', '2024-04-06 14:39:52', 1),
@@ -1158,7 +1210,38 @@ INSERT INTO `log_table` (`log_id`, `user_name`, `activity`, `activity_datetime`,
 	(869, 'admin', 'Logged In', '2024-05-09 15:18:55', 1),
 	(870, 'admin', 'Logged In', '2024-05-09 15:21:04', 1),
 	(871, 'admin', 'Logged In', '2024-05-09 15:23:10', 1),
-	(872, 'admin', 'Logged Out', '2024-05-09 15:38:41', 1);
+	(872, 'admin', 'Logged Out', '2024-05-09 15:38:41', 1),
+	(873, 'admin', 'Logged In', '2024-05-09 16:40:51', 1),
+	(874, 'admin', 'Logged Out', '2024-05-09 16:41:32', 1),
+	(875, 'admin', 'Logged In', '2024-05-13 09:07:47', 1),
+	(876, 'admin', 'Logged Out', '2024-05-13 09:08:26', 1),
+	(877, 'admin', 'Logged In', '2024-05-13 10:00:18', 1),
+	(878, 'admin', 'Logged Out', '2024-05-13 10:01:52', 1),
+	(879, 'admin', 'Logged In', '2024-05-13 15:43:05', 1),
+	(880, 'admin', 'Logged Out', '2024-05-13 15:43:35', 1),
+	(881, 'admin', 'Logged In', '2024-05-13 16:17:38', 1),
+	(882, 'admin', 'Logged Out', '2024-05-13 16:17:39', 1),
+	(883, 'admin', 'Logged In', '2024-05-13 16:20:48', 1),
+	(884, 'admin', 'Logged In', '2024-05-13 16:24:34', 1),
+	(885, 'admin', 'Logged In', '2024-05-13 16:25:03', 1),
+	(886, 'admin', 'Logged In', '2024-05-13 16:27:32', 1),
+	(887, 'admin', 'Logged In', '2024-05-13 16:27:46', 1),
+	(888, 'admin', 'Logged Out', '2024-05-13 16:28:38', 1),
+	(889, 'admin', 'Logged In', '2024-05-13 16:31:39', 1),
+	(890, 'admin', 'Logged In', '2024-05-13 16:39:51', 1),
+	(891, 'admin', 'Logged Out', '2024-05-13 16:41:17', 1),
+	(892, 'admin', 'Logged In', '2024-05-13 16:42:27', 1),
+	(893, 'admin', 'Logged Out', '2024-05-13 16:42:31', 1),
+	(894, 'admin', 'Logged In', '2024-05-13 16:43:11', 1),
+	(895, 'admin', 'Logged In', '2024-05-13 16:43:24', 1),
+	(896, 'admin', 'Logged In', '2024-05-13 16:44:19', 1),
+	(897, 'admin', 'Logged Out', '2024-05-13 16:45:21', 1),
+	(898, 'admin', 'Logged In', '2024-05-13 16:46:16', 1),
+	(899, 'admin', 'Logged Out', '2024-05-13 16:46:31', 1),
+	(900, 'admin', 'Logged In', '2024-05-13 16:46:47', 1),
+	(901, 'admin', 'Logged Out', '2024-05-13 16:47:03', 1),
+	(902, 'admin', 'Logged In', '2024-05-13 16:47:08', 1),
+	(903, 'admin', 'Logged Out', '2024-05-13 16:47:13', 1);
 
 -- Dumping structure for table db_ims.person_to_person_table
 CREATE TABLE IF NOT EXISTS `person_to_person_table` (
@@ -1173,6 +1256,49 @@ CREATE TABLE IF NOT EXISTS `person_to_person_table` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.person_to_person_table: ~0 rows (approximately)
+
+-- Dumping structure for table db_ims.transfer_current_table
+CREATE TABLE IF NOT EXISTS `transfer_current_table` (
+  `transfer_id` int NOT NULL,
+  `ics_number_id` varchar(50) NOT NULL DEFAULT '',
+  `employee_id` int NOT NULL,
+  `item_code` varchar(50) NOT NULL DEFAULT '',
+  `quantity` int NOT NULL DEFAULT (1),
+  `total_price` double NOT NULL DEFAULT (1.00),
+  `transfer_date` datetime NOT NULL DEFAULT (now()),
+  `transfer_return_due_date` date DEFAULT NULL,
+  `transfer_return_date` datetime DEFAULT NULL,
+  `created_by` varchar(50) NOT NULL,
+  `updated_by` varchar(50) DEFAULT NULL,
+  `remarks` longtext,
+  PRIMARY KEY (`transfer_id`),
+  KEY `FK_transfer_current_table_employee_table` (`employee_id`),
+  KEY `FK_transfer_current_table_items_table` (`item_code`),
+  KEY `FK_transfer_current_table_item_ics_table` (`ics_number_id`),
+  KEY `FK_transfer_current_table_user_info_table` (`created_by`),
+  KEY `FK_transfer_current_table_user_info_table_2` (`updated_by`),
+  CONSTRAINT `FK_transfer_current_table_employee_table` FOREIGN KEY (`employee_id`) REFERENCES `employee_table` (`employee_id`),
+  CONSTRAINT `FK_transfer_current_table_item_ics_table` FOREIGN KEY (`ics_number_id`) REFERENCES `item_ics_table` (`ics_number_id`),
+  CONSTRAINT `FK_transfer_current_table_items_table` FOREIGN KEY (`item_code`) REFERENCES `items_table` (`item_code`),
+  CONSTRAINT `FK_transfer_current_table_user_info_table` FOREIGN KEY (`created_by`) REFERENCES `user_info_table` (`user_name`),
+  CONSTRAINT `FK_transfer_current_table_user_info_table_2` FOREIGN KEY (`updated_by`) REFERENCES `user_info_table` (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_ims.transfer_current_table: ~0 rows (approximately)
+
+-- Dumping structure for table db_ims.transfer_item_serial_number
+CREATE TABLE IF NOT EXISTS `transfer_item_serial_number` (
+  `serial_number` varchar(100) NOT NULL,
+  `item_code` varchar(50) NOT NULL DEFAULT '0',
+  `ics_number_id` varchar(50) NOT NULL,
+  PRIMARY KEY (`serial_number`),
+  KEY `FK__items_table` (`item_code`),
+  KEY `FK__item_ics_table` (`ics_number_id`),
+  CONSTRAINT `FK__item_ics_table` FOREIGN KEY (`ics_number_id`) REFERENCES `item_ics_table` (`ics_number_id`),
+  CONSTRAINT `FK__items_table` FOREIGN KEY (`item_code`) REFERENCES `items_table` (`item_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_ims.transfer_item_serial_number: ~0 rows (approximately)
 
 -- Dumping structure for table db_ims.user_access_table
 CREATE TABLE IF NOT EXISTS `user_access_table` (
