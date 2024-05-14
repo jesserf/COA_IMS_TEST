@@ -422,6 +422,12 @@
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.Designer.cs">
+      <DependentUpon>LogsInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -772,6 +778,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.resx">
+      <DependentUpon>LogsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
