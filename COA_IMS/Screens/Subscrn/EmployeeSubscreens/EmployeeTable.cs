@@ -71,5 +71,10 @@ namespace COA_IMS.Screens.Subscrn
             employeeInfoForm.ShowDialog();
             generic_Table.Populate_Table();
         }
+
+        private void data_View_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

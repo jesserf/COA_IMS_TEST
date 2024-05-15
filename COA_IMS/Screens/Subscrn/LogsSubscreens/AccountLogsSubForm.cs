@@ -1,4 +1,5 @@
-﻿using COA_IMS.UserControlUtil.TableUtil;
+﻿using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
+using COA_IMS.UserControlUtil.TableUtil;
 using COA_IMS.Utilities;
 using System;
 using System.Collections.Generic;
@@ -80,6 +81,21 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
         private void AccountLogging_VisibleChanged(object sender, EventArgs e)
         {
             refresh_Button.PerformClick();
+        }
+
+  
+
+        private void LogsTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string arg = LogsTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string arg2 = LogsTable.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string arg3 = LogsTable.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //MessageBox.Show(arg.ToString());
+            LogsInfoForm logsform = new LogsInfoForm();
+            logsform.logs_Name_Textbox.Text = arg;
+            logsform.logs_office_Textbox.Text = arg3;
+            logsform.Action_Textbox.Text = arg2;
+            logsform.ShowDialog();
         }
     }
 }

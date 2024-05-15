@@ -33,7 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sortComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.reports_Button = new Guna.UI.WinForms.GunaButton();
+            this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.main_Panel = new System.Windows.Forms.Panel();
             this.content_Panel = new System.Windows.Forms.Panel();
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
@@ -45,9 +48,6 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.add_Employee_Button = new Guna.UI.WinForms.GunaButton();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
-            this.reports_Button = new Guna.UI.WinForms.GunaButton();
-            this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.main_Panel.SuspendLayout();
@@ -93,6 +93,61 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(118, 43);
             this.flowLayoutPanel3.TabIndex = 7;
             // 
+            // reports_Button
+            // 
+            this.reports_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.reports_Button.AnimationHoverSpeed = 0.07F;
+            this.reports_Button.AnimationSpeed = 0.03F;
+            this.reports_Button.BackColor = System.Drawing.Color.Transparent;
+            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
+            this.reports_Button.BorderColor = System.Drawing.Color.Black;
+            this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.reports_Button.FocusedColor = System.Drawing.Color.Empty;
+            this.reports_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
+            this.reports_Button.ForeColor = System.Drawing.Color.White;
+            this.reports_Button.Image = global::COA_IMS.Properties.Resources.business_report__1_;
+            this.reports_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.reports_Button.Location = new System.Drawing.Point(73, 3);
+            this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.reports_Button.Name = "reports_Button";
+            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
+            this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.reports_Button.OnHoverImage = null;
+            this.reports_Button.OnPressedColor = System.Drawing.Color.Black;
+            this.reports_Button.Radius = 12;
+            this.reports_Button.Size = new System.Drawing.Size(42, 35);
+            this.reports_Button.TabIndex = 4;
+            // 
+            // refresh_Button
+            // 
+            this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.refresh_Button.AnimationHoverSpeed = 0.07F;
+            this.refresh_Button.AnimationSpeed = 0.03F;
+            this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
+            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
+            this.refresh_Button.BorderColor = System.Drawing.Color.Black;
+            this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.refresh_Button.FocusedColor = System.Drawing.Color.Empty;
+            this.refresh_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
+            this.refresh_Button.ForeColor = System.Drawing.Color.White;
+            this.refresh_Button.Image = global::COA_IMS.Properties.Resources.refresh__1_;
+            this.refresh_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.refresh_Button.Location = new System.Drawing.Point(25, 3);
+            this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.refresh_Button.Name = "refresh_Button";
+            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
+            this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
+            this.refresh_Button.OnHoverImage = null;
+            this.refresh_Button.OnPressedColor = System.Drawing.Color.Black;
+            this.refresh_Button.Radius = 12;
+            this.refresh_Button.Size = new System.Drawing.Size(42, 35);
+            this.refresh_Button.TabIndex = 5;
+            this.refresh_Button.Click += new System.EventHandler(this.RePopulate_Table);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -111,6 +166,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1629, 58);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(13, 12);
+            this.searchBar1.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(561, 43);
+            this.searchBar1.TabIndex = 3;
             // 
             // main_Panel
             // 
@@ -197,6 +262,7 @@
             this.data_View.ThemeStyle.RowsStyle.Height = 22;
             this.data_View.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data_View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data_View.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_View_CellContentClick);
             this.data_View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_View_CellDoubleClick);
             // 
             // tableLayoutPanel2
@@ -349,71 +415,6 @@
             this.add_Employee_Button.Text = "ADD EMPLOYEE";
             this.add_Employee_Button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.add_Employee_Button.Click += new System.EventHandler(this.add_Employee_Button_Click);
-            // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(13, 12);
-            this.searchBar1.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(561, 43);
-            this.searchBar1.TabIndex = 3;
-            // 
-            // reports_Button
-            // 
-            this.reports_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.reports_Button.AnimationHoverSpeed = 0.07F;
-            this.reports_Button.AnimationSpeed = 0.03F;
-            this.reports_Button.BackColor = System.Drawing.Color.Transparent;
-            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
-            this.reports_Button.BorderColor = System.Drawing.Color.Black;
-            this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.reports_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.reports_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.reports_Button.ForeColor = System.Drawing.Color.White;
-            this.reports_Button.Image = global::COA_IMS.Properties.Resources.business_report__1_;
-            this.reports_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.reports_Button.Location = new System.Drawing.Point(73, 3);
-            this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.reports_Button.Name = "reports_Button";
-            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
-            this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.reports_Button.OnHoverImage = null;
-            this.reports_Button.OnPressedColor = System.Drawing.Color.Black;
-            this.reports_Button.Radius = 12;
-            this.reports_Button.Size = new System.Drawing.Size(42, 35);
-            this.reports_Button.TabIndex = 4;
-            // 
-            // refresh_Button
-            // 
-            this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.refresh_Button.AnimationHoverSpeed = 0.07F;
-            this.refresh_Button.AnimationSpeed = 0.03F;
-            this.refresh_Button.BackColor = System.Drawing.Color.Transparent;
-            this.refresh_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
-            this.refresh_Button.BorderColor = System.Drawing.Color.Black;
-            this.refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refresh_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.refresh_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.refresh_Button.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.refresh_Button.ForeColor = System.Drawing.Color.White;
-            this.refresh_Button.Image = global::COA_IMS.Properties.Resources.refresh__1_;
-            this.refresh_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.refresh_Button.Location = new System.Drawing.Point(25, 3);
-            this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.refresh_Button.Name = "refresh_Button";
-            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
-            this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.refresh_Button.OnHoverImage = null;
-            this.refresh_Button.OnPressedColor = System.Drawing.Color.Black;
-            this.refresh_Button.Radius = 12;
-            this.refresh_Button.Size = new System.Drawing.Size(42, 35);
-            this.refresh_Button.TabIndex = 5;
-            this.refresh_Button.Click += new System.EventHandler(this.RePopulate_Table);
             // 
             // EmployeeTable
             // 
