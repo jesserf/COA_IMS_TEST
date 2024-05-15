@@ -13,7 +13,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
 {
     public partial class AddTrackingInfo : Form
     {
-        GunaTextBox trackingTextBox;
+        TextBox trackingTextBox;
         ComboBox trackingComboBox;
         public AddTrackingInfo()
         {
@@ -47,7 +47,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             foreach(Control control in content_Panel.Controls)
             {
-                if (control is GunaTextBox gTextBox)
+                if (control is TextBox gTextBox)
                     if (string.IsNullOrEmpty(gTextBox.Text.Trim()))
                         return false;
                 if(control is ComboBox comboBox)
@@ -67,15 +67,16 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             TableSelectorForm tableSelectorForm = new TableSelectorForm(GetDataTableType(((GunaButton)sender).Name), trackingTextBox, trackingComboBox);
             tableSelectorForm.ShowDialog();
-            string xd = ((GunaButton)sender).Name;
+            Enable_Next_Btn(Check_Text_Boxes_Comboboxes());
         }
 
         private void next_Btn_Click_1(object sender, EventArgs e)
         {
             GetAllValues();
-            AddTrackingItems addTrackingItems = new AddTrackingItems();
-            this.Hide();
-            addTrackingItems.Show();
+            //AddTrackingItems addTrackingItems = new AddTrackingItems();
+            //this.Hide();
+            //addTrackingItems.Show();
+            SwitchStep("item");
         }
 
         private void GetAllValues()
@@ -83,7 +84,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             List<string> values = new List<string>();
             foreach (Control control in content_Panel.Controls)
             {
-                if (control is GunaTextBox gTextBox)
+                if (control is TextBox gTextBox)
                 {
                     values.Add(gTextBox.Text.Trim());
                 }
@@ -103,20 +104,50 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             switch(buttonName)
             {
                 case "add_Entity_Btn":
+                    trackingTextBox = null;
                     trackingComboBox = entity_Name_Textbox;
                     return "entity";
                 case "add_Funds_Btn":
-                    trackingTextBox = gunaTextBox2;
+                    trackingComboBox = null;
+                    trackingTextBox = fund_Cluster_Textbox;
                     return "fund";
                 case "add_Received_Btn":
+                    trackingTextBox = null;
                     trackingComboBox = received_By_Combobox;
                     return "employee";
                 case "add_Giver_Btn":
+                    trackingTextBox = null;
                     trackingComboBox = received_From_Combobox;
                     return "employee";
                 default: break;
             }
             return "none";
+        }
+
+        private void SwitchStep(string page)
+        {
+            this.Hide();
+            Form form = null;
+            switch (page)
+            {
+                case "confirm":
+                    form = new AddConfirmForm();
+                    break;
+                case "item":
+                    form = new AddTrackingItems();
+                    break;
+                case "info":
+                    form = new AddTrackingInfo();
+                    break;
+                default:
+                    break;
+            }
+            //Allow the from to fill the main panel.
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+
+            this.Parent.Controls.Add(form);
+            form.Show();
         }
     }
 }

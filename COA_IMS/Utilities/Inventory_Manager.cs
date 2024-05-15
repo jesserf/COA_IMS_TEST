@@ -235,6 +235,117 @@ namespace COA_IMS.Utilities
             return dt;
         }
         #endregion
+        #region Entity
+        public void Insert_Entity_Name(string entity_name, string type)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = string.Format(Database_Query.insert_entity_name, entity_name, CurrentUser.user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(type, entity_name);
+                MessageBox.Show($"Entity Name: {entity_name} is successfully added.", "Entity Name Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"Entity Name: {entity_name} is not added.", $"Entity Name Not Added\n{entity_name} may already exist.");
+
+        }
+        public DataTable Get_Entity_Names(int minimium, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.select_specific_entity, searchwords, minimium);
+            else query = string.Format(Database_Query.select_entity, minimium);
+            using (db_Manager)
+            {
+                dt = db_Manager.ExecuteQuery(query);
+            }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        #endregion
+        #region Employee Position
+        public void Insert_Employee_Position(string employee_position, string type)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = string.Format(Database_Query.insert_employee_position, employee_position, CurrentUser.user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(type, employee_position);
+                MessageBox.Show($"Employee Position: {employee_position} is successfully added.", "Employee Position Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"Employee Position: {employee_position} is not added.", $"Employee Position Not Added\n{employee_position} may already exist.");
+
+        }
+        public DataTable Get_Employee_Position(int minimium, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.select_specific_employee_position, searchwords, minimium);
+            else query = string.Format(Database_Query.select_employee_position, minimium);
+            using (db_Manager)
+            {
+                dt = db_Manager.ExecuteQuery(query);
+            }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        #endregion
+        #region Employee Office
+        public void Insert_Employee_Office(string employee_office, string type)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = string.Format(Database_Query.insert_employee_office, employee_office, CurrentUser.user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record(type, employee_office);
+                MessageBox.Show($"Employee Office: {employee_office} is successfully added.", "Employee Office Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"Employee Office: {employee_office} is not added.", $"Employee Office Not Added\n{employee_office} may already exist.");
+
+        }
+        public DataTable Get_Employee_Office(int minimium, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            if (searchwords != null)
+                query = string.Format(Database_Query.select_specific_employee_office, searchwords, minimium);
+            else query = string.Format(Database_Query.select_employee_office, minimium);
+            using (db_Manager)
+            {
+                dt = db_Manager.ExecuteQuery(query);
+            }
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        #endregion
         #region Employee
         public void Insert_Employee_Category(string query, string item, string type, bool zero_feedback = true)
         {

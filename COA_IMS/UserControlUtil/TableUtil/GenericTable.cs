@@ -399,6 +399,15 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "fund":
                     dt = FillFundsTable();
                     break;
+                case "entity":
+                    dt = FillEntityTable();
+                    break;
+                case "employee_position":
+                    dt = FillPositionTable();
+                    break;
+                case "employee_office":
+                    dt = FillOfficeTable();
+                    break;
                 case "employee":
                     dt = FillEmployeeTable();
                     break;
@@ -515,6 +524,21 @@ namespace COA_IMS.UserControlUtil.TableUtil
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Fund_Names(min_lim, searchBar1.Text);
         }
+        private DataTable FillEntityTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Entity_Names(min_lim, searchBar1.Text);
+        }
+        private DataTable FillPositionTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Employee_Position(min_lim, searchBar1.Text);
+        }
+        private DataTable FillOfficeTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Employee_Office(min_lim, searchBar1.Text);
+        }
         private DataTable FillEmployeeTable()
         {
             inventory_Manager = new Inventory_Manager();
@@ -616,6 +640,30 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         {
                             ("#", DataGridViewContentAlignment.MiddleRight),
                             ("Fund Names", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
+                case "entity":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 95) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Entity Names", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
+                case "employee_position":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 95) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Employee Position", DataGridViewContentAlignment.MiddleCenter),
+                        };
+                    break;
+                case "employee_office":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 95) };
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Employee Office", DataGridViewContentAlignment.MiddleCenter),
                         };
                     break;
                 case "employee":
@@ -722,6 +770,15 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     break;
                 case "fund":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_funds, searchBar1.Text));
+                    break;
+                case "entity":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_entity, searchBar1.Text));
+                    break;
+                case "employee_position":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee_position, searchBar1.Text));
+                    break;
+                case "employee_office":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee_office, searchBar1.Text));
                     break;
                 case "employee":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 1));

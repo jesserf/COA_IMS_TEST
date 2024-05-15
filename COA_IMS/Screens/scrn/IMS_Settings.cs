@@ -1,4 +1,5 @@
 ﻿using COA_IMS.Screens.Subscrn;
+using COA_IMS.Screens.Subscrn.SettingsSubscreens;
 using COA_IMS.Utilities;
 using Guna.UI.WinForms;
 using System;
@@ -21,6 +22,7 @@ namespace COA_IMS.Screens.scrn
 
         private readonly IMS_SuplierTable ims_supliertable = new IMS_SuplierTable();
         private readonly ItemCategoryForm itemCategoryForm = new ItemCategoryForm();
+        private readonly MiscCategoryForm miscCategoryForm = new MiscCategoryForm();
 
         private List<Control> navButtons = new List<Control>();
         public IMS_Settings()
@@ -41,8 +43,11 @@ namespace COA_IMS.Screens.scrn
                     break;
                 case "item_Supplier_Btn":
                     form = ims_supliertable;
-                    //current_Form = tab_Manager.switch_Form(itemCategoryForm, current_Form, content_Panel);
                     break;
+                case "misc_Category_Btn":
+                    form = miscCategoryForm;
+                    break;
+
                 default: break;
             }
             if (form != null)
