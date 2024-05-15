@@ -488,6 +488,12 @@
     <Compile Include="Screens\Subscrn\TableSelectorForm.Designer.cs">
       <DependentUpon>TableSelectorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\AddConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\AddConfirmForm.Designer.cs">
+      <DependentUpon>AddConfirmForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\Tracking\AddTrackingInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -811,6 +817,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\TableSelectorForm.resx">
       <DependentUpon>TableSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddConfirmForm.resx">
+      <DependentUpon>AddConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\AddTrackingInfo.resx">
       <DependentUpon>AddTrackingInfo.cs</DependentUpon>

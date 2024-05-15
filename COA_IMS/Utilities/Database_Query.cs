@@ -279,18 +279,6 @@ namespace COA_IMS
             "\n(SELECT o.employee_office_id FROM employee_office_table o WHERE o.employee_office = '{2}')" +
             "\n) LIMIT 1;";
 
-        public static readonly string insert_employee_position = "INSERT INTO employee_position_table " +
-            "\n(employee_position, added_by)" +
-            "\nSELECT* FROM(SELECT '{0}', '{1}') AS tmp" +
-            "\nWHERE NOT EXISTS(SELECT employee_position FROM employee_position_table" +
-            "\nWHERE employee_position = '{0}') LIMIT 1;";
-
-        public static readonly string insert_employee_office = "INSERT INTO employee_office_table " +
-            "\n(employee_office, added_by)" +
-            "\nSELECT* FROM(SELECT '{0}', '{1}') AS tmp" +
-            "\nWHERE NOT EXISTS(SELECT employee_office FROM employee_office_table" +
-            "\nWHERE employee_office = '{0}') LIMIT 1;";
-
         // 0 - searchbar.text | 1 - status
         public static readonly string count_employee = "SELECT COUNT(*) FROM employee_table emp " +
             "\nINNER JOIN" +
@@ -370,6 +358,38 @@ namespace COA_IMS
         public static readonly string select_specific_funds = "SELECT fund_name FROM fund_table WHERE fund_name LIKE '%{0}%' LIMIT {1}, 15;";
         public static readonly string specific_select_fund_id = "SELECT fund_id FROM fund_table WHERE fund_name = '{0}';";
         public static readonly string count_funds = "SELECT COUNT(*) FROM fund_table WHERE fund_name LIKE '%{0}%';";
+        #endregion
+        #region Entity Names
+        public static readonly string insert_entity_name = "INSERT INTO entity_table (entity_name, added_by) \r" +
+            "\nSELECT * FROM (SELECT '{0}', '{1}') AS tmp \r" +
+            "\nWHERE NOT EXISTS (SELECT entity_name FROM entity_table \r" +
+            "\nWHERE entity_name = '{0}') LIMIT 1;";
+        public static readonly string select_entity = "SELECT entity_name FROM entity_table LIMIT {0}, 15;";
+        public static readonly string select_specific_entity = "SELECT entity_name FROM entity_table WHERE entity_name LIKE '%{0}%' LIMIT {1}, 15;";
+        public static readonly string specific_select_entity_id = "SELECT entity_id FROM entity_table WHERE entity_name = '{0}';";
+        public static readonly string count_entity = "SELECT COUNT(*) FROM entity_table WHERE entity_name LIKE '%{0}%';";
+        #endregion
+        #region Employee Position
+        public static readonly string insert_employee_position = "INSERT INTO employee_position_table " +
+            "\n(employee_position, added_by)" +
+            "\nSELECT* FROM(SELECT '{0}', '{1}') AS tmp" +
+            "\nWHERE NOT EXISTS(SELECT employee_position FROM employee_position_table" +
+            "\nWHERE employee_position = '{0}') LIMIT 1;";
+        public static readonly string select_employee_position = "SELECT employee_position FROM employee_position_table LIMIT {0}, 15;";
+        public static readonly string select_specific_employee_position = "SELECT employee_position FROM employee_position_table WHERE employee_position LIKE '%{0}%' LIMIT {1}, 15;";
+        public static readonly string specific_select_employee_position_id = "SELECT employee_position_id FROM employee_position_table WHERE employee_position = '{0}';";
+        public static readonly string count_employee_position = "SELECT COUNT(*) FROM employee_position_table WHERE employee_position LIKE '%{0}%';";
+        #endregion
+        #region Employee Office
+        public static readonly string insert_employee_office = "INSERT INTO employee_office_table " +
+            "\n(employee_office, added_by)" +
+            "\nSELECT* FROM(SELECT '{0}', '{1}') AS tmp" +
+            "\nWHERE NOT EXISTS(SELECT employee_office FROM employee_office_table" +
+            "\nWHERE employee_office = '{0}') LIMIT 1;";
+        public static readonly string select_employee_office = "SELECT employee_office FROM employee_office_table LIMIT {0}, 15;";
+        public static readonly string select_specific_employee_office = "SELECT employee_office FROM employee_office_table WHERE employee_office LIKE '%{0}%' LIMIT {1}, 15;";
+        public static readonly string specific_select_employee_office_id = "SELECT employee_office_id FROM employee_office_table WHERE employee_office = '{0}';";
+        public static readonly string count_employee_office = "SELECT COUNT(*) FROM employee_office_table WHERE employee_office LIKE '%{0}%';";
         #endregion
         #region Item Brands
         public static readonly string insert_item_brand = "INSERT INTO item_brand_table (item_brand, added_by) \r" +

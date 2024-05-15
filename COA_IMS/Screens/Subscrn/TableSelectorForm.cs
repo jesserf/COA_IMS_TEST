@@ -16,9 +16,9 @@ namespace COA_IMS.Screens.Subscrn
     public partial class TableSelectorForm : Form
     {
         GenericTable generic_Table;
-        GunaTextBox gunaTextBox;
+        TextBox gunaTextBox;
         ComboBox comboBox;
-        public TableSelectorForm(string table_type = null, GunaTextBox gunaTextBox = null, ComboBox comboBox = null)
+        public TableSelectorForm(string table_type = null, TextBox gunaTextBox = null, ComboBox comboBox = null)
         {
             InitializeComponent();
             generic_Table = new GenericTable();
@@ -61,13 +61,30 @@ namespace COA_IMS.Screens.Subscrn
             string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
             if(gunaTextBox != null)
             {
+                if(gunaTextBox.Text.Contains(arg + " - "))
+                {
+                    gunaTextBox.Text = gunaTextBox.Text.Replace(arg + " - ", "").Trim();
+                    this.Close();
+                    return;
+                }
+                else if (gunaTextBox.Text.Contains(" - " + arg))
+                {
+                    gunaTextBox.Text = gunaTextBox.Text.Replace(" - " + arg, "").Trim();
+                    this.Close();
+                    return;
+                } else if (gunaTextBox.Text.Contains(arg))
+                {
+                    gunaTextBox.Text = gunaTextBox.Text.Replace(arg, "").Trim();
+                    this.Close();
+                    return;
+                }
                 if (string.IsNullOrEmpty(gunaTextBox.Text.Trim()))
                 {
                     gunaTextBox.Text = arg;
                 }
                 else
                 {
-                    gunaTextBox.Text += " - " + arg;
+                    gunaTextBox.Text += " - " + arg.Trim();
                 }
             }
 

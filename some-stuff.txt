@@ -134,3 +134,8 @@ adding new sql
 issues
 in adding in tracking, it uses the gunatextbox and combobox once it is used the corresponding button is pressed
 addingitems form is not using main panel on trackign
+
+5/15/24
+made misc categories in settings tab
+able to use table selector
+able to concatenate as fund clusters

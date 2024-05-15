@@ -30,11 +30,13 @@ CREATE TABLE IF NOT EXISTS `employee_office_table` (
   `status` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`employee_office_id`),
   UNIQUE KEY `employee_office` (`employee_office`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.employee_office_table: ~1 rows (approximately)
 INSERT INTO `employee_office_table` (`employee_office_id`, `employee_office`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
-	(3, 'ITO', '2024-05-09 14:24:09', 'admin', NULL, '2024-05-09 14:24:09', 1);
+	(3, 'ITO', '2024-05-09 14:24:09', 'admin', NULL, '2024-05-09 14:24:09', 1),
+	(4, 'TSO', '2024-05-15 08:31:05', 'admin', NULL, '2024-05-15 08:31:05', 1),
+	(5, 'HOR', '2024-05-15 10:37:46', 'admin', NULL, '2024-05-15 10:37:46', 1);
 
 -- Dumping structure for table db_ims.employee_position_table
 CREATE TABLE IF NOT EXISTS `employee_position_table` (
@@ -47,11 +49,13 @@ CREATE TABLE IF NOT EXISTS `employee_position_table` (
   `status` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`employee_position_id`),
   UNIQUE KEY `employee_position` (`employee_position`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.employee_position_table: ~1 rows (approximately)
+-- Dumping data for table db_ims.employee_position_table: ~0 rows (approximately)
 INSERT INTO `employee_position_table` (`employee_position_id`, `employee_position`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
-	(2, 'OJT', '2024-05-09 14:24:11', 'admin', NULL, '2024-05-09 14:24:11', 1);
+	(2, 'OJT', '2024-05-09 14:24:11', 'admin', NULL, '2024-05-09 14:24:11', 1),
+	(3, 'Officer-In-Charge', '2024-05-15 10:37:25', 'admin', NULL, '2024-05-15 10:37:25', 1),
+	(4, 'Assisstant Director', '2024-05-15 10:38:16', 'admin', NULL, '2024-05-15 10:38:16', 1);
 
 -- Dumping structure for table db_ims.employee_table
 CREATE TABLE IF NOT EXISTS `employee_table` (
@@ -78,11 +82,13 @@ CREATE TABLE IF NOT EXISTS `employee_table` (
   CONSTRAINT `FK_employee_table_employee_position_table` FOREIGN KEY (`employee_position_id`) REFERENCES `employee_position_table` (`employee_position_id`),
   CONSTRAINT `FK_employee_table_user_info_table` FOREIGN KEY (`added_by`) REFERENCES `user_info_table` (`user_name`),
   CONSTRAINT `FK_employee_table_user_info_table_2` FOREIGN KEY (`modified_by`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.employee_table: ~1 rows (approximately)
 INSERT INTO `employee_table` (`employee_id`, `employee_name`, `employee_position_id`, `employee_office_id`, `email`, `phone`, `address`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`, `remarks`) VALUES
-	(6, 'Carlo Almero', 2, 3, 'carloalmero@gmail.com', '0909 123 1421', 'COA', '2024-05-09 14:25:49', 'admin', NULL, NULL, 1, NULL);
+	(6, 'Carlo Almero', 2, 3, 'carloalmero@gmail.com', '0909 123 1421', 'COA', '2024-05-09 14:25:49', 'admin', NULL, NULL, 1, NULL),
+	(7, 'Jesser Famorca', 2, 4, 'jesserfamorca@gmail.com', NULL, 'Fairview Center Mall', '2024-05-15 08:31:06', 'admin', NULL, NULL, 1, NULL),
+	(8, 'Jamboy Candlelight', 4, 5, 'jmcandlelight@gmail.com', NULL, 'SJDM, Bulacan', '2024-05-15 10:39:14', 'admin', NULL, NULL, 1, NULL);
 
 -- Dumping structure for table db_ims.emp_info_table
 CREATE TABLE IF NOT EXISTS `emp_info_table` (
@@ -114,7 +120,7 @@ INSERT INTO `emp_info_table` (`emp_id`, `code`, `full_name`, `email`, `contact_n
 
 -- Dumping structure for table db_ims.entity_table
 CREATE TABLE IF NOT EXISTS `entity_table` (
-  `entity_id` int NOT NULL,
+  `entity_id` int NOT NULL AUTO_INCREMENT,
   `entity_name` varchar(100) NOT NULL DEFAULT '',
   `date_added` datetime NOT NULL DEFAULT (now()),
   `added_by` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT '',
@@ -127,9 +133,11 @@ CREATE TABLE IF NOT EXISTS `entity_table` (
   KEY `FK_entity_table_user_info_table_2` (`updated_by`),
   CONSTRAINT `FK_entity_table_user_info_table` FOREIGN KEY (`added_by`) REFERENCES `user_info_table` (`user_name`),
   CONSTRAINT `FK_entity_table_user_info_table_2` FOREIGN KEY (`updated_by`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.entity_table: ~0 rows (approximately)
+INSERT INTO `entity_table` (`entity_id`, `entity_name`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
+	(1, 'COMMISSION ON AUDIT', '2024-05-15 10:36:54', 'admin', NULL, '2024-05-15 10:36:54', 1);
 
 -- Dumping structure for table db_ims.fund_table
 CREATE TABLE IF NOT EXISTS `fund_table` (
@@ -145,11 +153,14 @@ CREATE TABLE IF NOT EXISTS `fund_table` (
   KEY `FK__user_info_table_2` (`modified_by`),
   CONSTRAINT `FK__user_info_table` FOREIGN KEY (`added_by`) REFERENCES `user_info_table` (`user_name`),
   CONSTRAINT `FK__user_info_table_2` FOREIGN KEY (`modified_by`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.fund_table: ~0 rows (approximately)
 INSERT INTO `fund_table` (`fund_id`, `fund_name`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`) VALUES
-	(1, 'Regular Agency Fund', '2024-05-06 10:46:13', 'admin', NULL, NULL, 1);
+	(1, 'Regular Agency Fund', '2024-05-06 10:46:13', 'admin', NULL, NULL, 1),
+	(2, 'General Fund', '2024-05-15 10:35:54', 'admin', '2024-05-15 10:35:54', NULL, 1),
+	(3, 'New General Appropriations', '2024-05-15 10:36:08', 'admin', '2024-05-15 10:36:08', NULL, 1),
+	(4, 'Specific Budget of National Government Agencies', '2024-05-15 10:36:26', 'admin', '2024-05-15 10:36:26', NULL, 1);
 
 -- Dumping structure for table db_ims.ics_fund_cluster_table
 CREATE TABLE IF NOT EXISTS `ics_fund_cluster_table` (
@@ -269,13 +280,13 @@ INSERT INTO `item_desc_table` (`item_desc_id`, `item_type_id`, `item_brand_id`, 
 -- Dumping structure for table db_ims.item_ics_table
 CREATE TABLE IF NOT EXISTS `item_ics_table` (
   `ics_number_id` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `entity_id` int DEFAULT NULL,
-  `receiver` int DEFAULT NULL,
-  `giver` int DEFAULT NULL,
+  `entity_id` int NOT NULL,
+  `receiver` int NOT NULL,
+  `giver` int NOT NULL,
   PRIMARY KEY (`ics_number_id`),
-  KEY `FK_item_ics_table_entity_table` (`entity_id`),
   KEY `FK_item_ics_table_employee_table` (`receiver`),
   KEY `FK_item_ics_table_employee_table_2` (`giver`),
+  KEY `FK_item_ics_table_entity_table` (`entity_id`),
   CONSTRAINT `FK_item_ics_table_employee_table` FOREIGN KEY (`receiver`) REFERENCES `employee_table` (`employee_id`),
   CONSTRAINT `FK_item_ics_table_employee_table_2` FOREIGN KEY (`giver`) REFERENCES `employee_table` (`employee_id`),
   CONSTRAINT `FK_item_ics_table_entity_table` FOREIGN KEY (`entity_id`) REFERENCES `entity_table` (`entity_id`)
@@ -370,9 +381,9 @@ CREATE TABLE IF NOT EXISTS `log_table` (
   PRIMARY KEY (`log_id`) USING BTREE,
   KEY `user_name` (`user_name`) USING BTREE,
   CONSTRAINT `FK_log_table_user_info_table` FOREIGN KEY (`user_name`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=904 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=991 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.log_table: ~830 rows (approximately)
+-- Dumping data for table db_ims.log_table: ~803 rows (approximately)
 INSERT INTO `log_table` (`log_id`, `user_name`, `activity`, `activity_datetime`, `activity_type`) VALUES
 	(1, 'admin', 'Logged In', '2024-03-31 15:14:46', 1),
 	(12, 'admin', 'Logged Out', '2024-04-06 14:39:52', 1),
@@ -1241,7 +1252,94 @@ INSERT INTO `log_table` (`log_id`, `user_name`, `activity`, `activity_datetime`,
 	(900, 'admin', 'Logged In', '2024-05-13 16:46:47', 1),
 	(901, 'admin', 'Logged Out', '2024-05-13 16:47:03', 1),
 	(902, 'admin', 'Logged In', '2024-05-13 16:47:08', 1),
-	(903, 'admin', 'Logged Out', '2024-05-13 16:47:13', 1);
+	(903, 'admin', 'Logged Out', '2024-05-13 16:47:13', 1),
+	(904, 'admin', 'Logged In', '2024-05-14 10:07:52', 1),
+	(905, 'admin', 'Logged Out', '2024-05-14 10:09:03', 1),
+	(906, 'admin', 'Logged In', '2024-05-14 10:09:26', 1),
+	(907, 'admin', 'Logged Out', '2024-05-14 10:09:30', 1),
+	(908, 'admin', 'Logged In', '2024-05-14 10:13:39', 1),
+	(909, 'admin', 'Logged Out', '2024-05-14 10:14:05', 1),
+	(910, 'admin', 'Logged In', '2024-05-14 10:25:13', 1),
+	(911, 'admin', 'Logged Out', '2024-05-14 10:25:18', 1),
+	(912, 'admin', 'Logged In', '2024-05-14 10:27:00', 1),
+	(913, 'admin', 'Logged In', '2024-05-14 10:27:34', 1),
+	(914, 'admin', 'Logged Out', '2024-05-14 10:27:56', 1),
+	(915, 'admin', 'Logged In', '2024-05-14 10:31:40', 1),
+	(916, 'admin', 'Logged Out', '2024-05-14 10:32:03', 1),
+	(917, 'admin', 'Logged In', '2024-05-14 10:42:48', 1),
+	(918, 'admin', 'Logged Out', '2024-05-14 10:42:56', 1),
+	(919, 'admin', 'Logged In', '2024-05-14 10:53:08', 1),
+	(920, 'admin', 'Logged Out', '2024-05-14 10:59:16', 1),
+	(921, 'admin', 'Logged In', '2024-05-14 11:21:26', 1),
+	(922, 'admin', 'Logged Out', '2024-05-14 11:21:51', 1),
+	(923, 'admin', 'Logged In', '2024-05-14 11:23:25', 1),
+	(924, 'admin', 'Logged Out', '2024-05-14 11:23:45', 1),
+	(925, 'admin', 'Logged In', '2024-05-14 13:20:29', 1),
+	(926, 'admin', 'Logged Out', '2024-05-14 13:20:38', 1),
+	(927, 'admin', 'Logged In', '2024-05-15 08:25:12', 1),
+	(928, 'admin', 'Logged Out', '2024-05-15 08:27:13', 1),
+	(929, 'admin', 'Logged In', '2024-05-15 08:27:26', 1),
+	(930, 'admin', 'Logged In', '2024-05-15 08:29:41', 1),
+	(931, 'admin', 'Add Record: Employee Position-OJT', '2024-05-15 08:31:05', 2),
+	(932, 'admin', 'Add Record: Employee-Jesser Famorca', '2024-05-15 08:31:06', 2),
+	(933, 'admin', 'Logged Out', '2024-05-15 08:33:48', 1),
+	(934, 'admin', 'Logged In', '2024-05-15 09:27:15', 1),
+	(935, 'admin', 'Logged In', '2024-05-15 10:10:51', 1),
+	(936, 'admin', 'Logged Out', '2024-05-15 10:14:28', 1),
+	(937, 'admin', 'Logged In', '2024-05-15 10:22:54', 1),
+	(938, 'admin', 'Logged Out', '2024-05-15 10:27:47', 1),
+	(939, 'admin', 'Logged In', '2024-05-15 10:35:11', 1),
+	(940, 'admin', 'Add Record: Fund Names-General Fund', '2024-05-15 10:35:54', 2),
+	(941, 'admin', 'Add Record: Fund Names-New General Appropriations', '2024-05-15 10:36:08', 2),
+	(942, 'admin', 'Add Record: Fund Names-Specific Budget of National Government Agencies', '2024-05-15 10:36:26', 2),
+	(943, 'admin', 'Add Record: Entity Names-COMMISSION ON AUDIT', '2024-05-15 10:36:54', 2),
+	(944, 'admin', 'Add Record: Employee Position-Officer-In-Charge', '2024-05-15 10:37:25', 2),
+	(945, 'admin', 'Add Record: Employee Office-HOR', '2024-05-15 10:37:46', 2),
+	(946, 'admin', 'Add Record: Employee Position-Assisstant Director', '2024-05-15 10:38:16', 2),
+	(947, 'admin', 'Add Record: Employee-Jamboy Candlelight', '2024-05-15 10:39:14', 2),
+	(948, 'admin', 'Logged Out', '2024-05-15 10:40:19', 1),
+	(949, 'admin', 'Logged In', '2024-05-15 10:41:35', 1),
+	(950, 'admin', 'Logged Out', '2024-05-15 10:42:09', 1),
+	(951, 'admin', 'Logged In', '2024-05-15 10:48:12', 1),
+	(952, 'admin', 'Logged Out', '2024-05-15 10:48:22', 1),
+	(953, 'admin', 'Logged In', '2024-05-15 10:50:59', 1),
+	(954, 'admin', 'Logged Out', '2024-05-15 10:55:43', 1),
+	(955, 'admin', 'Logged In', '2024-05-15 11:00:30', 1),
+	(956, 'admin', 'Logged Out', '2024-05-15 11:01:18', 1),
+	(957, 'admin', 'Logged In', '2024-05-15 11:01:26', 1),
+	(958, 'admin', 'Logged Out', '2024-05-15 11:04:35', 1),
+	(959, 'admin', 'Logged In', '2024-05-15 11:06:36', 1),
+	(960, 'admin', 'Logged Out', '2024-05-15 11:06:41', 1),
+	(961, 'admin', 'Logged In', '2024-05-15 11:08:16', 1),
+	(962, 'admin', 'Logged Out', '2024-05-15 11:08:24', 1),
+	(963, 'admin', 'Logged In', '2024-05-15 11:09:50', 1),
+	(964, 'admin', 'Logged Out', '2024-05-15 11:10:08', 1),
+	(965, 'admin', 'Logged In', '2024-05-15 11:10:29', 1),
+	(966, 'admin', 'Logged Out', '2024-05-15 11:11:11', 1),
+	(967, 'admin', 'Logged In', '2024-05-15 11:12:24', 1),
+	(968, 'admin', 'Logged Out', '2024-05-15 11:12:45', 1),
+	(969, 'admin', 'Logged In', '2024-05-15 11:13:01', 1),
+	(970, 'admin', 'Logged Out', '2024-05-15 11:13:17', 1),
+	(971, 'admin', 'Logged In', '2024-05-15 11:13:31', 1),
+	(972, 'admin', 'Logged Out', '2024-05-15 11:14:15', 1),
+	(973, 'admin', 'Logged In', '2024-05-15 11:15:48', 1),
+	(974, 'admin', 'Logged Out', '2024-05-15 11:16:33', 1),
+	(975, 'admin', 'Logged In', '2024-05-15 11:18:18', 1),
+	(976, 'admin', 'Logged Out', '2024-05-15 11:19:11', 1),
+	(977, 'admin', 'Logged In', '2024-05-15 11:19:14', 1),
+	(978, 'admin', 'Logged In', '2024-05-15 11:19:14', 1),
+	(979, 'admin', 'Logged Out', '2024-05-15 11:19:53', 1),
+	(980, 'admin', 'Logged In', '2024-05-15 11:28:52', 1),
+	(981, 'admin', 'Logged Out', '2024-05-15 11:29:07', 1),
+	(982, 'admin', 'Logged In', '2024-05-15 13:16:44', 1),
+	(983, 'admin', 'Logged Out', '2024-05-15 13:17:18', 1),
+	(984, 'admin', 'Logged In', '2024-05-15 14:49:46', 1),
+	(985, 'admin', 'Logged In', '2024-05-15 14:50:46', 1),
+	(986, 'admin', 'Logged Out', '2024-05-15 14:51:32', 1),
+	(987, 'admin', 'Logged In', '2024-05-15 14:51:50', 1),
+	(988, 'admin', 'Logged Out', '2024-05-15 14:53:53', 1),
+	(989, 'admin', 'Logged In', '2024-05-15 16:28:57', 1),
+	(990, 'admin', 'Logged Out', '2024-05-15 16:30:55', 1);
 
 -- Dumping structure for table db_ims.person_to_person_table
 CREATE TABLE IF NOT EXISTS `person_to_person_table` (

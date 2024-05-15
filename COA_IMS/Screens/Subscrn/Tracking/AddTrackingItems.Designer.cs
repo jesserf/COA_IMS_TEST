@@ -129,6 +129,7 @@
             this.add_Items_Btn.BaseColor = System.Drawing.Color.Transparent;
             this.add_Items_Btn.BorderColor = System.Drawing.Color.Silver;
             this.add_Items_Btn.BorderSize = 2;
+            this.add_Items_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_Items_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.add_Items_Btn.FocusedColor = System.Drawing.Color.Empty;
             this.add_Items_Btn.Font = new System.Drawing.Font("Bahnschrift", 24F);
@@ -147,6 +148,7 @@
             this.add_Items_Btn.TabIndex = 12;
             this.add_Items_Btn.Text = "+";
             this.add_Items_Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.add_Items_Btn.Click += new System.EventHandler(this.add_Btn_Click);
             // 
             // data_View
             // 
@@ -253,6 +255,7 @@
             this.next_Btn.Size = new System.Drawing.Size(160, 49);
             this.next_Btn.TabIndex = 0;
             this.next_Btn.Text = "Next";
+            this.next_Btn.Click += new System.EventHandler(this.next_Btn_Click);
             // 
             // back_Btn
             // 
@@ -277,6 +280,7 @@
             this.back_Btn.Size = new System.Drawing.Size(160, 49);
             this.back_Btn.TabIndex = 1;
             this.back_Btn.Text = "BACK";
+            this.back_Btn.Click += new System.EventHandler(this.back_Btn_Click);
             // 
             // AddTrackingItems
             // 
