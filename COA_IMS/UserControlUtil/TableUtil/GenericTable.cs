@@ -1,5 +1,6 @@
 ﻿using COA_IMS.CrystalReports;
 using COA_IMS.Utilities;
+using Guna.UI.Licensing;
 using Guna.UI.WinForms;
 using Org.BouncyCastle.Tls.Crypto;
 using System;
@@ -11,7 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*How to use
+ * Go To overload functions
+ */
 namespace COA_IMS.UserControlUtil.TableUtil
 {
     internal class GenericTable
