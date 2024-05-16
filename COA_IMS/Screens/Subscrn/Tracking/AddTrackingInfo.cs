@@ -13,11 +13,13 @@ namespace COA_IMS.Screens.Subscrn.Tracking
 {
     public partial class AddTrackingInfo : Form
     {
+        TrackingDTO trackDTO;
         TextBox trackingTextBox;
         ComboBox trackingComboBox;
-        public AddTrackingInfo()
+        public AddTrackingInfo(TrackingDTO trackDTO)
         {
             InitializeComponent();
+            this.trackDTO = trackDTO;
             Add_ICS_Number();
         }
 
@@ -31,16 +33,17 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             string ics_Num = "ICS-";
             ics_Num += DateTime.Now.ToString("yyyy-MM-HHmmdd");
             ics_Textbox.Text = ics_Num;
+            trackDTO.ics_number = ics_Num;
         }
         private void Enable_Next_Btn(bool enable)
         {
             if (enable)
             {
-                next_Btn.Enabled = true;
+                //next_Btn.Enabled = true;
             }
             else
             {
-                next_Btn.Enabled = false;
+                //next_Btn.Enabled = false;
             }
         }
         private bool Check_Text_Boxes_Comboboxes()
@@ -67,6 +70,10 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             TableSelectorForm tableSelectorForm = new TableSelectorForm(GetDataTableType(((GunaButton)sender).Name), trackingTextBox, trackingComboBox);
             tableSelectorForm.ShowDialog();
+            trackDTO.entity_name = entity_Name_Textbox.Text;
+            trackDTO.fund_cluster = fund_Cluster_Textbox.Text;
+            trackDTO.received_by = received_By_Combobox.Text;
+            trackDTO.received_from = received_From_Combobox.Text;
             Enable_Next_Btn(Check_Text_Boxes_Comboboxes());
         }
 
@@ -128,26 +135,13 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             this.Hide();
             Form form = null;
-            switch (page)
-            {
-                case "confirm":
-                    form = new AddConfirmForm();
-                    break;
-                case "item":
-                    form = new AddTrackingItems();
-                    break;
-                case "info":
-                    form = new AddTrackingInfo();
-                    break;
-                default:
-                    break;
-            }
+
             //Allow the from to fill the main panel.
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
+            //form.TopLevel = false;
+            //form.Dock = DockStyle.Fill;
 
             this.Parent.Controls.Add(form);
-            form.Show();
+            //form.Show();
         }
     }
 }

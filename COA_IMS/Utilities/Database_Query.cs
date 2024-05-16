@@ -498,6 +498,10 @@ namespace COA_IMS
             "\n" + Database_Query.get_concatenated_item_desc + "\r," +
             Database_Query.get_unit_from_items + "\r" +
             "\n, unit_cost, est_useful_life, quantity FROM items_table HAVING {2} LIKE '%{1}%' LIMIT {0}, 15;";
+        public static readonly string get_item_record = "SELECT item_code, \r" +
+            "\n" + Database_Query.get_concatenated_item_desc + "\r," +
+            Database_Query.get_unit_from_items + "\r" +
+            "\n, unit_cost, est_useful_life FROM items_table HAVING {2} LIKE '%{1}%' LIMIT {0}, 15;";
         #region deprecated
         //public static readonly string get_general_items_records =
         //    "SELECT item_code, item_desc_id, unit_id, unit_cost, est_useful_life, quantity FROM items_table LIMIT {0}, 15;";

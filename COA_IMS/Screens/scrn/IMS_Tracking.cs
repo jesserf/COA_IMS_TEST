@@ -21,7 +21,7 @@ namespace COA_IMS.Screens.scrn
 
         private Form current_Form = null;
 
-        private readonly AddTrackingInfo add_Tracking_Info = new AddTrackingInfo();
+        private readonly AddTrackingBaseForm add_Tracking_Base_Form = new AddTrackingBaseForm();
         private readonly TrackingTable tracking_Table = new TrackingTable();
         private readonly EmployeeHistoryTable history_Table = new EmployeeHistoryTable();
 
@@ -42,7 +42,7 @@ namespace COA_IMS.Screens.scrn
             switch (button.Name)
             {
                 case "add_Btn":
-                    form = add_Tracking_Info;
+                    form = add_Tracking_Base_Form;
                     break;
                 case "tracking_Table_Btn":
                     form = tracking_Table;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COA_IMS.Screens.Subscrn.Tracking;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -195,6 +196,19 @@ namespace COA_IMS.Utilities
             int removeLimitIndex = query.IndexOf("LIMIT");
             if (removeLimitIndex >= 0)
                 Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+
+        public DataTable Get_Item_Record(string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            query = string.Format(Database_Query.get_item_record, 0, searchwords, "item_code");
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+            if(searchwords != "nowords")
+                dt.Columns.Add(new DataColumn("SN"));
             return dt;
         }
         #endregion

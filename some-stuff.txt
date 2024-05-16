@@ -139,3 +139,10 @@ addingitems form is not using main panel on trackign
 made misc categories in settings tab
 able to use table selector
 able to concatenate as fund clusters
+
+5/16/24
+able to add items in addtracking
+able to transfer recent values to confirm track page
+
+issues
+get datarow duplicates to count to update set quantity -= dupllicates
