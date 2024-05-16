@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.next_Btn = new Guna.UI.WinForms.GunaButton();
-            this.back_Btn = new Guna.UI.WinForms.GunaButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.content_Panel = new System.Windows.Forms.TableLayoutPanel();
             this.title_Label = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -47,73 +44,8 @@
             this.add_Received_Btn = new Guna.UI.WinForms.GunaButton();
             this.add_Giver_Btn = new Guna.UI.WinForms.GunaButton();
             this.fund_Cluster_Textbox = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1.SuspendLayout();
             this.content_Panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // next_Btn
-            // 
-            this.next_Btn.AnimationHoverSpeed = 0.07F;
-            this.next_Btn.AnimationSpeed = 0.03F;
-            this.next_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.next_Btn.BorderColor = System.Drawing.Color.Black;
-            this.next_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.next_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.next_Btn.Enabled = false;
-            this.next_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.next_Btn.Font = new System.Drawing.Font("Bahnschrift", 24F);
-            this.next_Btn.ForeColor = System.Drawing.Color.White;
-            this.next_Btn.Image = null;
-            this.next_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.next_Btn.Location = new System.Drawing.Point(1395, 10);
-            this.next_Btn.Margin = new System.Windows.Forms.Padding(10);
-            this.next_Btn.Name = "next_Btn";
-            this.next_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.next_Btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.next_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.next_Btn.OnHoverImage = null;
-            this.next_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.next_Btn.Size = new System.Drawing.Size(160, 49);
-            this.next_Btn.TabIndex = 0;
-            this.next_Btn.Text = "Next";
-            this.next_Btn.Click += new System.EventHandler(this.next_Btn_Click_1);
-            // 
-            // back_Btn
-            // 
-            this.back_Btn.AnimationHoverSpeed = 0.07F;
-            this.back_Btn.AnimationSpeed = 0.03F;
-            this.back_Btn.BaseColor = System.Drawing.Color.LightGray;
-            this.back_Btn.BorderColor = System.Drawing.Color.Silver;
-            this.back_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.back_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.back_Btn.Font = new System.Drawing.Font("Bahnschrift", 24F);
-            this.back_Btn.ForeColor = System.Drawing.Color.Black;
-            this.back_Btn.Image = null;
-            this.back_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.back_Btn.Location = new System.Drawing.Point(1215, 10);
-            this.back_Btn.Margin = new System.Windows.Forms.Padding(10);
-            this.back_Btn.Name = "back_Btn";
-            this.back_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.back_Btn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.back_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.back_Btn.OnHoverImage = null;
-            this.back_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.back_Btn.Size = new System.Drawing.Size(160, 49);
-            this.back_Btn.TabIndex = 1;
-            this.back_Btn.Text = "BACK";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.next_Btn);
-            this.flowLayoutPanel1.Controls.Add(this.back_Btn);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 717);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1567, 100);
-            this.flowLayoutPanel1.TabIndex = 8;
             // 
             // content_Panel
             // 
@@ -147,7 +79,7 @@
             this.content_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.content_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.content_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.content_Panel.Size = new System.Drawing.Size(1567, 717);
+            this.content_Panel.Size = new System.Drawing.Size(1567, 817);
             this.content_Panel.TabIndex = 10;
             // 
             // title_Label
@@ -156,7 +88,7 @@
             this.title_Label.AutoSize = true;
             this.title_Label.BackColor = System.Drawing.Color.Transparent;
             this.title_Label.Font = new System.Drawing.Font("Bahnschrift SemiBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title_Label.Location = new System.Drawing.Point(10, 35);
+            this.title_Label.Location = new System.Drawing.Point(10, 55);
             this.title_Label.Margin = new System.Windows.Forms.Padding(10, 10, 10, 50);
             this.title_Label.Name = "title_Label";
             this.title_Label.Size = new System.Drawing.Size(238, 58);
@@ -169,7 +101,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(302, 153);
+            this.gunaLabel1.Location = new System.Drawing.Point(302, 173);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(10);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(205, 39);
@@ -182,7 +114,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Bahnschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(302, 239);
+            this.gunaLabel2.Location = new System.Drawing.Point(302, 271);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(10);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(205, 39);
@@ -195,7 +127,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel3.Font = new System.Drawing.Font("Bahnschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(289, 325);
+            this.gunaLabel3.Location = new System.Drawing.Point(289, 369);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(10);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(218, 39);
@@ -208,7 +140,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel4.Font = new System.Drawing.Font("Bahnschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(301, 554);
+            this.gunaLabel4.Location = new System.Drawing.Point(301, 630);
             this.gunaLabel4.Margin = new System.Windows.Forms.Padding(10);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(206, 39);
@@ -221,7 +153,7 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel5.Font = new System.Drawing.Font("Bahnschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(261, 640);
+            this.gunaLabel5.Location = new System.Drawing.Point(261, 728);
             this.gunaLabel5.Margin = new System.Windows.Forms.Padding(10);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(246, 39);
@@ -239,7 +171,7 @@
             this.ics_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.ics_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.ics_Textbox.Font = new System.Drawing.Font("Bahnschrift", 24F);
-            this.ics_Textbox.Location = new System.Drawing.Point(527, 153);
+            this.ics_Textbox.Location = new System.Drawing.Point(527, 173);
             this.ics_Textbox.Margin = new System.Windows.Forms.Padding(10);
             this.ics_Textbox.Name = "ics_Textbox";
             this.ics_Textbox.PasswordChar = '\0';
@@ -255,7 +187,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.entity_Name_Textbox.Font = new System.Drawing.Font("Bahnschrift", 24F);
             this.entity_Name_Textbox.FormattingEnabled = true;
-            this.entity_Name_Textbox.Location = new System.Drawing.Point(527, 239);
+            this.entity_Name_Textbox.Location = new System.Drawing.Point(527, 271);
             this.entity_Name_Textbox.Margin = new System.Windows.Forms.Padding(10);
             this.entity_Name_Textbox.Name = "entity_Name_Textbox";
             this.entity_Name_Textbox.Size = new System.Drawing.Size(763, 47);
@@ -268,7 +200,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.received_By_Combobox.Font = new System.Drawing.Font("Bahnschrift", 24F);
             this.received_By_Combobox.FormattingEnabled = true;
-            this.received_By_Combobox.Location = new System.Drawing.Point(527, 554);
+            this.received_By_Combobox.Location = new System.Drawing.Point(527, 630);
             this.received_By_Combobox.Margin = new System.Windows.Forms.Padding(10);
             this.received_By_Combobox.Name = "received_By_Combobox";
             this.received_By_Combobox.Size = new System.Drawing.Size(763, 47);
@@ -281,7 +213,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.received_From_Combobox.Font = new System.Drawing.Font("Bahnschrift", 24F);
             this.received_From_Combobox.FormattingEnabled = true;
-            this.received_From_Combobox.Location = new System.Drawing.Point(527, 640);
+            this.received_From_Combobox.Location = new System.Drawing.Point(527, 728);
             this.received_From_Combobox.Margin = new System.Windows.Forms.Padding(10);
             this.received_From_Combobox.Name = "received_From_Combobox";
             this.received_From_Combobox.Size = new System.Drawing.Size(763, 47);
@@ -302,7 +234,7 @@
             this.add_Entity_Btn.ForeColor = System.Drawing.Color.Black;
             this.add_Entity_Btn.Image = null;
             this.add_Entity_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_Entity_Btn.Location = new System.Drawing.Point(1310, 239);
+            this.add_Entity_Btn.Location = new System.Drawing.Point(1310, 271);
             this.add_Entity_Btn.Margin = new System.Windows.Forms.Padding(10);
             this.add_Entity_Btn.Name = "add_Entity_Btn";
             this.add_Entity_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
@@ -330,7 +262,7 @@
             this.add_Funds_Btn.ForeColor = System.Drawing.Color.Black;
             this.add_Funds_Btn.Image = null;
             this.add_Funds_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_Funds_Btn.Location = new System.Drawing.Point(1310, 325);
+            this.add_Funds_Btn.Location = new System.Drawing.Point(1310, 369);
             this.add_Funds_Btn.Margin = new System.Windows.Forms.Padding(10);
             this.add_Funds_Btn.Name = "add_Funds_Btn";
             this.add_Funds_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
@@ -358,7 +290,7 @@
             this.add_Received_Btn.ForeColor = System.Drawing.Color.Black;
             this.add_Received_Btn.Image = null;
             this.add_Received_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_Received_Btn.Location = new System.Drawing.Point(1310, 554);
+            this.add_Received_Btn.Location = new System.Drawing.Point(1310, 630);
             this.add_Received_Btn.Margin = new System.Windows.Forms.Padding(10);
             this.add_Received_Btn.Name = "add_Received_Btn";
             this.add_Received_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
@@ -386,7 +318,7 @@
             this.add_Giver_Btn.ForeColor = System.Drawing.Color.Black;
             this.add_Giver_Btn.Image = null;
             this.add_Giver_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_Giver_Btn.Location = new System.Drawing.Point(1310, 640);
+            this.add_Giver_Btn.Location = new System.Drawing.Point(1310, 728);
             this.add_Giver_Btn.Margin = new System.Windows.Forms.Padding(10);
             this.add_Giver_Btn.Name = "add_Giver_Btn";
             this.add_Giver_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
@@ -406,13 +338,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fund_Cluster_Textbox.Font = new System.Drawing.Font("Bahnschrift", 24F);
-            this.fund_Cluster_Textbox.Location = new System.Drawing.Point(527, 325);
+            this.fund_Cluster_Textbox.Location = new System.Drawing.Point(527, 369);
             this.fund_Cluster_Textbox.Margin = new System.Windows.Forms.Padding(10);
             this.fund_Cluster_Textbox.Multiline = true;
             this.fund_Cluster_Textbox.Name = "fund_Cluster_Textbox";
             this.fund_Cluster_Textbox.ReadOnly = true;
             this.fund_Cluster_Textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.fund_Cluster_Textbox.Size = new System.Drawing.Size(763, 209);
+            this.fund_Cluster_Textbox.Size = new System.Drawing.Size(763, 241);
             this.fund_Cluster_Textbox.TabIndex = 16;
             // 
             // AddTrackingInfo
@@ -422,11 +354,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1567, 817);
             this.Controls.Add(this.content_Panel);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddTrackingInfo";
             this.Text = "AddTrackingInfo";
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.content_Panel.ResumeLayout(false);
             this.content_Panel.PerformLayout();
             this.ResumeLayout(false);
@@ -434,9 +364,6 @@
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaButton next_Btn;
-        private Guna.UI.WinForms.GunaButton back_Btn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel content_Panel;
         private Guna.UI.WinForms.GunaLabel title_Label;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;

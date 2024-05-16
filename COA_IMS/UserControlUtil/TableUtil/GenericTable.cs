@@ -218,7 +218,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
         }
         #endregion
         #region add design to table
-        private void AddThemeToDGV(GunaDataGridView data_View, string data_Table_Type)
+        public void AddThemeToDGV(GunaDataGridView data_View, string data_Table_Type)
         {
             //Add Theme.cs DataGridView Style
             (bool, int)[] column_Widths = null;
@@ -254,6 +254,18 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Subject Matter",DataGridViewContentAlignment.MiddleLeft),
                             ("Receiving Date",DataGridViewContentAlignment.MiddleCenter)
                         };
+                    break;
+                case "items":
+                    column_Widths = new (bool, int)[] { (true, 10), (true, 30), (true, 10), (true, 10), (true, 10), (true, 30), }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("Item Code", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Description", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),
+                            ("SN", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
                     break;
                 default: break;
             }
@@ -414,6 +426,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "archived_employee":
                     dt = FillArchivedEmployeeTable();
                     break;
+                case "items":
+                    dt = FillBlankTable();
+                    break; 
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering
@@ -549,6 +564,11 @@ namespace COA_IMS.UserControlUtil.TableUtil
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Archived_Employee_Records(min_lim, 0, sort_String, searchBar1.Text);
         }
+        private DataTable FillBlankTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Item_Record("nowords");
+        }
         private void AddThemeToDGV()
         {
             //Add Theme.cs DataGridView Style
@@ -621,17 +641,16 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Contact Person", DataGridViewContentAlignment.MiddleCenter)
                         }; ;
                     break;
-                case "item":
-                    column_Widths = new (bool, int)[] { (true, 3), (true, 10), (true, 47), (true, 10), (true, 10), (true, 10), (true, 10) }; ;
+                case "items":
+                    column_Widths = new (bool, int)[] { (true, 10), (true, 30), (true, 10), (true, 10), (true, 10), (true, 30), }; ;
                     column_Text_Align = new (string, DataGridViewContentAlignment)[]
                         {
-                            ("#", DataGridViewContentAlignment.MiddleRight),
                             ("Item Code", DataGridViewContentAlignment.MiddleLeft),
                             ("Item Description", DataGridViewContentAlignment.MiddleLeft),
                             ("Unit", DataGridViewContentAlignment.MiddleLeft),
                             ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
                             ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),
-                            ("Quantity", DataGridViewContentAlignment.MiddleLeft)
+                            ("SN", DataGridViewContentAlignment.MiddleLeft),
                         }; ;
                     break;
                 case "fund":
@@ -687,10 +706,25 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Remarks", DataGridViewContentAlignment.MiddleCenter)
                         };
                     break;
+                case "item":
+                    column_Widths = new (bool, int)[] { (true, 3), (true, 10), (true, 47), (true, 10), (true, 10), (true, 10), (true, 10) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Item Code", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Description", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),
+                            ("Quantity", DataGridViewContentAlignment.MiddleLeft)
+                        }; ;
+                    break;
                 default: break;
             }
 
+            //MessageBox.Show("2");
             Theme.gridView_Style(data_View, column_Widths, column_Text_Align);
+            //MessageBox.Show("3");
         }
         private void AlternateTheTable()
         {
