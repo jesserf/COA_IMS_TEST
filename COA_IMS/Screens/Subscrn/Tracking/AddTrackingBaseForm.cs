@@ -200,6 +200,22 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             //MessageBox.Show(msg);
         }
 
+        private void RestartForm()
+        {
+            // Close the current form instance
+            this.Close();
+
+            // Create a new instance of the form
+            AddTrackingBaseForm newForm = new AddTrackingBaseForm();
+
+            // Add the new form to the parent panel
+            this.Parent.Controls.Add(newForm);
+            newForm.Dock = DockStyle.Fill;
+            newForm.Show();
+            //AddTrackingBaseForm addTrackingBaseForm = new AddTrackingBaseForm();
+            //this.Hide();
+        }
+
         private void ConfirmDialog()
         {
             DialogResult result = MessageBox.Show("Do you want to proceed?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -209,6 +225,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
                 // User clicked Yes, do something
                 Console.WriteLine("User clicked Yes.");
                 GetValues();
+                RestartForm();
                 // Perform the action you want to do when the user clicks "Yes"
             }
             else

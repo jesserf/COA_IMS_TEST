@@ -42,5 +42,19 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
 
         }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            // Check if there is a focused row
+            if (data_View.CurrentRow != null)
+            {
+                // Remove the focused row
+                data_View.Rows.Remove(data_View.CurrentRow);
+            }
+            else
+            {
+                MessageBox.Show("No row is currently focused.");
+            }
+        }
     }
 }

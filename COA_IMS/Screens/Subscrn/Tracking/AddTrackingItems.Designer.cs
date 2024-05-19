@@ -36,6 +36,7 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.add_Items_Btn = new Guna.UI.WinForms.GunaButton();
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
+            this.remove_Btn = new Guna.UI.WinForms.GunaButton();
             this.content_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_View)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             this.content_Panel.Controls.Add(this.gunaLabel1, 0, 1);
             this.content_Panel.Controls.Add(this.add_Items_Btn, 2, 1);
             this.content_Panel.Controls.Add(this.data_View, 1, 1);
+            this.content_Panel.Controls.Add(this.remove_Btn, 2, 2);
             this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content_Panel.Location = new System.Drawing.Point(0, 0);
             this.content_Panel.Name = "content_Panel";
@@ -188,6 +190,34 @@
             this.data_View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data_View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_View_CellDoubleClick);
             // 
+            // remove_Btn
+            // 
+            this.remove_Btn.AnimationHoverSpeed = 0.07F;
+            this.remove_Btn.AnimationSpeed = 0.03F;
+            this.remove_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.remove_Btn.BorderColor = System.Drawing.Color.Silver;
+            this.remove_Btn.BorderSize = 2;
+            this.remove_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.remove_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.remove_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.remove_Btn.Font = new System.Drawing.Font("Bahnschrift", 24F);
+            this.remove_Btn.ForeColor = System.Drawing.Color.Black;
+            this.remove_Btn.Image = null;
+            this.remove_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.remove_Btn.Location = new System.Drawing.Point(1341, 271);
+            this.remove_Btn.Margin = new System.Windows.Forms.Padding(10);
+            this.remove_Btn.Name = "remove_Btn";
+            this.remove_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.remove_Btn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.remove_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.remove_Btn.OnHoverImage = null;
+            this.remove_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.remove_Btn.Size = new System.Drawing.Size(49, 49);
+            this.remove_Btn.TabIndex = 17;
+            this.remove_Btn.Text = "-";
+            this.remove_Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.remove_Btn.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
             // AddTrackingItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,5 +242,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaButton add_Items_Btn;
         private Guna.UI.WinForms.GunaDataGridView data_View;
+        private Guna.UI.WinForms.GunaButton remove_Btn;
     }
 }
