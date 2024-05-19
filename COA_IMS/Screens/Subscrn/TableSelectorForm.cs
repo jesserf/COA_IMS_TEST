@@ -2,6 +2,7 @@
 using COA_IMS.Screens.Subscrn.Tracking;
 using COA_IMS.UserControlUtil.TableUtil;
 using COA_IMS.Utilities;
+using Google.Protobuf.WellKnownTypes;
 using Guna.UI.WinForms;
 using Mysqlx.Crud;
 using MySqlX.XDevAPI.Relational;
@@ -24,8 +25,11 @@ namespace COA_IMS.Screens.Subscrn
         TextBox gunaTextBox;
         ComboBox comboBox;
         GunaDataGridView gunaDataGridView;
+        TrackingDTO trackDTO;
         string table_type;
-        public TableSelectorForm(string table_type = null, TextBox gunaTextBox = null, ComboBox comboBox = null, GunaDataGridView gunaDataGridView = null)
+        public string pos { get; set; }
+        public string off { get; set; }
+        public TableSelectorForm(string table_type = null, TextBox gunaTextBox = null, ComboBox comboBox = null, GunaDataGridView gunaDataGridView = null, TrackingDTO trackDTO = null)
         {
             InitializeComponent();
             generic_Table = new GenericTable();
@@ -40,6 +44,8 @@ namespace COA_IMS.Screens.Subscrn
             this.comboBox = comboBox;
             this.gunaTextBox = gunaTextBox;
             this.gunaDataGridView = gunaDataGridView;
+            if(trackDTO != null)
+                this.trackDTO = trackDTO;
         }
 
         private void RePopulate_Table(object sender, EventArgs e)
@@ -66,6 +72,10 @@ namespace COA_IMS.Screens.Subscrn
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                return;
+            }
             string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
             if(table_type == "fund")
             {
@@ -96,62 +106,130 @@ namespace COA_IMS.Screens.Subscrn
                 }
             }
 
-            else if (table_type == "employee" || table_type == "entity")
+            else if (table_type == "entity")
                 comboBox.Text = arg;
 
+            else if (table_type == "employee")
+            {
+                pos = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
+                off = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
+                trackDTO.emp_position = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
+                trackDTO.emp_office = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
+                comboBox.Text = arg;
+            }
+
+            //if table selector is for items
             else if (table_type == "item")
             {
-                DataTable dt;
-                dt = gunaDataGridView.DataSource as DataTable;
-                DataColumnCollection columns = dt.Columns;
-                Util util = new Util();
                 Inventory_Manager inventory_Manager = new Inventory_Manager();
-                DebugTable(dt);
+                DataTable dt;
+                //get datatable based on the current data grid view
+                dt = gunaDataGridView.DataSource as DataTable;
+                //get index
+                int dtRows = dt.Rows.Count + 1;
 
-                if (columns.Contains("index"))
+                //DataColumnCollection columns = dt.Columns;
+                //Util util = new Util();
+                //DebugTable(dt);
+
+                //if (columns.Contains("index"))
+                //{
+                //    dt.Columns.RemoveAt(0);
+                //    DebugTable(dt);
+                //}
+                //if (!columns.Contains("SN"))
+                //{
+                //    dt.Columns.Add(new DataColumn("SN"));
+                //}
+                //if (!columns.Contains("Qty."))
+                //{
+                //    dt.Columns.Add(new DataColumn("Qty."));
+                //}
+                //DebugTable(dt);
+
+                //get the quantity for a the chosen item
+                int item_quantity = inventory_Manager.Get_Item_Quantity(arg);
+
+
+                //count quantity
+                Dictionary<string, int> itemQuantities = new Dictionary<string, int>();
+
+                // Populate dictionary from DataTable
+                foreach (DataRow row in dt.Rows)
                 {
-                    dt.Columns.RemoveAt(0);
-                    DebugTable(dt);
+                    string itemCode = row["item_code"].ToString();
+                    int quantity = (int)row["quantity"];
+
+                    if (itemQuantities.ContainsKey(itemCode))
+                    {
+                        itemQuantities[itemCode] += quantity; // Add to existing quantity
+                    }
+                    else
+                    {
+                        itemQuantities[itemCode] = quantity; // Add new item code
+                    }
                 }
-                if (!columns.Contains("SN"))
-                {
-                    dt.Columns.Add(new DataColumn("SN"));
-                }
-                DebugTable(dt);
-                AddSerialNumberForm form = new AddSerialNumberForm();
-                form.ShowDialog();
+                //checks if item count is empty and returns it
+                if(itemQuantities.ContainsKey(arg))
+                    if ((item_quantity - itemQuantities[arg]) == 0)
+                    {
+                        MessageBox.Show("Empty");
+                        return;
+                    }
+
+                //gets serial number for a specific item
+                AddSerialNumberForm sn_form = new AddSerialNumberForm();
+                sn_form.ShowDialog();
+
+
+                //gets the data of an item
                 DataRow newRow = inventory_Manager.Get_Item_Record(arg).Rows[0];
+
+                //foreach (DataColumn column in newRow.Table.Columns)
+                //{
+                //    // Print the column name and value
+                //    Console.WriteLine($"{column.ColumnName}: {newRow[column]}");
+                //}
+
+
                 //newRow.Columns.Add(new DataColumn("SN"));
-                
-                newRow["SN"] = form.sn;
+
+                //puts the serial number from the form to item data
+                newRow["SN"] = sn_form.sn;
+                //defaults the quantity to 1
+                newRow["Qty."] = "1";
+
+                if (string.IsNullOrEmpty(newRow["SN"].ToString()) || newRow["SN"].ToString().ToLower() == "none")
+                {
+                    // Handle the case where the string is null, empty, or "none"
+                    int quantity_on_table = 0;
+                    if (itemQuantities.ContainsKey(arg))
+                        quantity_on_table = itemQuantities[arg];
+                    AddItemQuantity qty_form = new AddItemQuantity(item_quantity - quantity_on_table);
+                    qty_form.ShowDialog();
+                    newRow["Qty."] = qty_form.qty;
+                }
+
+
+                //newRow["Total Price"] = qty_form.qty * Convert.ToDouble(newRow["unit_cost"]);
+                newRow["Total Price"] = Convert.ToInt32(newRow["Qty."]) * Convert.ToDouble(newRow["unit_cost"]);
+
+                //concatenates the item data to the index of the item
+                object[] rowData = new object[] { dtRows }.Concat(newRow.ItemArray).ToArray();
+                //adds the new data to the data table
+                dt.Rows.Add(rowData);
+
                 //if(!DuplicateSerialNumber(form.sn, dt))
-                dt.Rows.Add(newRow.ItemArray);
                 //foreach (DataRow dataRow in dt.Rows)
                 //    dataRow["SN"] = form.sn;
                 DebugTable(dt);
-                gunaDataGridView.DataSource = dt;
-                generic_Table.AddThemeToDGV(gunaDataGridView, "items");
+                //gunaDataGridView.DataSource = dt;
+                //generic_Table.AddThemeToDGV(gunaDataGridView, "items");
             }
 
             this.Close();
         }
 
-        private bool DuplicateSerialNumber(string sn, DataTable dt)
-        {
-            foreach (DataRow row in dt.Rows)
-            {
-                if (row["SN"] == sn)
-                {
-                    MessageBox.Show("Duplicate Serial Number.");
-                    DuplicateSerialNumber(sn, dt);
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return false;
-        }
 
         public void DebugTable(DataTable table)
         {

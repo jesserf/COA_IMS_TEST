@@ -513,6 +513,87 @@ namespace COA_IMS
         #endregion
 
         //public static readonly string insert_new_item = "INSERT emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
+        #region ICS Tracking
+        public static readonly string get_blank_tracking_table = "SELECT \r" +
+            "\ntr.item_code, \r" +
+            "\n(SELECT CONCAT(b.item_brand, \" - \", t.item_type, \" - \", d.product_name) \r" +
+            "\n) AS 'Item_Description',\r" +
+            "\ntr.serial_number,\r" +
+            "\nu.unit,\r" +
+            "\ntr.quantity,\r" +
+            "\ni.unit_cost,\r" +
+            "\n(tr.quantity * i.unit_cost) AS 'Total_Cost',\r" +
+            "\ni.est_useful_life FROM transfer_current_table tr\r" +
+            "\nINNER JOIN items_table i ON tr.item_code = i.item_code\r" +
+            "\nINNER JOIN item_unit_table u ON i.unit_id = u.unit_id\r" +
+            "\nINNER JOIN item_desc_table d ON i.item_desc_id = d.item_desc_id\r" +
+            "\nINNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id \r" +
+            "\nINNER JOIN item_type_table t ON d.item_type_id = t.item_type_id\r" +
+            "\nHAVING tr.item_code = null;";
+        // 0 - item column | 1 - item table | 2 conditional column | 3 - conditional variable
+        public static readonly string get_quantity_general = "SELECT {0} FROM {1} WHERE {2} = {3} LIMIT 1;";
+        // 0 - conditional variable
+        public static readonly string get_quantity_item = "SELECT quantity FROM items_table WHERE item_code = {0} LIMIT 1;";
+        // 0 - ics number | 1 - entity id | 2 - receiver | 3 - giver | 4 - CurrentUser.user_name
+        public static readonly string insert_ics = "INSERT INTO item_ics_table (ics_number_id, entity_id, receiver, giver, added_by)\r" +
+            "\nSELECT * FROM \r" +
+            "\n(SELECT \r" +
+            "\n\t'{0}', \r" +
+            "\n\t'{1}', \r" +
+            "\n\t'{2}', \r" +
+            "\n\t'{3}', \r" +
+            "\n\t'{4}')\r" +
+            "\nAS tmp WHERE NOT EXISTS (SELECT \r" +
+            "\n\tics_number_id \r" +
+            "\nFROM \r" +
+            "\n\titem_ics_table\r" +
+            "\nWHERE \r" +
+            "\n\tics_number_id =  '{0}')\r" +
+            "\nLIMIT 1;";
+        // 0 - ics number | 1 - item_code | 2 - serial number | 3 - quantity  | 4 - total price | 5 - CurrentUser.user_name
+        public static readonly string insert_transferred_item = "INSERT INTO transfer_current_table \r" +
+            "\n(ics_number_id, item_code, serial_number, quantity, total_price, created_by)\r" +
+            "\nSELECT * FROM \r" +
+            "\n(SELECT \r" +
+            "\n\t'{0}', '{1}', '{2}', '{3}', '{4}', '{5}') AS tmp\r" +
+            "\nWHERE NOT EXISTS (\r" +
+            "\n    SELECT serial_number FROM transfer_current_table \r" +
+            "\n    WHERE serial_number = '{2}'\r" +
+            "\n) LIMIT 1;";
+        // 0 - quantity | 1 - item_code
+        public static readonly string update_item_quantity = "UPDATE items_table SET quantity = quantity - {0} WHERE item_code = {1};";
+        // 0 - ics number | 1 - fund_cluster
+        public static readonly string insert_fund_cluster = "INSERT INTO ics_fund_cluster_table " +
+            "(ics_number, fund_cluster) " +
+            "SELECT * FROM " +
+            "(SELECT '{0}', '{1}') AS tmp " +
+            "WHERE NOT EXISTS " +
+            "(SELECT ics_number " +
+            "FROM ics_fund_cluster_table " +
+            "WHERE ics_number = '{0}' ) " +
+            "LIMIT 1;";
+        // 0 - employee name | 1 - employee position | 2 - employee office
+        public static readonly string get_employee_id = "SELECT e.employee_id FROM employee_table e\r" +
+            "\nINNER JOIN employee_office_table o ON e.employee_office_id = o.employee_office_id\r" +
+            "\nINNER JOIN employee_position_table p ON e.employee_position_id = p.employee_position_id\r" +
+            "\nWHERE e.employee_name = '{0}' \r" +
+            "\nAND p.employee_position = '{1}' \r" +
+            "\nAND o.employee_office = '{2}' \r" +
+            "\nLIMIT 1;";
+        // 0 - employee name | 1 - employee position | 2 - employee office
+        public static readonly string get_employee_id_name = "SELECT e.employee_id FROM employee_table e\r" +
+            "\nINNER JOIN employee_office_table o ON e.employee_office_id = o.employee_office_id\r" +
+            "\nINNER JOIN employee_position_table p ON e.employee_position_id = p.employee_position_id\r" +
+            "\nWHERE e.employee_name = '{0}' \r" +
+            "\nAND p.employee_position LIKE '%{1}%' \r" +
+            "\nAND o.employee_office LIKE '%{2}%' \r" +
+            "\nLIMIT 1;";
+        // 0 - entity name
+        public static readonly string get_entity_id = "SELECT entity_id " +
+            "FROM entity_table " +
+            "WHERE entity_name = '{0}' " +
+            "LIMIT 1;";
+        #endregion
         #endregion
 
         public static readonly string set_new_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by)\r" +

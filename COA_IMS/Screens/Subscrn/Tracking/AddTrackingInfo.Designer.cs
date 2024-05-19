@@ -192,7 +192,8 @@
             this.entity_Name_Textbox.Name = "entity_Name_Textbox";
             this.entity_Name_Textbox.Size = new System.Drawing.Size(763, 47);
             this.entity_Name_Textbox.TabIndex = 7;
-            this.entity_Name_Textbox.TextUpdate += new System.EventHandler(this.text_TextUpdate);
+            this.entity_Name_Textbox.TextUpdate += new System.EventHandler(this.entity_Name_Textbox_TextUpdate);
+            this.entity_Name_Textbox.TextChanged += new System.EventHandler(this.entity_Name_Textbox_TextChanged);
             // 
             // received_By_Combobox
             // 
@@ -205,7 +206,8 @@
             this.received_By_Combobox.Name = "received_By_Combobox";
             this.received_By_Combobox.Size = new System.Drawing.Size(763, 47);
             this.received_By_Combobox.TabIndex = 10;
-            this.received_By_Combobox.TextUpdate += new System.EventHandler(this.text_TextUpdate);
+            this.received_By_Combobox.TextUpdate += new System.EventHandler(this.received_By_Combobox_TextUpdate);
+            this.received_By_Combobox.TextChanged += new System.EventHandler(this.received_By_Combobox_TextChanged);
             // 
             // received_From_Combobox
             // 
@@ -218,7 +220,8 @@
             this.received_From_Combobox.Name = "received_From_Combobox";
             this.received_From_Combobox.Size = new System.Drawing.Size(763, 47);
             this.received_From_Combobox.TabIndex = 9;
-            this.received_From_Combobox.TextUpdate += new System.EventHandler(this.text_TextUpdate);
+            this.received_From_Combobox.TextUpdate += new System.EventHandler(this.received_From_Combobox_TextUpdate);
+            this.received_From_Combobox.TextChanged += new System.EventHandler(this.received_From_Combobox_TextChanged);
             // 
             // add_Entity_Btn
             // 
