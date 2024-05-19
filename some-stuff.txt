@@ -146,3 +146,7 @@ able to transfer recent values to confirm track page
 
 issues
 get datarow duplicates to count to update set quantity -= dupllicates
+
+5/19/24
+able to add ics number and the tracking items
+

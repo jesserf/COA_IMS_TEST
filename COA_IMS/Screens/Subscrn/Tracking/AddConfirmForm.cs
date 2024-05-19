@@ -19,10 +19,18 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         public AddConfirmForm(TrackingDTO trackDTO)
         {
             InitializeComponent();
+
             genericTable = new GenericTable();
             genericTable.FillVariables(null, null, null, "items", "items", null, null, null, data_View, null, null, null);
+            genericTable.sort_String = "All";
             this.trackDTO = trackDTO;
-            ics_Textbox.Text = trackDTO.ics_number;
+            genericTable.Populate_Table(1);
+            //genericTable = new GenericTable();
+            //genericTable.FillVariables(null, null, null, "items", "items", null, null, null, data_View, null, null, null);
+            //genericTable.sort_String = "All";
+            //genericTable.Populate_Table(1);
+            //this.trackDTO = trackDTO;
+            //ics_Textbox.Text = trackDTO.ics_number;
         }
         
 

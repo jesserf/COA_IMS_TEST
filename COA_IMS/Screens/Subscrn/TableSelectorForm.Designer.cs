@@ -37,10 +37,10 @@
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.next_Button = new Guna.UI.WinForms.GunaButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.content_Panel = new System.Windows.Forms.Panel();
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
-            this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -160,6 +160,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 65);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
+            // searchBar1
+            // 
+            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(23, 13);
+            this.searchBar1.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(561, 43);
+            this.searchBar1.TabIndex = 4;
+            // 
             // refresh_Button
             // 
             this.refresh_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -265,16 +275,6 @@
             this.data_View.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data_View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_View_CellDoubleClick);
             // 
-            // searchBar1
-            // 
-            this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(23, 13);
-            this.searchBar1.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(561, 43);
-            this.searchBar1.TabIndex = 4;
-            // 
             // TableSelectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +286,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "TableSelectorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableSelectorForm";
             this.VisibleChanged += new System.EventHandler(this.RePopulate_Table);
             this.tableLayoutPanel2.ResumeLayout(false);

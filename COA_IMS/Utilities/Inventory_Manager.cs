@@ -1,4 +1,5 @@
 ﻿using COA_IMS.Screens.Subscrn.Tracking;
+using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -198,7 +199,7 @@ namespace COA_IMS.Utilities
                 Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
         }
-
+        #region For Tracking
         public DataTable Get_Item_Record(string searchwords = null)
         {
             string query;
@@ -208,9 +209,159 @@ namespace COA_IMS.Utilities
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);
             if(searchwords != "nowords")
+            {
                 dt.Columns.Add(new DataColumn("SN"));
+                dt.Columns.Add(new DataColumn("Qty."));
+                dt.Columns.Add(new DataColumn("Total Price"));
+            }
+
+            foreach (DataColumn column in dt.Columns)
+            {
+                // Print the column name and value
+                Console.WriteLine($"{column.ColumnName}:");
+            }
+
+            DataTable rearrangedDataTable = new DataTable();
+
+            // Specify the desired column order
+            string[] columnNames = { "item_code", "Item_Description", "SN", "unit" , "Qty.", "unit_cost" , "Total Price", "est_useful_life" }; // Example: rearrange columns 3, 1, 2, and 4
+
+            // Add columns to the rearranged DataTable in the specified order
+            foreach (string columnName in columnNames)
+            {
+                DataColumn column = dt.Columns[columnName];
+                rearrangedDataTable.Columns.Add(column.ColumnName, column.DataType);
+            }
+
+            // Copy data from the original DataTable to the rearranged DataTable
+            foreach (DataRow originalRow in dt.Rows)
+            {
+                DataRow newRow = rearrangedDataTable.NewRow();
+
+                // Copy data from original row to the new row in the rearranged DataTable
+                foreach (string columnName in columnNames)
+                {
+                    newRow[columnName] = originalRow[columnName];
+                }
+
+                rearrangedDataTable.Rows.Add(newRow);
+            }
+
+            return rearrangedDataTable;
+        }
+        public DataTable Get_Blank_Item_Record()
+        {
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(Database_Query.get_blank_tracking_table);
             return dt;
         }
+        public int Get_Item_Quantity(string column, string table, string conditional_column, string conditional_var)
+        {
+            string query = Database_Query.get_quantity_general;
+            query = string.Format(query, column, table, conditional_column, conditional_var);
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+                return Convert.ToInt32(db_Manager.ExecuteScalar(query));
+        }
+        public int Get_Item_Quantity(string conditional_var)
+        {
+            string query = Database_Query.get_quantity_item;
+            query = string.Format(query, conditional_var);
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+                return Convert.ToInt32(db_Manager.ExecuteScalar(query));
+        }
+        public int Get_Entity_ID(string conditional_var)
+        {
+            string query = Database_Query.get_entity_id;
+            query = string.Format(query, conditional_var);
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+                return Convert.ToInt32(db_Manager.ExecuteScalar(query));
+        }
+        public int Get_Employee_ID(string emp_name, string emp_pos, string emp_off)
+        {
+            string query = Database_Query.get_employee_id;
+            query = string.Format(query, emp_name, emp_pos, emp_off);
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+                return Convert.ToInt32(db_Manager.ExecuteScalar(query));
+        }
+        #region Inserts
+        public void Insert_ICS(string ics_num, int entity_id, int receiver, int giver)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = Database_Query.insert_ics;
+            string user_name = CurrentUser.user_name;
+            query = string.Format(query, ics_num, entity_id, receiver, giver, user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record("ICS", ics_num);
+                MessageBox.Show($"ICS Number: {ics_num} is successfully added.", "ICS Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"ICS Number: {ics_num} is not added.", $"ICS Number Not Added\n{ics_num} may already exist.");
+        }
+        public void Insert_Transfer_Item(string ics_num, string item_code, string serial_number, int quantity, double total)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = Database_Query.insert_transferred_item;
+            string user_name = CurrentUser.user_name;
+            query = string.Format(query, ics_num, item_code, serial_number, quantity, total, user_name);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record("Item", item_code);
+                //MessageBox.Show($"Item: {item_code} is successfully added.", "Item Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"Item: {item_code} is not added.", $"Item Not Added\n{item_code} may already exist.");
+        }
+        public void Insert_Fund_Cluster(string ics_num, string fund_cluster)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = Database_Query.insert_fund_cluster;
+            query = string.Format(query, ics_num, fund_cluster);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Add_New_Item_Record("Fund Cluster", ics_num);
+                //MessageBox.Show($"Fund Cluster in {ics_num} is successfully added.", "Fund Cluster Added");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"Fund Cluster in {ics_num} is not added.", $"Fund Cluster Not Added\n{ics_num} may already exist.");
+        }
+        public void Update_Item_Quantity(int quantity, string item_code)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = Database_Query.update_item_quantity;
+            query = string.Format(query, quantity, item_code);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Update_Item_Quantity(quantity.ToString(), item_code);
+                //MessageBox.Show($"{item_code} is successfully updated.", "Quantity Updated");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"{item_code} is not updated.", $"Quantity not Updated");
+        }
+        #endregion
+        #endregion
         #endregion
         #region Funds
         public void Insert_Fund_Name(string fund_name, string type)

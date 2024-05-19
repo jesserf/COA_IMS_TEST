@@ -256,15 +256,18 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         };
                     break;
                 case "items":
-                    column_Widths = new (bool, int)[] { (true, 10), (true, 30), (true, 10), (true, 10), (true, 10), (true, 30), }; ;
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 10), (true, 20), (true, 20), (true, 10), (true, 5), (true, 10), (true, 10), (true, 10), }; ;
                     column_Text_Align = new (string, DataGridViewContentAlignment)[]
                         {
+                            ("#", DataGridViewContentAlignment.MiddleLeft),
                             ("Item Code", DataGridViewContentAlignment.MiddleLeft),
-                            ("Item Description", DataGridViewContentAlignment.MiddleLeft),
-                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
-                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
-                            ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Desc.", DataGridViewContentAlignment.MiddleLeft),
                             ("SN", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
+                            ("Qty.", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Total Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Est Use Life", DataGridViewContentAlignment.MiddleLeft),
                         }; ;
                     break;
                 default: break;
@@ -567,7 +570,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
         private DataTable FillBlankTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Item_Record("nowords");
+            return inventory_Manager.Get_Blank_Item_Record();
         }
         private void AddThemeToDGV()
         {
@@ -642,15 +645,18 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         }; ;
                     break;
                 case "items":
-                    column_Widths = new (bool, int)[] { (true, 10), (true, 30), (true, 10), (true, 10), (true, 10), (true, 30), }; ;
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 10), (true, 20), (true, 20), (true, 10), (true, 5), (true, 10), (true, 10), (true, 10), }; ;
                     column_Text_Align = new (string, DataGridViewContentAlignment)[]
                         {
+                            ("#", DataGridViewContentAlignment.MiddleLeft),
                             ("Item Code", DataGridViewContentAlignment.MiddleLeft),
-                            ("Item Description", DataGridViewContentAlignment.MiddleLeft),
-                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
-                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
-                            ("Est Useful Life", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Desc.", DataGridViewContentAlignment.MiddleLeft),
                             ("SN", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
+                            ("Qty.", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Total Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Est Use Life", DataGridViewContentAlignment.MiddleLeft),
                         }; ;
                     break;
                 case "fund":

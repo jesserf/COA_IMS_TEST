@@ -35,46 +35,12 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             TableSelectorForm tableSelectorForm = new TableSelectorForm("item", null, null, data_View);
             tableSelectorForm.ShowDialog();
             trackDTO.items = data_View.DataSource as DataTable;
-            CheckNextButton();
-        }
-
-        private void back_Btn_Click(object sender, EventArgs e)
-        {
-            SwitchStep("info");
-        }
-
-        private void SwitchStep(string page)
-        {
-            this.Hide();
-            Form form = null;
-
-            //Allow the from to fill the main panel.
-            //form.TopLevel = false;
-            //form.Dock = DockStyle.Fill;
-
-            //this.Parent.Controls.Add(form);
-            //form.Show();
-        }
-
-        private void next_Btn_Click(object sender, EventArgs e)
-        {
-            SwitchStep("confirm");
+            tableSelectorForm.DebugTable(trackDTO.items);
         }
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void CheckNextButton()
-        {
-            DataTable dt = data_View.DataSource as DataTable;
-            if(dt.Rows.Count == 0)
-            {
-                return;
-            }
-
-            //next_Btn.Enabled = true;
         }
     }
 }

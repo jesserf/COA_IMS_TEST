@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,9 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         public AddSerialNumberForm()
         {
             InitializeComponent();
+            sn = "none";
             AcceptButton = next_Btn;
+            sn_Textbox.Focus();
             
         }
 

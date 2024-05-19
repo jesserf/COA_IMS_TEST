@@ -494,6 +494,12 @@
     <Compile Include="Screens\Subscrn\Tracking\AddConfirmForm.Designer.cs">
       <DependentUpon>AddConfirmForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\AddItemQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\AddItemQuantity.Designer.cs">
+      <DependentUpon>AddItemQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\Tracking\AddSerialNumberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -833,6 +839,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\AddConfirmForm.resx">
       <DependentUpon>AddConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddItemQuantity.resx">
+      <DependentUpon>AddItemQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\AddSerialNumberForm.resx">
       <DependentUpon>AddSerialNumberForm.cs</DependentUpon>

@@ -107,5 +107,36 @@ namespace COA_IMS.Utilities
 
             }
         }
+
+        public static void ChangeButtonBaseColor(Form form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                if (control is Button btn)
+                {
+                    btn.BackColor = Color.Red; // Change button base color to red (example)
+                }
+            }
+        }
+        public static string Number_To_Currency(double num)
+        {
+            return "₱" + num.ToString("N2");
+        }
+        public static double Currency_To_Number(string currency)
+        {
+            // Remove currency symbol and thousand separators
+            string cleanCurrency = currency.Replace("₱", "").Replace(",", "");
+
+            // Parse the remaining string as a double
+            if (double.TryParse(cleanCurrency, out double result))
+            {
+                return result;
+            }
+            else
+            {
+                // Handle parsing failure, return a default value or throw an exception
+                throw new ArgumentException("Invalid currency format");
+            }
+        }
     }
 }

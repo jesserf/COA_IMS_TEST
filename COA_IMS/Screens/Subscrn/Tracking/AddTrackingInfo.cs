@@ -1,4 +1,5 @@
-﻿using Guna.UI.WinForms;
+﻿using COA_IMS.Utilities;
+using Guna.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         TrackingDTO trackDTO;
         TextBox trackingTextBox;
         ComboBox trackingComboBox;
+        Inventory_Manager inventory_Manager = new Inventory_Manager();
         public AddTrackingInfo(TrackingDTO trackDTO)
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         private void Add_ICS_Number()
         {
             string ics_Num = "ICS-";
-            ics_Num += DateTime.Now.ToString("yyyy-MM-HHmmdd");
+            ics_Num += DateTime.Now.ToString("yyyy-MM-ddHHmmssfff");
             ics_Textbox.Text = ics_Num;
             trackDTO.ics_number = ics_Num;
         }
@@ -68,22 +70,22 @@ namespace COA_IMS.Screens.Subscrn.Tracking
 
         private void add_Btn_Click(object sender, EventArgs e)
         {
-            TableSelectorForm tableSelectorForm = new TableSelectorForm(GetDataTableType(((GunaButton)sender).Name), trackingTextBox, trackingComboBox);
+            TableSelectorForm tableSelectorForm = new TableSelectorForm(GetDataTableType(((GunaButton)sender).Name), trackingTextBox, trackingComboBox, null, trackDTO);
             tableSelectorForm.ShowDialog();
+
+            //if (tableSelectorForm.off != null)
+            //{
+                trackDTO.emp_office = tableSelectorForm.off;
+                trackDTO.emp_position = tableSelectorForm.pos;
+            //}
+
             trackDTO.entity_name = entity_Name_Textbox.Text;
             trackDTO.fund_cluster = fund_Cluster_Textbox.Text;
             trackDTO.received_by = received_By_Combobox.Text;
             trackDTO.received_from = received_From_Combobox.Text;
-            Enable_Next_Btn(Check_Text_Boxes_Comboboxes());
-        }
 
-        private void next_Btn_Click_1(object sender, EventArgs e)
-        {
-            GetAllValues();
-            //AddTrackingItems addTrackingItems = new AddTrackingItems();
-            //this.Hide();
-            //addTrackingItems.Show();
-            SwitchStep("item");
+
+            Enable_Next_Btn(Check_Text_Boxes_Comboboxes());
         }
 
         private void GetAllValues()
@@ -131,17 +133,43 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             return "none";
         }
 
-        private void SwitchStep(string page)
+        private void received_By_Combobox_TextChanged(object sender, EventArgs e)
         {
-            this.Hide();
-            Form form = null;
+            if(received_By_Combobox.Text == received_From_Combobox.Text)
+            {
+                received_From_Combobox.Text = "";
+            }
+            trackDTO.received_by_id = inventory_Manager.Get_Employee_ID(received_By_Combobox.Text, trackDTO.emp_position, trackDTO.emp_office);
+        }
 
-            //Allow the from to fill the main panel.
-            //form.TopLevel = false;
-            //form.Dock = DockStyle.Fill;
+        private void received_From_Combobox_TextChanged(object sender, EventArgs e)
+        {
+            if (received_From_Combobox.Text == received_By_Combobox.Text)
+            {
+                received_By_Combobox.Text = "";
+            }
+            trackDTO.received_from_id = inventory_Manager.Get_Employee_ID(received_From_Combobox.Text, trackDTO.emp_position, trackDTO.emp_office);
+        }
 
-            this.Parent.Controls.Add(form);
-            //form.Show();
+        private void entity_Name_Textbox_TextChanged(object sender, EventArgs e)
+        {
+            trackDTO.entity_id = inventory_Manager.Get_Entity_ID(entity_Name_Textbox.Text);
+        }
+
+        private void entity_Name_Textbox_TextUpdate(object sender, EventArgs e)
+        {
+            trackDTO.entity_id = inventory_Manager.Get_Entity_ID(entity_Name_Textbox.Text);
+            MessageBox.Show(trackDTO.entity_id.ToString());
+        }
+
+        private void received_By_Combobox_TextUpdate(object sender, EventArgs e)
+        {
+            //trackDTO.received_by_id = inventory_Manager.Get_Employee_ID(received_By_Combobox.Text, trackDTO.emp_position, trackDTO.emp_office);
+        }
+
+        private void received_From_Combobox_TextUpdate(object sender, EventArgs e)
+        {
+            //trackDTO.received_from_id = inventory_Manager.Get_Employee_ID(received_From_Combobox.Text, trackDTO.emp_position, trackDTO.emp_office);
         }
     }
 }
