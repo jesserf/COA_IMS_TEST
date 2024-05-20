@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               8.0.36 - MySQL Community Server - GPL
+-- Server version:               8.3.0 - MySQL Community Server - GPL
 -- Server OS:                    Win64
 -- HeidiSQL Version:             12.6.0.6765
 -- --------------------------------------------------------
@@ -49,13 +49,14 @@ CREATE TABLE IF NOT EXISTS `employee_position_table` (
   `status` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`employee_position_id`),
   UNIQUE KEY `employee_position` (`employee_position`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 
 -- Dumping data for table db_ims.employee_position_table: ~3 rows (approximately)
 INSERT INTO `employee_position_table` (`employee_position_id`, `employee_position`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
 	(2, 'OJT', '2024-05-09 14:24:11', 'admin', NULL, '2024-05-09 14:24:11', 1),
 	(3, 'Officer-In-Charge', '2024-05-15 10:37:25', 'admin', NULL, '2024-05-15 10:37:25', 1),
-	(4, 'Assisstant Director', '2024-05-15 10:38:16', 'admin', NULL, '2024-05-15 10:38:16', 1);
+	(4, 'Assisstant Director', '2024-05-15 10:38:16', 'admin', NULL, '2024-05-15 10:38:16', 1),
+	(5, 'Director III', '2024-05-20 08:57:39', 'admin', NULL, '2024-05-20 08:57:39', 1);
 
 -- Dumping structure for table db_ims.employee_table
 CREATE TABLE IF NOT EXISTS `employee_table` (
@@ -82,13 +83,15 @@ CREATE TABLE IF NOT EXISTS `employee_table` (
   CONSTRAINT `FK_employee_table_employee_position_table` FOREIGN KEY (`employee_position_id`) REFERENCES `employee_position_table` (`employee_position_id`),
   CONSTRAINT `FK_employee_table_user_info_table` FOREIGN KEY (`added_by`) REFERENCES `user_info_table` (`user_name`),
   CONSTRAINT `FK_employee_table_user_info_table_2` FOREIGN KEY (`modified_by`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.employee_table: ~4 rows (approximately)
+-- Dumping data for table db_ims.employee_table: ~3 rows (approximately)
 INSERT INTO `employee_table` (`employee_id`, `employee_name`, `employee_position_id`, `employee_office_id`, `email`, `phone`, `address`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`, `remarks`) VALUES
-	(6, 'Carlo Almero', 2, 3, 'carloalmero@gmail.com', '0909 123 1421', 'COA', '2024-05-09 14:25:49', 'admin', NULL, NULL, 1, NULL),
+	(6, 'Carlo Almero', 2, 3, 'carloalmero@gmail.com', '0909 123 1421', 'COA', '2024-05-09 14:25:49', 'admin', NULL, 'admin', 0, 'xd'),
 	(7, 'Jesser Famorca', 2, 4, 'jesserfamorca@gmail.com', NULL, 'Fairview Center Mall', '2024-05-15 08:31:06', 'admin', NULL, NULL, 1, NULL),
-	(8, 'Jamboy Candlelight', 4, 5, 'jmcandlelight@gmail.com', NULL, 'SJDM, Bulacan', '2024-05-15 10:39:14', 'admin', NULL, NULL, 1, NULL);
+	(8, 'Jamboy Candlelight', 4, 5, 'jmcandlelight@gmail.com', NULL, 'SJDM, Bulacan', '2024-05-15 10:39:14', 'admin', NULL, NULL, 1, NULL),
+	(9, 'Rens Trinidad', 5, 4, 'rens3@gmail.com', NULL, NULL, '2024-05-20 08:57:41', 'admin', NULL, NULL, 1, NULL),
+	(10, 'James Vinas', 3, 4, 'jamesv@gmail.com', NULL, NULL, '2024-05-20 09:35:24', 'admin', NULL, NULL, 1, NULL);
 
 -- Dumping structure for table db_ims.emp_info_table
 CREATE TABLE IF NOT EXISTS `emp_info_table` (
@@ -155,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `fund_table` (
   CONSTRAINT `FK__user_info_table_2` FOREIGN KEY (`modified_by`) REFERENCES `user_info_table` (`user_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.fund_table: ~3 rows (approximately)
+-- Dumping data for table db_ims.fund_table: ~4 rows (approximately)
 INSERT INTO `fund_table` (`fund_id`, `fund_name`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`) VALUES
 	(1, 'Regular Agency Fund', '2024-05-06 10:46:13', 'admin', NULL, NULL, 1),
 	(2, 'General Fund', '2024-05-15 10:35:54', 'admin', '2024-05-15 10:35:54', NULL, 1),
@@ -170,10 +173,15 @@ CREATE TABLE IF NOT EXISTS `ics_fund_cluster_table` (
   CONSTRAINT `FK_ics_fund_cluster_table_item_ics_table` FOREIGN KEY (`ics_number`) REFERENCES `item_ics_table` (`ics_number_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.ics_fund_cluster_table: ~0 rows (approximately)
+-- Dumping data for table db_ims.ics_fund_cluster_table: ~2 rows (approximately)
 INSERT INTO `ics_fund_cluster_table` (`ics_number`, `fund_cluster`) VALUES
 	('ICS-2024-05-20020400436', 'Regular Agency Fund - General Fund'),
-	('ICS-2024-05-20021020296', 'Regular Agency Fund - General Fund - New General Appropriations - Specific Budget of National Government Agencies');
+	('ICS-2024-05-20021020296', 'Regular Agency Fund - General Fund - New General Appropriations - Specific Budget of National Government Agencies'),
+	('ICS-2024-05-20085034357', 'New General Appropriations'),
+	('ICS-2024-05-20085653959', 'Regular Agency Fund'),
+	('ICS-2024-05-20090646749', 'General Fund'),
+	('ICS-2024-05-20093058577', 'Regular Agency Fund'),
+	('ICS-2024-05-20093502522', 'General Fund');
 
 -- Dumping structure for table db_ims.items_table
 CREATE TABLE IF NOT EXISTS `items_table` (
@@ -201,7 +209,8 @@ CREATE TABLE IF NOT EXISTS `items_table` (
 
 -- Dumping data for table db_ims.items_table: ~2 rows (approximately)
 INSERT INTO `items_table` (`item_code`, `item_desc_id`, `unit_id`, `unit_cost`, `est_useful_life`, `quantity`, `added_by`, `date_added`, `date_modified`, `modified_by`, `status`) VALUES
-	('456', '125', 2, 20, 5, 48, 'admin', '2024-04-30 13:44:35', NULL, NULL, 1),
+	('123A 256B', 'I2ZR413NGONM', 2, 75000, 5, 99, 'admin', '2024-05-20 09:32:07', NULL, NULL, 1),
+	('456', '125', 2, 20, 5, 43, 'admin', '2024-04-30 13:44:35', NULL, NULL, 1),
 	('721', 'I2CP640FEIXL', 2, 500, 5, 13, 'admin', '2024-04-30 16:10:12', NULL, NULL, 1);
 
 -- Dumping structure for table db_ims.item_brand_table
@@ -220,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `item_brand_table` (
   CONSTRAINT `FK_item_brand_table_user_info_table` FOREIGN KEY (`updated_by`) REFERENCES `user_info_table` (`user_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.item_brand_table: ~3 rows (approximately)
+-- Dumping data for table db_ims.item_brand_table: ~4 rows (approximately)
 INSERT INTO `item_brand_table` (`item_brand_id`, `item_brand`, `date_added`, `added_by`, `updated_by`, `updated_date`, `status`) VALUES
 	(19, 'Lenovo', '2024-04-29 14:46:29', 'admin', NULL, '2024-04-29 14:46:29', 1),
 	(20, 'Intel', '2024-04-29 14:47:01', 'admin', NULL, '2024-04-29 14:47:01', 1),
@@ -264,7 +273,8 @@ INSERT INTO `item_desc_table` (`item_desc_id`, `item_type_id`, `item_brand_id`, 
 	('123', 16, 21, 'WT300'),
 	('124', 16, 21, 'WT300'),
 	('125', 16, 21, 'WT300'),
-	('I2CP640FEIXL', 16, 21, 'Wireless Mouse');
+	('I2CP640FEIXL', 16, 21, 'Wireless Mouse'),
+	('I2ZR413NGONM', 17, 21, 'ExpertBook');
 
 -- Dumping structure for table db_ims.item_ics_table
 CREATE TABLE IF NOT EXISTS `item_ics_table` (
@@ -288,10 +298,15 @@ CREATE TABLE IF NOT EXISTS `item_ics_table` (
   CONSTRAINT `FK_item_ics_table_entity_table` FOREIGN KEY (`entity_id`) REFERENCES `entity_table` (`entity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.item_ics_table: ~0 rows (approximately)
+-- Dumping data for table db_ims.item_ics_table: ~7 rows (approximately)
 INSERT INTO `item_ics_table` (`ics_number_id`, `entity_id`, `receiver`, `giver`, `transfer_date`, `date_added`, `added_by`, `date_modified`, `modified_by`, `status`, `remarks`) VALUES
 	('ICS-2024-05-20020400436', 1, 6, 8, '2024-05-20 02:04:45', '2024-05-20 02:04:45', 'admin', NULL, NULL, 1, NULL),
-	('ICS-2024-05-20021020296', 1, 6, 8, '2024-05-20 02:11:45', '2024-05-20 02:11:45', 'admin', NULL, NULL, 1, NULL);
+	('ICS-2024-05-20021020296', 1, 6, 8, '2024-05-20 02:11:45', '2024-05-20 02:11:45', 'admin', NULL, NULL, 1, NULL),
+	('ICS-2024-05-20085034357', 1, 7, 8, '2024-05-20 08:51:33', '2024-05-20 08:51:33', 'admin', NULL, NULL, 1, NULL),
+	('ICS-2024-05-20085653959', 1, 9, 8, '2024-05-20 08:58:03', '2024-05-20 08:58:03', 'admin', NULL, NULL, 1, NULL),
+	('ICS-2024-05-20090646749', 1, 6, 8, '2024-05-20 09:07:01', '2024-05-20 09:07:01', 'admin', NULL, NULL, 1, NULL),
+	('ICS-2024-05-20093058577', 1, 9, 8, '2024-05-20 09:32:37', '2024-05-20 09:32:37', 'admin', NULL, NULL, 1, NULL),
+	('ICS-2024-05-20093502522', 1, 10, 8, '2024-05-20 09:36:15', '2024-05-20 09:36:15', 'admin', NULL, NULL, 1, NULL);
 
 -- Dumping structure for table db_ims.item_supplier_af_table
 CREATE TABLE IF NOT EXISTS `item_supplier_af_table` (
@@ -380,9 +395,9 @@ CREATE TABLE IF NOT EXISTS `log_table` (
   PRIMARY KEY (`log_id`) USING BTREE,
   KEY `user_name` (`user_name`) USING BTREE,
   CONSTRAINT `FK_log_table_user_info_table` FOREIGN KEY (`user_name`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=1113 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=1159 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.log_table: ~966 rows (approximately)
+-- Dumping data for table db_ims.log_table: ~1,077 rows (approximately)
 INSERT INTO `log_table` (`log_id`, `user_name`, `activity`, `activity_datetime`, `activity_type`) VALUES
 	(1, 'admin', 'Logged In', '2024-03-31 15:14:46', 1),
 	(12, 'admin', 'Logged Out', '2024-04-06 14:39:52', 1),
@@ -1460,7 +1475,53 @@ INSERT INTO `log_table` (`log_id`, `user_name`, `activity`, `activity_datetime`,
 	(1109, 'admin', 'Add Record: Item-721', '2024-05-20 02:11:47', 2),
 	(1110, 'admin', 'Edited Record: Quantity-6721', '2024-05-20 02:11:47', 2),
 	(1111, 'admin', 'Edited Record: Quantity-2456', '2024-05-20 02:11:47', 2),
-	(1112, 'admin', 'Logged Out', '2024-05-20 02:12:15', 1);
+	(1112, 'admin', 'Logged Out', '2024-05-20 02:12:15', 1),
+	(1113, 'admin', 'Logged In', '2024-05-20 08:50:34', 1),
+	(1114, 'admin', 'Add Record: ICS-ICS-2024-05-20085034357', '2024-05-20 08:51:33', 2),
+	(1115, 'admin', 'Add Record: Fund Cluster-ICS-2024-05-20085034357', '2024-05-20 08:51:35', 2),
+	(1116, 'admin', 'Add Record: Item-456', '2024-05-20 08:51:35', 2),
+	(1117, 'admin', 'Edited Record: Quantity-1456', '2024-05-20 08:51:35', 2),
+	(1118, 'admin', 'Logged In', '2024-05-20 08:56:54', 1),
+	(1119, 'admin', 'Add Record: Employee Position-Director III', '2024-05-20 08:57:39', 2),
+	(1120, 'admin', 'Add Record: Employee-Rens Trinidad', '2024-05-20 08:57:41', 2),
+	(1121, 'admin', 'Add Record: ICS-ICS-2024-05-20085653959', '2024-05-20 08:58:03', 2),
+	(1122, 'admin', 'Add Record: Fund Cluster-ICS-2024-05-20085653959', '2024-05-20 08:58:04', 2),
+	(1123, 'admin', 'Edited Record: Quantity-1456', '2024-05-20 08:58:05', 2),
+	(1124, 'admin', 'Logged In', '2024-05-20 08:59:53', 1),
+	(1125, 'admin', 'Logged In', '2024-05-20 09:06:46', 1),
+	(1126, 'admin', 'Add Record: ICS-ICS-2024-05-20090646749', '2024-05-20 09:07:01', 2),
+	(1127, 'admin', 'Add Record: Fund Cluster-ICS-2024-05-20090646749', '2024-05-20 09:07:03', 2),
+	(1128, 'admin', 'Edited Record: Quantity-2456', '2024-05-20 09:07:04', 2),
+	(1129, 'admin', 'Logged Out', '2024-05-20 09:08:11', 1),
+	(1130, 'admin', 'Logged In', '2024-05-20 09:30:58', 1),
+	(1131, 'admin', 'Add Record: Item Description-I2ZR413NGONM', '2024-05-20 09:32:05', 2),
+	(1132, 'admin', 'Add Record: Item-123A 256B', '2024-05-20 09:32:07', 2),
+	(1133, 'admin', 'Add Record: ICS-ICS-2024-05-20093058577', '2024-05-20 09:32:37', 2),
+	(1134, 'admin', 'Add Record: Fund Cluster-ICS-2024-05-20093058577', '2024-05-20 09:32:38', 2),
+	(1135, 'admin', 'Add Record: Item-123A 256B', '2024-05-20 09:32:38', 2),
+	(1136, 'admin', 'Logged Out', '2024-05-20 09:33:13', 1),
+	(1137, 'admin', 'Logged In', '2024-05-20 09:35:02', 1),
+	(1138, 'admin', 'Add Record: Employee-James Vinas', '2024-05-20 09:35:24', 2),
+	(1139, 'admin', 'Add Record: ICS-ICS-2024-05-20093502522', '2024-05-20 09:36:15', 2),
+	(1140, 'admin', 'Add Record: Fund Cluster-ICS-2024-05-20093502522', '2024-05-20 09:36:16', 2),
+	(1141, 'admin', 'Add Record: Item-123A 256B', '2024-05-20 09:36:16', 2),
+	(1142, 'admin', 'Add Record: Item-456', '2024-05-20 09:36:16', 2),
+	(1143, 'admin', 'Edited Record: Quantity-1123A 256B', '2024-05-20 09:36:16', 2),
+	(1144, 'admin', 'Edited Record: Quantity-1456', '2024-05-20 09:36:16', 2),
+	(1145, 'admin', 'Archived Record: Employee-Carlo Almero: Remarks: xd', '2024-05-20 09:50:35', 2),
+	(1146, 'admin', 'Logged Out', '2024-05-20 10:04:30', 1),
+	(1147, 'admin', 'Logged In', '2024-05-20 10:22:13', 1),
+	(1148, 'admin', 'Logged Out', '2024-05-20 10:22:42', 1),
+	(1149, 'admin', 'Logged In', '2024-05-20 11:17:50', 1),
+	(1150, 'admin', 'Logged Out', '2024-05-20 11:18:41', 1),
+	(1151, 'admin', 'Logged In', '2024-05-20 11:30:23', 1),
+	(1152, 'admin', 'Logged Out', '2024-05-20 11:30:43', 1),
+	(1153, 'admin', 'Logged In', '2024-05-20 11:32:07', 1),
+	(1154, 'admin', 'Logged Out', '2024-05-20 11:32:18', 1),
+	(1155, 'admin', 'Logged In', '2024-05-20 11:33:38', 1),
+	(1156, 'admin', 'Logged Out', '2024-05-20 11:38:22', 1),
+	(1157, 'admin', 'Logged In', '2024-05-20 11:38:32', 1),
+	(1158, 'admin', 'Logged In', '2024-05-20 11:39:18', 1);
 
 -- Dumping structure for table db_ims.transfer_current_table
 CREATE TABLE IF NOT EXISTS `transfer_current_table` (
@@ -1487,15 +1548,19 @@ CREATE TABLE IF NOT EXISTS `transfer_current_table` (
   CONSTRAINT `FK_transfer_current_table_items_table` FOREIGN KEY (`item_code`) REFERENCES `items_table` (`item_code`),
   CONSTRAINT `FK_transfer_current_table_user_info_table` FOREIGN KEY (`created_by`) REFERENCES `user_info_table` (`user_name`),
   CONSTRAINT `FK_transfer_current_table_user_info_table_2` FOREIGN KEY (`updated_by`) REFERENCES `user_info_table` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.transfer_current_table: ~5 rows (approximately)
+-- Dumping data for table db_ims.transfer_current_table: ~9 rows (approximately)
 INSERT INTO `transfer_current_table` (`transfer_id`, `ics_number_id`, `item_code`, `serial_number`, `quantity`, `total_price`, `transfer_return_due_date`, `transfer_return_date`, `created_by`, `date_created`, `updated_by`, `date_updated`, `status`, `remarks`) VALUES
 	(1, 'ICS-2024-05-20020400436', '721', '000000001', 1, 500, NULL, NULL, 'admin', '2024-05-20 02:05:17', NULL, NULL, 1, NULL),
 	(2, 'ICS-2024-05-20021020296', '721', '123123', 1, 500, NULL, NULL, 'admin', '2024-05-20 02:11:47', NULL, NULL, 1, NULL),
 	(3, 'ICS-2024-05-20021020296', '456', '135125', 1, 20, NULL, NULL, 'admin', '2024-05-20 02:11:47', NULL, NULL, 1, NULL),
 	(4, 'ICS-2024-05-20021020296', '456', 'asdf1234', 1, 20, NULL, NULL, 'admin', '2024-05-20 02:11:47', NULL, NULL, 1, NULL),
-	(5, 'ICS-2024-05-20021020296', '721', 'none', 5, 2500, NULL, NULL, 'admin', '2024-05-20 02:11:47', NULL, NULL, 1, NULL);
+	(5, 'ICS-2024-05-20021020296', '721', 'none', 5, 2500, NULL, NULL, 'admin', '2024-05-20 02:11:47', NULL, NULL, 1, NULL),
+	(6, 'ICS-2024-05-20085034357', '456', 'bac', 1, 20, NULL, NULL, 'admin', '2024-05-20 08:51:35', NULL, NULL, 1, NULL),
+	(7, 'ICS-2024-05-20093058577', '123A 256B', 'BAIJD9801A', 1, 75000, NULL, NULL, 'admin', '2024-05-20 09:32:38', NULL, NULL, 1, NULL),
+	(8, 'ICS-2024-05-20093502522', '123A 256B', 'AFDJS123 123ASD', 1, 75000, NULL, NULL, 'admin', '2024-05-20 09:36:16', NULL, NULL, 1, NULL),
+	(9, 'ICS-2024-05-20093502522', '456', 'SD132A SDAS', 1, 20, NULL, NULL, 'admin', '2024-05-20 09:36:16', NULL, NULL, 1, NULL);
 
 -- Dumping structure for table db_ims.transfer_item_serial_number
 CREATE TABLE IF NOT EXISTS `transfer_item_serial_number` (
@@ -1569,7 +1634,7 @@ CREATE TABLE IF NOT EXISTS `user_role_table` (
   UNIQUE KEY `role_title` (`role_title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_ims.user_role_table: ~0 rows (approximately)
+-- Dumping data for table db_ims.user_role_table: ~1 rows (approximately)
 INSERT INTO `user_role_table` (`urt_id`, `role_title`, `dashboard`) VALUES
 	(1, 'Super Admin', 1);
 

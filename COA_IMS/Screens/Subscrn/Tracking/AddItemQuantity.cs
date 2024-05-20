@@ -24,6 +24,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             {
                 plus_Btn.Enabled = false;
             }
+            ActiveControl = qty_Textbox;
         }
 
         private void plus_Btn_Click(object sender, EventArgs e)

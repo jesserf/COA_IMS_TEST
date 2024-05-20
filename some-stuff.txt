@@ -150,3 +150,6 @@ get datarow duplicates to count to update set quantity -= dupllicates
 5/19/24
 able to add ics number and the tracking items
 
+5/20/24
+added remove button in adding items to tracking
+

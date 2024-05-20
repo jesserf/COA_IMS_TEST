@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace COA_IMS.Screens.Subscrn.Tracking
 {
-    public partial class TrackingTable : Form
+    public partial class ICS_Return_Table : Form
     {
         GenericTable generic_Table;
         readonly string[] log_table_names = { "All", "Employee Name", "Employee Position", "Employee Office" };
-        public TrackingTable()
+        public ICS_Return_Table()
         {
             InitializeComponent();
             //setup GenericTable
@@ -24,7 +24,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             foreach (string name in log_table_names)
                 sortComboBox.Items.Add(name);
             generic_Table = new GenericTable();
-            generic_Table.FillVariables(log_table_names, null, null, "ics", "ics", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
+            generic_Table.FillVariables(log_table_names, null, null, "return", "return", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
             generic_Table.sort_String = "All";
             sortComboBox.SelectedText = "All";
             sortComboBox.SelectedIndex = 0;

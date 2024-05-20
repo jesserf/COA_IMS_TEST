@@ -24,6 +24,8 @@ namespace COA_IMS.Screens.scrn
         private readonly AddTrackingBaseForm add_Tracking_Base_Form = new AddTrackingBaseForm();
         private readonly TrackingTable tracking_Table = new TrackingTable();
         private readonly EmployeeHistoryTable history_Table = new EmployeeHistoryTable();
+        private readonly ICS_Return_Table iCS_Return_Table = new ICS_Return_Table();
+        private readonly Tracking_Serial_Num_Table tracking_Serial_Num_Table = new Tracking_Serial_Num_Table();
 
         private List<Control> navButtons = new List<Control>();
 
@@ -48,7 +50,13 @@ namespace COA_IMS.Screens.scrn
                     form = tracking_Table;
                     break;
                 case "returned_Btn":
+                    form = iCS_Return_Table;
+                    break;
+                case "emp_History_Btn":
                     form = history_Table;
+                    break;
+                case "item_History_Btn":
+                    form = tracking_Serial_Num_Table;
                     break;
                 default: break;
             }

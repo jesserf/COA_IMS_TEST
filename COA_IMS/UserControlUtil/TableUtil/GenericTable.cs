@@ -431,6 +431,15 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     break;
                 case "items":
                     dt = FillBlankTable();
+                    break;
+                case "ics":
+                    dt = FillICSTable();
+                    break; 
+                case "return":
+                    dt = FillICSReturnTable();
+                    break; 
+                case "sn_item":
+                    dt = FillSNItemTable();
                     break; 
                 default: break;
             }
@@ -571,6 +580,27 @@ namespace COA_IMS.UserControlUtil.TableUtil
         {
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Blank_Item_Record();
+        }
+        private DataTable FillICSTable()
+        {
+            //string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
+            //string current_time = DateTime.Now.ToString("HH':'mm':'ss");
+            //string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd " + current_time);
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_ICS_Records(min_lim, 1, sort_String, searchBar1.Text);
+        }
+        private DataTable FillICSReturnTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_ICS_Return_Records(min_lim, 1, sort_String, searchBar1.Text);
+        }
+        private DataTable FillSNItemTable()
+        {
+            string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
+            string current_time = DateTime.Now.ToString("HH':'mm':'ss");
+            string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd " + current_time);
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_SN_Item_Records(min_lim, 1, sort_String, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -725,6 +755,41 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Quantity", DataGridViewContentAlignment.MiddleLeft)
                         }; ;
                     break;
+                case "ics":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 25), (true, 15), (true, 25), (true, 15), (true, 15) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("ICS Number", DataGridViewContentAlignment.MiddleLeft),
+                            ("Entity Name", DataGridViewContentAlignment.MiddleLeft),
+                            ("Received By", DataGridViewContentAlignment.MiddleLeft),
+                            ("Brief Item", DataGridViewContentAlignment.MiddleLeft),
+                            ("Transfer Date", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
+                    break;
+                case "return":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 10), (true, 15), (true, 25), (true, 15), (true, 15) , (true, 15) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("ICS Number", DataGridViewContentAlignment.MiddleLeft),
+                            ("Entity Name", DataGridViewContentAlignment.MiddleLeft),
+                            ("Received By", DataGridViewContentAlignment.MiddleLeft),
+                            ("Brief Item", DataGridViewContentAlignment.MiddleLeft),
+                            ("Transfer Date", DataGridViewContentAlignment.MiddleLeft),
+                            ("Return Date", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
+                    break;
+                case "sn_item":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 30), (true, 20), (true, 45) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("Serial Number", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Code", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Description", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
+                    break;
                 default: break;
             }
 
@@ -824,6 +889,15 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 1));
                     break;
                 case "archived_employee":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
+                    break;
+                case "ics":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_ics_table, min_lim, 1, searchBar1.Text));
+                    break;
+                case "sn_item":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_serial_num_item_table, min_lim, 1, searchBar1.Text));
+                    break;
+                case "return":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
                     break;
                 default: break;
