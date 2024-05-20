@@ -20,7 +20,8 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             sn = "none";
             AcceptButton = next_Btn;
             sn_Textbox.Focus();
-            
+            ActiveControl = sn_Textbox;
+
         }
 
         private void next_Btn_Click(object sender, EventArgs e)

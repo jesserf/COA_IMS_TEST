@@ -33,13 +33,15 @@
             this.content_Panel = new Guna.UI.WinForms.GunaPanel();
             this.container_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.tracking_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.add_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.returned_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.tracking_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.add_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.returned_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.emp_History_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.item_History_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPanel1.SuspendLayout();
             this.container_Panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
@@ -109,6 +111,8 @@
             this.nav_panel.Controls.Add(this.tracking_Table_Btn);
             this.nav_panel.Controls.Add(this.add_Btn);
             this.nav_panel.Controls.Add(this.returned_Btn);
+            this.nav_panel.Controls.Add(this.emp_History_Btn);
+            this.nav_panel.Controls.Add(this.item_History_Btn);
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.nav_panel.Location = new System.Drawing.Point(0, 0);
@@ -116,6 +120,41 @@
             this.nav_panel.Name = "nav_panel";
             this.nav_panel.Size = new System.Drawing.Size(1583, 55);
             this.nav_panel.TabIndex = 4;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.flowLayoutPanel1.Controls.Add(this.line_Panel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1601, 56);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // line_Panel
+            // 
+            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.line_Panel.Location = new System.Drawing.Point(3, 3);
+            this.line_Panel.Name = "line_Panel";
+            this.line_Panel.Size = new System.Drawing.Size(1603, 10);
+            this.line_Panel.TabIndex = 5;
+            // 
+            // parent_panel
+            // 
+            this.parent_panel.BackColor = System.Drawing.Color.Transparent;
+            this.parent_panel.Controls.Add(this.container_Panel);
+            this.parent_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parent_panel.Location = new System.Drawing.Point(10, 10);
+            this.parent_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.parent_panel.Name = "parent_panel";
+            this.parent_panel.Size = new System.Drawing.Size(1583, 906);
+            this.parent_panel.TabIndex = 4;
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // tracking_Table_Btn
             // 
@@ -225,40 +264,77 @@
             this.returned_Btn.TextOffsetX = 5;
             this.returned_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            // flowLayoutPanel1
+            // emp_History_Btn
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.flowLayoutPanel1.Controls.Add(this.line_Panel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1601, 56);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.emp_History_Btn.Animated = true;
+            this.emp_History_Btn.AnimationHoverSpeed = 0.07F;
+            this.emp_History_Btn.AnimationSpeed = 0.03F;
+            this.emp_History_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.emp_History_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.emp_History_Btn.BorderColor = System.Drawing.Color.Black;
+            this.emp_History_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.emp_History_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.emp_History_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.emp_History_Btn.CheckedImage = null;
+            this.emp_History_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.emp_History_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.emp_History_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.emp_History_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.emp_History_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.emp_History_Btn.ForeColor = System.Drawing.Color.White;
+            this.emp_History_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.emp_History_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.emp_History_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
+            this.emp_History_Btn.Location = new System.Drawing.Point(669, 0);
+            this.emp_History_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.emp_History_Btn.Name = "emp_History_Btn";
+            this.emp_History_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
+            this.emp_History_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            this.emp_History_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.emp_History_Btn.OnHoverImage = null;
+            this.emp_History_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
+            this.emp_History_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.emp_History_Btn.Size = new System.Drawing.Size(222, 55);
+            this.emp_History_Btn.TabIndex = 8;
+            this.emp_History_Btn.Text = "EMPLOYEE HISTORY";
+            this.emp_History_Btn.TextOffsetX = 5;
+            this.emp_History_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            // line_Panel
+            // item_History_Btn
             // 
-            this.line_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.line_Panel.Location = new System.Drawing.Point(3, 3);
-            this.line_Panel.Name = "line_Panel";
-            this.line_Panel.Size = new System.Drawing.Size(1603, 10);
-            this.line_Panel.TabIndex = 5;
-            // 
-            // parent_panel
-            // 
-            this.parent_panel.BackColor = System.Drawing.Color.Transparent;
-            this.parent_panel.Controls.Add(this.container_Panel);
-            this.parent_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parent_panel.Location = new System.Drawing.Point(10, 10);
-            this.parent_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.parent_panel.Name = "parent_panel";
-            this.parent_panel.Size = new System.Drawing.Size(1583, 906);
-            this.parent_panel.TabIndex = 4;
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
+            this.item_History_Btn.Animated = true;
+            this.item_History_Btn.AnimationHoverSpeed = 0.07F;
+            this.item_History_Btn.AnimationSpeed = 0.03F;
+            this.item_History_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.item_History_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.item_History_Btn.BorderColor = System.Drawing.Color.Black;
+            this.item_History_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.item_History_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.item_History_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.item_History_Btn.CheckedImage = null;
+            this.item_History_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.item_History_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item_History_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.item_History_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.item_History_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
+            this.item_History_Btn.ForeColor = System.Drawing.Color.White;
+            this.item_History_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
+            this.item_History_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.item_History_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
+            this.item_History_Btn.Location = new System.Drawing.Point(892, 0);
+            this.item_History_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.item_History_Btn.Name = "item_History_Btn";
+            this.item_History_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
+            this.item_History_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
+            this.item_History_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.item_History_Btn.OnHoverImage = null;
+            this.item_History_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
+            this.item_History_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.item_History_Btn.Size = new System.Drawing.Size(222, 55);
+            this.item_History_Btn.TabIndex = 9;
+            this.item_History_Btn.Text = "ITEM HISTORY";
+            this.item_History_Btn.TextOffsetX = 5;
+            this.item_History_Btn.Click += new System.EventHandler(this.button_Click);
             // 
             // IMS_Tracking
             // 
@@ -296,6 +372,8 @@
         private Guna.UI.WinForms.GunaPanel line_Panel;
         private Guna.UI.WinForms.GunaPanel parent_panel;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private Guna.UI.WinForms.GunaAdvenceButton emp_History_Btn;
+        private Guna.UI.WinForms.GunaAdvenceButton item_History_Btn;
         //master end
     }
 }

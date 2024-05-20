@@ -20,5 +20,20 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         public string emp_position { get; set; }
         public string emp_office { get; set; }
         public DataTable items { get; set; }
+
+        public void ClearVariable()
+        {
+            ics_number = string.Empty;
+            entity_name = string.Empty;
+            entity_id = 0;
+            fund_cluster = string.Empty;
+            received_by = string.Empty;
+            received_by_id = 0;
+            received_from = string.Empty;
+            received_from_id = 0;
+            emp_position = string.Empty;
+            emp_office = string.Empty;
+            items = null;
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         AddConfirmForm add_Confirm_Form;
         Inventory_Manager inventory_Manager = new Inventory_Manager();
         string active, next, back;
+        AddTrackingBaseForm newForm;
         public AddTrackingBaseForm()
         {
             InitializeComponent();
@@ -203,17 +204,25 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         private void RestartForm()
         {
             // Close the current form instance
-            this.Close();
+            //this.Close();
 
             // Create a new instance of the form
-            AddTrackingBaseForm newForm = new AddTrackingBaseForm();
+            //newForm = new AddTrackingBaseForm();
 
             // Add the new form to the parent panel
-            this.Parent.Controls.Add(newForm);
-            newForm.Dock = DockStyle.Fill;
-            newForm.Show();
+            //this.Parent.Controls.Add(newForm);
+            //newForm.Dock = DockStyle.Fill;
+            //newForm.Show();
             //AddTrackingBaseForm addTrackingBaseForm = new AddTrackingBaseForm();
             //this.Hide();
+            main_Panel.Controls.Clear();
+
+            trackDTO.ClearVariable();
+            add_Tracking_Info = new AddTrackingInfo(trackDTO);
+            add_Tracking_Items = new AddTrackingItems(trackDTO);
+            add_Confirm_Form = new AddConfirmForm(trackDTO);
+            next = "info";
+            next_Btn.PerformClick();
         }
 
         private void ConfirmDialog()

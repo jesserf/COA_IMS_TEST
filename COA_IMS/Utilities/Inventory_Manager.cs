@@ -1,4 +1,5 @@
-﻿using COA_IMS.Screens.Subscrn.Tracking;
+﻿using COA_IMS.Screens;
+using COA_IMS.Screens.Subscrn.Tracking;
 using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace COA_IMS.Utilities
 {
@@ -255,6 +257,69 @@ namespace COA_IMS.Utilities
             DataTable dt = new DataTable();
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(Database_Query.get_blank_tracking_table);
+            return dt;
+        }
+        public DataTable Get_ICS_Records(int minimium, int status, string sortString, string searchwords = null, string from_date = null, string to_date = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_ics_table, minimium, status, searchwords, from_date, to_date);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_ics_table, minimium, status, searchwords, sortString.Replace(" ", "_"));
+                    else query = string.Format(Database_Query.get_general_ics_table, minimium, status);
+                    break;
+            }
+
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        public DataTable Get_ICS_Return_Records(int minimium, int status, string sortString, string searchwords = null, string end_date = "", string from_date = null, string to_date = null)
+        {
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+            // 0 - transfer return date | 1 - transfer date | 2 - ics number | 3 - entity name | 4 - employee name | 5 - minimum limit
+            string query = Database_Query.get_return_ics_table;
+            query = string.Format(query, minimium, status, sortString, from_date, to_date);
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+            return dt;
+        }
+        public DataTable Get_SN_Item_Records(int minimium, int status, string sortString, string searchwords = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+
+            switch (sortString)
+            {
+                case "All":
+                    query = string.Format(Database_Query.get_all_serial_num_item_table, minimium, status, searchwords);
+                    break;
+                default:
+                    if (searchwords != null)
+                        query = string.Format(Database_Query.get_specific_serial_num_item_table, minimium, status, searchwords, sortString.Replace(" ", "_"));
+                    else query = string.Format(Database_Query.get_general_serial_num_item_table, minimium, status);
+                    break;
+            }
+
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
         }
         public int Get_Item_Quantity(string column, string table, string conditional_column, string conditional_var)
