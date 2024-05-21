@@ -1,5 +1,6 @@
 ﻿using COA_IMS.Screens;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -140,6 +141,19 @@ namespace COA_IMS.Utilities
                 using (db_Manager)
                 {
                     ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.log_maintenance_activity_edit, CurrentUser.user_name, "Quantity", qty, item_code)));
+                }
+            }
+        }
+        public void Update_Item_Return(string ics, string sn, string date)
+        {
+            db_Manager = new Database_Manager();
+            using (db_Manager)
+            {
+                db_Manager = new Database_Manager();
+                int ret = 0;
+                using (db_Manager)
+                {
+                    ret = Convert.ToInt32(db_Manager.ExecuteNonQuery(string.Format(Database_Query.return_item_log, CurrentUser.user_name, sn, ics)));
                 }
             }
         }

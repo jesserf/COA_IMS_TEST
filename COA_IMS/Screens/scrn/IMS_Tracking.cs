@@ -74,9 +74,9 @@ namespace COA_IMS.Screens.scrn
             tab_Manager.TakeAllAdvButtonsFromFlowLay(nav_panel);
 
             tab_Manager.set_Colors("#1B303B", "#C7C8CC");
-            tab_Manager.active_AdvButton(add_Btn, false, false);
+            tab_Manager.active_AdvButton(tracking_Table_Btn, false, false);
 
-            add_Btn.PerformClick();
+            tracking_Table_Btn.PerformClick();
         }
 
         private void CreateOrder_Click(object sender, EventArgs e)

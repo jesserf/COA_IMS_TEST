@@ -1,4 +1,5 @@
 ﻿using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
+using COA_IMS.UserControlUtil;
 using COA_IMS.UserControlUtil.TableUtil;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
     public partial class TrackingTable : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "All", "Employee Name", "Employee Position", "Employee Office" };
+        readonly string[] log_table_names = { "All", "ICS Number", "Entity Name", "Employee Name", "Brief Item", "SN"};
         public TrackingTable()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             foreach (string name in log_table_names)
                 sortComboBox.Items.Add(name);
             generic_Table = new GenericTable();
-            generic_Table.FillVariables(log_table_names, null, null, "ics", "ics", searchBar1, null, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
+            generic_Table.FillVariables(log_table_names, null, null, "ics", "ics", searchBar1, dateFilter1, sortComboBox, data_View, next_Button, previous_Button, pageCountTextbox);
             generic_Table.sort_String = "All";
             sortComboBox.SelectedText = "All";
             sortComboBox.SelectedIndex = 0;
@@ -33,12 +34,16 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             searchBar1.Ambatu(RePopulate_Table);
             //disables next logs button
             generic_Table.Check_Count();
+            //setup date filter
+            ChangeDataDates();
+            dateFilter1.Ambatu(dateTimePicker_ValueChanged);
+            dateFilter1.toValue = DateTime.Today;
+            dateFilter1.fromValue = DateTime.Today;
 
             next_Button.Click += next_Button_Click;
             previous_Button.Click += previous_Button_Click;
             pageCountTextbox.KeyDown += pageCountTextbox_KeyDown;
             sortComboBox.SelectedIndexChanged += sortComboBox_SelectedIndexChanged;
-            data_View.CellDoubleClick += data_View_CellDoubleClick;
             refresh_Button.Click += RePopulate_Table;
             this.VisibleChanged += RePopulate_Table;
         }
@@ -72,13 +77,27 @@ namespace COA_IMS.Screens.Subscrn.Tracking
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+                return;
             string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
-            string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //MessageBox.Show(arg.ToString());
-            EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3);
+            string arg2 = data_View.Rows[e.RowIndex].Cells[5].Value.ToString();
+            ICSInfoForm employeeInfoForm = new ICSInfoForm(arg, arg2);
             employeeInfoForm.ShowDialog();
-            generic_Table.Populate_Table();
         }
+
+
+        #region More Plates More Dates
+        public void ChangeDataDates()
+        {
+            dateFilter1.ToValueChanged += dateTimePicker_ValueChanged;
+            dateFilter1.FromValueChanged += dateTimePicker_ValueChanged;
+        }
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateFilter1.toValue < dateFilter1.fromValue)
+                dateFilter1.fromValue = dateFilter1.toValue;
+            generic_Table.Populate_Table(3);
+        }
+        #endregion
     }
 }
