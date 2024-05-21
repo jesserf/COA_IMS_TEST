@@ -63,6 +63,8 @@ namespace COA_IMS.Screens.Subscrn
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+                return;
             string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
             string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
             string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -70,11 +72,6 @@ namespace COA_IMS.Screens.Subscrn
             EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3);
             employeeInfoForm.ShowDialog();
             generic_Table.Populate_Table();
-        }
-
-        private void data_View_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

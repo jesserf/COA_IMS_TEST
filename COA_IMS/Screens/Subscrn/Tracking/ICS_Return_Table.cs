@@ -72,13 +72,12 @@ namespace COA_IMS.Screens.Subscrn.Tracking
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+                return;
             string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
-            string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //MessageBox.Show(arg.ToString());
-            EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3);
+            string arg2 = data_View.Rows[e.RowIndex].Cells[5].Value.ToString();
+            ICSInfoForm employeeInfoForm = new ICSInfoForm(arg, arg2);
             employeeInfoForm.ShowDialog();
-            generic_Table.Populate_Table();
         }
     }
 }

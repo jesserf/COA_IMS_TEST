@@ -30,6 +30,7 @@ namespace COA_IMS.Utilities
             db_Manager = new Database_Manager();
             List<string> list_Of_Items = new List<string>();
             query = string.Format(query);
+            Console.WriteLine(query);
             using (db_Manager)
                 list_Of_Items = db_Manager.ExecuteQueryToList(query, item_columns);
             return list_Of_Items;
@@ -272,11 +273,10 @@ namespace COA_IMS.Utilities
                     break;
                 default:
                     if (searchwords != null)
-                        query = string.Format(Database_Query.get_specific_ics_table, minimium, status, searchwords, sortString.Replace(" ", "_"));
-                    else query = string.Format(Database_Query.get_general_ics_table, minimium, status);
+                        query = string.Format(Database_Query.get_specific_ics_table, minimium, status, searchwords, sortString.Replace(" ", "_"), from_date, to_date);
+                    else query = string.Format(Database_Query.get_general_ics_table, minimium, status, from_date, to_date);
                     break;
             }
-
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);
 
@@ -285,18 +285,37 @@ namespace COA_IMS.Utilities
                 Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
         }
+        public void Update_ICS_Record(string ics, string sn, string date = null)
+        {
+            int ret;
+            db_Manager = new Database_Manager();
+            string query = Database_Query.update_ics_record;
+            if (date == null) date = "CURRENT_TIMESTAMP";
+            query = string.Format(query, date, CurrentUser.user_name, ics, sn);
+            using (db_Manager)
+                ret = db_Manager.ExecuteNonQuery(query);
+            if (ret == 1)
+            {
+                Activity_Manager activity_Manager = new Activity_Manager();
+                activity_Manager.Update_Item_Return(ics, sn, date);
+                //MessageBox.Show($"{item_code} is successfully updated.", "Quantity Updated");
+            }
+            else if (ret == 0)
+                MessageBox.Show($"{sn} is not updated.");
+        }
         public DataTable Get_ICS_Return_Records(int minimium, int status, string sortString, string searchwords = null, string end_date = "", string from_date = null, string to_date = null)
         {
             db_Manager = new Database_Manager();
             DataTable dt = new DataTable();
             // 0 - transfer return date | 1 - transfer date | 2 - ics number | 3 - entity name | 4 - employee name | 5 - minimum limit
             string query = Database_Query.get_return_ics_table;
-            query = string.Format(query, minimium, status, sortString, from_date, to_date);
+            query = string.Format(query, minimium, status, searchwords, from_date, to_date);
+            Console.WriteLine(query);
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);
             return dt;
         }
-        public DataTable Get_SN_Item_Records(int minimium, int status, string sortString, string searchwords = null)
+        public DataTable Get_SN_Item_Records(int minimium, int status, string sortString, string searchwords = null, string from_date = null, string to_date = null)
         {
             string query;
             db_Manager = new Database_Manager();

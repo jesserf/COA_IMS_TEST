@@ -542,6 +542,18 @@
     <Compile Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.Designer.cs">
       <DependentUpon>EmployeeHistoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\ICSInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\ICSInfoForm.Designer.cs">
+      <DependentUpon>ICSInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\ICS_Info_Return_SubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\ICS_Info_Return_SubForm.Designer.cs">
+      <DependentUpon>ICS_Info_Return_SubForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\Tracking\ICS_Return_Table.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -881,6 +893,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.resx">
       <DependentUpon>EmployeeHistoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\ICSInfoForm.resx">
+      <DependentUpon>ICSInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\ICS_Info_Return_SubForm.resx">
+      <DependentUpon>ICS_Info_Return_SubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\ICS_Return_Table.resx">
       <DependentUpon>ICS_Return_Table.cs</DependentUpon>
