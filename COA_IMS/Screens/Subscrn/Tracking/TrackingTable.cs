@@ -1,6 +1,8 @@
-﻿using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
+﻿using COA_IMS.Screens.scrn;
+using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
 using COA_IMS.UserControlUtil;
 using COA_IMS.UserControlUtil.TableUtil;
+using COA_IMS.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +19,11 @@ namespace COA_IMS.Screens.Subscrn.Tracking
     {
         GenericTable generic_Table;
         readonly string[] log_table_names = { "All", "ICS Number", "Entity Name", "Employee Name", "Brief Item", "SN"};
+        private Inventory_Manager inventory_Manager;
         public TrackingTable()
         {
             InitializeComponent();
+            inventory_Manager = new Inventory_Manager();
             //setup GenericTable
             //setup ordinary controls
             foreach (string name in log_table_names)
@@ -37,8 +41,17 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             //setup date filter
             ChangeDataDates();
             dateFilter1.Ambatu(dateTimePicker_ValueChanged);
-            dateFilter1.toValue = DateTime.Today;
-            dateFilter1.fromValue = DateTime.Today;
+            //dateFilter1.toValue = DateTime.Today;
+            //dateFilter1.fromValue = DateTime.Today;
+
+            DateTime latest_date = (DateTime)inventory_Manager.Get_Code_From_table(Database_Query.get_max_transfer_date);
+
+            string max_date = latest_date.ToString();
+
+            dateFilter1.toValue = latest_date;
+            dateFilter1.fromValue = latest_date;
+
+
 
             next_Button.Click += next_Button_Click;
             previous_Button.Click += previous_Button_Click;

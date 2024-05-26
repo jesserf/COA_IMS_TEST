@@ -259,97 +259,7 @@ namespace COA_IMS
         #region Fill Comboboxes
         public static readonly string select_item_list = "SELECT {0} FROM {0}_table;";
         #endregion
-        #region Employee
-        //0 - employee name | 1 - employee position | 2 - employee office | 3 - email | 4 - phone | 5 - address | 6 - added by
-        public static readonly string insert_employee_record = "INSERT INTO employee_table " +
-            "\n(employee_name, employee_position_id, employee_office_id, email, phone, address, added_by)" +
-            "\nSELECT* FROM(SELECT" +
-            "\n'{0}'," +
-            "\n(SELECT pos.employee_position_id FROM employee_position_table pos WHERE pos.employee_position = '{1}')," +
-            "\n(SELECT o.employee_office_id FROM employee_office_table o WHERE o.employee_office = '{2}')," +
-            "\n'{3}' AS email," +
-            "\n'{4}' AS phone," +
-            "\n'{5}' AS address," +
-            "\n'{6}'" +
-            "\n) AS tmp" +
-            "\nWHERE NOT EXISTS(SELECT employee_name, employee_position_id, employee_office_id FROM employee_table" +
-            "\nWHERE employee_name = '{0}' AND" +
-            "\nemployee_position_id =" +
-            "\n(SELECT pos.employee_position_id FROM employee_position_table pos WHERE pos.employee_position = '{1}') AND" +
-            "\nemployee_office_id =" +
-            "\n(SELECT o.employee_office_id FROM employee_office_table o WHERE o.employee_office = '{2}')" +
-            "\n) LIMIT 1;";
-
-        // 0 - searchbar.text | 1 - status
-        public static readonly string count_employee = "SELECT COUNT(*) FROM employee_table emp " +
-            "\nINNER JOIN" +
-            "\nemployee_position_table pos ON pos.employee_position_id = emp.employee_position_id" +
-            "\nINNER JOIN" +
-            "\nemployee_office_table o ON o.employee_office_id = emp.employee_office_id" +
-            "\nWHERE (" +
-            "\nemployee_name LIKE '%{0}%' OR" +
-            "\nemployee_position LIKE '%{0}%' OR" +
-            "\nemployee_office LIKE '%{0}%') AND emp.status = {1};";
-        // 0 - employee id | 1 - changes | 2 - CurrentUser.user_name 
-        public static readonly string update_employee_record = "UPDATE employee_table\r" +
-            "\nSET{1}, modified_by = '{2}'" +
-            "\nWHERE employee_id = {0};";
-        #region archive employee
-        // 0 - employee id | 1 - status | 2 - remarks | 3 - CurrentUser.user_name
-        public static readonly string alter_employee_status = "UPDATE employee_table\r" +
-            "\nSET `status` = {1} {2}, modified_by = '{3}'" +
-            "\nWHERE employee_id = {0};";
-        // 0 - employee id 
-        public static readonly string get_employee_remarks = "SELECT remarks FROM employee_table WHERE employee_id = {0};";
-        // 0 - minimum | 1 - status
-        public static readonly string get_general_archived_employee_record =
-            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id WHERE emp.status = {1} LIMIT {0}, 15;";
-        // 0 - minimum | 1 - searchbar.text | 2 - status 
-        public static readonly string get_all_specific_archived_employee_record =
-            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
-            "\nWHERE (employee_name LIKE '%{1}%' OR employee_position LIKE '%{1}%' OR employee_office LIKE '%{1}%') AND emp.status = {2} LIMIT {0}, 15;";
-        // 0 - minimum | 1 - searchbar.text | 2 - specific table name | 3 - status
-        public static readonly string get_specific_archived_employee_record =
-            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
-            "\nWHERE {2} LIKE '%{1}%' LIMIT {0}, 15; WHERE {2} LIKE '%{1}%' AND emp.status = {3} LIMIT {0}, 15;";
-        #endregion
-        // 0 - employee name | 1 - employee position | 2 - employee office
-        public static readonly string get_employee_record =
-            "SELECT emp.employee_id, emp.employee_name, pos.employee_position, o.employee_office, emp.email, emp.phone, emp.address " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
-            "\nWHERE (employee_name = '{0}' AND pos.employee_position = '{1}' AND o.employee_office = '{2}') LIMIT 1 ;";
-        // 0 - minimum | 1 - status
-        public static readonly string get_general_employee_record =
-            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id WHERE emp.status = {1} LIMIT {0}, 15;";
-        // 0 - minimum | 1 - searchbar.text | 2 - status 
-        public static readonly string get_all_specific_employee_record =
-            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
-            "\nWHERE (employee_name LIKE '%{1}%' OR employee_position LIKE '%{1}%' OR employee_office LIKE '%{1}%') AND emp.status = {2} LIMIT {0}, 15;";
-        // 0 - minimum | 1 - searchbar.text | 2 - specific table name | 3 - status
-        public static readonly string get_specific_employee_record =
-            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office " +
-            "\nFROM employee_table emp " +
-            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
-            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
-            "\nWHERE {2} LIKE '%{1}%' LIMIT {0}, 15; WHERE {2} LIKE '%{1}%' AND emp.status = {3} LIMIT {0}, 15;";
-        #endregion
+        
         #region Fund Names
         public static readonly string insert_fund_name = "INSERT INTO fund_table (fund_name, added_by) \r" +
             "\nSELECT * FROM (SELECT '{0}', '{1}') AS tmp \r" +
@@ -514,6 +424,143 @@ namespace COA_IMS
         #endregion
 
         //public static readonly string insert_new_item = "INSERT emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
+        
+        #endregion
+        #region Employee
+        //0 - employee name | 1 - employee position | 2 - employee office | 3 - email | 4 - phone | 5 - address | 6 - added by
+        public static readonly string insert_employee_record = "INSERT INTO employee_table " +
+            "\n(employee_name, employee_position_id, employee_office_id, email, phone, address, added_by)" +
+            "\nSELECT* FROM(SELECT" +
+            "\n'{0}'," +
+            "\n(SELECT pos.employee_position_id FROM employee_position_table pos WHERE pos.employee_position = '{1}')," +
+            "\n(SELECT o.employee_office_id FROM employee_office_table o WHERE o.employee_office = '{2}')," +
+            "\n'{3}' AS email," +
+            "\n'{4}' AS phone," +
+            "\n'{5}' AS address," +
+            "\n'{6}'" +
+            "\n) AS tmp" +
+            "\nWHERE NOT EXISTS(SELECT employee_name, employee_position_id, employee_office_id FROM employee_table" +
+            "\nWHERE employee_name = '{0}' AND" +
+            "\nemployee_position_id =" +
+            "\n(SELECT pos.employee_position_id FROM employee_position_table pos WHERE pos.employee_position = '{1}') AND" +
+            "\nemployee_office_id =" +
+            "\n(SELECT o.employee_office_id FROM employee_office_table o WHERE o.employee_office = '{2}')" +
+            "\n) LIMIT 1;";
+
+        // 0 - searchbar.text | 1 - status
+        public static readonly string count_employee = "SELECT COUNT(*) FROM employee_table emp " +
+            "\nINNER JOIN" +
+            "\nemployee_position_table pos ON pos.employee_position_id = emp.employee_position_id" +
+            "\nINNER JOIN" +
+            "\nemployee_office_table o ON o.employee_office_id = emp.employee_office_id" +
+            "\nWHERE (" +
+            "\nemployee_name LIKE '%{0}%' OR" +
+            "\nemployee_position LIKE '%{0}%' OR" +
+            "\nemployee_office LIKE '%{0}%') AND emp.status = {1};";
+        // 0 - employee id | 1 - changes | 2 - CurrentUser.user_name 
+        public static readonly string update_employee_record = "UPDATE employee_table\r" +
+            "\nSET{1}, modified_by = '{2}'" +
+            "\nWHERE employee_id = {0};";
+        #region archive employee
+        // 0 - employee id | 1 - status | 2 - remarks | 3 - CurrentUser.user_name
+        public static readonly string alter_employee_status = "UPDATE employee_table\r" +
+            "\nSET `status` = {1} {2}, modified_by = '{3}'" +
+            "\nWHERE employee_id = {0};";
+        // 0 - employee id 
+        public static readonly string get_employee_remarks = "SELECT remarks FROM employee_table WHERE employee_id = {0};";
+        // 0 - minimum | 1 - status
+        public static readonly string get_general_archived_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id WHERE emp.status = {1} LIMIT {0}, 15;";
+        // 0 - minimum | 1 - searchbar.text | 2 - status 
+        public static readonly string get_all_specific_archived_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE (employee_name LIKE '%{1}%' OR employee_position LIKE '%{1}%' OR employee_office LIKE '%{1}%') AND emp.status = {2} LIMIT {0}, 15;";
+        // 0 - minimum | 1 - searchbar.text | 2 - specific table name | 3 - status
+        public static readonly string get_specific_archived_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office, emp.remarks " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE {2} LIKE '%{1}%' LIMIT {0}, 15; WHERE {2} LIKE '%{1}%' AND emp.status = {3} LIMIT {0}, 15;";
+        #endregion
+        // 0 - employee name | 1 - employee position | 2 - employee office
+        public static readonly string get_employee_record =
+            "SELECT emp.employee_id, emp.employee_name, pos.employee_position, o.employee_office, emp.email, emp.phone, emp.address " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE (employee_name = '{0}' AND pos.employee_position = '{1}' AND o.employee_office = '{2}') LIMIT 1 ;";
+        // 0 - minimum | 1 - status
+        public static readonly string get_general_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id WHERE emp.status = {1} LIMIT {0}, 15;";
+        // 0 - minimum | 1 - searchbar.text | 2 - status 
+        public static readonly string get_all_specific_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE (employee_name LIKE '%{1}%' OR employee_position LIKE '%{1}%' OR employee_office LIKE '%{1}%') AND emp.status = {2} LIMIT {0}, 15;";
+        // 0 - minimum | 1 - searchbar.text | 2 - specific table name | 3 - status
+        public static readonly string get_specific_employee_record =
+            "\nSELECT emp.employee_name, pos.employee_position, o.employee_office " +
+            "\nFROM employee_table emp " +
+            "\nINNER JOIN employee_position_table pos ON pos.employee_position_id = emp.employee_position_id " +
+            "\nINNER JOIN employee_office_table o ON o.employee_office_id = emp.employee_office_id " +
+            "\nWHERE {2} LIKE '%{1}%' LIMIT {0}, 15; WHERE {2} LIKE '%{1}%' AND emp.status = {3} LIMIT {0}, 15;";
+        #region Employee Tracking History
+        public static readonly string get_employee_history_item = "SELECT \r\n            i.ics_number_id,\r" +
+            "\n            CONCAT(tr.item_code, ' - ', b.item_brand, ' - ', t.item_type, ' - ', d.product_name) AS 'item',\r" +
+            "\n            tr.serial_number AS 'sn',\r" +
+            "\n            tr.quantity,\r" +
+            "\n            i.transfer_date,\r" +
+            "\n            tr.transfer_return_date\r" +
+            "\n            FROM item_ics_table i \r" +
+            "\n            INNER JOIN transfer_current_table tr ON i.ics_number_id = tr.ics_number_id\r" +
+            "\n            INNER JOIN employee_table emp ON i.receiver = emp.employee_id\r" +
+            "\n            INNER JOIN employee_office_table o ON emp.employee_office_id = o.employee_office_id\r" +
+            "\n            INNER JOIN employee_position_table p ON emp.employee_position_id = p.employee_position_id\r" +
+            "\n            INNER JOIN items_table it ON tr.item_code = it.item_code\r" +
+            "\n            INNER JOIN item_desc_table d ON it.item_desc_id = d.item_desc_id\r" +
+            "\n            INNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id\r" +
+            "\n            INNER JOIN item_type_table t ON d.item_type_id = t.item_type_id\r" +
+            "\n            WHERE emp.employee_name LIKE '%{1}%' \r" +
+            "\n\t\t\t\tAND p.employee_position LIKE '%{2}%'\r" +
+            "\n\t\t\t\tAND o.employee_office LIKE '%{3}%'\r" +
+            "\n\t\t\t\tHAVING (ics_number_id LIKE '%{4}%' OR item LIKE '%{4}%' OR sn LIKE '%{4}%' OR transfer_date LIKE '%{4}%' OR transfer_return_date LIKE '%{4}%')\r" +
+            "\n            ORDER BY tr.transfer_return_date ASC, i.transfer_date ASC LIMIT {0}, 15;";
+        public static readonly string get_employee_history_count = "SELECT COUNT(*) AS total_count FROM \r" +
+            "\n(SELECT \r" +
+            "\n            i.ics_number_id,\r" +
+            "\n            CONCAT(tr.item_code, ' - ', b.item_brand, ' - ', t.item_type, ' - ', d.product_name) AS 'item',\r" +
+            "\n            tr.serial_number AS 'sn',\r" +
+            "\n            tr.quantity,\r" +
+            "\n            i.transfer_date,\r" +
+            "\n            tr.transfer_return_date\r" +
+            "\n            FROM item_ics_table i \r" +
+            "\n            INNER JOIN transfer_current_table tr ON i.ics_number_id = tr.ics_number_id\r" +
+            "\n            INNER JOIN employee_table emp ON i.receiver = emp.employee_id\r" +
+            "\n            INNER JOIN employee_office_table o ON emp.employee_office_id = o.employee_office_id\r" +
+            "\n            INNER JOIN employee_position_table p ON emp.employee_position_id = p.employee_position_id\r" +
+            "\n            INNER JOIN items_table it ON tr.item_code = it.item_code\r" +
+            "\n            INNER JOIN item_desc_table d ON it.item_desc_id = d.item_desc_id\r" +
+            "\n            INNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id\r" +
+            "\n            INNER JOIN item_type_table t ON d.item_type_id = t.item_type_id\r" +
+            "\n            WHERE emp.employee_name LIKE '%{1}%' \r" +
+            "\n\t\t\t\tAND p.employee_position LIKE '%{2}%'\r" +
+            "\n\t\t\t\tAND o.employee_office LIKE '%{3}%'\r" +
+            "\n\t\t\t\tHAVING (ics_number_id LIKE '%{0}%' OR item LIKE '%{0}%' OR sn LIKE '%{0}%' OR transfer_date LIKE '%{0}%' OR transfer_return_date LIKE '%{0}%')\r" +
+            "\n            ) AS emp_history_count;";
+        #endregion
+        #endregion
         #region ICS Tracking
         #region ICS Table
         // 0 - ics number | 1 - serial number |  
@@ -637,6 +684,8 @@ namespace COA_IMS
             "\nOR r.serial_number LIKE '%{2}%'\r" +
             "\nOR emp.employee_name LIKE '%{2}%')\r" +
             "\nLIMIT {0}, 15";
+
+        public static readonly string get_max_transfer_date = "SELECT max(transfer_date) FROM item_ics_table;";
         #endregion
         #region Return ICS Table
         // 0 - minimum limit | 1 - status | 2 - search words | 
@@ -801,7 +850,6 @@ namespace COA_IMS
             "FROM entity_table " +
             "WHERE entity_name = '{0}' " +
             "LIMIT 1;";
-        #endregion
         #endregion
 
         public static readonly string set_new_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by)\r" +

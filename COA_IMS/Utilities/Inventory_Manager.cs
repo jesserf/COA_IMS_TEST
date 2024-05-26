@@ -35,13 +35,13 @@ namespace COA_IMS.Utilities
                 list_Of_Items = db_Manager.ExecuteQueryToList(query, item_columns);
             return list_Of_Items;
         }
-        public int Get_Code_From_table(string query)
+        public object Get_Code_From_table(string query)
         {
             db_Manager = new Database_Manager();
-            int code = 0;
+            object ret;
             using (db_Manager)
-                code = Convert.ToInt32(db_Manager.ExecuteScalar(query));
-            return code;
+                ret = (db_Manager.ExecuteScalar(query));
+            return ret;
         }
         public void Insert_Item_Category_Name(string query, string item, string type, string name = null)
         {
@@ -332,6 +332,22 @@ namespace COA_IMS.Utilities
                     else query = string.Format(Database_Query.get_general_serial_num_item_table, minimium, status);
                     break;
             }
+
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        public DataTable Get_Employee_History_Records(int minimium, string employee_name, string employee_position, string employee_office, string searchwords)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+
+            query = string.Format(Database_Query.get_employee_history_item, minimium, employee_name, employee_position, employee_office, searchwords);
 
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);

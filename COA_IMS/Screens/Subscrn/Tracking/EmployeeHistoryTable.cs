@@ -14,6 +14,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
 {
     public partial class EmployeeHistoryTable : Form
     {
+        EmployeeHistorySubform employeeInfoForm;
         GenericTable generic_Table;
         readonly string[] log_table_names = { "All", "Employee Name", "Employee Position", "Employee Office" };
         public EmployeeHistoryTable()
@@ -78,7 +79,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
             string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
             //MessageBox.Show(arg.ToString());
-            EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3);
+            employeeInfoForm = new EmployeeHistorySubform(arg, arg2, arg3);
             employeeInfoForm.ShowDialog();
             generic_Table.Populate_Table();
         }

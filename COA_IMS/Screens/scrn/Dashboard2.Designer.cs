@@ -47,8 +47,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cherieUrieRejoyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.main_Panel = new Guna.UI.WinForms.GunaElipsePanel();
             this.dateTImeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.main_Panel = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel1.SuspendLayout();
             this.tabPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
@@ -245,15 +245,16 @@
             this.trackingbtn.ForeColor = System.Drawing.Color.Black;
             this.trackingbtn.Image = global::COA_IMS.Properties.Resources.location_alt;
             this.trackingbtn.ImageOffsetX = 20;
-            this.trackingbtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.trackingbtn.Location = new System.Drawing.Point(3, 303);
+            this.trackingbtn.ImageSize = new System.Drawing.Size(24, 24);
+            this.trackingbtn.Location = new System.Drawing.Point(0, 300);
+            this.trackingbtn.Margin = new System.Windows.Forms.Padding(0);
             this.trackingbtn.Name = "trackingbtn";
-            this.trackingbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.trackingbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.trackingbtn.OnHoverBorderColor = System.Drawing.Color.Black;
             this.trackingbtn.OnHoverForeColor = System.Drawing.Color.White;
             this.trackingbtn.OnHoverImage = null;
             this.trackingbtn.OnPressedColor = System.Drawing.Color.Black;
-            this.trackingbtn.Size = new System.Drawing.Size(282, 42);
+            this.trackingbtn.Size = new System.Drawing.Size(285, 60);
             this.trackingbtn.TabIndex = 10;
             this.trackingbtn.Tag = "Tracking";
             this.trackingbtn.Text = "Tracking";
@@ -274,7 +275,7 @@
             this.UserMaintenancebtn.Image = global::COA_IMS.Properties.Resources.users_alt__1_;
             this.UserMaintenancebtn.ImageOffsetX = 20;
             this.UserMaintenancebtn.ImageSize = new System.Drawing.Size(24, 24);
-            this.UserMaintenancebtn.Location = new System.Drawing.Point(0, 348);
+            this.UserMaintenancebtn.Location = new System.Drawing.Point(0, 360);
             this.UserMaintenancebtn.Margin = new System.Windows.Forms.Padding(0);
             this.UserMaintenancebtn.Name = "UserMaintenancebtn";
             this.UserMaintenancebtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
@@ -303,7 +304,7 @@
             this.Logsbtn.Image = global::COA_IMS.Properties.Resources.digital_tachograph;
             this.Logsbtn.ImageOffsetX = 20;
             this.Logsbtn.ImageSize = new System.Drawing.Size(24, 24);
-            this.Logsbtn.Location = new System.Drawing.Point(0, 408);
+            this.Logsbtn.Location = new System.Drawing.Point(0, 420);
             this.Logsbtn.Margin = new System.Windows.Forms.Padding(0);
             this.Logsbtn.Name = "Logsbtn";
             this.Logsbtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
@@ -435,8 +436,14 @@
             // dsaToolStripMenuItem
             // 
             this.dsaToolStripMenuItem.Name = "dsaToolStripMenuItem";
-            this.dsaToolStripMenuItem.Size = new System.Drawing.Size(190, 30);
+            this.dsaToolStripMenuItem.Size = new System.Drawing.Size(191, 30);
             this.dsaToolStripMenuItem.Text = "Added Item";
+            // 
+            // dateTImeToolStripMenuItem
+            // 
+            this.dateTImeToolStripMenuItem.Name = "dateTImeToolStripMenuItem";
+            this.dateTImeToolStripMenuItem.Size = new System.Drawing.Size(191, 30);
+            this.dateTImeToolStripMenuItem.Text = "Date / Time";
             // 
             // main_Panel
             // 
@@ -448,12 +455,6 @@
             this.main_Panel.Radius = 5;
             this.main_Panel.Size = new System.Drawing.Size(1619, 965);
             this.main_Panel.TabIndex = 2;
-            // 
-            // dateTImeToolStripMenuItem
-            // 
-            this.dateTImeToolStripMenuItem.Name = "dateTImeToolStripMenuItem";
-            this.dateTImeToolStripMenuItem.Size = new System.Drawing.Size(191, 30);
-            this.dateTImeToolStripMenuItem.Text = "Date / Time";
             // 
             // Dashboard2
             // 

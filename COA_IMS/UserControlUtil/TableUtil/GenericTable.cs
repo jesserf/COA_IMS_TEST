@@ -34,6 +34,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
         public string data_Table_Type { get; set; }
         public string inventory_Table_Name { get; set; }
         public string sort_String { get; set; }
+        public string employee_name { get; set; }
+        public string employee_office { get; set; }
+        public string employee_position { get; set; }
         //user controls
         SearchBar searchBar1 { get; set; }
         DateFilter dateFilter1 { get; set; }
@@ -441,6 +444,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                 case "sn_item":
                     dt = FillSNItemTable();
                     break; 
+                case "emp_hist":
+                    dt = FillEmpHistoryTable();
+                    break; 
                 default: break;
             }
             //fill in datagridview with formatted datatable with numbering
@@ -605,6 +611,11 @@ namespace COA_IMS.UserControlUtil.TableUtil
             //string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd " + current_time);
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_SN_Item_Records(min_lim, 1, sort_String, searchBar1.Text);
+        }
+        private DataTable FillEmpHistoryTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Employee_History_Records(min_lim, employee_name, employee_position, employee_office, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -796,6 +807,19 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Item Description", DataGridViewContentAlignment.MiddleLeft),
                         }; ;
                     break;
+                case "emp_hist":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 20), (true, 20), (true, 20) , (true, 5), (true, 15), (true, 15) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("ICS Number", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item", DataGridViewContentAlignment.MiddleLeft),
+                            ("SN", DataGridViewContentAlignment.MiddleLeft),
+                            ("Qty.", DataGridViewContentAlignment.MiddleLeft),
+                            ("Transfer Date", DataGridViewContentAlignment.MiddleLeft),
+                            ("Return Date", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
+                    break;
                 default: break;
             }
 
@@ -907,6 +931,9 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     break;
                 case "return":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
+                    break;
+                case "emp_hist":
+                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.get_employee_history_count, searchBar1.Text, employee_name,  employee_position,  employee_office));
                     break;
                 default: break;
             }

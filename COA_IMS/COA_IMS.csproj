@@ -536,6 +536,12 @@
     <Compile Include="Screens\Subscrn\Tracking\Cherie_TrackingTable.Designer.cs">
       <DependentUpon>Cherie_TrackingTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\EmployeeHistorySubform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\Tracking\EmployeeHistorySubform.Designer.cs">
+      <DependentUpon>EmployeeHistorySubform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -890,6 +896,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\Cherie_TrackingTable.resx">
       <DependentUpon>Cherie_TrackingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\Tracking\EmployeeHistorySubform.resx">
+      <DependentUpon>EmployeeHistorySubform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.resx">
       <DependentUpon>EmployeeHistoryTable.cs</DependentUpon>
