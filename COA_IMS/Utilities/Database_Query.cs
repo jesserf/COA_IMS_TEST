@@ -402,13 +402,13 @@ namespace COA_IMS
         public static readonly string get_all_specific_items_record = "SELECT item_code, \r" +
             "\n" + Database_Query.get_concatenated_item_desc + "\r," +
             Database_Query.get_unit_from_items + "\r" +
-            "\n, unit_cost, est_useful_life, quantity FROM items_table HAVING  (item_code LIKE '%{1}%' OR \r" +
+            "\n, unit_cost, est_useful_life, quantity FROM items_table WHERE `status` = {2} HAVING  (item_code LIKE '%{1}%' OR \r" +
             "Item_Description" + " LIKE '%{1}%' OR \r" +
             "unit" + " LIKE '%{1}%') LIMIT {0}, 15;";
         public static readonly string get_specific_items_record = "SELECT item_code, \r" +
             "\n" + Database_Query.get_concatenated_item_desc + "\r," +
             Database_Query.get_unit_from_items + "\r" +
-            "\n, unit_cost, est_useful_life, quantity FROM items_table HAVING {2} LIKE '%{1}%' LIMIT {0}, 15;";
+            "\n, unit_cost, est_useful_life, quantity FROM items_table WHERE `status` = {3} HAVING {2} LIKE '%{1}%' LIMIT {0}, 15;";
         public static readonly string get_item_record = "SELECT item_code, \r" +
             "\n" + Database_Query.get_concatenated_item_desc + "\r," +
             Database_Query.get_unit_from_items + "\r" +
@@ -718,11 +718,11 @@ namespace COA_IMS
             "\n            OR employee_name LIKE '%{2}%')\r" +
             "\n            LIMIT {0}, 15;";
         #endregion
-         #region Serial Number
+        #region Serial Number
         // 0 - minimum limit | 1 - status | 2 - searchwords |
-        public static readonly string get_sn_item_info = "SELECT tr.item_code, d.product_name, b.item_brand, t.item_type, it.unit_cost from transfer_current_table tr \r\nINNER JOIN items_table it ON tr.item_code = it.item_code\r\nINNER JOIN item_desc_table d ON it.item_desc_id = d.item_desc_id\r\nINNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id\r\nINNER JOIN item_type_table t ON d.item_type_id = t.item_type_id\r\nWHERE tr.serial_number = '{0}' LIMIT 1;\r\n;";
-        public static readonly string get_sn_item_history = "SELECT tr.ics_number_id, rec.employee_name, giv.employee_name, i.transfer_date, tr.transfer_return_date from transfer_current_table tr \r\nINNER JOIN item_ics_table i ON tr.ics_number_id = i.ics_number_id\r\nINNER JOIN employee_table rec ON i.receiver = rec.employee_id\r\nINNER JOIN employee_table giv ON i.giver = giv.employee_id\r\nWHERE tr.serial_number = '{0}' LIMIT 1;";
-        public static readonly string get_all_serial_num_item_table = "SELECT tr.serial_number," +
+        public static readonly string get_all_serial_num_item_table = "SELECT tr.serial_number, it.item_code,\r\nCONCAT(b.item_brand, ' - ', t.item_type, ' - ', d.product_name) AS item_description,\r\nemp.employee_name AS currently_held_by,\r\nemp.employee_name AS last_held_by\r\nFROM transfer_current_table tr\r\nINNER JOIN items_table it ON tr.item_code = it.item_code\r\nINNER JOIN item_desc_table d ON it.item_desc_id = d.item_desc_id\r\nINNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id\r\nINNER JOIN item_type_table t ON d.item_type_id = t.item_type_id \r\nINNER JOIN item_ics_table i ON tr.ics_number_id = i.ics_number_id\r\nINNER JOIN employee_table emp ON i.receiver = emp.employee_id\r\nWHERE tr.`status` = 1 \r\nHAVING (serial_number LIKE '%%'\r\nOR item_code LIKE '%%'\r\nOR item_description LIKE '%%'\r\nOR currently_held_by LIKE '%%'\r\nOR last_held_by LIKE '%%')\r\nLIMIT 0, 15;\r\n";
+        // 0 - minimum limit | 1 - status | 2 - searchwords |
+        public static readonly string get_all_serial_num_item_table2 = "SELECT tr.serial_number," +
             "\n            it.item_code," +
             "\n            CONCAT(b.item_brand, ' - ', t.item_type, ' - ', d.product_name) AS item_description," +
             "\n            CASE " +
@@ -749,8 +749,7 @@ namespace COA_IMS
             "\n            OR item_code LIKE '%{2}%'" +
             "\n            OR item_description LIKE '%{2}%'" +
             "\nOR currently_held_by LIKE '%{2}%'" +
-            "\n            OR last_held_by LIKE '%{2}%')" +
-            "\n            LIMIT {0}, 15;";
+            "\n            OR last_held_by LIKE '%{2}%');";
         // 0 - minimum limit | 1 - status | 2 - searchwords | 3 - sortstring
         public static readonly string get_specific_serial_num_item_table = "SELECT tr.serial_number,\r" +
             "\nit.item_code,\r" +
@@ -783,42 +782,26 @@ namespace COA_IMS
             "\nINNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id\r" +
             "\nINNER JOIN item_type_table t ON d.item_type_id = t.item_type_id WHERE tr.`status` = {1}\r" +
             "\nAND tr.serial_number != 'none' LIMIT {0}, 15;";
-        // 0 - minimum limit | 1 - status | | 2 - searchwords |
-        public static readonly string count_serial_num_item_table = "SELECT COUNT(*) AS total_results\r" +
-            "\nFROM\r" +
-            "\nSELECT tr.serial_number,\r" +
-            "\n            it.item_code,\r" +
-            "\n            CONCAT(b.item_brand, ' - ', t.item_type, ' - ', d.product_name) AS item_description,\r" +
-            "\n            CASE \r" +
-            "\n           \t\tWHEN tr.transfer_return_date IS NULL \r" +
-            "\n\t\t\t\t\t  THEN emp.employee_name\r" +
-            "\n           \t\tELSE 'none'\r" +
-            "\n       \t\tEND AS currently_held_by,\r" +
-            "\n       \t\tCASE \r" +
-            "\n           \t\tWHEN tr.transfer_return_date IS NOT NULL \r" +
-            "\n\t\t\t\t\t  THEN emp.employee_name\r" +
-            "\n           \t\tELSE 'active'\r" +
-            "\n       \t\tEND AS last_held_by\r" +
-            "\n            FROM transfer_current_table tr\r" +
-            "\n            INNER JOIN items_table it ON tr.item_code = it.item_code\r" +
-            "\n            INNER JOIN item_desc_table d ON it.item_desc_id = d.item_desc_id\r" +
-            "\n            INNER JOIN item_brand_table b ON d.item_brand_id = b.item_brand_id\r" +
-            "\n            INNER JOIN item_type_table t ON d.item_type_id = t.item_type_id \r" +
-            "\n            INNER JOIN item_ics_table i ON tr.ics_number_id = i.ics_number_id\r" +
-            "\n            INNER JOIN employee_table emp ON i.receiver = emp.employee_id\r" +
-            "\n\t\t\t\tWHERE tr.`status` = {1}\r" +
-            "\n            AND tr.serial_number != 'none' \r" +
-            "\n\t\t\t\tHAVING\r" +
-            "\n            (serial_number LIKE '%{2}%'\r" +
-            "\n            OR item_code LIKE '%{2}%'\r" +
-            "\n            OR item_description LIKE '%{2}%'\r" +
-            "\n\t\t\t\tOR currently_held_by LIKE '%{2}%'\r" +
-            "\n            OR last_held_by LIKE '%{2}%')\r" +
-            "\n            ) AS record_count;\r" +
-            "\n            ";
-
         #endregion
-
+        #region Specific Serial Number
+        public static readonly string get_specific_sn_item = "SELECT tr.ics_number_id,\r" +
+            "\nemp1.employee_name AS receiver,\r" +
+            "\nemp2.employee_name AS giver,\r" +
+            "\nics.transfer_date,\r" +
+            "\ntr.transfer_return_date AS ret_date\r" +
+            "\n FROM transfer_current_table tr \r" +
+            "\nINNER JOIN item_ics_table ics ON tr.ics_number_id = ics.ics_number_id\r" +
+            "\nINNER JOIN employee_table emp1 ON ics.receiver = emp1.employee_id\r" +
+            "\nINNER JOIN employee_table emp2 ON ics.giver = emp2.employee_id\r" +
+            "\nWHERE tr.serial_number LIKE '%{1}%' \r" +
+            "\nHAVING (ics_number_id LIKE '%{2}%' OR \r" +
+            "\nreceiver LIKE '%{2}%' OR \r" +
+            "\ngiver LIKE '%{2}%' OR \r" +
+            "\ntransfer_date LIKE '%{2}%' OR \r" +
+            "\nret_date LIKE '%{2}%')\r" +
+            "\nORDER BY ics.transfer_date DESC\r" +
+            "\nLIMIT {0}, 15;";
+        #endregion
         public static readonly string get_blank_tracking_table = "SELECT \r" +
             "\ntr.item_code, \r" +
             "\n(SELECT CONCAT(b.item_brand, \" - \", t.item_type, \" - \", d.product_name) \r" +
@@ -899,7 +882,7 @@ namespace COA_IMS
             "WHERE entity_name = '{0}' " +
             "LIMIT 1;";
         #endregion
-
+        public static readonly string count_total_result = "SELECT COUNT(*) AS total_results FROM ({0}) AS subquery_alias;";
         public static readonly string set_new_supplier = "INSERT INTO item_supplier_table (supplier_name, supplier_address, supplier_contact_num, supplier_contact_person, added_by)\r" +
                                                      "VALUES ('{0}','{1}','{2}','{3}','{4}')";
     }

@@ -53,7 +53,7 @@ namespace COA_IMS.Screens.Subscrn
             string insert_position_query = string.Format(Database_Query.insert_employee_position, position_ComboBox.Text, CurrentUser.user_name);
             string insert_office_query = string.Format(Database_Query.insert_employee_office, office_ComboBox.Text, CurrentUser.user_name);
             inventory_Manager.Insert_Employee_Category(insert_position_query, position_ComboBox.Text, "Employee Position", false);
-            inventory_Manager.Insert_Employee_Category(insert_office_query, office_ComboBox.Text, "Employee Office");
+            inventory_Manager.Insert_Employee_Category(insert_office_query, office_ComboBox.Text, "Employee Office", false);
             inventory_Manager.Insert_Employee_Category(insert_employee_query.Replace("'None'", "NULL"), employee_Name_Textbox.Text, "Employee");
 
             clear_Textboxes();

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LogsTable = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
@@ -63,31 +63,31 @@
             this.LogsTable.AllowUserToDeleteRows = false;
             this.LogsTable.AllowUserToResizeColumns = false;
             this.LogsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.LogsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.LogsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.LogsTable.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.LogsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LogsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LogsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LogsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LogsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.LogsTable.ColumnHeadersHeight = 20;
             this.LogsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LogsTable.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LogsTable.DefaultCellStyle = dataGridViewCellStyle6;
             this.LogsTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LogsTable.EnableHeadersVisualStyles = false;
             this.LogsTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -122,7 +122,6 @@
             this.LogsTable.ThemeStyle.RowsStyle.Height = 22;
             this.LogsTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.LogsTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-
             this.LogsTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LogsTable_CellDoubleClick);
             // 
             // tableLayoutPanel1
@@ -131,7 +130,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.53465F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.46535F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
@@ -170,7 +169,7 @@
             this.reports_Button.AnimationHoverSpeed = 0.07F;
             this.reports_Button.AnimationSpeed = 0.03F;
             this.reports_Button.BackColor = System.Drawing.Color.Transparent;
-            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
             this.reports_Button.BorderColor = System.Drawing.Color.Black;
             this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -182,7 +181,7 @@
             this.reports_Button.Location = new System.Drawing.Point(73, 3);
             this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.reports_Button.Name = "reports_Button";
-            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
             this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
             this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
             this.reports_Button.OnHoverImage = null;
@@ -209,7 +208,7 @@
             this.refresh_Button.Location = new System.Drawing.Point(25, 3);
             this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.refresh_Button.Name = "refresh_Button";
-            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
             this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
             this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
             this.refresh_Button.OnHoverImage = null;
@@ -236,7 +235,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1190, 30);
+            this.sortComboBox.Location = new System.Drawing.Point(1189, 30);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
@@ -254,7 +253,7 @@
             this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
             this.dateFilter1.Location = new System.Drawing.Point(555, 29);
             this.dateFilter1.Name = "dateFilter1";
-            this.dateFilter1.Size = new System.Drawing.Size(629, 43);
+            this.dateFilter1.Size = new System.Drawing.Size(628, 43);
             this.dateFilter1.TabIndex = 5;
             this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
             // 

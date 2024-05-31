@@ -45,7 +45,6 @@
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.add_Employee_Button = new Guna.UI.WinForms.GunaButton();
             this.main_Panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
@@ -56,7 +55,6 @@
             this.flowLayoutPanel3.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.main_Panel.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -65,7 +63,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 797);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 850);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -201,7 +199,7 @@
             this.data_View.RowHeadersVisible = false;
             this.data_View.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.data_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_View.Size = new System.Drawing.Size(1629, 739);
+            this.data_View.Size = new System.Drawing.Size(1629, 792);
             this.data_View.TabIndex = 7;
             this.data_View.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.data_View.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -256,7 +254,7 @@
             this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content_Panel.Location = new System.Drawing.Point(0, 58);
             this.content_Panel.Name = "content_Panel";
-            this.content_Panel.Size = new System.Drawing.Size(1629, 739);
+            this.content_Panel.Size = new System.Drawing.Size(1629, 792);
             this.content_Panel.TabIndex = 12;
             // 
             // reports_Button
@@ -364,56 +362,25 @@
             this.gunaPanel1.Size = new System.Drawing.Size(1629, 58);
             this.gunaPanel1.TabIndex = 8;
             // 
-            // add_Employee_Button
-            // 
-            this.add_Employee_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.add_Employee_Button.AnimationHoverSpeed = 0.07F;
-            this.add_Employee_Button.AnimationSpeed = 0.03F;
-            this.add_Employee_Button.BackColor = System.Drawing.Color.Transparent;
-            this.add_Employee_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
-            this.add_Employee_Button.BorderColor = System.Drawing.Color.Black;
-            this.add_Employee_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_Employee_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.add_Employee_Button.FocusedColor = System.Drawing.Color.Empty;
-            this.add_Employee_Button.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_Employee_Button.ForeColor = System.Drawing.Color.White;
-            this.add_Employee_Button.Image = null;
-            this.add_Employee_Button.ImageSize = new System.Drawing.Size(20, 20);
-            this.add_Employee_Button.Location = new System.Drawing.Point(1469, 3);
-            this.add_Employee_Button.Margin = new System.Windows.Forms.Padding(3, 3, 13, 3);
-            this.add_Employee_Button.Name = "add_Employee_Button";
-            this.add_Employee_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
-            this.add_Employee_Button.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
-            this.add_Employee_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.add_Employee_Button.OnHoverImage = null;
-            this.add_Employee_Button.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
-            this.add_Employee_Button.Radius = 10;
-            this.add_Employee_Button.Size = new System.Drawing.Size(147, 47);
-            this.add_Employee_Button.TabIndex = 1;
-            this.add_Employee_Button.Text = "ADD EMPLOYEE";
-            this.add_Employee_Button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.add_Employee_Button.Click += new System.EventHandler(this.add_Employee_Button_Click);
-            // 
             // main_Panel
             // 
             this.main_Panel.Controls.Add(this.content_Panel);
             this.main_Panel.Controls.Add(this.tableLayoutPanel2);
             this.main_Panel.Controls.Add(this.gunaPanel1);
             this.main_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.main_Panel.Location = new System.Drawing.Point(0, 53);
+            this.main_Panel.Location = new System.Drawing.Point(0, 0);
             this.main_Panel.Name = "main_Panel";
-            this.main_Panel.Size = new System.Drawing.Size(1629, 873);
+            this.main_Panel.Size = new System.Drawing.Size(1629, 926);
             this.main_Panel.TabIndex = 19;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.add_Employee_Button);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1629, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1629, 0);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
             // ArchivedEmployeeTable
@@ -436,7 +403,6 @@
             this.flowLayoutPanel3.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
             this.main_Panel.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,7 +424,6 @@
         private Guna.UI.WinForms.GunaButton refresh_Button;
         private UserControlUtil.SearchBar searchBar1;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaButton add_Employee_Button;
         private System.Windows.Forms.Panel main_Panel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }

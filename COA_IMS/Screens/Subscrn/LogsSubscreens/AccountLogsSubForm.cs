@@ -38,10 +38,12 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
         private void logsSearchBox_TextChanged(object sender, EventArgs e)
         {
             generic_Table.Populate_Table(2, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
+            generic_Table.Check_Count(next_Button, previous_Button, dateFilter1, "acclog");
         }
         private void sortComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
+            generic_Table.Check_Count(next_Button, previous_Button, dateFilter1, "acclog");
         }
 
         private void previous_Button_Click(object sender, EventArgs e)
@@ -76,6 +78,7 @@ namespace COA_IMS.Screens.Subscrn.LogsSubscreens
         private void refresh_Button_Click(object sender, EventArgs e)
         {
             generic_Table.Populate_Table(3, dateFilter1, searchBar1, LogsTable, sortComboBox, log_table_names, "acclog");
+            generic_Table.Check_Count(next_Button, previous_Button, dateFilter1, "acclog");
         }
 
         private void AccountLogging_VisibleChanged(object sender, EventArgs e)

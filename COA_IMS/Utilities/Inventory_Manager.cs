@@ -30,7 +30,6 @@ namespace COA_IMS.Utilities
             db_Manager = new Database_Manager();
             List<string> list_Of_Items = new List<string>();
             query = string.Format(query);
-            Console.WriteLine(query);
             using (db_Manager)
                 list_Of_Items = db_Manager.ExecuteQueryToList(query, item_columns);
             return list_Of_Items;
@@ -65,6 +64,23 @@ namespace COA_IMS.Utilities
         {
             db_Manager = new Database_Manager();
             int count;
+            using (db_Manager)
+            {
+                count = Convert.ToInt32(db_Manager.ExecuteScalar(query));
+            }
+            return count;
+        }
+        public int Count_Total_Results(string query)
+        {
+            db_Manager = new Database_Manager();
+            int count;
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                query = query.Remove(removeLimitIndex);
+
+            query = string.Format(Database_Query.count_total_result, query);
+
             using (db_Manager)
             {
                 count = Convert.ToInt32(db_Manager.ExecuteScalar(query));
@@ -176,7 +192,7 @@ namespace COA_IMS.Utilities
                 MessageBox.Show($"{name} Name: {item_code} is not added.", $"Item Not Added\n{item_code} may already exist.");
 
         }
-        public DataTable Get_Item_Records(int minimium, string sortString, string searchwords = null)
+        public DataTable Get_Item_Records(int minimium, string sortString, string searchwords = null, int status = 1)
         {
             string query;
             db_Manager = new Database_Manager();
@@ -184,11 +200,11 @@ namespace COA_IMS.Utilities
             switch (sortString)
             {
                 case "All":
-                    query = string.Format(Database_Query.get_all_specific_items_record, minimium, searchwords);
+                    query = string.Format(Database_Query.get_all_specific_items_record, minimium, searchwords, status);
                     break;
                 default:
                     if (searchwords != null)
-                        query = string.Format(Database_Query.get_specific_items_record, minimium, searchwords, sortString.Replace(" ", "_"));
+                        query = string.Format(Database_Query.get_specific_items_record, minimium, searchwords, sortString.Replace(" ", "_"), status);
                     else query = string.Format(Database_Query.get_general_items_record, minimium);
                     break;
             }
@@ -218,11 +234,6 @@ namespace COA_IMS.Utilities
                 dt.Columns.Add(new DataColumn("Total Price"));
             }
 
-            foreach (DataColumn column in dt.Columns)
-            {
-                // Print the column name and value
-                Console.WriteLine($"{column.ColumnName}:");
-            }
 
             DataTable rearrangedDataTable = new DataTable();
 
@@ -310,35 +321,36 @@ namespace COA_IMS.Utilities
             // 0 - transfer return date | 1 - transfer date | 2 - ics number | 3 - entity name | 4 - employee name | 5 - minimum limit
             string query = Database_Query.get_return_ics_table;
             query = string.Format(query, minimium, status, searchwords, from_date, to_date);
-            Console.WriteLine(query);
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);
             return dt;
         }
-        public DataTable Get_SN_Item_Records(int minimium, int status, string sortString, string searchwords = null, string from_date = null, string to_date = null)
+        public DataTable Get_SN_Item_Records(int minimium, int status, string sortString, string searchwords = null)
         {
             string query;
             db_Manager = new Database_Manager();
             DataTable dt = new DataTable();
-
             switch (sortString)
             {
                 case "All":
                     query = string.Format(Database_Query.get_all_serial_num_item_table, minimium, status, searchwords);
                     break;
                 default:
-                    if (searchwords != null)
-                        query = string.Format(Database_Query.get_specific_serial_num_item_table, minimium, status, searchwords, sortString.Replace(" ", "_"));
-                    else query = string.Format(Database_Query.get_general_serial_num_item_table, minimium, status);
+                    query = string.Format(Database_Query.get_specific_serial_num_item_table, minimium, status, searchwords, sortString.Replace(" ", "_"));
+                    //else query = string.Format(Database_Query.get_general_serial_num_item_table, minimium, status);
+                    //if (searchwords != null)
+                    //    query = string.Format(Database_Query.get_specific_serial_num_item_table, minimium, status, searchwords, sortString.Replace(" ", "_"));
+                    //else query = string.Format(Database_Query.get_general_serial_num_item_table, minimium, status);
                     break;
             }
-
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);
 
+            Console.WriteLine(query);
             int removeLimitIndex = query.IndexOf("LIMIT");
             if (removeLimitIndex >= 0)
                 Database_Query.last_query = query.Remove(removeLimitIndex);
+
             return dt;
         }
         public DataTable Get_Employee_History_Records(int minimium, string employee_name, string employee_position, string employee_office, string searchwords)
@@ -348,6 +360,22 @@ namespace COA_IMS.Utilities
             DataTable dt = new DataTable();
 
             query = string.Format(Database_Query.get_employee_history_item, minimium, employee_name, employee_position, employee_office, searchwords);
+
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        public DataTable Get_Item_History_Records(int minimium, string spec_sn, string searchword)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+
+            query = string.Format(Database_Query.get_specific_sn_item, minimium, spec_sn, searchword);
 
             using (db_Manager)
                 dt = db_Manager.ExecuteQuery(query);

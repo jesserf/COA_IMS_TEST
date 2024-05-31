@@ -41,15 +41,19 @@ namespace COA_IMS.Screens.Subscrn
             IMS_Product_Form prodform = new IMS_Product_Form();
             prodform.ShowDialog();
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
         private void RePopulate_Table(object sender, EventArgs e)
         {
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
+            generic_Table.ResetPaging();
         }
         private void sortComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
 
         private void previous_Button_Click(object sender, EventArgs e)

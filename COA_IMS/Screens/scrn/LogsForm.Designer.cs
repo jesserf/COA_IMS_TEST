@@ -32,10 +32,10 @@
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
             this.line_Panel = new Guna.UI.WinForms.GunaPanel();
             this.nav_panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.account_Logs_Button = new Guna.UI.WinForms.GunaAdvenceButton();
             this.activity_Logs_Button = new Guna.UI.WinForms.GunaAdvenceButton();
             this.reports_Button = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.parent_panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
             this.SuspendLayout();
@@ -85,13 +85,6 @@
             this.nav_panel.Size = new System.Drawing.Size(1603, 54);
             this.nav_panel.TabIndex = 0;
             // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
             // account_Logs_Button
             // 
             this.account_Logs_Button.Animated = true;
@@ -110,8 +103,8 @@
             this.account_Logs_Button.FocusedColor = System.Drawing.Color.Empty;
             this.account_Logs_Button.Font = new System.Drawing.Font("Bahnschrift", 14F);
             this.account_Logs_Button.ForeColor = System.Drawing.Color.White;
-            this.account_Logs_Button.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.account_Logs_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.account_Logs_Button.Image = global::COA_IMS.Properties.Resources.account_logs_white_24;
+            this.account_Logs_Button.ImageSize = new System.Drawing.Size(24, 24);
             this.account_Logs_Button.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.account_Logs_Button.Location = new System.Drawing.Point(0, 0);
             this.account_Logs_Button.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
@@ -119,7 +112,7 @@
             this.account_Logs_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
             this.account_Logs_Button.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
             this.account_Logs_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.account_Logs_Button.OnHoverImage = null;
+            this.account_Logs_Button.OnHoverImage = global::COA_IMS.Properties.Resources.account_logs_darkblue_24;
             this.account_Logs_Button.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.account_Logs_Button.OnPressedColor = System.Drawing.Color.Black;
             this.account_Logs_Button.Size = new System.Drawing.Size(222, 55);
@@ -146,8 +139,8 @@
             this.activity_Logs_Button.FocusedColor = System.Drawing.Color.Empty;
             this.activity_Logs_Button.Font = new System.Drawing.Font("Bahnschrift", 14F);
             this.activity_Logs_Button.ForeColor = System.Drawing.Color.White;
-            this.activity_Logs_Button.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.activity_Logs_Button.ImageSize = new System.Drawing.Size(20, 20);
+            this.activity_Logs_Button.Image = global::COA_IMS.Properties.Resources.activity_logs_white_24;
+            this.activity_Logs_Button.ImageSize = new System.Drawing.Size(24, 24);
             this.activity_Logs_Button.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.activity_Logs_Button.Location = new System.Drawing.Point(223, 0);
             this.activity_Logs_Button.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
@@ -155,7 +148,7 @@
             this.activity_Logs_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
             this.activity_Logs_Button.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
             this.activity_Logs_Button.OnHoverForeColor = System.Drawing.Color.White;
-            this.activity_Logs_Button.OnHoverImage = null;
+            this.activity_Logs_Button.OnHoverImage = global::COA_IMS.Properties.Resources.activity_logs_darkblue_24;
             this.activity_Logs_Button.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.activity_Logs_Button.OnPressedColor = System.Drawing.Color.Black;
             this.activity_Logs_Button.Size = new System.Drawing.Size(222, 55);
@@ -199,6 +192,13 @@
             this.reports_Button.Text = "REPORTS";
             this.reports_Button.TextOffsetX = 5;
             this.reports_Button.Click += new System.EventHandler(this.button_Click);
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // LogsForm
             // 

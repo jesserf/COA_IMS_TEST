@@ -38,11 +38,11 @@
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.previous_Button = new Guna.UI.WinForms.GunaButton();
             this.pageCountTextbox = new Guna.UI.WinForms.GunaTextBox();
+            this.next_Button = new Guna.UI.WinForms.GunaButton();
             this.searchbar_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBar1 = new COA_IMS.UserControlUtil.SearchBar();
-            this.previous_Button = new Guna.UI.WinForms.GunaButton();
-            this.next_Button = new Guna.UI.WinForms.GunaButton();
             this.refresh_Button = new Guna.UI.WinForms.GunaButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.content_Panel.SuspendLayout();
@@ -107,12 +107,12 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(586, 12);
+            this.label1.Location = new System.Drawing.Point(669, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 35);
+            this.label1.Size = new System.Drawing.Size(60, 35);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Employee Name";
+            this.label1.Text = "SN:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // content_Panel
@@ -217,47 +217,6 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 53);
             this.flowLayoutPanel2.TabIndex = 12;
             // 
-            // pageCountTextbox
-            // 
-            this.pageCountTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pageCountTextbox.BackColor = System.Drawing.Color.White;
-            this.pageCountTextbox.BaseColor = System.Drawing.Color.White;
-            this.pageCountTextbox.BorderColor = System.Drawing.Color.White;
-            this.pageCountTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pageCountTextbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.pageCountTextbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.pageCountTextbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.pageCountTextbox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageCountTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
-            this.pageCountTextbox.Location = new System.Drawing.Point(55, 15);
-            this.pageCountTextbox.Name = "pageCountTextbox";
-            this.pageCountTextbox.PasswordChar = '\0';
-            this.pageCountTextbox.SelectedText = "";
-            this.pageCountTextbox.Size = new System.Drawing.Size(90, 30);
-            this.pageCountTextbox.TabIndex = 2;
-            this.pageCountTextbox.Text = "1";
-            this.pageCountTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // searchbar_Panel
-            // 
-            this.searchbar_Panel.Controls.Add(this.searchBar1);
-            this.searchbar_Panel.Controls.Add(this.refresh_Button);
-            this.searchbar_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchbar_Panel.Location = new System.Drawing.Point(0, 0);
-            this.searchbar_Panel.Name = "searchbar_Panel";
-            this.searchbar_Panel.Size = new System.Drawing.Size(1379, 65);
-            this.searchbar_Panel.TabIndex = 29;
-            // 
-            // searchBar1
-            // 
-            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 10);
-            this.searchBar1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(561, 45);
-            this.searchBar1.TabIndex = 20;
-            // 
             // previous_Button
             // 
             this.previous_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -284,6 +243,28 @@
             this.previous_Button.TabIndex = 0;
             this.previous_Button.Text = "<";
             // 
+            // pageCountTextbox
+            // 
+            this.pageCountTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pageCountTextbox.BackColor = System.Drawing.Color.White;
+            this.pageCountTextbox.BaseColor = System.Drawing.Color.White;
+            this.pageCountTextbox.BorderColor = System.Drawing.Color.White;
+            this.pageCountTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pageCountTextbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.pageCountTextbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.pageCountTextbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.pageCountTextbox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageCountTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(48)))), ((int)(((byte)(59)))));
+            this.pageCountTextbox.Location = new System.Drawing.Point(55, 15);
+            this.pageCountTextbox.Name = "pageCountTextbox";
+            this.pageCountTextbox.PasswordChar = '\0';
+            this.pageCountTextbox.SelectedText = "";
+            this.pageCountTextbox.Size = new System.Drawing.Size(90, 30);
+            this.pageCountTextbox.TabIndex = 2;
+            this.pageCountTextbox.Text = "1";
+            this.pageCountTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // next_Button
             // 
             this.next_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -309,6 +290,25 @@
             this.next_Button.Size = new System.Drawing.Size(46, 42);
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
+            // 
+            // searchbar_Panel
+            // 
+            this.searchbar_Panel.Controls.Add(this.searchBar1);
+            this.searchbar_Panel.Controls.Add(this.refresh_Button);
+            this.searchbar_Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchbar_Panel.Location = new System.Drawing.Point(0, 0);
+            this.searchbar_Panel.Name = "searchbar_Panel";
+            this.searchbar_Panel.Size = new System.Drawing.Size(1379, 65);
+            this.searchbar_Panel.TabIndex = 29;
+            // 
+            // searchBar1
+            // 
+            this.searchBar1.BackColor = System.Drawing.Color.Transparent;
+            this.searchBar1.Location = new System.Drawing.Point(3, 10);
+            this.searchBar1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.searchBar1.Name = "searchBar1";
+            this.searchBar1.Size = new System.Drawing.Size(561, 45);
+            this.searchBar1.TabIndex = 20;
             // 
             // refresh_Button
             // 

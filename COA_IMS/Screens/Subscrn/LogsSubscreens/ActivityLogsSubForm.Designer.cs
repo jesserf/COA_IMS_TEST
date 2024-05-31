@@ -130,7 +130,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.53465F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.46535F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
@@ -149,7 +149,7 @@
             this.searchBar1.BackColor = System.Drawing.Color.Transparent;
             this.searchBar1.Location = new System.Drawing.Point(3, 29);
             this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(544, 43);
+            this.searchBar1.Size = new System.Drawing.Size(543, 43);
             this.searchBar1.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -169,7 +169,7 @@
             this.reports_Button.AnimationHoverSpeed = 0.07F;
             this.reports_Button.AnimationSpeed = 0.03F;
             this.reports_Button.BackColor = System.Drawing.Color.Transparent;
-            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.reports_Button.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
             this.reports_Button.BorderColor = System.Drawing.Color.Black;
             this.reports_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reports_Button.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -181,7 +181,7 @@
             this.reports_Button.Location = new System.Drawing.Point(73, 3);
             this.reports_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.reports_Button.Name = "reports_Button";
-            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.reports_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
             this.reports_Button.OnHoverBorderColor = System.Drawing.Color.Black;
             this.reports_Button.OnHoverForeColor = System.Drawing.Color.White;
             this.reports_Button.OnHoverImage = null;
@@ -208,7 +208,7 @@
             this.refresh_Button.Location = new System.Drawing.Point(25, 3);
             this.refresh_Button.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.refresh_Button.Name = "refresh_Button";
-            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
+            this.refresh_Button.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
             this.refresh_Button.OnHoverBorderColor = System.Drawing.Color.Black;
             this.refresh_Button.OnHoverForeColor = System.Drawing.Color.White;
             this.refresh_Button.OnHoverImage = null;
@@ -235,7 +235,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "User Name",
             "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1184, 30);
+            this.sortComboBox.Location = new System.Drawing.Point(1183, 30);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(134)))), ((int)(((byte)(33)))));
@@ -251,7 +251,7 @@
             this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
             this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            this.dateFilter1.Location = new System.Drawing.Point(553, 29);
+            this.dateFilter1.Location = new System.Drawing.Point(552, 29);
             this.dateFilter1.Name = "dateFilter1";
             this.dateFilter1.Size = new System.Drawing.Size(625, 43);
             this.dateFilter1.TabIndex = 5;

@@ -422,6 +422,12 @@
     <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.Designer.cs">
+      <DependentUpon>ArchivedInventoryTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -846,6 +852,9 @@
     <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
       <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.resx">
+      <DependentUpon>ArchivedInventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.resx">
       <DependentUpon>LogsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1071,23 +1080,53 @@
     <None Include="Resources\circle-xmark %282%29.png" />
     <None Include="Resources\digital-tachograph.png" />
     <None Include="Resources\disk.png" />
+    <Content Include="Resources\darkblu\account_logs-darkblue-24.png" />
+    <Content Include="Resources\darkblu\account_logs-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\account_logs-white-24.png" />
+    <Content Include="Resources\darkblu\activity_logs-darkblue_24.png" />
+    <Content Include="Resources\darkblu\activity_logs-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\activity_logs-white-24.png" />
+    <Content Include="Resources\darkblu\add_tracking-darkblue-24.png" />
+    <Content Include="Resources\darkblu\add_tracking-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\add_tracking-white-24.png" />
     <Content Include="Resources\darkblu\archive-black-24.png" />
     <Content Include="Resources\darkblu\archive-darkblue-24.png" />
     <Content Include="Resources\darkblu\archive-lightgray-24.png" />
     <Content Include="Resources\darkblu\archive-white-24.png" />
+    <Content Include="Resources\darkblu\archive_items-darkblue-24.png" />
+    <Content Include="Resources\darkblu\archive_items-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\archive_items-white-24.png" />
     <Content Include="Resources\darkblu\employee-darkblue-24.png" />
     <Content Include="Resources\darkblu\employee-lightgray-24.png" />
     <Content Include="Resources\darkblu\employee-table-darkblue-24.png" />
     <Content Include="Resources\darkblu\employee-table-lightgray-24.png" />
     <Content Include="Resources\darkblu\employee-table-white-24.png" />
+    <Content Include="Resources\darkblu\employee_history-darkblue-24.png" />
+    <Content Include="Resources\darkblu\employee_history-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\employee_history-white-24.png" />
+    <Content Include="Resources\darkblu\inventory_table-darkblue-24.png" />
+    <Content Include="Resources\darkblu\inventory_table-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\inventory_table-white-24.png" />
     <Content Include="Resources\darkblu\item-category-darkblue-24.png" />
     <Content Include="Resources\darkblu\item-category-lightgray-24.png" />
     <Content Include="Resources\darkblu\item-category-white-24.png" />
     <Content Include="Resources\darkblu\item-supplier-darkblue-24.png" />
     <Content Include="Resources\darkblu\item-supplier-lightgray-24.png" />
     <Content Include="Resources\darkblu\item-supplier-white-24.png" />
+    <Content Include="Resources\darkblu\item_history-darkblue-24.png" />
+    <Content Include="Resources\darkblu\item_history-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\item_history-white-24.png" />
     <Content Include="Resources\darkblu\logout-darkblue-24.png" />
     <Content Include="Resources\darkblu\logout-lightgray-24.png" />
+    <Content Include="Resources\darkblu\reports-darkblue-24.png" />
+    <Content Include="Resources\darkblu\reports-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\reports-white-24.png" />
+    <Content Include="Resources\darkblu\returned_table-darkblue-24.png" />
+    <Content Include="Resources\darkblu\returned_table-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\returned_table-white-24.png" />
+    <Content Include="Resources\darkblu\tracking_ics-darkblue-24.png" />
+    <Content Include="Resources\darkblu\tracking_ics-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\tracking_ics-white-24.png" />
     <Content Include="Resources\dsahboard_img.png" />
     <None Include="Resources\employee-darkblue-24.png" />
     <Content Include="Resources\expand - Copy.png" />

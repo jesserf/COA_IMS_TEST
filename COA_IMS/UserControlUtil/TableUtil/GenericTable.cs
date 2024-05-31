@@ -4,6 +4,7 @@ using Guna.UI.Licensing;
 using Guna.UI.WinForms;
 using Org.BouncyCastle.Tls.Crypto;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 /*How to use
  * Go To overload functions
  */
@@ -37,6 +39,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
         public string employee_name { get; set; }
         public string employee_office { get; set; }
         public string employee_position { get; set; }
+        public string specific_sn_item { get; set; }
         //user controls
         SearchBar searchBar1 { get; set; }
         DateFilter dateFilter1 { get; set; }
@@ -376,7 +379,7 @@ namespace COA_IMS.UserControlUtil.TableUtil
             //instantiate a datatable to put in items to datagridview
             DataTable dt = new DataTable();
             //take datetimepicker values and format it to mysql format
-            if(dateFilter1 != null)
+            if (dateFilter1 != null)
             {
                 string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
                 string current_time = DateTime.Now.ToString("HH':'mm':'ss");
@@ -446,6 +449,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     break; 
                 case "emp_hist":
                     dt = FillEmpHistoryTable();
+                    break; 
+                case "spec_sn":
+                    dt = FillItemHistoryTable();
+                    break; 
+                case "archived_items":
+                    dt = FillArchivedItemsTable();
                     break; 
                 default: break;
             }
@@ -550,7 +559,12 @@ namespace COA_IMS.UserControlUtil.TableUtil
         private DataTable FillItemsTable()
         {
             inventory_Manager = new Inventory_Manager();
-            return inventory_Manager.Get_Item_Records(min_lim, sort_String, searchBar1.Text);
+            return inventory_Manager.Get_Item_Records(min_lim, sort_String, searchBar1.Text, 1);
+        }
+        private DataTable FillArchivedItemsTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Item_Records(min_lim, sort_String, searchBar1.Text, 0);
         }
         private DataTable FillFundsTable()
         {
@@ -606,9 +620,6 @@ namespace COA_IMS.UserControlUtil.TableUtil
         }
         private DataTable FillSNItemTable()
         {
-            //string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
-            //string current_time = DateTime.Now.ToString("HH':'mm':'ss");
-            //string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd " + current_time);
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_SN_Item_Records(min_lim, 1, sort_String, searchBar1.Text);
         }
@@ -616,6 +627,11 @@ namespace COA_IMS.UserControlUtil.TableUtil
         {
             inventory_Manager = new Inventory_Manager();
             return inventory_Manager.Get_Employee_History_Records(min_lim, employee_name, employee_position, employee_office, searchBar1.Text);
+        }
+        private DataTable FillItemHistoryTable()
+        {
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Item_History_Records(min_lim, specific_sn_item, searchBar1.Text);
         }
         private void AddThemeToDGV()
         {
@@ -690,6 +706,21 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         }; ;
                     break;
                 case "items":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 10), (true, 20), (true, 20), (true, 10), (true, 5), (true, 10), (true, 10), (true, 10), }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Code", DataGridViewContentAlignment.MiddleLeft),
+                            ("Item Desc.", DataGridViewContentAlignment.MiddleLeft),
+                            ("SN", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit", DataGridViewContentAlignment.MiddleLeft),
+                            ("Qty.", DataGridViewContentAlignment.MiddleLeft),
+                            ("Unit Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Total Cost", DataGridViewContentAlignment.MiddleLeft),
+                            ("Est Use Life", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
+                    break;
+                case "archived_items":
                     column_Widths = new (bool, int)[] { (true, 5), (true, 10), (true, 20), (true, 20), (true, 10), (true, 5), (true, 10), (true, 10), (true, 10), }; ;
                     column_Text_Align = new (string, DataGridViewContentAlignment)[]
                         {
@@ -822,48 +853,27 @@ namespace COA_IMS.UserControlUtil.TableUtil
                             ("Return Date", DataGridViewContentAlignment.MiddleLeft),
                         }; ;
                     break;
+                case "spec_sn":
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 25), (true, 20), (true, 20), (true, 15) , (true, 15) }; ;
+                    column_Text_Align = new (string, DataGridViewContentAlignment)[]
+                        {
+                            ("#", DataGridViewContentAlignment.MiddleRight),
+                            ("ICS Number", DataGridViewContentAlignment.MiddleLeft),
+                            ("Receiver", DataGridViewContentAlignment.MiddleLeft),
+                            ("Giver", DataGridViewContentAlignment.MiddleLeft),
+                            ("Transfer Date", DataGridViewContentAlignment.MiddleLeft),
+                            ("Return Date.", DataGridViewContentAlignment.MiddleLeft),
+                        }; ;
+                    break;
                 default: break;
             }
 
-            //MessageBox.Show("2");
             Theme.gridView_Style(data_View, column_Widths, column_Text_Align);
-            //MessageBox.Show("3");
         }
         private void AlternateTheTable()
         {
             Theme.AlternateTableRows(data_View);
         }
-        //add button
-        //private void AddDeletee()
-        //{
-        //    DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
-        //    int columnIndex = 2;
-        //    if (data_View.Columns["uninstall_column"] == null)
-        //    {
-        //        data_View.Columns.Insert(columnIndex, uninstallButtonColumn);
-        //    }
-        //    data_View.CellPainting += grid_CellPainting;
-        //}
-
-        private void grid_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0)
-                return;
-
-            //I supposed your button column is at index 0
-            if (e.ColumnIndex == 2)
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var w = trash.Width;
-                var h = trash.Height;
-                var x = e.CellBounds.Right + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-                e.Graphics.DrawImage(trash, new Rectangle(x, y, w, h));
-            }
-        }
-
         public void Check_Count()
         {
             min_lim = max_lim * (page_cnt - 1);
@@ -918,10 +928,30 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee_office, searchBar1.Text));
                     break;
                 case "employee":
-                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 1));
+                    if (sort_String.Equals("All"))
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_all_specific_employee_record, min_lim, searchBar1.Text, 1));
+                    else
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_specific_employee_record, min_lim, searchBar1.Text, sort_String.Replace(" ", "_"), 1));
+                    //rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 1));
                     break;
                 case "archived_employee":
-                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
+                    if (sort_String.Equals("All"))
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_all_specific_archived_employee_record, min_lim, searchBar1.Text, 0));
+                    else
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_specific_archived_employee_record, min_lim, searchBar1.Text, sort_String.Replace(" ", "_"), 0));
+                    //rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
+                    break;
+                case "item":
+                    if (sort_String.Equals("All"))
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_all_specific_items_record, min_lim, searchBar1.Text, 1));
+                    else
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_specific_items_record, min_lim, searchBar1.Text, sort_String.Replace(" ", "_"), 1));
+                    break;
+                case "archived_items":
+                    if (sort_String.Equals("All"))
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_all_specific_items_record, min_lim, searchBar1.Text, 1));
+                    else
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_specific_items_record, min_lim, searchBar1.Text, sort_String.Replace(" ", "_"), 0));
                     break;
                 case "ics":
                     from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
@@ -929,13 +959,19 @@ namespace COA_IMS.UserControlUtil.TableUtil
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_ics_table, min_lim, 1, searchBar1.Text, from_Date, to_Date));
                     break;
                 case "sn_item":
-                    rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_serial_num_item_table, min_lim, 1, searchBar1.Text));
+                    if (sort_String.Equals("All"))
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_all_serial_num_item_table, min_lim, 1, searchBar1.Text));
+                    else
+                        rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_specific_serial_num_item_table, min_lim, 1, searchBar1.Text, sort_String.Replace(" ", "_")));
                     break;
                 case "return":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.count_employee, searchBar1.Text, 0));
                     break;
                 case "emp_hist":
                     rec_count = inventory_Manager.Count_Item_Categories(string.Format(Database_Query.get_employee_history_count, searchBar1.Text, employee_name,  employee_position,  employee_office));
+                    break;
+                case "spec_sn":
+                    rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.get_specific_sn_item, min_lim, specific_sn_item,  searchBar1.Text));
                     break;
                 default: break;
             }
@@ -961,6 +997,14 @@ namespace COA_IMS.UserControlUtil.TableUtil
             //if wrong, puts last know page count to text box
             pageCountTextbox.Text = page_cnt.ToString();
             return page_cnt;
+        }
+        public void ResetPaging()
+        {
+            page_cnt = 1; //puts user input as page count
+            Check_Count();
+            Populate_Table(3);
+            //if wrong, puts last know page count to text box
+            pageCountTextbox.Text = page_cnt.ToString();
         }
 
         public void UserChangePage(bool next)

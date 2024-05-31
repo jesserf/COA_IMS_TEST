@@ -73,6 +73,46 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_logs_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("account_logs-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_logs_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("account_logs-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap activity_logs_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("activity_logs-darkblue_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap activity_logs_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("activity_logs-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add__1_ {
             get {
                 object obj = ResourceManager.GetObject("add (1)", resourceCulture);
@@ -103,6 +143,26 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_tracking_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("add_tracking-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_tracking_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("add_tracking-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap apps_sort {
             get {
                 object obj = ResourceManager.GetObject("apps-sort", resourceCulture);
@@ -116,6 +176,26 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap archive_darkblue_24 {
             get {
                 object obj = ResourceManager.GetObject("archive-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archive_items_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("archive_items-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archive_items_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("archive_items-white-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,6 +473,26 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employee_history_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("employee_history-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_history_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("employee_history-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employee_lightgray_24 {
             get {
                 object obj = ResourceManager.GetObject("employee-lightgray-24", resourceCulture);
@@ -533,6 +633,26 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inventory_table_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("inventory_table-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_table_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("inventory_table-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap item_category_darkblue_24 {
             get {
                 object obj = ResourceManager.GetObject("item-category-darkblue-24", resourceCulture);
@@ -546,6 +666,26 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap item_category_white_24 {
             get {
                 object obj = ResourceManager.GetObject("item-category-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap item_history_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("item_history-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap item_history_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("item_history-white-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -803,6 +943,46 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reports_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("reports-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reports_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("reports-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap returned_table_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("returned_table-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap returned_table_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("returned_table-white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap route {
             get {
                 object obj = ResourceManager.GetObject("route", resourceCulture);
@@ -1046,6 +1226,26 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap to_do__2_ {
             get {
                 object obj = ResourceManager.GetObject("to-do (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tracking_ics_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("tracking_ics-darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tracking_ics_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("tracking_ics-white-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

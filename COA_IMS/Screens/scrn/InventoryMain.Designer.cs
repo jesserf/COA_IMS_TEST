@@ -36,7 +36,6 @@
             this.parent_panel = new Guna.UI.WinForms.GunaPanel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.inventory_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.disposal_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.archived_Table_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.container_Panel.SuspendLayout();
             this.nav_panel.SuspendLayout();
@@ -70,7 +69,6 @@
             this.nav_panel.AutoSize = true;
             this.nav_panel.BackColor = System.Drawing.Color.White;
             this.nav_panel.Controls.Add(this.inventory_Table_Btn);
-            this.nav_panel.Controls.Add(this.disposal_Btn);
             this.nav_panel.Controls.Add(this.archived_Table_Btn);
             this.nav_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nav_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -133,8 +131,8 @@
             this.inventory_Table_Btn.FocusedColor = System.Drawing.Color.Empty;
             this.inventory_Table_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
             this.inventory_Table_Btn.ForeColor = System.Drawing.Color.White;
-            this.inventory_Table_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.inventory_Table_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.inventory_Table_Btn.Image = global::COA_IMS.Properties.Resources.inventory_table_white_24;
+            this.inventory_Table_Btn.ImageSize = new System.Drawing.Size(24, 24);
             this.inventory_Table_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
             this.inventory_Table_Btn.Location = new System.Drawing.Point(0, 0);
             this.inventory_Table_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
@@ -142,7 +140,7 @@
             this.inventory_Table_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
             this.inventory_Table_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
             this.inventory_Table_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.inventory_Table_Btn.OnHoverImage = null;
+            this.inventory_Table_Btn.OnHoverImage = global::COA_IMS.Properties.Resources.inventory_table_darkblue_24;
             this.inventory_Table_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
             this.inventory_Table_Btn.OnPressedColor = System.Drawing.Color.Black;
             this.inventory_Table_Btn.Size = new System.Drawing.Size(222, 55);
@@ -151,49 +149,13 @@
             this.inventory_Table_Btn.TextOffsetX = 5;
             this.inventory_Table_Btn.Click += new System.EventHandler(this.button_Click);
             // 
-            // disposal_Btn
-            // 
-            this.disposal_Btn.Animated = true;
-            this.disposal_Btn.AnimationHoverSpeed = 0.07F;
-            this.disposal_Btn.AnimationSpeed = 0.03F;
-            this.disposal_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.disposal_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.disposal_Btn.BorderColor = System.Drawing.Color.Black;
-            this.disposal_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.disposal_Btn.CheckedBorderColor = System.Drawing.Color.Black;
-            this.disposal_Btn.CheckedForeColor = System.Drawing.Color.White;
-            this.disposal_Btn.CheckedImage = null;
-            this.disposal_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.disposal_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.disposal_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.disposal_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.disposal_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
-            this.disposal_Btn.ForeColor = System.Drawing.Color.White;
-            this.disposal_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.disposal_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.disposal_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
-            this.disposal_Btn.Location = new System.Drawing.Point(223, 0);
-            this.disposal_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.disposal_Btn.Name = "disposal_Btn";
-            this.disposal_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
-            this.disposal_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
-            this.disposal_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.disposal_Btn.OnHoverImage = null;
-            this.disposal_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
-            this.disposal_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.disposal_Btn.Size = new System.Drawing.Size(222, 55);
-            this.disposal_Btn.TabIndex = 7;
-            this.disposal_Btn.Text = "DISPOSAL";
-            this.disposal_Btn.TextOffsetX = 5;
-            this.disposal_Btn.Click += new System.EventHandler(this.button_Click);
-            // 
             // archived_Table_Btn
             // 
             this.archived_Table_Btn.Animated = true;
             this.archived_Table_Btn.AnimationHoverSpeed = 0.07F;
             this.archived_Table_Btn.AnimationSpeed = 0.03F;
-            this.archived_Table_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.archived_Table_Btn.BaseColor = System.Drawing.Color.Transparent;
+            this.archived_Table_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.archived_Table_Btn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
             this.archived_Table_Btn.BorderColor = System.Drawing.Color.Black;
             this.archived_Table_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
             this.archived_Table_Btn.CheckedBorderColor = System.Drawing.Color.Black;
@@ -205,20 +167,20 @@
             this.archived_Table_Btn.FocusedColor = System.Drawing.Color.Empty;
             this.archived_Table_Btn.Font = new System.Drawing.Font("Bahnschrift", 14F);
             this.archived_Table_Btn.ForeColor = System.Drawing.Color.White;
-            this.archived_Table_Btn.Image = global::COA_IMS.Properties.Resources.newspaper__1_;
-            this.archived_Table_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.archived_Table_Btn.Image = global::COA_IMS.Properties.Resources.archive_items_white_24;
+            this.archived_Table_Btn.ImageSize = new System.Drawing.Size(24, 24);
             this.archived_Table_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(105)))), ((int)(((byte)(115)))));
-            this.archived_Table_Btn.Location = new System.Drawing.Point(446, 0);
+            this.archived_Table_Btn.Location = new System.Drawing.Point(223, 0);
             this.archived_Table_Btn.Margin = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.archived_Table_Btn.Name = "archived_Table_Btn";
             this.archived_Table_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(84)))), ((int)(((byte)(94)))));
             this.archived_Table_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(75)))));
             this.archived_Table_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.archived_Table_Btn.OnHoverImage = null;
+            this.archived_Table_Btn.OnHoverImage = global::COA_IMS.Properties.Resources.archive_items_darkblue_24;
             this.archived_Table_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(148)))), ((int)(((byte)(155)))));
             this.archived_Table_Btn.OnPressedColor = System.Drawing.Color.Black;
             this.archived_Table_Btn.Size = new System.Drawing.Size(222, 55);
-            this.archived_Table_Btn.TabIndex = 5;
+            this.archived_Table_Btn.TabIndex = 7;
             this.archived_Table_Btn.Text = "ARCHIVED TABLE";
             this.archived_Table_Btn.TextOffsetX = 5;
             this.archived_Table_Btn.Click += new System.EventHandler(this.button_Click);
@@ -254,7 +216,6 @@
         private Guna.UI.WinForms.GunaPanel line_Panel;
         private System.Windows.Forms.FlowLayoutPanel nav_panel;
         private Guna.UI.WinForms.GunaAdvenceButton archived_Table_Btn;
-        private Guna.UI.WinForms.GunaAdvenceButton disposal_Btn;
         private Guna.UI.WinForms.GunaAdvenceButton inventory_Table_Btn;
         private Guna.UI.WinForms.GunaPanel content_Panel;
     }

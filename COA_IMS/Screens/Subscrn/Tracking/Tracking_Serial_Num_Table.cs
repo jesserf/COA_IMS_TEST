@@ -15,7 +15,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
     public partial class Tracking_Serial_Num_Table : Form
     {
         GenericTable generic_Table;
-        readonly string[] log_table_names = { "All", "Employee Name", "Employee Position", "Employee Office" };
+        readonly string[] log_table_names = { "All", "Serial Number", "Item Code", "Item Description" , "Currently Held By", "Last Held By" };
         public Tracking_Serial_Num_Table()
         {
             InitializeComponent();
@@ -45,6 +45,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         private void RePopulate_Table(object sender, EventArgs e)
         {
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
 
         private void previous_Button_Click(object sender, EventArgs e)
@@ -68,19 +69,19 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1 && e.ColumnIndex >= 0)
                 return;
-            string arg = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string arg2 = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
-            string arg3 = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //MessageBox.Show(arg.ToString());
-            EmployeeInfoForm employeeInfoForm = new EmployeeInfoForm(arg, arg2, arg3);
-            employeeInfoForm.ShowDialog();
+            string arg_sn = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string arg_item_desc = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
+            SNHistorySubform snHistorySubform = new SNHistorySubform(arg_item_desc, arg_sn);
+            snHistorySubform.ShowDialog();
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
     }
 }

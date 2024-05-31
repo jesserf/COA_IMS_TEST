@@ -62,8 +62,8 @@ namespace COA_IMS.Screens.scrn
             activity_manager.Log_Activity(CurrentUser.user_name, "Logged In");
 
             tab_Manager.Header_Title = title_Label;
-            tab_Manager.active_Button(Homebtn, true);
-            trackingbtn.PerformClick();
+            tab_Manager.active_Button(Inventorybtn, true);
+            Inventorybtn.PerformClick();
         }
         private void tab_Button_Click(object sender, EventArgs e)
         {

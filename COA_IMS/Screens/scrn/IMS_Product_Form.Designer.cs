@@ -595,7 +595,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "IMS_Product_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IMS_Product_Form";
+            this.Text = "Add New Item";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.IMS_Product_Form_KeyDown);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
