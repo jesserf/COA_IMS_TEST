@@ -87,7 +87,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(111)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.data_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -314,7 +314,7 @@
             this.sortComboBox.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
             this.sortComboBox.ForeColor = System.Drawing.Color.White;
             this.sortComboBox.FormattingEnabled = true;
-            this.sortComboBox.Location = new System.Drawing.Point(1154, 69);
+            this.sortComboBox.Location = new System.Drawing.Point(1153, 69);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
@@ -330,7 +330,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.67244F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.32756F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 1);

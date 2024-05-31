@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.sn_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.item_Desc_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.quantity_Lbl = new System.Windows.Forms.Label();
-            this.sn_Lbl = new System.Windows.Forms.Label();
-            this.item_Desc_Lbl = new System.Windows.Forms.Label();
+            this.office_Textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.position_Textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.received_From_Lbl = new System.Windows.Forms.Label();
             this.ics_Number_Lbl = new System.Windows.Forms.Label();
             this.received_By_Lbl = new System.Windows.Forms.Label();
             this.employee_Name_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.office_Lbl = new System.Windows.Forms.Label();
             this.position_Lbl = new System.Windows.Forms.Label();
-            this.quantity_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.received_From_Lbl = new System.Windows.Forms.Label();
-            this.unit_Cost_Lbl = new System.Windows.Forms.Label();
             this.giver_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.unit_Cost_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.return_Btn = new Guna.UI.WinForms.GunaButton();
             this.remove_Btn = new Guna.UI.WinForms.GunaButton();
+            this.return_Btn = new Guna.UI.WinForms.GunaButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fund_Cluster_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.total_Lbl = new System.Windows.Forms.Label();
             this.total_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.position_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.office_Textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.unit_Cost_Lbl = new System.Windows.Forms.Label();
+            this.unit_Cost_Textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.quantity_Lbl = new System.Windows.Forms.Label();
+            this.quantity_Textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.sn_Lbl = new System.Windows.Forms.Label();
+            this.sn_Textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.item_Desc_Lbl = new System.Windows.Forms.Label();
+            this.item_Desc_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.return_Due_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.fund_Cluster_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.transfer_Date_Textbox = new Guna.UI.WinForms.GunaTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.return_Due_Lbl = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.transfer_Date_Textbox = new Guna.UI.WinForms.GunaTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,85 +113,61 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 776);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // sn_Textbox
+            // office_Textbox
             // 
-            this.sn_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.sn_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.sn_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.sn_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.sn_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sn_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.sn_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.sn_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.sn_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sn_Textbox.Location = new System.Drawing.Point(330, 520);
-            this.sn_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.sn_Textbox.Name = "sn_Textbox";
-            this.sn_Textbox.PasswordChar = '\0';
-            this.sn_Textbox.Radius = 10;
-            this.sn_Textbox.ReadOnly = true;
-            this.sn_Textbox.SelectedText = "";
-            this.sn_Textbox.Size = new System.Drawing.Size(460, 36);
-            this.sn_Textbox.TabIndex = 5;
-            this.sn_Textbox.Tag = "Phone";
+            this.office_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.office_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.office_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.office_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.office_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.office_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.office_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.office_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.office_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.office_Textbox.Location = new System.Drawing.Point(330, 163);
+            this.office_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.office_Textbox.Name = "office_Textbox";
+            this.office_Textbox.PasswordChar = '\0';
+            this.office_Textbox.Radius = 10;
+            this.office_Textbox.ReadOnly = true;
+            this.office_Textbox.SelectedText = "";
+            this.office_Textbox.Size = new System.Drawing.Size(460, 36);
+            this.office_Textbox.TabIndex = 24;
+            this.office_Textbox.Tag = "Address";
             // 
-            // item_Desc_Textbox
+            // position_Textbox
             // 
-            this.item_Desc_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_Desc_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.item_Desc_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.item_Desc_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.item_Desc_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.item_Desc_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.item_Desc_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.item_Desc_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.item_Desc_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item_Desc_Textbox.Location = new System.Drawing.Point(330, 469);
-            this.item_Desc_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.item_Desc_Textbox.Name = "item_Desc_Textbox";
-            this.item_Desc_Textbox.PasswordChar = '\0';
-            this.item_Desc_Textbox.Radius = 10;
-            this.item_Desc_Textbox.ReadOnly = true;
-            this.item_Desc_Textbox.SelectedText = "";
-            this.item_Desc_Textbox.Size = new System.Drawing.Size(460, 36);
-            this.item_Desc_Textbox.TabIndex = 4;
-            this.item_Desc_Textbox.Tag = "Email";
+            this.position_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.position_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.position_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.position_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.position_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.position_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.position_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.position_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.position_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.position_Textbox.Location = new System.Drawing.Point(330, 112);
+            this.position_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.position_Textbox.Name = "position_Textbox";
+            this.position_Textbox.PasswordChar = '\0';
+            this.position_Textbox.Radius = 10;
+            this.position_Textbox.ReadOnly = true;
+            this.position_Textbox.SelectedText = "";
+            this.position_Textbox.Size = new System.Drawing.Size(460, 36);
+            this.position_Textbox.TabIndex = 23;
+            this.position_Textbox.Tag = "Address";
             // 
-            // quantity_Lbl
+            // received_From_Lbl
             // 
-            this.quantity_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.quantity_Lbl.AutoSize = true;
-            this.quantity_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity_Lbl.Location = new System.Drawing.Point(216, 574);
-            this.quantity_Lbl.Margin = new System.Windows.Forms.Padding(10);
-            this.quantity_Lbl.Name = "quantity_Lbl";
-            this.quantity_Lbl.Size = new System.Drawing.Size(94, 25);
-            this.quantity_Lbl.TabIndex = 11;
-            this.quantity_Lbl.Text = "Quantity:";
-            // 
-            // sn_Lbl
-            // 
-            this.sn_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.sn_Lbl.AutoSize = true;
-            this.sn_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sn_Lbl.Location = new System.Drawing.Point(157, 523);
-            this.sn_Lbl.Margin = new System.Windows.Forms.Padding(10);
-            this.sn_Lbl.Name = "sn_Lbl";
-            this.sn_Lbl.Size = new System.Drawing.Size(153, 25);
-            this.sn_Lbl.TabIndex = 10;
-            this.sn_Lbl.Text = "Serial Number:";
-            // 
-            // item_Desc_Lbl
-            // 
-            this.item_Desc_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.item_Desc_Lbl.AutoSize = true;
-            this.item_Desc_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.item_Desc_Lbl.Location = new System.Drawing.Point(139, 472);
-            this.item_Desc_Lbl.Margin = new System.Windows.Forms.Padding(10);
-            this.item_Desc_Lbl.Name = "item_Desc_Lbl";
-            this.item_Desc_Lbl.Size = new System.Drawing.Size(171, 25);
-            this.item_Desc_Lbl.TabIndex = 9;
-            this.item_Desc_Lbl.Text = "Item Description:";
+            this.received_From_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.received_From_Lbl.AutoSize = true;
+            this.received_From_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.received_From_Lbl.Location = new System.Drawing.Point(153, 217);
+            this.received_From_Lbl.Margin = new System.Windows.Forms.Padding(10);
+            this.received_From_Lbl.Name = "received_From_Lbl";
+            this.received_From_Lbl.Size = new System.Drawing.Size(157, 25);
+            this.received_From_Lbl.TabIndex = 13;
+            this.received_From_Lbl.Text = "Received From:";
             // 
             // ics_Number_Lbl
             // 
@@ -267,52 +243,6 @@
             this.position_Lbl.TabIndex = 5;
             this.position_Lbl.Text = "Employee Position:";
             // 
-            // quantity_Textbox
-            // 
-            this.quantity_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.quantity_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.quantity_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.quantity_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.quantity_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.quantity_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.quantity_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.quantity_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.quantity_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity_Textbox.Location = new System.Drawing.Point(330, 571);
-            this.quantity_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.quantity_Textbox.Name = "quantity_Textbox";
-            this.quantity_Textbox.PasswordChar = '\0';
-            this.quantity_Textbox.Radius = 10;
-            this.quantity_Textbox.ReadOnly = true;
-            this.quantity_Textbox.SelectedText = "";
-            this.quantity_Textbox.Size = new System.Drawing.Size(460, 36);
-            this.quantity_Textbox.TabIndex = 6;
-            this.quantity_Textbox.Tag = "Address";
-            // 
-            // received_From_Lbl
-            // 
-            this.received_From_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.received_From_Lbl.AutoSize = true;
-            this.received_From_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.received_From_Lbl.Location = new System.Drawing.Point(153, 217);
-            this.received_From_Lbl.Margin = new System.Windows.Forms.Padding(10);
-            this.received_From_Lbl.Name = "received_From_Lbl";
-            this.received_From_Lbl.Size = new System.Drawing.Size(157, 25);
-            this.received_From_Lbl.TabIndex = 13;
-            this.received_From_Lbl.Text = "Received From:";
-            // 
-            // unit_Cost_Lbl
-            // 
-            this.unit_Cost_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.unit_Cost_Lbl.AutoSize = true;
-            this.unit_Cost_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit_Cost_Lbl.Location = new System.Drawing.Point(207, 625);
-            this.unit_Cost_Lbl.Margin = new System.Windows.Forms.Padding(10);
-            this.unit_Cost_Lbl.Name = "unit_Cost_Lbl";
-            this.unit_Cost_Lbl.Size = new System.Drawing.Size(103, 25);
-            this.unit_Cost_Lbl.TabIndex = 15;
-            this.unit_Cost_Lbl.Text = "Unit Cost:";
-            // 
             // giver_Textbox
             // 
             this.giver_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -335,27 +265,35 @@
             this.giver_Textbox.TabIndex = 16;
             this.giver_Textbox.Tag = "Address";
             // 
-            // unit_Cost_Textbox
+            // remove_Btn
             // 
-            this.unit_Cost_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.unit_Cost_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.unit_Cost_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.unit_Cost_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.unit_Cost_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.unit_Cost_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.unit_Cost_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.unit_Cost_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.unit_Cost_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit_Cost_Textbox.Location = new System.Drawing.Point(330, 622);
-            this.unit_Cost_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.unit_Cost_Textbox.Name = "unit_Cost_Textbox";
-            this.unit_Cost_Textbox.PasswordChar = '\0';
-            this.unit_Cost_Textbox.Radius = 10;
-            this.unit_Cost_Textbox.ReadOnly = true;
-            this.unit_Cost_Textbox.SelectedText = "";
-            this.unit_Cost_Textbox.Size = new System.Drawing.Size(460, 36);
-            this.unit_Cost_Textbox.TabIndex = 17;
-            this.unit_Cost_Textbox.Tag = "Address";
+            this.remove_Btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.remove_Btn.AnimationHoverSpeed = 0.07F;
+            this.remove_Btn.AnimationSpeed = 0.03F;
+            this.remove_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.remove_Btn.BaseColor = System.Drawing.Color.Silver;
+            this.remove_Btn.BorderColor = System.Drawing.Color.Black;
+            this.remove_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.remove_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.remove_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.remove_Btn.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_Btn.ForeColor = System.Drawing.Color.Black;
+            this.remove_Btn.Image = null;
+            this.remove_Btn.ImageSize = new System.Drawing.Size(20, 20);
+            this.remove_Btn.Location = new System.Drawing.Point(90, 724);
+            this.remove_Btn.Margin = new System.Windows.Forms.Padding(10);
+            this.remove_Btn.Name = "remove_Btn";
+            this.remove_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.remove_Btn.OnHoverBorderColor = System.Drawing.Color.Firebrick;
+            this.remove_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.remove_Btn.OnHoverImage = null;
+            this.remove_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.remove_Btn.Radius = 10;
+            this.remove_Btn.Size = new System.Drawing.Size(140, 42);
+            this.remove_Btn.TabIndex = 20;
+            this.remove_Btn.Text = "Remove";
+            this.remove_Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.remove_Btn.Click += new System.EventHandler(this.remove_Btn_Click);
             // 
             // return_Btn
             // 
@@ -388,35 +326,41 @@
             this.return_Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.return_Btn.Click += new System.EventHandler(this.return_Btn_Click);
             // 
-            // remove_Btn
+            // label3
             // 
-            this.remove_Btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.remove_Btn.AnimationHoverSpeed = 0.07F;
-            this.remove_Btn.AnimationSpeed = 0.03F;
-            this.remove_Btn.BackColor = System.Drawing.Color.Transparent;
-            this.remove_Btn.BaseColor = System.Drawing.Color.Silver;
-            this.remove_Btn.BorderColor = System.Drawing.Color.Black;
-            this.remove_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.remove_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.remove_Btn.FocusedColor = System.Drawing.Color.Empty;
-            this.remove_Btn.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remove_Btn.ForeColor = System.Drawing.Color.Black;
-            this.remove_Btn.Image = null;
-            this.remove_Btn.ImageSize = new System.Drawing.Size(20, 20);
-            this.remove_Btn.Location = new System.Drawing.Point(90, 724);
-            this.remove_Btn.Margin = new System.Windows.Forms.Padding(10);
-            this.remove_Btn.Name = "remove_Btn";
-            this.remove_Btn.OnHoverBaseColor = System.Drawing.Color.DimGray;
-            this.remove_Btn.OnHoverBorderColor = System.Drawing.Color.Firebrick;
-            this.remove_Btn.OnHoverForeColor = System.Drawing.Color.White;
-            this.remove_Btn.OnHoverImage = null;
-            this.remove_Btn.OnPressedColor = System.Drawing.Color.Black;
-            this.remove_Btn.Radius = 10;
-            this.remove_Btn.Size = new System.Drawing.Size(140, 42);
-            this.remove_Btn.TabIndex = 20;
-            this.remove_Btn.Text = "Remove";
-            this.remove_Btn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.remove_Btn.Click += new System.EventHandler(this.remove_Btn_Click);
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(172, 268);
+            this.label3.Margin = new System.Windows.Forms.Padding(10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Fund Cluster:";
+            // 
+            // fund_Cluster_Textbox
+            // 
+            this.fund_Cluster_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.fund_Cluster_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.fund_Cluster_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.fund_Cluster_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.fund_Cluster_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fund_Cluster_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.fund_Cluster_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.fund_Cluster_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.fund_Cluster_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fund_Cluster_Textbox.Location = new System.Drawing.Point(330, 265);
+            this.fund_Cluster_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.fund_Cluster_Textbox.Multiline = true;
+            this.fund_Cluster_Textbox.Name = "fund_Cluster_Textbox";
+            this.fund_Cluster_Textbox.PasswordChar = '\0';
+            this.fund_Cluster_Textbox.Radius = 10;
+            this.fund_Cluster_Textbox.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.fund_Cluster_Textbox, 2);
+            this.fund_Cluster_Textbox.SelectedText = "";
+            this.fund_Cluster_Textbox.Size = new System.Drawing.Size(460, 82);
+            this.fund_Cluster_Textbox.TabIndex = 26;
+            this.fund_Cluster_Textbox.Tag = "Address";
             // 
             // total_Lbl
             // 
@@ -452,49 +396,141 @@
             this.total_Textbox.TabIndex = 21;
             this.total_Textbox.Tag = "Address";
             // 
-            // position_Textbox
+            // unit_Cost_Lbl
             // 
-            this.position_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.position_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.position_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.position_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.position_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.position_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.position_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.position_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.position_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.position_Textbox.Location = new System.Drawing.Point(330, 112);
-            this.position_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.position_Textbox.Name = "position_Textbox";
-            this.position_Textbox.PasswordChar = '\0';
-            this.position_Textbox.Radius = 10;
-            this.position_Textbox.ReadOnly = true;
-            this.position_Textbox.SelectedText = "";
-            this.position_Textbox.Size = new System.Drawing.Size(460, 36);
-            this.position_Textbox.TabIndex = 23;
-            this.position_Textbox.Tag = "Address";
+            this.unit_Cost_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.unit_Cost_Lbl.AutoSize = true;
+            this.unit_Cost_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unit_Cost_Lbl.Location = new System.Drawing.Point(207, 625);
+            this.unit_Cost_Lbl.Margin = new System.Windows.Forms.Padding(10);
+            this.unit_Cost_Lbl.Name = "unit_Cost_Lbl";
+            this.unit_Cost_Lbl.Size = new System.Drawing.Size(103, 25);
+            this.unit_Cost_Lbl.TabIndex = 15;
+            this.unit_Cost_Lbl.Text = "Unit Cost:";
             // 
-            // office_Textbox
+            // unit_Cost_Textbox
             // 
-            this.office_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.office_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.office_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.office_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.office_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.office_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.office_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.office_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.office_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.office_Textbox.Location = new System.Drawing.Point(330, 163);
-            this.office_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.office_Textbox.Name = "office_Textbox";
-            this.office_Textbox.PasswordChar = '\0';
-            this.office_Textbox.Radius = 10;
-            this.office_Textbox.ReadOnly = true;
-            this.office_Textbox.SelectedText = "";
-            this.office_Textbox.Size = new System.Drawing.Size(460, 36);
-            this.office_Textbox.TabIndex = 24;
-            this.office_Textbox.Tag = "Address";
+            this.unit_Cost_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.unit_Cost_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.unit_Cost_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.unit_Cost_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.unit_Cost_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.unit_Cost_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.unit_Cost_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.unit_Cost_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.unit_Cost_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unit_Cost_Textbox.Location = new System.Drawing.Point(330, 622);
+            this.unit_Cost_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.unit_Cost_Textbox.Name = "unit_Cost_Textbox";
+            this.unit_Cost_Textbox.PasswordChar = '\0';
+            this.unit_Cost_Textbox.Radius = 10;
+            this.unit_Cost_Textbox.ReadOnly = true;
+            this.unit_Cost_Textbox.SelectedText = "";
+            this.unit_Cost_Textbox.Size = new System.Drawing.Size(460, 36);
+            this.unit_Cost_Textbox.TabIndex = 17;
+            this.unit_Cost_Textbox.Tag = "Address";
+            // 
+            // quantity_Lbl
+            // 
+            this.quantity_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.quantity_Lbl.AutoSize = true;
+            this.quantity_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantity_Lbl.Location = new System.Drawing.Point(216, 574);
+            this.quantity_Lbl.Margin = new System.Windows.Forms.Padding(10);
+            this.quantity_Lbl.Name = "quantity_Lbl";
+            this.quantity_Lbl.Size = new System.Drawing.Size(94, 25);
+            this.quantity_Lbl.TabIndex = 11;
+            this.quantity_Lbl.Text = "Quantity:";
+            // 
+            // quantity_Textbox
+            // 
+            this.quantity_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.quantity_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.quantity_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.quantity_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.quantity_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.quantity_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.quantity_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.quantity_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.quantity_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantity_Textbox.Location = new System.Drawing.Point(330, 571);
+            this.quantity_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.quantity_Textbox.Name = "quantity_Textbox";
+            this.quantity_Textbox.PasswordChar = '\0';
+            this.quantity_Textbox.Radius = 10;
+            this.quantity_Textbox.ReadOnly = true;
+            this.quantity_Textbox.SelectedText = "";
+            this.quantity_Textbox.Size = new System.Drawing.Size(460, 36);
+            this.quantity_Textbox.TabIndex = 6;
+            this.quantity_Textbox.Tag = "Address";
+            // 
+            // sn_Lbl
+            // 
+            this.sn_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.sn_Lbl.AutoSize = true;
+            this.sn_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sn_Lbl.Location = new System.Drawing.Point(157, 523);
+            this.sn_Lbl.Margin = new System.Windows.Forms.Padding(10);
+            this.sn_Lbl.Name = "sn_Lbl";
+            this.sn_Lbl.Size = new System.Drawing.Size(153, 25);
+            this.sn_Lbl.TabIndex = 10;
+            this.sn_Lbl.Text = "Serial Number:";
+            // 
+            // sn_Textbox
+            // 
+            this.sn_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sn_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.sn_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.sn_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.sn_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sn_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.sn_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.sn_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.sn_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sn_Textbox.Location = new System.Drawing.Point(330, 520);
+            this.sn_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.sn_Textbox.Name = "sn_Textbox";
+            this.sn_Textbox.PasswordChar = '\0';
+            this.sn_Textbox.Radius = 10;
+            this.sn_Textbox.ReadOnly = true;
+            this.sn_Textbox.SelectedText = "";
+            this.sn_Textbox.Size = new System.Drawing.Size(460, 36);
+            this.sn_Textbox.TabIndex = 5;
+            this.sn_Textbox.Tag = "Phone";
+            // 
+            // item_Desc_Lbl
+            // 
+            this.item_Desc_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.item_Desc_Lbl.AutoSize = true;
+            this.item_Desc_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_Desc_Lbl.Location = new System.Drawing.Point(139, 472);
+            this.item_Desc_Lbl.Margin = new System.Windows.Forms.Padding(10);
+            this.item_Desc_Lbl.Name = "item_Desc_Lbl";
+            this.item_Desc_Lbl.Size = new System.Drawing.Size(171, 25);
+            this.item_Desc_Lbl.TabIndex = 9;
+            this.item_Desc_Lbl.Text = "Item Description:";
+            // 
+            // item_Desc_Textbox
+            // 
+            this.item_Desc_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.item_Desc_Textbox.BackColor = System.Drawing.Color.Transparent;
+            this.item_Desc_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.item_Desc_Textbox.BorderColor = System.Drawing.Color.Silver;
+            this.item_Desc_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.item_Desc_Textbox.FocusedBaseColor = System.Drawing.Color.White;
+            this.item_Desc_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.item_Desc_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.item_Desc_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_Desc_Textbox.Location = new System.Drawing.Point(330, 469);
+            this.item_Desc_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.item_Desc_Textbox.Name = "item_Desc_Textbox";
+            this.item_Desc_Textbox.PasswordChar = '\0';
+            this.item_Desc_Textbox.Radius = 10;
+            this.item_Desc_Textbox.ReadOnly = true;
+            this.item_Desc_Textbox.SelectedText = "";
+            this.item_Desc_Textbox.Size = new System.Drawing.Size(460, 36);
+            this.item_Desc_Textbox.TabIndex = 4;
+            this.item_Desc_Textbox.Tag = "Email";
             // 
             // return_Due_Textbox
             // 
@@ -518,29 +554,29 @@
             this.return_Due_Textbox.TabIndex = 25;
             this.return_Due_Textbox.Tag = "Address";
             // 
-            // fund_Cluster_Textbox
+            // return_Due_Lbl
             // 
-            this.fund_Cluster_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.fund_Cluster_Textbox.BackColor = System.Drawing.Color.Transparent;
-            this.fund_Cluster_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
-            this.fund_Cluster_Textbox.BorderColor = System.Drawing.Color.Silver;
-            this.fund_Cluster_Textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fund_Cluster_Textbox.FocusedBaseColor = System.Drawing.Color.White;
-            this.fund_Cluster_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.fund_Cluster_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.fund_Cluster_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fund_Cluster_Textbox.Location = new System.Drawing.Point(330, 265);
-            this.fund_Cluster_Textbox.Margin = new System.Windows.Forms.Padding(10);
-            this.fund_Cluster_Textbox.Multiline = true;
-            this.fund_Cluster_Textbox.Name = "fund_Cluster_Textbox";
-            this.fund_Cluster_Textbox.PasswordChar = '\0';
-            this.fund_Cluster_Textbox.Radius = 10;
-            this.fund_Cluster_Textbox.ReadOnly = true;
-            this.tableLayoutPanel1.SetRowSpan(this.fund_Cluster_Textbox, 2);
-            this.fund_Cluster_Textbox.SelectedText = "";
-            this.fund_Cluster_Textbox.Size = new System.Drawing.Size(460, 82);
-            this.fund_Cluster_Textbox.TabIndex = 26;
-            this.fund_Cluster_Textbox.Tag = "Address";
+            this.return_Due_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.return_Due_Lbl.AutoSize = true;
+            this.return_Due_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return_Due_Lbl.Location = new System.Drawing.Point(136, 421);
+            this.return_Due_Lbl.Margin = new System.Windows.Forms.Padding(10);
+            this.return_Due_Lbl.Name = "return_Due_Lbl";
+            this.return_Due_Lbl.Size = new System.Drawing.Size(174, 25);
+            this.return_Due_Lbl.TabIndex = 30;
+            this.return_Due_Lbl.Text = "Return Due Date:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(165, 370);
+            this.label1.Margin = new System.Windows.Forms.Padding(10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 25);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Transfer Date:";
             // 
             // transfer_Date_Textbox
             // 
@@ -563,42 +599,6 @@
             this.transfer_Date_Textbox.Size = new System.Drawing.Size(460, 36);
             this.transfer_Date_Textbox.TabIndex = 28;
             this.transfer_Date_Textbox.Tag = "Address";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 370);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 25);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Transfer Date:";
-            // 
-            // return_Due_Lbl
-            // 
-            this.return_Due_Lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.return_Due_Lbl.AutoSize = true;
-            this.return_Due_Lbl.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.return_Due_Lbl.Location = new System.Drawing.Point(136, 421);
-            this.return_Due_Lbl.Margin = new System.Windows.Forms.Padding(10);
-            this.return_Due_Lbl.Name = "return_Due_Lbl";
-            this.return_Due_Lbl.Size = new System.Drawing.Size(174, 25);
-            this.return_Due_Lbl.TabIndex = 30;
-            this.return_Due_Lbl.Text = "Return Due Date:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(172, 268);
-            this.label3.Margin = new System.Windows.Forms.Padding(10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 25);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Fund Cluster:";
             // 
             // ICSInfoForm
             // 

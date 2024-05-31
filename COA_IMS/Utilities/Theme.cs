@@ -51,7 +51,9 @@ namespace COA_IMS.Utilities
             GunaDataGridViewHeaderStyle columnHeaderStyle = new GunaDataGridViewHeaderStyle(guna_Table.ColumnHeadersDefaultCellStyle, guna_Table);
             columnHeaderStyle.Font = new Font("Bahnschrift", 14.25F);
             columnHeaderStyle.Height = col_height;
+            //highlight header
             columnHeaderStyle.BackColor = dark_pink_header;
+            guna_Table.ColumnHeadersDefaultCellStyle.SelectionBackColor = dark_pink_header;
 
 
             // Create row style

@@ -153,7 +153,7 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
             string[] employee_Details = { "employee_name", "employee_position", "employee_office", "email", "phone", "address", "employee_id" };
             List<string> list_of_items = inventory_Manager.Display_List_To_Combobox(query, employee_Details);
             string[] employee_details = list_of_items.ToArray();
-            employee_Name_Textbox.Text = employee_details[0];
+             employee_Name_Textbox.Text = employee_details[0];
             position_ComboBox.Text = employee_details[1];
             office_ComboBox.Text = employee_details[2];
             email_Textbox.Text = employee_details[3];

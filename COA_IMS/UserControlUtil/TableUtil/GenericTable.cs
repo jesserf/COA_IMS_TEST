@@ -798,13 +798,15 @@ namespace COA_IMS.UserControlUtil.TableUtil
                         }; ;
                     break;
                 case "sn_item":
-                    column_Widths = new (bool, int)[] { (true, 5), (true, 30), (true, 20), (true, 45) }; ;
+                    column_Widths = new (bool, int)[] { (true, 5), (true, 20), (true, 15), (true, 20) , (true, 20), (true, 20) }; ;
                     column_Text_Align = new (string, DataGridViewContentAlignment)[]
                         {
                             ("#", DataGridViewContentAlignment.MiddleRight),
                             ("Serial Number", DataGridViewContentAlignment.MiddleLeft),
                             ("Item Code", DataGridViewContentAlignment.MiddleLeft),
                             ("Item Description", DataGridViewContentAlignment.MiddleLeft),
+                            ("Currently Held By", DataGridViewContentAlignment.MiddleLeft),
+                            ("Last Held By", DataGridViewContentAlignment.MiddleLeft),
                         }; ;
                     break;
                 case "emp_hist":
