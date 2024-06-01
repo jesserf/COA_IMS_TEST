@@ -49,6 +49,7 @@ namespace COA_IMS
         public static readonly string display_activity_logs = "SELECT user_name, activity, activity_datetime FROM log_table WHERE activity_type = 2";
         public static readonly string return_module_name = "SELECT module FROM code_table WHERE `table` like '{0}'";
         public static readonly string return_item_log = "INSERT INTO log_table (user_name, activity, activity_datetime, activity_type) VALUES ('{0}', 'Returned Item SN: {1}, ICS: {2}', CURRENT_TIMESTAMP, 2)";
+        public static readonly string create_activity_log = "INSERT INTO log_table (user_name, activity, activity_datetime, activity_type) VALUES ('{0}', '{1}', CURRENT_TIMESTAMP, 2)";
         #endregion
         #region Deprecated Logs Query
         public static readonly string display_three_logs = "SELECT user_name, activity, activity_datetime FROM log_table WHERE activity_type = 1 LIMIT {0}, 15";
@@ -423,8 +424,18 @@ namespace COA_IMS
         #endregion
         #endregion
 
+        #region Archive Items
+        // 0 - employee id | 1 - status | 2 - remarks | 3 - CurrentUser.user_name
+        public static readonly string alter_items_status = "UPDATE items_table\r" +
+            "\nSET `status` = {1} {2}, modified_by = '{3}'" +
+            "\nWHERE item_code = '{0}';";
+        // 0 - employee id | 1 - status | 2 - remarks | 3 - CurrentUser.user_name
+        public static readonly string update_item = "UPDATE items_table\r" +
+            "\nSET {1}, modified_by = '{2}'" +
+            "\nWHERE item_code = '{0}';";
+        #endregion
         //public static readonly string insert_new_item = "INSERT emp_info_table SET \r\nemp_info_table.full_name = '{0}',\r\nemp_info_table.email = '{1}',\r\nemp_info_table.contact_no = '{2}',\r\nemp_info_table.section_code = '{3}',\r\nemp_info_table.position_code = '{4}',\r\nemp_info_table.updated_by = '{5}',\r\nemp_info_table.updated_date = CURRENT_TIMESTAMP()\r\nWHERE emp_info_table.code = '{6}' AND emp_info_table.status = 1;";
-        
+
         #endregion
         #region Employee
         //0 - employee name | 1 - employee position | 2 - employee office | 3 - email | 4 - phone | 5 - address | 6 - added by
@@ -686,6 +697,8 @@ namespace COA_IMS
             "\nLIMIT {0}, 15";
 
         public static readonly string get_max_transfer_date = "SELECT max(transfer_date) FROM item_ics_table;";
+        public static readonly string get_max_transfer_date_acclogs = "SELECT max(activity_datetime) FROM log_table WHERE activity_type = 1;";
+        public static readonly string get_max_transfer_date_actlogs = "SELECT max(activity_datetime) FROM log_table WHERE activity_type = 2;";
         #endregion
         #region Return ICS Table
         // 0 - minimum limit | 1 - status | 2 - search words | 

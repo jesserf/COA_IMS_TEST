@@ -98,7 +98,7 @@
             this.LogsTable.RowHeadersVisible = false;
             this.LogsTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.LogsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LogsTable.Size = new System.Drawing.Size(1567, 666);
+            this.LogsTable.Size = new System.Drawing.Size(1567, 627);
             this.LogsTable.TabIndex = 7;
             this.LogsTable.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.LogsTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -130,26 +130,29 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.53465F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.46535F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dateFilter1, 1, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dateFilter1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1567, 75);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1567, 114);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // searchBar1
             // 
             this.searchBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.searchBar1.BackColor = System.Drawing.Color.Transparent;
-            this.searchBar1.Location = new System.Drawing.Point(3, 29);
+            this.tableLayoutPanel1.SetColumnSpan(this.searchBar1, 2);
+            this.searchBar1.Location = new System.Drawing.Point(3, 68);
             this.searchBar1.Name = "searchBar1";
-            this.searchBar1.Size = new System.Drawing.Size(546, 43);
+            this.searchBar1.Size = new System.Drawing.Size(545, 43);
             this.searchBar1.TabIndex = 8;
             // 
             // flowLayoutPanel1
@@ -157,7 +160,7 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.reports_Button);
             this.flowLayoutPanel1.Controls.Add(this.refresh_Button);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1446, 29);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1446, 68);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 43);
@@ -216,44 +219,41 @@
             this.refresh_Button.Radius = 12;
             this.refresh_Button.Size = new System.Drawing.Size(42, 35);
             this.refresh_Button.TabIndex = 5;
-            this.refresh_Button.Click += new System.EventHandler(this.refresh_Button_Click);
             // 
             // sortComboBox
             // 
             this.sortComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sortComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.sortComboBox.BaseColor = System.Drawing.Color.Transparent;
-            this.sortComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.sortComboBox.BorderSize = 1;
+            this.sortComboBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(177)))), ((int)(((byte)(175)))));
+            this.sortComboBox.BorderColor = System.Drawing.Color.Transparent;
             this.sortComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sortComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.sortComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sortComboBox.FocusedColor = System.Drawing.Color.Empty;
             this.sortComboBox.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
-            this.sortComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.sortComboBox.ForeColor = System.Drawing.Color.White;
             this.sortComboBox.FormattingEnabled = true;
             this.sortComboBox.Items.AddRange(new object[] {
-            "User Name",
-            "Activity"});
-            this.sortComboBox.Location = new System.Drawing.Point(1189, 30);
+            ""});
+            this.sortComboBox.Location = new System.Drawing.Point(1187, 69);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
+            this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
             this.sortComboBox.OnHoverItemForeColor = System.Drawing.Color.White;
             this.sortComboBox.Radius = 12;
             this.sortComboBox.Size = new System.Drawing.Size(191, 35);
             this.sortComboBox.TabIndex = 2;
-            this.sortComboBox.SelectedValueChanged += new System.EventHandler(this.sortComboBox_SelectedValueChanged);
             // 
             // dateFilter1
             // 
             this.dateFilter1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateFilter1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dateFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.SetColumnSpan(this.dateFilter1, 2);
             this.dateFilter1.fromValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
-            this.dateFilter1.Location = new System.Drawing.Point(555, 29);
+            this.dateFilter1.Location = new System.Drawing.Point(3, 11);
             this.dateFilter1.Name = "dateFilter1";
-            this.dateFilter1.Size = new System.Drawing.Size(628, 43);
+            this.dateFilter1.Size = new System.Drawing.Size(627, 43);
             this.dateFilter1.TabIndex = 5;
             this.dateFilter1.toValue = new System.DateTime(2024, 4, 8, 10, 35, 15, 477);
             // 
@@ -282,7 +282,6 @@
             this.previous_Button.Size = new System.Drawing.Size(46, 42);
             this.previous_Button.TabIndex = 0;
             this.previous_Button.Text = "<";
-            this.previous_Button.Click += new System.EventHandler(this.previous_Button_Click);
             // 
             // pageCountTextbox
             // 
@@ -305,7 +304,6 @@
             this.pageCountTextbox.TabIndex = 2;
             this.pageCountTextbox.Text = "1";
             this.pageCountTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.pageCountTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.pageCountTextbox_KeyDown);
             // 
             // next_Button
             // 
@@ -332,7 +330,6 @@
             this.next_Button.Size = new System.Drawing.Size(46, 42);
             this.next_Button.TabIndex = 1;
             this.next_Button.Text = ">";
-            this.next_Button.Click += new System.EventHandler(this.next_Button_Click);
             // 
             // gunaPanel1
             // 
@@ -341,7 +338,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1567, 75);
+            this.gunaPanel1.Size = new System.Drawing.Size(1567, 114);
             this.gunaPanel1.TabIndex = 8;
             // 
             // main_Panel
@@ -359,9 +356,9 @@
             // 
             this.content_Panel.Controls.Add(this.LogsTable);
             this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content_Panel.Location = new System.Drawing.Point(0, 75);
+            this.content_Panel.Location = new System.Drawing.Point(0, 114);
             this.content_Panel.Name = "content_Panel";
-            this.content_Panel.Size = new System.Drawing.Size(1567, 666);
+            this.content_Panel.Size = new System.Drawing.Size(1567, 627);
             this.content_Panel.TabIndex = 12;
             // 
             // tableLayoutPanel2
@@ -398,7 +395,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AccountLogsSubForm";
             this.Text = "AccountLogsSubForm";
-            this.VisibleChanged += new System.EventHandler(this.AccountLogging_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.LogsTable)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

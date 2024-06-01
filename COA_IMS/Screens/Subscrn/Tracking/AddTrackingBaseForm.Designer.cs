@@ -115,8 +115,9 @@
             this.ClientSize = new System.Drawing.Size(1567, 817);
             this.Controls.Add(this.main_Panel);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddTrackingBaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTrackingBaseForm";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

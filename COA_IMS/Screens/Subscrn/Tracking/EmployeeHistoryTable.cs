@@ -47,6 +47,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             generic_Table.Populate_Table();
             generic_Table.Check_Count();
+            generic_Table.ResetPaging();
         }
 
         private void previous_Button_Click(object sender, EventArgs e)

@@ -390,11 +390,13 @@ namespace COA_IMS.UserControlUtil.TableUtil
             {
                 //if data needed is for account logs
                 case "acclog":
-                    dt = FillAccLogsTable(type_of_spec, from_Date, to_Date);
+                    dt = FillAccountLogs();
+                    //dt = FillAccLogsTable(type_of_spec, from_Date, to_Date);
                     break;
                 //if data needed is for activity logs
                 case "actlog":
-                    dt = FillActLogsTable(type_of_spec, from_Date, to_Date);
+                    dt = FillActivityLogs();
+                    //dt = FillActLogsTable(type_of_spec, from_Date, to_Date);
                     break;
                 //if data needed is for project requests
                 case "project":
@@ -546,6 +548,20 @@ namespace COA_IMS.UserControlUtil.TableUtil
             return dt;
         }
         #endregion
+        private DataTable FillActivityLogs()
+        {
+            string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
+            string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd 23:59:59");
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Activity_Logs(min_lim, sort_String.Replace(" ", "_"), searchBar1.Text, from_Date, to_Date);
+        }
+        private DataTable FillAccountLogs()
+        {
+            string from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
+            string to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd 23:59:59");
+            inventory_Manager = new Inventory_Manager();
+            return inventory_Manager.Get_Account_Logs(min_lim, sort_String.Replace(" ", "_"), searchBar1.Text, from_Date, to_Date);
+        }
         private DataTable FillInventoryTable()
         {
             inventory_Manager = new Inventory_Manager();
@@ -896,10 +912,16 @@ namespace COA_IMS.UserControlUtil.TableUtil
             switch (data_Table_Type)
             {
                 case "actlog":
-                    rec_count = activity_manager.Count_Activity_Logs(from_Date, to_Date);
+                    from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
+                    to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd 23:59:59");
+                    rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.display_specified_activity_logs, from_Date, to_Date, min_lim, searchBar1.Text, sort_String.Replace(" ", "_")));
+                    //rec_count = activity_manager.Count_Activity_Logs(from_Date, to_Date);
                     break;
                 case "acclog":
-                    rec_count = activity_manager.Count_Account_Logs(from_Date, to_Date);
+                    from_Date = dateFilter1.fromValue.ToString("yyyy/MM/dd 00:00:00");
+                    to_Date = dateFilter1.toValue.ToString("yyyy/MM/dd 23:59:59");
+                    rec_count = inventory_Manager.Count_Total_Results(string.Format(Database_Query.display_specified_account_logs, from_Date, to_Date, min_lim, searchBar1.Text, sort_String.Replace(" ", "_")));
+                    //rec_count = activity_manager.Count_Account_Logs(from_Date, to_Date);
                     break;
                 case "project":
                     break;

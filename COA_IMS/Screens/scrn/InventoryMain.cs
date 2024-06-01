@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using COA_IMS.Screens.Subscrn;
+using COA_IMS.Screens.Subscrn.InventorySubscreens;
 
 namespace COA_IMS.Screens.scrn
 {
@@ -21,7 +22,7 @@ namespace COA_IMS.Screens.scrn
         private Form current_Form = null;
 
         private readonly InventoryTable inventory_Table = new InventoryTable();
-        private readonly ArchiveInventoryTable archived_Inventory_Table = new ArchiveInventoryTable();
+        private readonly ArchivedInventoryTable archived_Inventory_Table = new ArchivedInventoryTable();
 
         private List<Control> navButtons = new List<Control>();
         public InventoryMain()

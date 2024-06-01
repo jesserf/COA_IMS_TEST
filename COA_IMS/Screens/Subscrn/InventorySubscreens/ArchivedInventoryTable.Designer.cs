@@ -274,7 +274,6 @@
             // content_Panel
             // 
             this.content_Panel.Controls.Add(this.data_View);
-            this.content_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content_Panel.Location = new System.Drawing.Point(0, 58);
             this.content_Panel.Name = "content_Panel";
             this.content_Panel.Size = new System.Drawing.Size(1567, 683);

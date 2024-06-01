@@ -63,6 +63,8 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         private void RePopulate_Table(object sender, EventArgs e)
         {
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
+            generic_Table.ResetPaging();
         }
 
         private void previous_Button_Click(object sender, EventArgs e)
@@ -86,6 +88,7 @@ namespace COA_IMS.Screens.Subscrn.Tracking
         {
             generic_Table.sort_String = log_table_names[sortComboBox.SelectedIndex];
             generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
 
         private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -110,7 +113,16 @@ namespace COA_IMS.Screens.Subscrn.Tracking
             if (dateFilter1.toValue < dateFilter1.fromValue)
                 dateFilter1.fromValue = dateFilter1.toValue;
             generic_Table.Populate_Table(3);
+            generic_Table.Check_Count();
         }
         #endregion
+
+        private void add_Item_Btn_Click(object sender, EventArgs e)
+        {
+            AddTrackingBaseForm add_Tracking_Base_Form = new AddTrackingBaseForm();
+            add_Tracking_Base_Form.ShowDialog();
+            generic_Table.Populate_Table(3);
+            generic_Table.Check_Count();
+        }
     }
 }

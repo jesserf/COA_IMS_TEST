@@ -8,19 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
-namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
+namespace COA_IMS.Screens.Subscrn.InventorySubscreens
 {
-    public partial class EmployeeRemoveRemarksSubForm : Form
+    public partial class RemoveItemSubform : Form
     {
         private Form parentForm;
         Inventory_Manager inventory_Manager;
-        string id, name, button_text, remarks;
-        public EmployeeRemoveRemarksSubForm(string id, string name, Form parentForm, string button_text = null, string remarks = null)
+        string id, button_text, remarks;
+        public RemoveItemSubform(string id, Form parentForm, string button_text = null, string remarks = null)
         {
             InitializeComponent();
             this.id = id;
-            this.name = name;
             this.parentForm = parentForm;
             if (button_text != null)
             {
@@ -28,6 +28,9 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
                 this.Text = button_text + " Employee";
             }
             remarks_Textbox.Text = remarks;
+
+            remove_Btn.Click += remove_Btn_Click;
+            cancel_Btn.Click += cancel_Btn_Click;
         }
 
         private void remove_Btn_Click(object sender, EventArgs e)
@@ -41,15 +44,15 @@ namespace COA_IMS.Screens.Subscrn.EmployeeSubscreens
             }
             inventory_Manager = new Inventory_Manager();
 
-            if(remove_Btn.Text == "Restore")
+            if (remove_Btn.Text == "Restore")
             {
-                string query = string.Format(Database_Query.alter_employee_status, id, 1, remarks, CurrentUser.user_name);
-                inventory_Manager.Archive_Employee_Status(query, name, "Employee", true, changes, 1);
+                string query = string.Format(Database_Query.alter_items_status, id, 1, remarks, CurrentUser.user_name);
+                inventory_Manager.Archive_Employee_Status(query, id, "Item", true, changes, 1);
             }
             else
             {
-                string query = string.Format(Database_Query.alter_employee_status, id, 0, remarks, CurrentUser.user_name);
-                inventory_Manager.Archive_Employee_Status(query, name, "Employee", true, changes, 0);
+                string query = string.Format(Database_Query.alter_items_status, id, 0, remarks, CurrentUser.user_name);
+                inventory_Manager.Archive_Employee_Status(query, id, "Item", true, changes, 0);
             }
 
             if (parentForm != null)

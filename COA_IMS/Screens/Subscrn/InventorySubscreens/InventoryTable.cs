@@ -1,4 +1,6 @@
 ﻿using COA_IMS.Screens.scrn;
+using COA_IMS.Screens.Subscrn.EmployeeSubscreens;
+using COA_IMS.Screens.Subscrn.InventorySubscreens;
 using COA_IMS.UserControlUtil;
 using COA_IMS.UserControlUtil.TableUtil;
 using Guna.UI.WinForms;
@@ -35,6 +37,8 @@ namespace COA_IMS.Screens.Subscrn
             searchBar1.Ambatu(RePopulate_Table);
             //disables next logs button
             generic_Table.Check_Count();
+
+            data_View.CellDoubleClick += data_View_CellDoubleClick;
         }
         private void add_item_Click(object sender, EventArgs e)
         {
@@ -71,6 +75,27 @@ namespace COA_IMS.Screens.Subscrn
             {
                 generic_Table.UserChangePageCountInput();
             }
+        }
+        private void data_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+                return;
+            string arg_code = data_View.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string arg_desc = data_View.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string arg_unit = data_View.Rows[e.RowIndex].Cells[3].Value.ToString();
+            string arg_cost = data_View.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string arg_life = data_View.Rows[e.RowIndex].Cells[5].Value.ToString();
+            string arg_qty = data_View.Rows[e.RowIndex].Cells[6].Value.ToString();
+            //MessageBox.Show(arg.ToString());
+            ItemInfo itemInfo = new ItemInfo();
+            itemInfo.item_Code_Textbox.Text = arg_code;
+            itemInfo.item_Desc_Textbox.Text = arg_desc; 
+            itemInfo.unit_Type_CBox.Text = arg_unit;
+            itemInfo.unit_Cost_Textbox.Text = arg_cost;
+            itemInfo.quantity_Textbox.Text = arg_qty;
+            itemInfo.ShowDialog();
+            generic_Table.Populate_Table();
+            generic_Table.Check_Count();
         }
 
     }

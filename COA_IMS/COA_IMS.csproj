@@ -428,6 +428,18 @@
     <Compile Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.Designer.cs">
       <DependentUpon>ArchivedInventoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Subscrn\InventorySubscreens\ItemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\InventorySubscreens\ItemInfo.Designer.cs">
+      <DependentUpon>ItemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscrn\InventorySubscreens\RemoveItemSubform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscrn\InventorySubscreens\RemoveItemSubform.Designer.cs">
+      <DependentUpon>RemoveItemSubform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -854,6 +866,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.resx">
       <DependentUpon>ArchivedInventoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\ItemInfo.resx">
+      <DependentUpon>ItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\RemoveItemSubform.resx">
+      <DependentUpon>RemoveItemSubform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.resx">
       <DependentUpon>LogsInfoForm.cs</DependentUpon>

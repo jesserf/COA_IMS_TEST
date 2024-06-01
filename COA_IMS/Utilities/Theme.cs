@@ -87,6 +87,39 @@ namespace COA_IMS.Utilities
                 }
             }
 
+            foreach (DataGridViewColumn column in guna_Table.Columns)
+            {
+                if (column.Name == "unit_cost")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    column.DefaultCellStyle.Format = "C"; // Apply currency format to Price column
+                }
+                if (column.Name == "Total_Cost")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    column.DefaultCellStyle.Format = "C"; // Apply currency format to Price column
+                }
+                if (column.Name == "quantity")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                }
+                if (column.Name == "est_useful_life")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                }
+                if (column.Name == "transfer_date")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+                if (column.Name == "return_date")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+                if (column.Name == "unit")
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+            }
 
             // Apply alternating row colors
             for (int i = 0; i < guna_Table.Rows.Count; i++)

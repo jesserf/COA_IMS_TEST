@@ -41,7 +41,7 @@
             // 
             // logs_office_Textbox
             // 
-            this.logs_office_Textbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.logs_office_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.logs_office_Textbox.BackColor = System.Drawing.Color.Transparent;
             this.logs_office_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.logs_office_Textbox.BorderColor = System.Drawing.Color.Silver;
@@ -51,19 +51,21 @@
             this.logs_office_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.logs_office_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.logs_office_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logs_office_Textbox.Location = new System.Drawing.Point(240, 205);
+            this.logs_office_Textbox.Location = new System.Drawing.Point(283, 310);
             this.logs_office_Textbox.Margin = new System.Windows.Forms.Padding(10);
             this.logs_office_Textbox.Name = "logs_office_Textbox";
             this.logs_office_Textbox.PasswordChar = '\0';
             this.logs_office_Textbox.Radius = 10;
             this.logs_office_Textbox.SelectedText = "";
-            this.logs_office_Textbox.Size = new System.Drawing.Size(325, 36);
+            this.logs_office_Textbox.Size = new System.Drawing.Size(617, 36);
             this.logs_office_Textbox.TabIndex = 14;
             this.logs_office_Textbox.Tag = "Email";
             // 
             // Action_Textbox
             // 
-            this.Action_Textbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Action_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Action_Textbox.BackColor = System.Drawing.Color.Transparent;
             this.Action_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.Action_Textbox.BorderColor = System.Drawing.Color.Silver;
@@ -73,13 +75,15 @@
             this.Action_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Action_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.Action_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Action_Textbox.Location = new System.Drawing.Point(240, 137);
-            this.Action_Textbox.Margin = new System.Windows.Forms.Padding(10);
+            this.Action_Textbox.Location = new System.Drawing.Point(283, 166);
+            this.Action_Textbox.Margin = new System.Windows.Forms.Padding(10, 20, 10, 30);
+            this.Action_Textbox.Multiline = true;
             this.Action_Textbox.Name = "Action_Textbox";
             this.Action_Textbox.PasswordChar = '\0';
             this.Action_Textbox.Radius = 10;
+            this.tableLayoutPanel1.SetRowSpan(this.Action_Textbox, 2);
             this.Action_Textbox.SelectedText = "";
-            this.Action_Textbox.Size = new System.Drawing.Size(325, 36);
+            this.Action_Textbox.Size = new System.Drawing.Size(617, 110);
             this.Action_Textbox.TabIndex = 13;
             this.Action_Textbox.Tag = "Email";
             // 
@@ -88,7 +92,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(144, 142);
+            this.label4.Location = new System.Drawing.Point(187, 170);
             this.label4.Margin = new System.Windows.Forms.Padding(10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 25);
@@ -100,7 +104,7 @@
             this.Date.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Date.AutoSize = true;
             this.Date.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(160, 211);
+            this.Date.Location = new System.Drawing.Point(203, 316);
             this.Date.Margin = new System.Windows.Forms.Padding(10);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(60, 25);
@@ -109,7 +113,7 @@
             // 
             // logs_Name_Textbox
             // 
-            this.logs_Name_Textbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.logs_Name_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.logs_Name_Textbox.BackColor = System.Drawing.Color.Transparent;
             this.logs_Name_Textbox.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.logs_Name_Textbox.BorderColor = System.Drawing.Color.Silver;
@@ -119,13 +123,13 @@
             this.logs_Name_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.logs_Name_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.logs_Name_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logs_Name_Textbox.Location = new System.Drawing.Point(240, 75);
+            this.logs_Name_Textbox.Location = new System.Drawing.Point(283, 91);
             this.logs_Name_Textbox.Margin = new System.Windows.Forms.Padding(10);
             this.logs_Name_Textbox.Name = "logs_Name_Textbox";
             this.logs_Name_Textbox.PasswordChar = '\0';
             this.logs_Name_Textbox.Radius = 10;
             this.logs_Name_Textbox.SelectedText = "";
-            this.logs_Name_Textbox.Size = new System.Drawing.Size(325, 36);
+            this.logs_Name_Textbox.Size = new System.Drawing.Size(617, 36);
             this.logs_Name_Textbox.TabIndex = 1;
             // 
             // label2
@@ -133,7 +137,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 80);
+            this.label2.Location = new System.Drawing.Point(94, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(10);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -148,7 +152,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.logsinfo, 2);
             this.logsinfo.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logsinfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(55)))));
-            this.logsinfo.Location = new System.Drawing.Point(248, 17);
+            this.logsinfo.Location = new System.Drawing.Point(415, 28);
             this.logsinfo.Margin = new System.Windows.Forms.Padding(10);
             this.logsinfo.Name = "logsinfo";
             this.logsinfo.Size = new System.Drawing.Size(79, 35);
@@ -159,37 +163,37 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Controls.Add(this.logsinfo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.logs_Name_Textbox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Date, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Action_Textbox, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.logs_office_Textbox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.logs_office_Textbox, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Date, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.75479F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.75479F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.75479F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.35249F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(575, 261);
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(910, 365);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // LogsInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 261);
+            this.ClientSize = new System.Drawing.Size(910, 365);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "LogsInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LogsInfoForm";
+            this.Text = "Logs Information";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

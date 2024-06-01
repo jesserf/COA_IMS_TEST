@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackingTable));
             this.content_Panel = new System.Windows.Forms.Panel();
             this.data_View = new Guna.UI.WinForms.GunaDataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -50,6 +51,7 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.main_Panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.add_Item_Btn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.content_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_View)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -314,7 +316,7 @@
             this.sortComboBox.Font = new System.Drawing.Font("Bahnschrift", 16.25F);
             this.sortComboBox.ForeColor = System.Drawing.Color.White;
             this.sortComboBox.FormattingEnabled = true;
-            this.sortComboBox.Location = new System.Drawing.Point(1153, 69);
+            this.sortComboBox.Location = new System.Drawing.Point(1152, 69);
             this.sortComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(141)))), ((int)(((byte)(140)))));
@@ -330,11 +332,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.67244F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.32756F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tableLayoutPanel1.Controls.Add(this.sortComboBox, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.searchBar1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.add_Item_Btn, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -416,6 +419,42 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1567, 0);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
+            // add_Item_Btn
+            // 
+            this.add_Item_Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.add_Item_Btn.AnimationHoverSpeed = 0.07F;
+            this.add_Item_Btn.AnimationSpeed = 0.03F;
+            this.add_Item_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.add_Item_Btn.BaseColor = System.Drawing.Color.ForestGreen;
+            this.add_Item_Btn.BorderColor = System.Drawing.Color.Black;
+            this.add_Item_Btn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.add_Item_Btn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.add_Item_Btn.CheckedForeColor = System.Drawing.Color.White;
+            this.add_Item_Btn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("add_Item_Btn.CheckedImage")));
+            this.add_Item_Btn.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.add_Item_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_Item_Btn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.add_Item_Btn.FocusedColor = System.Drawing.Color.Empty;
+            this.add_Item_Btn.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.add_Item_Btn.ForeColor = System.Drawing.Color.White;
+            this.add_Item_Btn.Image = global::COA_IMS.Properties.Resources.add_product;
+            this.add_Item_Btn.ImageSize = new System.Drawing.Size(32, 32);
+            this.add_Item_Btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.add_Item_Btn.Location = new System.Drawing.Point(1378, 5);
+            this.add_Item_Btn.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.add_Item_Btn.Name = "add_Item_Btn";
+            this.add_Item_Btn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(82)))));
+            this.add_Item_Btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.add_Item_Btn.OnHoverForeColor = System.Drawing.Color.White;
+            this.add_Item_Btn.OnHoverImage = null;
+            this.add_Item_Btn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.add_Item_Btn.OnPressedColor = System.Drawing.Color.Black;
+            this.add_Item_Btn.Radius = 10;
+            this.add_Item_Btn.Size = new System.Drawing.Size(186, 42);
+            this.add_Item_Btn.TabIndex = 14;
+            this.add_Item_Btn.Text = "ADD ITEM";
+            this.add_Item_Btn.Click += new System.EventHandler(this.add_Item_Btn_Click);
+            // 
             // TrackingTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,5 +503,6 @@
         private UserControlUtil.DateFilter dateFilter1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaAdvenceButton add_Item_Btn;
     }
 }

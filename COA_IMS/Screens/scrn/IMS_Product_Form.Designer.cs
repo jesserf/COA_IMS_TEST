@@ -106,11 +106,11 @@
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel6.Location = new System.Drawing.Point(20, 454);
             this.gunaLabel6.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(84, 24);
+            this.gunaLabel6.Size = new System.Drawing.Size(94, 25);
             this.gunaLabel6.TabIndex = 20;
             this.gunaLabel6.Text = "Supplier:";
             // 
@@ -120,12 +120,12 @@
             this.unit_Type_CBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.unit_Type_CBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.unit_Type_CBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unit_Type_CBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.unit_Type_CBox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.unit_Type_CBox.FormattingEnabled = true;
             this.unit_Type_CBox.Location = new System.Drawing.Point(196, 263);
             this.unit_Type_CBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.unit_Type_CBox.Name = "unit_Type_CBox";
-            this.unit_Type_CBox.Size = new System.Drawing.Size(371, 32);
+            this.unit_Type_CBox.Size = new System.Drawing.Size(371, 33);
             this.unit_Type_CBox.TabIndex = 4;
             // 
             // item_Brand_CBox
@@ -134,22 +134,22 @@
             this.item_Brand_CBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.item_Brand_CBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.item_Brand_CBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item_Brand_CBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.item_Brand_CBox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.item_Brand_CBox.FormattingEnabled = true;
             this.item_Brand_CBox.Location = new System.Drawing.Point(196, 139);
             this.item_Brand_CBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.item_Brand_CBox.Name = "item_Brand_CBox";
-            this.item_Brand_CBox.Size = new System.Drawing.Size(371, 32);
+            this.item_Brand_CBox.Size = new System.Drawing.Size(371, 33);
             this.item_Brand_CBox.TabIndex = 2;
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel1.Location = new System.Drawing.Point(20, 20);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(20);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(101, 22);
+            this.gunaLabel1.Size = new System.Drawing.Size(111, 22);
             this.gunaLabel1.TabIndex = 7;
             this.gunaLabel1.Text = "Item Code:";
             // 
@@ -163,24 +163,24 @@
             this.item_Code_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.item_Code_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.item_Code_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.item_Code_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.item_Code_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.item_Code_Textbox.Location = new System.Drawing.Point(196, 15);
             this.item_Code_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.item_Code_Textbox.Name = "item_Code_Textbox";
             this.item_Code_Textbox.PasswordChar = '\0';
             this.item_Code_Textbox.Radius = 10;
             this.item_Code_Textbox.SelectedText = "";
-            this.item_Code_Textbox.Size = new System.Drawing.Size(371, 35);
+            this.item_Code_Textbox.Size = new System.Drawing.Size(371, 36);
             this.item_Code_Textbox.TabIndex = 0;
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel3.Location = new System.Drawing.Point(20, 82);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(20);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(97, 22);
+            this.gunaLabel3.Size = new System.Drawing.Size(106, 22);
             this.gunaLabel3.TabIndex = 9;
             this.gunaLabel3.Text = "Item Type:";
             // 
@@ -194,14 +194,14 @@
             this.est_Life_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.est_Life_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.est_Life_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.est_Life_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.est_Life_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.est_Life_Textbox.Location = new System.Drawing.Point(196, 201);
             this.est_Life_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.est_Life_Textbox.Name = "est_Life_Textbox";
             this.est_Life_Textbox.PasswordChar = '\0';
             this.est_Life_Textbox.Radius = 10;
             this.est_Life_Textbox.SelectedText = "";
-            this.est_Life_Textbox.Size = new System.Drawing.Size(371, 35);
+            this.est_Life_Textbox.Size = new System.Drawing.Size(371, 36);
             this.est_Life_Textbox.TabIndex = 3;
             this.est_Life_Textbox.TextChanged += new System.EventHandler(this.gunaTextBox5_TextChanged);
             // 
@@ -215,14 +215,14 @@
             this.unit_Cost_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.unit_Cost_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.unit_Cost_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.unit_Cost_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.unit_Cost_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.unit_Cost_Textbox.Location = new System.Drawing.Point(196, 325);
             this.unit_Cost_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.unit_Cost_Textbox.Name = "unit_Cost_Textbox";
             this.unit_Cost_Textbox.PasswordChar = '\0';
             this.unit_Cost_Textbox.Radius = 10;
             this.unit_Cost_Textbox.SelectedText = "";
-            this.unit_Cost_Textbox.Size = new System.Drawing.Size(371, 35);
+            this.unit_Cost_Textbox.Size = new System.Drawing.Size(371, 36);
             this.unit_Cost_Textbox.TabIndex = 5;
             // 
             // quantity_Textbox
@@ -235,68 +235,68 @@
             this.quantity_Textbox.FocusedBaseColor = System.Drawing.Color.White;
             this.quantity_Textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.quantity_Textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.quantity_Textbox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.quantity_Textbox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.quantity_Textbox.Location = new System.Drawing.Point(196, 387);
             this.quantity_Textbox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.quantity_Textbox.Name = "quantity_Textbox";
             this.quantity_Textbox.PasswordChar = '\0';
             this.quantity_Textbox.Radius = 10;
             this.quantity_Textbox.SelectedText = "";
-            this.quantity_Textbox.Size = new System.Drawing.Size(371, 35);
+            this.quantity_Textbox.Size = new System.Drawing.Size(371, 36);
             this.quantity_Textbox.TabIndex = 6;
             // 
             // gunaLabel8
             // 
             this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel8.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel8.Location = new System.Drawing.Point(20, 144);
             this.gunaLabel8.Margin = new System.Windows.Forms.Padding(20);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(108, 22);
+            this.gunaLabel8.Size = new System.Drawing.Size(122, 22);
             this.gunaLabel8.TabIndex = 14;
             this.gunaLabel8.Text = "Item Brand:";
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel4.Location = new System.Drawing.Point(20, 268);
             this.gunaLabel4.Margin = new System.Windows.Forms.Padding(20);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(95, 22);
+            this.gunaLabel4.Size = new System.Drawing.Size(102, 22);
             this.gunaLabel4.TabIndex = 10;
             this.gunaLabel4.Text = "Unit Type:";
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel2.Location = new System.Drawing.Point(20, 206);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(20);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(103, 22);
+            this.gunaLabel2.Size = new System.Drawing.Size(121, 22);
             this.gunaLabel2.TabIndex = 8;
             this.gunaLabel2.Text = "Est. Useful Life:";
             // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel5.Location = new System.Drawing.Point(20, 330);
             this.gunaLabel5.Margin = new System.Windows.Forms.Padding(20);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(93, 22);
+            this.gunaLabel5.Size = new System.Drawing.Size(103, 22);
             this.gunaLabel5.TabIndex = 11;
             this.gunaLabel5.Text = "Unit Cost:";
             // 
             // gunaLabel7
             // 
             this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel7.Location = new System.Drawing.Point(20, 392);
             this.gunaLabel7.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(87, 24);
+            this.gunaLabel7.Size = new System.Drawing.Size(94, 25);
             this.gunaLabel7.TabIndex = 13;
             this.gunaLabel7.Text = "Quantity:";
             // 
@@ -306,12 +306,12 @@
             this.item_Type_CBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.item_Type_CBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.item_Type_CBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item_Type_CBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.item_Type_CBox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.item_Type_CBox.FormattingEnabled = true;
             this.item_Type_CBox.Location = new System.Drawing.Point(196, 77);
             this.item_Type_CBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.item_Type_CBox.Name = "item_Type_CBox";
-            this.item_Type_CBox.Size = new System.Drawing.Size(371, 32);
+            this.item_Type_CBox.Size = new System.Drawing.Size(371, 33);
             this.item_Type_CBox.TabIndex = 1;
             // 
             // supplier_CBox
@@ -320,12 +320,12 @@
             this.supplier_CBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.supplier_CBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.supplier_CBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.supplier_CBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.supplier_CBox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.supplier_CBox.FormattingEnabled = true;
             this.supplier_CBox.Location = new System.Drawing.Point(196, 449);
             this.supplier_CBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.supplier_CBox.Name = "supplier_CBox";
-            this.supplier_CBox.Size = new System.Drawing.Size(371, 32);
+            this.supplier_CBox.Size = new System.Drawing.Size(371, 33);
             this.supplier_CBox.TabIndex = 7;
             // 
             // product_Name_TextBox
@@ -338,24 +338,24 @@
             this.product_Name_TextBox.FocusedBaseColor = System.Drawing.Color.White;
             this.product_Name_TextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.product_Name_TextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.product_Name_TextBox.Font = new System.Drawing.Font("Calibri", 15F);
+            this.product_Name_TextBox.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.product_Name_TextBox.Location = new System.Drawing.Point(196, 511);
             this.product_Name_TextBox.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.product_Name_TextBox.Name = "product_Name_TextBox";
             this.product_Name_TextBox.PasswordChar = '\0';
             this.product_Name_TextBox.Radius = 10;
             this.product_Name_TextBox.SelectedText = "";
-            this.product_Name_TextBox.Size = new System.Drawing.Size(371, 35);
+            this.product_Name_TextBox.Size = new System.Drawing.Size(371, 36);
             this.product_Name_TextBox.TabIndex = 22;
             // 
             // gunaLabel10
             // 
             this.gunaLabel10.AutoSize = true;
-            this.gunaLabel10.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.gunaLabel10.Location = new System.Drawing.Point(20, 516);
             this.gunaLabel10.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
             this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(139, 24);
+            this.gunaLabel10.Size = new System.Drawing.Size(156, 25);
             this.gunaLabel10.TabIndex = 21;
             this.gunaLabel10.Text = "Product  Name:";
             // 
@@ -383,7 +383,7 @@
             this.save_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save_Button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.save_Button.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
-            this.save_Button.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
+            this.save_Button.Font = new System.Drawing.Font("Bahnschrift", 15.75F);
             this.save_Button.ForeColor = System.Drawing.Color.White;
             this.save_Button.Image = null;
             this.save_Button.ImageSize = new System.Drawing.Size(20, 20);
@@ -422,11 +422,11 @@
             // 
             this.gunaLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.Location = new System.Drawing.Point(10, 20);
+            this.gunaLabel9.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.Location = new System.Drawing.Point(10, 18);
             this.gunaLabel9.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(135, 33);
+            this.gunaLabel9.Size = new System.Drawing.Size(151, 35);
             this.gunaLabel9.TabIndex = 0;
             this.gunaLabel9.Text = "ADD ITEM:";
             // 

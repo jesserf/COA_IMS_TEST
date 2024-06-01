@@ -105,6 +105,38 @@ namespace COA_IMS.Utilities
                 Database_Query.last_query = query.Remove(removeLimitIndex);
             return dt;
         }
+        public DataTable Get_Activity_Logs(int minimium, string sortString, string searchwords = null, string from_date = null, string to_date = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+
+            query = string.Format(Database_Query.display_specified_activity_logs, from_date, to_date, minimium, searchwords, sortString);
+
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
+        public DataTable Get_Account_Logs(int minimium, string sortString, string searchwords = null, string from_date = null, string to_date = null)
+        {
+            string query;
+            db_Manager = new Database_Manager();
+            DataTable dt = new DataTable();
+
+            query = string.Format(Database_Query.display_specified_account_logs, from_date, to_date, minimium, searchwords, sortString);
+
+            using (db_Manager)
+                dt = db_Manager.ExecuteQuery(query);
+
+            int removeLimitIndex = query.IndexOf("LIMIT");
+            if (removeLimitIndex >= 0)
+                Database_Query.last_query = query.Remove(removeLimitIndex);
+            return dt;
+        }
         #endregion
         #region Item Supplier
         public void Insert_Item_Supplier(string query, string supplier_name, string supplier_address, string supplier_contact_num, string supplier_contact_person, string name = "Item Supplier")
