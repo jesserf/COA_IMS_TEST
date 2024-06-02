@@ -1,4 +1,5 @@
-﻿using COA_IMS.Screens.Subscrn;
+﻿using COA_IMS.Screens.Subscreens.Users;
+using COA_IMS.Screens.Subscrn;
 using COA_IMS.Utilities;
 using Guna.UI.WinForms;
 using System;
@@ -15,9 +16,12 @@ namespace COA_IMS.Screens
 {
     public partial class UserMaintenancetab : Form
     {
+        private Form current_Form = null;
         private Tab_Manager tab_Manager = new Tab_Manager();
 
-        private Form current_Form = null;
+        private readonly Users_Lists users_Lists = new Users_Lists();
+        private readonly Users_Roles users_Roles = new Users_Roles();
+        private readonly Users_Create users_Create = new Users_Create();
 
         private readonly IMS_AccountManagement ims_accmanagement = new IMS_AccountManagement();
 
@@ -25,22 +29,38 @@ namespace COA_IMS.Screens
         {
             InitializeComponent();
         }
-        private void gunaButton1_Click(object sender, EventArgs e)
+        private void User_Load(object sender, EventArgs e)
         {
-            var btn = (GunaButton)sender;
-            Form usermanagementform = null;
+            foreach (Control control in nav_panel.Controls)
+                if (control is GunaAdvenceButton)
+                    tab_Manager.Nav_buttons.Add(control);
 
-            switch (btn.Name)
+            tab_Manager.set_Colors("#1B303B", "#C7C8CC");
+            tab_Manager.active_AdvButton(user_Btn, false);
+
+            user_Btn.PerformClick();
+
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            var button = (GunaAdvenceButton)sender;
+            Form form = null;
+
+            switch (button.Name)
             {
-                case "accountbtn":
-                    usermanagementform = ims_accmanagement;
+                case "user_Btn":
+                    form = users_Lists;
+                    break;
+                case "roles_Btn":
+                    form = users_Roles;
                     break;
             }
-            if (usermanagementform != null)
-            {
-                current_Form = tab_Manager.switch_Form(usermanagementform, current_Form, gunaPanel1);
-            }
-            tab_Manager.active_Button(btn, false, false);
+            if (form != null)
+                current_Form = tab_Manager.switch_Form(form, current_Form, content_Panel);
+
+            tab_Manager.active_AdvButton(button, false);
+
         }
     }
 }

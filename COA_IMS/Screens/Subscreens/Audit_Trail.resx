@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gunaLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gunaLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="gunaLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="gunaLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 41</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gunaLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gunaLabel1.Text" xml:space="preserve">
+    <value>Audit Trail</value>
+  </data>
+  <data name="gunaLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel1.Name" xml:space="preserve">
+    <value>gunaLabel1</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel1.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaLabel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel1.Parent" xml:space="preserve">
+    <value>main_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="control_Panel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="control_Panel.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <metadata name="gunaPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="gunaPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gunaPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 399</value>
+  </data>
+  <data name="gunaPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 5</value>
+  </data>
+  <data name="gunaPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;gunaPanel1.Name" xml:space="preserve">
+    <value>gunaPanel1</value>
+  </data>
+  <data name="&gt;&gt;gunaPanel1.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaPanel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaPanel1.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="content_Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="content_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="content_Panel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 0, 0</value>
+  </data>
+  <data name="content_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 14</value>
+  </data>
+  <data name="content_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;content_Panel.Name" xml:space="preserve">
+    <value>content_Panel</value>
+  </data>
+  <data name="&gt;&gt;content_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;content_Panel.Parent" xml:space="preserve">
+    <value>parent_Panel</value>
+  </data>
+  <data name="&gt;&gt;content_Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="parent_Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="parent_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 379</value>
+  </data>
+  <data name="parent_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 14</value>
+  </data>
+  <data name="parent_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;parent_Panel.Name" xml:space="preserve">
+    <value>parent_Panel</value>
+  </data>
+  <data name="&gt;&gt;parent_Panel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaElipsePanel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;parent_Panel.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;parent_Panel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="updatedDate_Text.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="updatedDate_Text.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="updatedDate_Text.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 324</value>
+  </data>
+  <data name="updatedDate_Text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 49</value>
+  </data>
+  <data name="updatedDate_Text.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;updatedDate_Text.Name" xml:space="preserve">
+    <value>updatedDate_Text</value>
+  </data>
+  <data name="&gt;&gt;updatedDate_Text.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaTextBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;updatedDate_Text.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;updatedDate_Text.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="updatedBy_Text.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="updatedBy_Text.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="updatedBy_Text.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 230</value>
+  </data>
+  <data name="updatedBy_Text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 49</value>
+  </data>
+  <data name="updatedBy_Text.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;updatedBy_Text.Name" xml:space="preserve">
+    <value>updatedBy_Text</value>
+  </data>
+  <data name="&gt;&gt;updatedBy_Text.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaTextBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;updatedBy_Text.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;updatedBy_Text.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="createdDate_Text.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="createdDate_Text.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="createdDate_Text.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 136</value>
+  </data>
+  <data name="createdDate_Text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 49</value>
+  </data>
+  <data name="createdDate_Text.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;createdDate_Text.Name" xml:space="preserve">
+    <value>createdDate_Text</value>
+  </data>
+  <data name="&gt;&gt;createdDate_Text.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaTextBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;createdDate_Text.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;createdDate_Text.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gunaLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gunaLabel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gunaLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="gunaLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gunaLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="gunaLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 39</value>
+  </data>
+  <data name="gunaLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gunaLabel2.Text" xml:space="preserve">
+    <value>Created By :</value>
+  </data>
+  <data name="gunaLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel2.Name" xml:space="preserve">
+    <value>gunaLabel2</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel2.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaLabel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel2.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gunaLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gunaLabel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gunaLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="gunaLabel3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gunaLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 94</value>
+  </data>
+  <data name="gunaLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 39</value>
+  </data>
+  <data name="gunaLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gunaLabel3.Text" xml:space="preserve">
+    <value>Date Created : </value>
+  </data>
+  <data name="gunaLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel3.Name" xml:space="preserve">
+    <value>gunaLabel3</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel3.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaLabel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel3.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="gunaLabel4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gunaLabel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gunaLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="gunaLabel4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gunaLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 188</value>
+  </data>
+  <data name="gunaLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 39</value>
+  </data>
+  <data name="gunaLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="gunaLabel4.Text" xml:space="preserve">
+    <value>Updated By : </value>
+  </data>
+  <data name="gunaLabel4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel4.Name" xml:space="preserve">
+    <value>gunaLabel4</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel4.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaLabel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel4.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gunaLabel5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gunaLabel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gunaLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="gunaLabel5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gunaLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 282</value>
+  </data>
+  <data name="gunaLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 39</value>
+  </data>
+  <data name="gunaLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gunaLabel5.Text" xml:space="preserve">
+    <value>Date Updated : </value>
+  </data>
+  <data name="gunaLabel5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel5.Name" xml:space="preserve">
+    <value>gunaLabel5</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel5.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaLabel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel5.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="createdBy_Text.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="createdBy_Text.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="createdBy_Text.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 42</value>
+  </data>
+  <data name="createdBy_Text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 49</value>
+  </data>
+  <data name="createdBy_Text.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;createdBy_Text.Name" xml:space="preserve">
+    <value>createdBy_Text</value>
+  </data>
+  <data name="&gt;&gt;createdBy_Text.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaTextBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;createdBy_Text.Parent" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;createdBy_Text.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="control_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 44</value>
+  </data>
+  <data name="control_Panel.RowCount" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="control_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 420</value>
+  </data>
+  <data name="control_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;control_Panel.Name" xml:space="preserve">
+    <value>control_Panel</value>
+  </data>
+  <data name="&gt;&gt;control_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;control_Panel.Parent" xml:space="preserve">
+    <value>main_Panel</value>
+  </data>
+  <data name="&gt;&gt;control_Panel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="control_Panel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gunaPanel1" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="parent_Panel" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="updatedDate_Text" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="updatedBy_Text" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="createdDate_Text" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gunaLabel2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gunaLabel3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gunaLabel4" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gunaLabel5" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="createdBy_Text" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,10.46512,Percent,14.53488,Percent,10.46512,Percent,14.53488,Percent,10.46512,Percent,14.53488,Percent,10.46512,Percent,14.53488,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="main_Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="main_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="main_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 465</value>
+  </data>
+  <data name="main_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;main_Panel.Name" xml:space="preserve">
+    <value>main_Panel</value>
+  </data>
+  <data name="&gt;&gt;main_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;main_Panel.Parent" xml:space="preserve">
+    <value>gunaElipsePanel1</value>
+  </data>
+  <data name="&gt;&gt;main_Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gunaElipsePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gunaElipsePanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="gunaElipsePanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 8, 8, 8</value>
+  </data>
+  <data name="gunaElipsePanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 481</value>
+  </data>
+  <data name="gunaElipsePanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gunaElipsePanel1.Name" xml:space="preserve">
+    <value>gunaElipsePanel1</value>
+  </data>
+  <data name="&gt;&gt;gunaElipsePanel1.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaElipsePanel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaElipsePanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gunaElipsePanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="top_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="gunaLabel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="gunaLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 14.25pt</value>
+  </data>
+  <data name="gunaLabel6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="gunaLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gunaLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 42</value>
+  </data>
+  <data name="gunaLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gunaLabel6.Text" xml:space="preserve">
+    <value>Audit Trail</value>
+  </data>
+  <data name="gunaLabel6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel6.Name" xml:space="preserve">
+    <value>gunaLabel6</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel6.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaLabel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel6.Parent" xml:space="preserve">
+    <value>top_Panel</value>
+  </data>
+  <data name="&gt;&gt;gunaLabel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="top_Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="top_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="top_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 42</value>
+  </data>
+  <data name="top_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;top_Panel.Name" xml:space="preserve">
+    <value>top_Panel</value>
+  </data>
+  <data name="&gt;&gt;top_Panel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaPanel, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;top_Panel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;top_Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>420, 497</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 8, 8, 8</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Audit Trail</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Audit_Trail</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

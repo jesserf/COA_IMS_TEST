@@ -403,6 +403,26 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deactive_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("deactive_darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deactive_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("deactive_white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap digital_tachograph {
             get {
                 object obj = ResourceManager.GetObject("digital-tachograph", resourceCulture);
@@ -983,6 +1003,26 @@ namespace COA_IMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap roles_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("roles_darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap roles_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("roles_white-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap route {
             get {
                 object obj = ResourceManager.GetObject("route", resourceCulture);
@@ -1376,6 +1416,26 @@ namespace COA_IMS.Properties {
         internal static System.Drawing.Bitmap users_alt__1_ {
             get {
                 object obj = ResourceManager.GetObject("users-alt (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_darkblue_24 {
+            get {
+                object obj = ResourceManager.GetObject("users_darkblue-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("users_white-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

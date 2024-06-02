@@ -158,83 +158,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Audit_Trail.cs">
+    <Compile Include="Screens\Subscreens\Audit_Trail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Audit_Trail.Designer.cs">
+    <Compile Include="Screens\Subscreens\Audit_Trail.Designer.cs">
       <DependentUpon>Audit_Trail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Employee.cs">
+    <Compile Include="Screens\Subscreens\LoginSubscreens\DevInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\DevInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\DevInfo.Designer.cs">
+    <Compile Include="Screens\Subscreens\LoginSubscreens\DevInfo.Designer.cs">
       <DependentUpon>DevInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\ActivityLogs.cs">
+    <Compile Include="Screens\Dashboard2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\ActivityLogs.Designer.cs">
-      <DependentUpon>ActivityLogs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Maintenance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Maintenance.Designer.cs">
-      <DependentUpon>Maintenance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Projects.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Projects.Designer.cs">
-      <DependentUpon>Projects.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Reports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Reports.Designer.cs">
-      <DependentUpon>Reports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\scrn\Dashboard2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\scrn\Dashboard2.Designer.cs">
+    <Compile Include="Screens\Dashboard2.Designer.cs">
       <DependentUpon>Dashboard2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\Homepage.cs">
+    <Compile Include="Screens\Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\Homepage.Designer.cs">
+    <Compile Include="Screens\Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Employee.cs">
+    <Compile Include="Screens\IMS_Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Employee.Designer.cs">
+    <Compile Include="Screens\IMS_Employee.Designer.cs">
       <DependentUpon>IMS_Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Login.cs">
+    <Compile Include="Screens\IMS_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Login.Designer.cs">
+    <Compile Include="Screens\IMS_Login.Designer.cs">
       <DependentUpon>IMS_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\scrn\IMS_Maintenance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\scrn\IMS_Maintenance.Designer.cs">
-      <DependentUpon>IMS_Maintenance.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\scrn\IMS_Product_Form.cs">
       <SubType>Form</SubType>
@@ -242,34 +200,34 @@
     <Compile Include="Screens\scrn\IMS_Product_Form.Designer.cs">
       <DependentUpon>IMS_Product_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Reports.cs">
+    <Compile Include="Screens\IMS_Reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Reports.Designer.cs">
+    <Compile Include="Screens\IMS_Reports.Designer.cs">
       <DependentUpon>IMS_Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Settings.cs">
+    <Compile Include="Screens\IMS_Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Settings.Designer.cs">
+    <Compile Include="Screens\IMS_Settings.Designer.cs">
       <DependentUpon>IMS_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Tracking.cs">
+    <Compile Include="Screens\IMS_Tracking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\IMS_Tracking.Designer.cs">
+    <Compile Include="Screens\IMS_Tracking.Designer.cs">
       <DependentUpon>IMS_Tracking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\InventoryMain.cs">
+    <Compile Include="Screens\InventoryMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\InventoryMain.Designer.cs">
+    <Compile Include="Screens\InventoryMain.Designer.cs">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\scrn\LogsForm.cs">
+    <Compile Include="Screens\LogsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\scrn\LogsForm.Designer.cs">
+    <Compile Include="Screens\LogsForm.Designer.cs">
       <DependentUpon>LogsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Splash Screen.cs">
@@ -290,324 +248,264 @@
     <Compile Include="Screens\Subscreens\ActivityLogs\AccountLogging.Designer.cs">
       <DependentUpon>AccountLogging.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscreens\Employees\Add_Employee.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\Add SupplierForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscreens\Employees\Add_Employee.Designer.cs">
-      <DependentUpon>Add_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Employees\Employee_Submodule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Employees\Employee_Submodule.Designer.cs">
-      <DependentUpon>Employee_Submodule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Employees\Inactive_Submodule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Employees\Inactive_Submodule.Designer.cs">
-      <DependentUpon>Inactive_Submodule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Employees\View_Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Employees\View_Employee.Designer.cs">
-      <DependentUpon>View_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Maintenance\Add_Record.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Maintenance\Add_Record.Designer.cs">
-      <DependentUpon>Add_Record.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Maintenance\View_Record.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Maintenance\View_Record.Designer.cs">
-      <DependentUpon>View_Record.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Projects\ProjectArchive.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Projects\ProjectArchive.Designer.cs">
-      <DependentUpon>ProjectArchive.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Projects\ProjectCreate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Projects\ProjectCreate.Designer.cs">
-      <DependentUpon>ProjectCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Projects\ProjectLists.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Projects\ProjectLists.Designer.cs">
-      <DependentUpon>ProjectLists.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Reports\Reports_Submodule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscreens\Reports\Reports_Submodule.Designer.cs">
-      <DependentUpon>Reports_Submodule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\Add SupplierForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\Add SupplierForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\Add SupplierForm.Designer.cs">
       <DependentUpon>Add SupplierForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\AddEmployeeForm.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\AddEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\AddEmployeeForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\ArchiveInventoryTable.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\ArchivedEmployeeTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\ArchiveInventoryTable.Designer.cs">
-      <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\CategoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\CategoryForm.Designer.cs">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\CategoryTab.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\CategoryTab.Designer.cs">
-      <DependentUpon>CategoryTab.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\ArchivedEmployeeTable.Designer.cs">
       <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\CreateOrder.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\EmployeeInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\CreateOrder.Designer.cs">
-      <DependentUpon>CreateOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\EmployeeInfoForm.Designer.cs">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.Designer.cs">
       <DependentUpon>EmployeeRemoveRemarksSubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\EmployeeTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\EmployeeSubscreens\EmployeeTable.Designer.cs">
       <DependentUpon>EmployeeTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\IMS_AccountManagement.cs">
+    <Compile Include="Screens\scrn\IMS_AccountManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\IMS_AccountManagement.Designer.cs">
+    <Compile Include="Screens\scrn\IMS_AccountManagement.Designer.cs">
       <DependentUpon>IMS_AccountManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\IMS_InventoryTable.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\ArchivedInventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\IMS_InventoryTable.Designer.cs">
-      <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\ArchivedInventoryTable.Designer.cs">
       <DependentUpon>ArchivedInventoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\ItemInfo.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\ItemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\ItemInfo.Designer.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\ItemInfo.Designer.cs">
       <DependentUpon>ItemInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\RemoveItemSubform.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\RemoveItemSubform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\RemoveItemSubform.Designer.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\RemoveItemSubform.Designer.cs">
       <DependentUpon>RemoveItemSubform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\LogsInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\LogsInfoForm.Designer.cs">
       <DependentUpon>LogsInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\SearchForm.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\IMS_SuplierTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\SearchForm.Designer.cs">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\IMS_SuplierTable.Designer.cs">
       <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\InventoryTable.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\InventoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\InventorySubscreens\InventoryTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\InventorySubscreens\InventoryTable.Designer.cs">
       <DependentUpon>InventoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\SettingsSubscreens\ItemCategoryForm.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\ItemCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\SettingsSubscreens\ItemCategoryForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\ItemCategoryForm.Designer.cs">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\AccountLogsSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\AccountLogsSubForm.Designer.cs">
       <DependentUpon>AccountLogsSubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\ActivityLogsSubForm.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\ActivityLogsSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\ActivityLogsSubForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\ActivityLogsSubForm.Designer.cs">
       <DependentUpon>ActivityLogsSubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\ReportLogsSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\ReportLogsSubForm.Designer.cs">
       <DependentUpon>ReportLogsSubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\UnitForm.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\UnitForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\LogsSubscreens\UnitForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\LogsSubscreens\UnitForm.Designer.cs">
       <DependentUpon>UnitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\SettingsSubscreens\MiscCategoryForm.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\MiscCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\SettingsSubscreens\MiscCategoryForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\SettingsSubscreens\MiscCategoryForm.Designer.cs">
       <DependentUpon>MiscCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\TableSelectorForm.cs">
+    <Compile Include="Screens\Subscreens\TableSelectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\TableSelectorForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\TableSelectorForm.Designer.cs">
       <DependentUpon>TableSelectorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddConfirmForm.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddConfirmForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddConfirmForm.Designer.cs">
       <DependentUpon>AddConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddItemQuantity.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddItemQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddItemQuantity.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddItemQuantity.Designer.cs">
       <DependentUpon>AddItemQuantity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddSerialNumberForm.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddSerialNumberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddSerialNumberForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddSerialNumberForm.Designer.cs">
       <DependentUpon>AddSerialNumberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddTrackingBaseForm.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddTrackingBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddTrackingBaseForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddTrackingBaseForm.Designer.cs">
       <DependentUpon>AddTrackingBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddTrackingInfo.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddTrackingInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddTrackingInfo.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddTrackingInfo.Designer.cs">
       <DependentUpon>AddTrackingInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddTrackingItems.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddTrackingItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\AddTrackingItems.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\AddTrackingItems.Designer.cs">
       <DependentUpon>AddTrackingItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ButtonWithExit.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ButtonWithExit.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ButtonWithExit.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ButtonWithExit.Designer.cs">
       <DependentUpon>ButtonWithExit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\Cherie_TrackingTable.cs">
+    <Compile Include="Screens\Subscreens\Tracking\Cherie_TrackingTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\Cherie_TrackingTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\Cherie_TrackingTable.Designer.cs">
       <DependentUpon>Cherie_TrackingTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\EmployeeHistorySubform.cs">
+    <Compile Include="Screens\Subscreens\Tracking\EmployeeHistorySubform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\EmployeeHistorySubform.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\EmployeeHistorySubform.Designer.cs">
       <DependentUpon>EmployeeHistorySubform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.cs">
+    <Compile Include="Screens\Subscreens\Tracking\EmployeeHistoryTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\EmployeeHistoryTable.Designer.cs">
       <DependentUpon>EmployeeHistoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ICSInfoForm.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ICSInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ICSInfoForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ICSInfoForm.Designer.cs">
       <DependentUpon>ICSInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ICS_Info_Return_SubForm.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ICS_Info_Return_SubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ICS_Info_Return_SubForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ICS_Info_Return_SubForm.Designer.cs">
       <DependentUpon>ICS_Info_Return_SubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ICS_Return_Table.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ICS_Return_Table.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\ICS_Return_Table.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\ICS_Return_Table.Designer.cs">
       <DependentUpon>ICS_Return_Table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\selected_Item_Info_SubForm.cs">
+    <Compile Include="Screens\Subscreens\Tracking\selected_Item_Info_SubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\selected_Item_Info_SubForm.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\selected_Item_Info_SubForm.Designer.cs">
       <DependentUpon>selected_Item_Info_SubForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\SNHistorySubform.cs">
+    <Compile Include="Screens\Subscreens\Tracking\SNHistorySubform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\SNHistorySubform.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\SNHistorySubform.Designer.cs">
       <DependentUpon>SNHistorySubform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\TrackingDTO.cs" />
-    <Compile Include="Screens\Subscrn\Tracking\TrackingTable.cs">
+    <Compile Include="Screens\Subscreens\Tracking\TrackingDTO.cs" />
+    <Compile Include="Screens\Subscreens\Tracking\TrackingTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\TrackingTable.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\TrackingTable.Designer.cs">
       <DependentUpon>TrackingTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\Tracking_Serial_Num_Table.cs">
+    <Compile Include="Screens\Subscreens\Tracking\Tracking_Serial_Num_Table.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Subscrn\Tracking\Tracking_Serial_Num_Table.Designer.cs">
+    <Compile Include="Screens\Subscreens\Tracking\Tracking_Serial_Num_Table.Designer.cs">
       <DependentUpon>Tracking_Serial_Num_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Role_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Role_Create.Designer.cs">
+      <DependentUpon>Role_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Role_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Role_View.Designer.cs">
+      <DependentUpon>Role_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Create.Designer.cs">
+      <DependentUpon>Users_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Lists.Designer.cs">
+      <DependentUpon>Users_Lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Roles.Designer.cs">
+      <DependentUpon>Users_Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_View.Designer.cs">
+      <DependentUpon>Users_View.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\UserMaintenancetab.cs">
       <SubType>Form</SubType>
@@ -616,23 +514,11 @@
       <DependentUpon>UserMaintenancetab.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UserControlUtil\Cherie UI\Datagrid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserControlUtil\Cherie UI\Datagrid.Designer.cs">
-      <DependentUpon>Datagrid.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlUtil\DateFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlUtil\DateFilter.Designer.cs">
       <DependentUpon>DateFilter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlUtil\DGVTable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlUtil\DGVTable.Designer.cs">
-      <DependentUpon>DGVTable.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlUtil\Label_Drop.cs">
       <SubType>UserControl</SubType>
@@ -664,34 +550,94 @@
     <Compile Include="UserControlUtil\Label_TextLabel.Designer.cs">
       <DependentUpon>Label_TextLabel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\IPRIS_UserControl.cs" />
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Date_Picker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Date_Picker.Designer.cs">
+      <DependentUpon>PRIS_Date_Picker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_CheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_CheckBox.Designer.cs">
+      <DependentUpon>PRIS_Label_CheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_DateCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_DateCheckBox.Designer.cs">
+      <DependentUpon>PRIS_Label_DateCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_DropBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_DropBox.Designer.cs">
+      <DependentUpon>PRIS_Label_DropBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Entry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Entry.Designer.cs">
+      <DependentUpon>PRIS_Label_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_MainCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_MainCheckBox.Designer.cs">
+      <DependentUpon>PRIS_Label_MainCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Rich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Rich.Designer.cs">
+      <DependentUpon>PRIS_Label_Rich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Selector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Selector.Designer.cs">
+      <DependentUpon>PRIS_Label_Selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Status.Designer.cs">
+      <DependentUpon>PRIS_Label_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Search_DropBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserControl\PRIS_Search_DropBox.Designer.cs">
+      <DependentUpon>PRIS_Search_DropBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserForms\Selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlUtil\PRIS_UserForms\Selector.Designer.cs">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlUtil\SearchBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlUtil\SearchBar.Designer.cs">
       <DependentUpon>SearchBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlUtil\Selector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserControlUtil\Selector.Designer.cs">
-      <DependentUpon>Selector.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlUtil\TableUtil\GenericTable.cs" />
     <Compile Include="UserControlUtil\TableUtil\IGenericTableVariables.cs" />
     <Compile Include="Utilities\Activity_Manager.cs" />
+    <Compile Include="Utilities\ConnectionInfo.cs" />
     <Compile Include="Utilities\CurrentUser.cs" />
+    <Compile Include="Utilities\Encryption_Manager.cs" />
     <Compile Include="Utilities\Inventory_Manager.cs" />
     <Compile Include="Utilities\RandomAlphanumericString.cs" />
+    <Compile Include="Utilities\ServerManager.cs" />
     <Compile Include="Utilities\Tab_Manager.cs" />
+    <Compile Include="Utilities\TCPClient.cs" />
+    <Compile Include="Utilities\TCPServer.cs" />
     <Compile Include="Utilities\Theme.cs" />
     <Compile Include="Utilities\Database_Manager.cs" />
     <Compile Include="Utilities\Database_Credential.cs" />
-    <Compile Include="Screens\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utilities\Database_Connection.cs" />
     <Compile Include="Utilities\Database_Query.cs" />
     <Compile Include="Screens\login.cs">
@@ -724,19 +670,10 @@
     <EmbeddedResource Include="CrystalReports\TempReportsForms.resx">
       <DependentUpon>TempReportsForms.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Audit_Trail.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Audit_Trail.resx">
       <DependentUpon>Audit_Trail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\DevInfo.resx">
+    <EmbeddedResource Include="Screens\Subscreens\LoginSubscreens\DevInfo.resx">
       <DependentUpon>DevInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\login.resx">
@@ -747,46 +684,31 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\ActivityLogs.resx">
-      <DependentUpon>ActivityLogs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Maintenance.resx">
-      <DependentUpon>Maintenance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Projects.resx">
-      <DependentUpon>Projects.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Reports.resx">
-      <DependentUpon>Reports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\Dashboard2.resx">
+    <EmbeddedResource Include="Screens\Dashboard2.resx">
       <DependentUpon>Dashboard2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\Homepage.resx">
+    <EmbeddedResource Include="Screens\Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\IMS_Employee.resx">
+    <EmbeddedResource Include="Screens\IMS_Employee.resx">
       <DependentUpon>IMS_Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\IMS_Login.resx">
+    <EmbeddedResource Include="Screens\IMS_Login.resx">
       <DependentUpon>IMS_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\IMS_Maintenance.resx">
-      <DependentUpon>IMS_Maintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\scrn\IMS_Product_Form.resx">
       <DependentUpon>IMS_Product_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\IMS_Settings.resx">
+    <EmbeddedResource Include="Screens\IMS_Settings.resx">
       <DependentUpon>IMS_Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\IMS_Tracking.resx">
+    <EmbeddedResource Include="Screens\IMS_Tracking.resx">
       <DependentUpon>IMS_Tracking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\InventoryMain.resx">
+    <EmbeddedResource Include="Screens\InventoryMain.resx">
       <DependentUpon>InventoryMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\scrn\LogsForm.resx">
+    <EmbeddedResource Include="Screens\LogsForm.resx">
       <DependentUpon>LogsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Splash Screen.resx">
@@ -798,164 +720,134 @@
     <EmbeddedResource Include="Screens\Subscreens\ActivityLogs\AccountLogging.resx">
       <DependentUpon>AccountLogging.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Employees\Add_Employee.resx">
-      <DependentUpon>Add_Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Employees\Employee_Submodule.resx">
-      <DependentUpon>Employee_Submodule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Employees\Inactive_Submodule.resx">
-      <DependentUpon>Inactive_Submodule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Employees\View_Employee.resx">
-      <DependentUpon>View_Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Maintenance\Add_Record.resx">
-      <DependentUpon>Add_Record.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Maintenance\View_Record.resx">
-      <DependentUpon>View_Record.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Projects\ProjectArchive.resx">
-      <DependentUpon>ProjectArchive.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Projects\ProjectCreate.resx">
-      <DependentUpon>ProjectCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Projects\ProjectLists.resx">
-      <DependentUpon>ProjectLists.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscreens\Reports\Reports_Submodule.resx">
-      <DependentUpon>Reports_Submodule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Add SupplierForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\SettingsSubscreens\Add SupplierForm.resx">
       <DependentUpon>Add SupplierForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\AddEmployeeForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\EmployeeSubscreens\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\ArchiveInventoryTable.resx">
-      <DependentUpon>ArchiveInventoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\CategoryForm.resx">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\CategoryTab.resx">
-      <DependentUpon>CategoryTab.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\ArchivedEmployeeTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\EmployeeSubscreens\ArchivedEmployeeTable.resx">
       <DependentUpon>ArchivedEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\CreateOrder.resx">
-      <DependentUpon>CreateOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeInfoForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\EmployeeSubscreens\EmployeeInfoForm.resx">
       <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\EmployeeSubscreens\EmployeeRemoveRemarksSubForm.resx">
       <DependentUpon>EmployeeRemoveRemarksSubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\EmployeeSubscreens\EmployeeTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\EmployeeSubscreens\EmployeeTable.resx">
       <DependentUpon>EmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\IMS_AccountManagement.resx">
+    <EmbeddedResource Include="Screens\scrn\IMS_AccountManagement.resx">
       <DependentUpon>IMS_AccountManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\IMS_InventoryTable.resx">
-      <DependentUpon>IMS_InventoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\ArchivedInventoryTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\InventorySubscreens\ArchivedInventoryTable.resx">
       <DependentUpon>ArchivedInventoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\ItemInfo.resx">
+    <EmbeddedResource Include="Screens\Subscreens\InventorySubscreens\ItemInfo.resx">
       <DependentUpon>ItemInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\RemoveItemSubform.resx">
+    <EmbeddedResource Include="Screens\Subscreens\InventorySubscreens\RemoveItemSubform.resx">
       <DependentUpon>RemoveItemSubform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\LogsInfoForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\LogsSubscreens\LogsInfoForm.resx">
       <DependentUpon>LogsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\SearchForm.resx">
-      <DependentUpon>SearchForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\IMS_SuplierTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\SettingsSubscreens\IMS_SuplierTable.resx">
       <DependentUpon>IMS_SuplierTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\InventorySubscreens\InventoryTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\InventorySubscreens\InventoryTable.resx">
       <DependentUpon>InventoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\ItemCategoryForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\SettingsSubscreens\ItemCategoryForm.resx">
       <DependentUpon>ItemCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\AccountLogsSubForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\LogsSubscreens\AccountLogsSubForm.resx">
       <DependentUpon>AccountLogsSubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\ActivityLogsSubForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\LogsSubscreens\ActivityLogsSubForm.resx">
       <DependentUpon>ActivityLogsSubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\ReportLogsSubForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\LogsSubscreens\ReportLogsSubForm.resx">
       <DependentUpon>ReportLogsSubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\LogsSubscreens\UnitForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\LogsSubscreens\UnitForm.resx">
       <DependentUpon>UnitForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\SettingsSubscreens\MiscCategoryForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\SettingsSubscreens\MiscCategoryForm.resx">
       <DependentUpon>MiscCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\TableSelectorForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\TableSelectorForm.resx">
       <DependentUpon>TableSelectorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddConfirmForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\AddConfirmForm.resx">
       <DependentUpon>AddConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddItemQuantity.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\AddItemQuantity.resx">
       <DependentUpon>AddItemQuantity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddSerialNumberForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\AddSerialNumberForm.resx">
       <DependentUpon>AddSerialNumberForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddTrackingBaseForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\AddTrackingBaseForm.resx">
       <DependentUpon>AddTrackingBaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddTrackingInfo.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\AddTrackingInfo.resx">
       <DependentUpon>AddTrackingInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\AddTrackingItems.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\AddTrackingItems.resx">
       <DependentUpon>AddTrackingItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\ButtonWithExit.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\ButtonWithExit.resx">
       <DependentUpon>ButtonWithExit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\Cherie_TrackingTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\Cherie_TrackingTable.resx">
       <DependentUpon>Cherie_TrackingTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\EmployeeHistorySubform.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\EmployeeHistorySubform.resx">
       <DependentUpon>EmployeeHistorySubform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\EmployeeHistoryTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\EmployeeHistoryTable.resx">
       <DependentUpon>EmployeeHistoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\ICSInfoForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\ICSInfoForm.resx">
       <DependentUpon>ICSInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\ICS_Info_Return_SubForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\ICS_Info_Return_SubForm.resx">
       <DependentUpon>ICS_Info_Return_SubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\ICS_Return_Table.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\ICS_Return_Table.resx">
       <DependentUpon>ICS_Return_Table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\selected_Item_Info_SubForm.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\selected_Item_Info_SubForm.resx">
       <DependentUpon>selected_Item_Info_SubForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\SNHistorySubform.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\SNHistorySubform.resx">
       <DependentUpon>SNHistorySubform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\TrackingTable.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\TrackingTable.resx">
       <DependentUpon>TrackingTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Subscrn\Tracking\Tracking_Serial_Num_Table.resx">
+    <EmbeddedResource Include="Screens\Subscreens\Tracking\Tracking_Serial_Num_Table.resx">
       <DependentUpon>Tracking_Serial_Num_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscreens\UserMaintenanceSubScreens\Role_Create.resx">
+      <DependentUpon>Role_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscreens\UserMaintenanceSubScreens\Role_View.resx">
+      <DependentUpon>Role_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Create.resx">
+      <DependentUpon>Users_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Lists.resx">
+      <DependentUpon>Users_Lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_Roles.resx">
+      <DependentUpon>Users_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Subscreens\UserMaintenanceSubScreens\Users_View.resx">
+      <DependentUpon>Users_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\UserMaintenancetab.resx">
       <DependentUpon>UserMaintenancetab.cs</DependentUpon>
@@ -966,14 +858,8 @@
     <EmbeddedResource Include="SysSetupUserControl.resx">
       <DependentUpon>SysSetupUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlUtil\Cherie UI\Datagrid.resx">
-      <DependentUpon>Datagrid.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\DateFilter.resx">
       <DependentUpon>DateFilter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlUtil\DGVTable.resx">
-      <DependentUpon>DGVTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\Label_Drop.resx">
       <DependentUpon>Label_Drop.cs</DependentUpon>
@@ -989,6 +875,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\Label_TextLabel.resx">
       <DependentUpon>Label_TextLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Date_Picker.resx">
+      <DependentUpon>PRIS_Date_Picker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_CheckBox.resx">
+      <DependentUpon>PRIS_Label_CheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_DateCheckBox.resx">
+      <DependentUpon>PRIS_Label_DateCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_DropBox.resx">
+      <DependentUpon>PRIS_Label_DropBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Entry.resx">
+      <DependentUpon>PRIS_Label_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_MainCheckBox.resx">
+      <DependentUpon>PRIS_Label_MainCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Rich.resx">
+      <DependentUpon>PRIS_Label_Rich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Selector.resx">
+      <DependentUpon>PRIS_Label_Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Label_Status.resx">
+      <DependentUpon>PRIS_Label_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserControl\PRIS_Search_DropBox.resx">
+      <DependentUpon>PRIS_Search_DropBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUtil\PRIS_UserForms\Selector.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUtil\SearchBar.resx">
       <DependentUpon>SearchBar.cs</DependentUpon>
@@ -1104,6 +1023,11 @@
     <Content Include="Resources\darkblu\activity_logs-darkblue_24.png" />
     <Content Include="Resources\darkblu\activity_logs-lightgrey-24.png" />
     <Content Include="Resources\darkblu\activity_logs-white-24.png" />
+    <Content Include="Resources\darkblu\add-darkblue-24.png" />
+    <Content Include="Resources\darkblu\add-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\add-white-24.png" />
+    <Content Include="Resources\darkblu\add_box-darkblue-24.png" />
+    <Content Include="Resources\darkblu\add_box-white-24.png" />
     <Content Include="Resources\darkblu\add_tracking-darkblue-24.png" />
     <Content Include="Resources\darkblu\add_tracking-lightgrey-24.png" />
     <Content Include="Resources\darkblu\add_tracking-white-24.png" />
@@ -1114,6 +1038,8 @@
     <Content Include="Resources\darkblu\archive_items-darkblue-24.png" />
     <Content Include="Resources\darkblu\archive_items-lightgrey-24.png" />
     <Content Include="Resources\darkblu\archive_items-white-24.png" />
+    <Content Include="Resources\darkblu\deactive_darkblue-24.png" />
+    <Content Include="Resources\darkblu\deactive_white-24.png" />
     <Content Include="Resources\darkblu\employee-darkblue-24.png" />
     <Content Include="Resources\darkblu\employee-lightgray-24.png" />
     <Content Include="Resources\darkblu\employee-table-darkblue-24.png" />
@@ -1122,6 +1048,9 @@
     <Content Include="Resources\darkblu\employee_history-darkblue-24.png" />
     <Content Include="Resources\darkblu\employee_history-lightgrey-24.png" />
     <Content Include="Resources\darkblu\employee_history-white-24.png" />
+    <Content Include="Resources\darkblu\info_darkblue-24.png" />
+    <Content Include="Resources\darkblu\info_lightgrey-24.png" />
+    <Content Include="Resources\darkblu\info_white-24.png" />
     <Content Include="Resources\darkblu\inventory_table-darkblue-24.png" />
     <Content Include="Resources\darkblu\inventory_table-lightgrey-24.png" />
     <Content Include="Resources\darkblu\inventory_table-white-24.png" />
@@ -1136,15 +1065,39 @@
     <Content Include="Resources\darkblu\item_history-white-24.png" />
     <Content Include="Resources\darkblu\logout-darkblue-24.png" />
     <Content Include="Resources\darkblu\logout-lightgray-24.png" />
+    <Content Include="Resources\darkblu\password_circle-darkblue-24.png" />
+    <Content Include="Resources\darkblu\password_circle-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\password_circle-white-24.png" />
+    <Content Include="Resources\darkblu\password_darkblue-24.png" />
+    <Content Include="Resources\darkblu\password_white-24.png" />
+    <Content Include="Resources\darkblu\refresh-darkblue-24.png" />
+    <Content Include="Resources\darkblu\refresh-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\refresh-white-24.png" />
+    <Content Include="Resources\darkblu\remove-white-24.png" />
+    <Content Include="Resources\darkblu\remove_darkblue-24.png" />
     <Content Include="Resources\darkblu\reports-darkblue-24.png" />
     <Content Include="Resources\darkblu\reports-lightgrey-24.png" />
     <Content Include="Resources\darkblu\reports-white-24.png" />
     <Content Include="Resources\darkblu\returned_table-darkblue-24.png" />
     <Content Include="Resources\darkblu\returned_table-lightgrey-24.png" />
     <Content Include="Resources\darkblu\returned_table-white-24.png" />
+    <Content Include="Resources\darkblu\roles_darkblue-24.png" />
+    <Content Include="Resources\darkblu\roles_white-24.png" />
+    <Content Include="Resources\darkblu\search_darkblue-24.png" />
+    <Content Include="Resources\darkblu\search_lightgrey-24.png" />
+    <Content Include="Resources\darkblu\search_white-24.png" />
     <Content Include="Resources\darkblu\tracking_ics-darkblue-24.png" />
     <Content Include="Resources\darkblu\tracking_ics-lightgrey-24.png" />
     <Content Include="Resources\darkblu\tracking_ics-white-24.png" />
+    <Content Include="Resources\darkblu\user-darkblue-24.png" />
+    <Content Include="Resources\darkblu\user-white-24.png" />
+    <Content Include="Resources\darkblu\users_darkblue-24.png" />
+    <Content Include="Resources\darkblu\users_white-24.png" />
+    <Content Include="Resources\darkblu\user_circle-darkblue-24.png" />
+    <Content Include="Resources\darkblu\user_circle-lightgrey-24.png" />
+    <Content Include="Resources\darkblu\user_circle-white-24.png" />
+    <Content Include="Resources\darkblu\view-darkblue-24.png" />
+    <Content Include="Resources\darkblu\view-white-24.png" />
     <Content Include="Resources\dsahboard_img.png" />
     <None Include="Resources\employee-darkblue-24.png" />
     <Content Include="Resources\expand - Copy.png" />
@@ -1242,6 +1195,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserControlUtil\PRIS_UserControl\NewFolder1\" />
+    <Folder Include="UserControlUtil\PRIS_UserControl\NewFolder2\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

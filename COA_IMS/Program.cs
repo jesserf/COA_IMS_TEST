@@ -25,8 +25,8 @@ namespace COA_IMS
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login());
-            Application.Run(new Dashboard2());
+            Application.Run(new login());
+            //Application.Run(new Dashboard2());
             //Application.Run(new Splash_Screen());
             //Application.Run(new Dashboard());
         }
